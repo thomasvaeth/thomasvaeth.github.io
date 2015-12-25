@@ -1,0 +1,19 @@
+---
+layout: post
+title: "/* Local Weather */"
+date: '2015-09-08T13:25:25-07:00'
+tags:
+- freecodecamp
+- free code camp
+- web development
+- web dev
+- bootstrap
+- javascript
+- js
+- jquery
+- html
+- codepen
+- github
+tumblr_url: http://thomasvaeth.com/post/128646800935/local-weather
+---
+<p>I had a busy Labor Day weekend. After finishing the random quote generator I jumped straight into another <a href="http://www.freecodecamp.com/challenges/zipline-show-the-local-weather">project</a> on FreeCodeCamp. This one was to show the visitor&rsquo;s local weather in Fahrenheit or Celsius and to have a background picture similar to what it looked like outside.</p><figure data-orig-width="2880" data-orig-height="1538" class="tmblr-full"><img data-orig-width="2880" data-orig-height="1538" src="http://36.media.tumblr.com/65c921a4123974ca75053ec00f6c78e0/tumblr_inline_nudcuk63PC1t6kknv_540.png" alt="image"/></figure><p>I used the same Bootsrap template that I used for the random quote generator because it was another project for developing my JavaScript and jQuery skills.</p><script src="https://gist.github.com/thomasvaeth/e83fbf199d5a94ada4ce.js"></script><p>The project required the use of two APIs. I used an <a href="http://ip-api.com/#">API</a> to get the IP address of the visitor to find out where they were from. I also used an <a href="http://openweathermap.org/api">API</a> to get the local weather of the visitor based on the latitude and longitude of the IP address. The temparture was easy to get and convert from Kelvin to Fahrenheit or Celsius. The weather proved a little more difficult because I could not find a list of all the possible outputs. I had to use the <a href="http://openweathermap.org/weather-conditions">weather icon</a> output, which has two possibilities for day and night so that is why I used a substring of only the first two characters. Whatever the two character string comes back as is what the background image will be. It is not as accurate as the main weather output, but it still works for what I am doing.<br/>I tried using a switch statement instead of an if&hellip; else statement, but I could not get it to work for this project. I could improve on the code by figuring out if a switch statement is possible to use.<br/>You can view the project on <a href="http://codepen.io/thomasvaeth/full/avzaBd/">CodePen</a> and get all of the code on <a href="https://github.com/thomasvaeth/freecodecamp/tree/master/local-weather">GitHub</a>.</p>
