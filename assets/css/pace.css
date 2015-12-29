@@ -11,6 +11,7 @@ body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-do
   opacity: 0
 }
 
+/* Pace */
 .pace {
   -webkit-pointer-events: none;
   pointer-events: none;
