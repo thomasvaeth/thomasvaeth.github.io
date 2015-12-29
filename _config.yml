@@ -22,5 +22,15 @@ paginate: 5
 # Build settings
 markdown: kramdown
 
+# Default settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+
 # Gems
 gems: [jekyll-paginate]
