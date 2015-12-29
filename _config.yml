@@ -21,6 +21,7 @@ paginate: 5
 
 # Build settings
 markdown: kramdown
+permalink: pretty
 
 # Default settings
 defaults:
