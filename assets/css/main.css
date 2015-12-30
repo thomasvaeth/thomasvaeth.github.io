@@ -132,10 +132,12 @@ h1 {
 
 .post h3 {
     font-size: 1.5em;
+    margin-bottom: 0;
 }
 
 .post h4 {
     font-size: 1.25em;
+    margin-bottom: 0;
 }
 
 .post h5 {
@@ -182,6 +184,10 @@ pre {
 
 code {
     font-family: Consolas, monospace;
+}
+
+#disqus_thread {
+    margin-top: 40px;
 }
 
 /* Archive Page */

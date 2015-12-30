@@ -12,5 +12,20 @@ layout: default
     {{ content }}
   </div>
 
+  <div class="post-list">
+    {% if content and page.related %}
+      <h4>Related Posts</h4>
+      <ul>
+        {% for post in site.posts %}
+          {% if page.related contains post.title %}
+            <li>
+              <a href="{{ post.url }}">{{ post.title }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
   {% include comments.html disqus_identifier=page.disqus_identifier %}
 </article>
