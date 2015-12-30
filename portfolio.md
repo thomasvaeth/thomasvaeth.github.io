@@ -11,7 +11,7 @@ permalink: /portfolio/
 
 <h3>Fare Start</h3>
 <a href="https://farestart.herokuapp.com/" target="_blank"><img src="/assets/images/fare-start-1.png"></a>
-<p>Fare Start is a full stack web application using Ruby on Rails, PostgreSQL, Ruby, HTML, SASS, JavaScript, jQuery, Bootstrap, Uber API, Google Maps Javascript API, Google Maps Geocoding API, and D3.js.</p>
+<p>Fare Start is a full stack web application using Ruby on Rails, PostgreSQL, Ruby, HTML, Sass, JavaScript, jQuery, Bootstrap, Uber API, Google Maps Javascript API, Google Maps Geocoding API, and D3.js.</p>
 <a href="https://farestart.herokuapp.com/" target="_blank"><i class="fa fa-laptop fa-lg"></i></a>
 <a href="https://github.com/thomasvaeth/ga-rails" target="_blank"><i class="fa fa-github fa-lg"></i></a>
 
