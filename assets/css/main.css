@@ -272,3 +272,27 @@ i {
 i:hover {
     color: #222;
 }
+
+.fa-envelope-o:hover {
+    color: #db4437;
+}
+
+.fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.fa-file-text-o:hover {
+    color: #007ee5;
+}
+
+.fa-twitter:hover {
+    color: #55acee;
+}
+
+.fa-instagram:hover {
+    color: #3f729b;
+}
+
+.fa-facebook:hover {
+    color: #3b5998;
+}
