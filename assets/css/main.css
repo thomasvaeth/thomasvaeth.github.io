@@ -186,6 +186,10 @@ code {
     font-family: Consolas, monospace;
 }
 
+.emoji {
+  text-align: center;
+}
+
 #disqus_thread {
     margin-top: 2em;
 }
