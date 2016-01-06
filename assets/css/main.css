@@ -21,12 +21,6 @@ html {
     color: #333;
 }
 
-@media (min-width: 34em) {
-    html {
-        font-size: 16px;
-    }
-}
-
 .wrapper {
     margin: 0 auto;
     padding: 0 1em;
@@ -34,6 +28,10 @@ html {
 }
 
 @media (min-width: 34em) {
+    html {
+        font-size: 16px;
+    }
+
     .wrapper {
         padding: 0 2em;
     }
