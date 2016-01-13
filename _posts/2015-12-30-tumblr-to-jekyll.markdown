@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Tumblr to Jekyll: Part 1"
+title: "Tumblr to Jekyll"
 date: 2015-12-30
 ---
 This was my blog on Tumblr...
