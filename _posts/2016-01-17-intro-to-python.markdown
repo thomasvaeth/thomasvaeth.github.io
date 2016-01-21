@@ -4,7 +4,7 @@ title: "Intro to Python"
 date: 2016-01-17
 related: ["Gulp", "Tumblr to Jekyll"]
 ---
-A month after the 12-week web development program has ended and I am still learning something new everyday. I decided to start learning Python after adding Gulp to my last project and changing my personal website to Jekyll.
+It has been a month since the 12-week web development program has ended and I am still learning something new everyday. I decided to start learning Python after adding Gulp to my last project and changing my personal website to Jekyll.
 
 <img src="/assets/images/python-1.jpg">
 
