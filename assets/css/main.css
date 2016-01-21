@@ -191,6 +191,21 @@ code {
 }
 
 /* About Page */
+.devicon-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+.devicon-list li {
+  display: inline-block;
+  margin: 0.25em;
+}
+
+.devicon {
+  font-size: 2em;
+}
+
 .contact {
   margin-top: 2em;
   text-align: center;
