@@ -206,6 +206,73 @@ code {
   font-size: 2em;
 }
 
+.devicon-html5-plain:hover {
+  color: #E54D26;
+}
+
+.devicon-css3-plain:hover {
+  color: #3D8FC6;
+}
+
+.devicon-javascript-plain:hover {
+  color: #F0DB4F;
+}
+.devicon-jquery-plain:hover {
+  color: #0769AD;
+}
+
+.devicon-nodejs-plain:hover {
+  color: #83CD29;
+}
+
+.devicon-angularjs-plain:hover {
+  color: #C4473A;
+}
+
+.devicon-react-original:hover {
+  color: #61DAFB;
+}
+
+.devicon-bootstrap-plain:hover {
+  color: #59407F;
+}
+
+.devicon-foundation-plain:hover {
+  color: #008CBA;
+}
+
+.devicon-sass-original:hover {
+  color: #CC6699;
+}
+
+.devicon-gulp-plain:hover {
+  color: #EB4A4B;
+}
+
+.devicon-heroku-original:hover {
+  color: #6762A6;
+}
+
+.devicon-mongodb-plain:hover {
+  color: #4FAA41;
+}
+
+.devicon-postgresql-plain:hover {
+  color: #336791;
+}
+
+.devicon-python-plain:hover {
+  color: #FFD845;
+}
+
+.devicon-ruby-plain:hover {
+  color: #D91404;
+}
+
+.devicon-rails-plain:hover {
+  color: #A62C46;
+}
+
 .contact {
   margin-top: 2em;
   text-align: center;
