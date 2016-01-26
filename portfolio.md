@@ -5,7 +5,7 @@ permalink: /portfolio/
 ---
 <h3>Samesies</h3>
 <a href="http://samesies.herokuapp.com/" target="_blank"><img src="/assets/images/samesies-1.png"></a>
-<p>Samesies is a full stack web application using AngularJS, Express/Node.js, MongoDB, HTML, CSS, JavaScript, and Bootstrap.</p>
+<p>Samesies is a full stack web application using AngularJS, Express/Node.js, MongoDB, HTML, CSS, JavaScript, Bootstrap, Animate.CSS, and WOW.js.</p>
 <a href="http://samesies.herokuapp.com/" target="_blank"><i class="fa fa-laptop fa-lg"></i></a>
 <a href="https://github.com/thomasvaeth/ga-samesies" target="_blank"><i class="fa fa-github fa-lg"></i></a>
 
