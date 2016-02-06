@@ -23,6 +23,6 @@ permalink: /portfolio/
 
 <h3>Simon</h3>
 <a href="http://thomasvaeth.github.io/ga-simon/" target="_blank"><img src="/assets/images/simon-1.png"></a>
-<p>Simon is a front end memory game using HTML, CSS, JavaScript, jQuery, and Animate.CSS.</p>
+<p>Simon is a front end memory game using HTML, CSS, JavaScript/CoffeeScript, jQuery, and Animate.CSS.</p>
 <a href="http://thomasvaeth.github.io/ga-simon/" target="_blank"><i class="fa fa-laptop fa-lg"></i></a>
 <a href="https://github.com/thomasvaeth/ga-simon" target="_blank"><i class="fa fa-github fa-lg"></i></a>
