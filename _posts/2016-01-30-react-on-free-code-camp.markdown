@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "React and Sass"
+title: "React on Free Code Camp"
 date: 2016-01-30
 ---
 I studied Python for a few more days after my last blog post and then jumped into learning more React. General Assembly only covered React for two days, so there was a lot more to do. Free Code Camp posted a few projects the other month, so I thought that would be a great place to continue to learn. The only project requirements were to use React and Sass. I did not spend a lot of time styling each project since I was mostly doing these to understand React and its one-way data flow, so I only used Sass for nesting.
