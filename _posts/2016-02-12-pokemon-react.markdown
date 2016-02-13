@@ -21,4 +21,6 @@ I got a little practice with Jade, but there was not much in the HTML file. And 
 
 At the end of the project I threw everything on Express because of the React-Router. I used `browserHistory` for production, so I needed to configure my server. The <a href="https://github.com/reactjs/react-router/blob/latest/docs/guides/Histories.md" target="_blank">documentation</a> gives the reasoning behind it.
 
+The project can be seen on <a href="http://codepen.io/thomasvaeth/full/obJZqb/" target="_blank">Codepen</a> or the code can be cloned from <a href="https://github.com/thomasvaeth/pokemon-react" target="_blank">GitHub</a>.
+
 Webpack and Redux next?
