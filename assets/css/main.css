@@ -96,8 +96,8 @@ h1 {
 .site-nav a {
   text-decoration: none;
   float: left;
-  padding-right: 1.5em;
-  padding-bottom: 1.5em;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .site-nav a:hover {
