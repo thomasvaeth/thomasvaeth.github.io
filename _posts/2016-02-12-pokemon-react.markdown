@@ -26,3 +26,6 @@ I got a little practice with Jade, but there was not much in the HTML file. And 
 The project can be seen on <a href="http://codepen.io/thomasvaeth/full/obJZqb/" target="_blank">Codepen</a> and the code can be cloned from <a href="https://github.com/thomasvaeth/pokemon-react" target="_blank">GitHub</a>.
 
 Webpack and Redux next?
+
+Update Feb 15, 2016
+The calls to the Pokémon API were taking too long, so I added Mongoose since I was already using Express. Everything is being stored in a database except for the sprites. You can see the updated project on <a href="http://pokemon-react.herokuapp.com/" target="_blank">Heroku</a>.
