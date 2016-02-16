@@ -6,7 +6,7 @@ permalink: /portfolio/
 <h3>Pokémon React</h3>
 <a href="http://pokemon-react.herokuapp.com/" target="_blank"><img src="/assets/images/pokemon-1.png"></a>
 <p>Pokémon React is a full stack web application using React, ES2015, Express/Node.js, MongoDB, Jade, Sass, JavaScript, jQuery, Gulp, and Pokémon API.</p>
-<a href="http://codepen.io/thomasvaeth/full/obJZqb/" target="_blank"><i class="fa fa-laptop fa-lg"></i></a>
+<a href="http://pokemon-react.herokuapp.com/" target="_blank"><i class="fa fa-laptop fa-lg"></i></a>
 <a href="https://github.com/thomasvaeth/pokemon-react" target="_blank"><i class="fa fa-github fa-lg"></i></a>
 
 <h3>Samesies</h3>

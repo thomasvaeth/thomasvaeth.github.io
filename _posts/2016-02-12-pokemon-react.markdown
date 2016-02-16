@@ -27,5 +27,5 @@ The project can be seen on <a href="http://codepen.io/thomasvaeth/full/obJZqb/" 
 
 Webpack and Redux next?
 
-Update Feb 15, 2016
+Updated Feb 15, 2016<br>
 The calls to the Pokémon API were taking too long, so I added Mongoose since I was already using Express. Everything is being stored in a database except for the sprites. You can see the updated project on <a href="http://pokemon-react.herokuapp.com/" target="_blank">Heroku</a>.
