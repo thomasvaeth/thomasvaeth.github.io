@@ -29,3 +29,6 @@ Webpack and Redux next?
 
 Updated Feb 15, 2016<br>
 The calls to the Pokémon API were taking too long, so I added Mongoose since I was already using Express. Everything is being stored in a database except for the sprites. You can see the updated project on <a href="http://pokemon-react.herokuapp.com/" target="_blank">Heroku</a>.
+
+Updated Mar 22, 2016<br>
+I got rid of jQuery. I was only using it to make a single request on the PokemonCard and Pokedex components, so I installed `whatwg-fetch` to use fetch instead. The script file size went from 1.1MB (371KB minified) to 852KB (295KB minified).
