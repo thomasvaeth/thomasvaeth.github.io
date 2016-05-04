@@ -94,6 +94,8 @@ h1 {
 }
 
 .site-nav a {
+  position: relative;
+  color: #333;
   text-decoration: none;
   float: left;
   margin-right: 1.5em;
@@ -101,7 +103,28 @@ h1 {
 }
 
 .site-nav a:hover {
-  text-decoration: underline;
+  color: #333;
+}
+
+.site-nav a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.site-nav a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .site-tagline {
@@ -149,11 +172,34 @@ h1 {
 }
 
 .post-link {
+  position: relative;
+  color: #333;
   text-decoration: none;
 }
 
 .post-link:hover {
-  text-decoration: underline;
+  color: #333;
+}
+
+.post-link:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #333;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.post-link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .post-date {
