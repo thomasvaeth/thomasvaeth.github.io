@@ -250,6 +250,11 @@ code {
 
 .devicon {
   font-size: 2em;
+  -webkit-transition: color .4s ease-in-out;
+  -moz-transition: color .4s ease-in-out;
+  -o-transition: color .4s ease-in-out;
+  -ms-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
 }
 
 .devicon-html5-plain:hover {
