@@ -334,6 +334,11 @@ code {
   padding: 1em 2em;
   background: #444;
   text-decoration: none;
+  -webkit-transition: background .4s ease-in-out;
+  -moz-transition: background .4s ease-in-out;
+  -o-transition: background .4s ease-in-out;
+  -ms-transition: background .4s ease-in-out;
+  transition: background .4s ease-in-out;
 }
 
 a.contact-btn:hover {
@@ -417,6 +422,11 @@ a.previous:hover, a.next:hover {
 i {
   color: #444;
   padding: 0 .0625em;
+  -webkit-transition: color .4s ease-in-out;
+  -moz-transition: color .4s ease-in-out;
+  -o-transition: color .4s ease-in-out;
+  -ms-transition: color .4s ease-in-out;
+  transition: color .4s ease-in-out;
 }
 
 i:hover {
