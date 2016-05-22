@@ -390,20 +390,25 @@ a.contact-btn:hover {
   margin-bottom: 2em;
 }
 
-.previous {
-  float: left;
+.previous,
+.next {
   color: #f1f1f1;
   padding: 1em 2em;
   background: #444;
   text-decoration: none;
+  -webkit-transition: background .4s ease-in-out;
+  -moz-transition: background .4s ease-in-out;
+  -o-transition: background .4s ease-in-out;
+  -ms-transition: background .4s ease-in-out;
+  transition: background .4s ease-in-out;
+}
+
+.previous {
+  float: left;
 }
 
 .next {
   float: right;
-  color: #f1f1f1;
-  padding: 1em 2em;
-  background: #444;
-  text-decoration: none;
 }
 
 a.previous:hover, a.next:hover {
