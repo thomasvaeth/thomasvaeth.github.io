@@ -13,3 +13,8 @@ The SVG animation was featured on CodePen last weekend. It has 1,688 views at th
 <p data-height="265" data-theme-id="0" data-slug-hash="PNMPwB" data-default-tab="css,result" data-user="thomasvaeth" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/thomasvaeth/pen/PNMPwB/">Flexbox Sticky Navigation</a> by Thomas Vaeth (<a href="http://codepen.io/thomasvaeth">@thomasvaeth</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 I made this one yesterday. It is a navigation built using flexbox. I like using flexbox for navigations because it is easy to get the `ul` set up horizontally. `display: flex;`, `list-style-type: none;`, and it is ready to go. I used DOM instead of jQuery to change to a sticky navigation. I also converted a font to Base64. This small project is my favorite one so far because it can easily be used in any project and I plan on using it when needed.
+
+Updated May 23, 2016<br>
+<p data-height="265" data-theme-id="0" data-slug-hash="mPNzMR" data-default-tab="css,result" data-user="thomasvaeth" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/thomasvaeth/pen/mPNzMR/">Gnarly Dude!</a> by Thomas Vaeth (<a href="http://codepen.io/thomasvaeth">@thomasvaeth</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+I saw this font on a 404 page, so I had to use it for a quick update. I just added a `text-shadow` to the word using a monochromatic color.
