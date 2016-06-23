@@ -16,6 +16,7 @@ html {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background: #fafafa;
   background-image: url('../images/geometry.png');
   color: #333;
@@ -245,7 +246,6 @@ iframe {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
-  transition: filter 0.4s ease-in-out;
 
   &:hover {
     -webkit-filter: grayscale(0);
