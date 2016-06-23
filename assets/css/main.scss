@@ -15,6 +15,7 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 html {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
+  -webkit-font-smoothing: antialiased;
   background: #fafafa;
   background-image: url('../images/geometry.png');
   color: #333;
@@ -241,10 +242,13 @@ iframe {
 
 /* About Page */
 .headshot {
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
   transition: filter 0.4s ease-in-out;
 
   &:hover {
+    -webkit-filter: grayscale(0);
     filter: grayscale(0);
   }
 }
@@ -437,7 +441,7 @@ i {
 }
 
 .fa {
-  
+
   &-envelope-o:hover {
     color: #db4437;
   }
