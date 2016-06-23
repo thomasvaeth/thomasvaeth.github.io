@@ -233,7 +233,8 @@ code {
 }
 
 iframe {
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
 }
 
 #disqus_thread {
