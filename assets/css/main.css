@@ -85,7 +85,7 @@ figure {
 
 h1 {
   font-size: 1.5em;
-  margin: 1em 0 .3em 0;
+  margin: 1em 0 0.3em 0;
 }
 
 .site-title {
@@ -131,7 +131,7 @@ h1 {
   margin: 0 0 1.5em 0;
   font-weight: 300;
   color: #777;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 /* Post and Pages */
@@ -164,7 +164,7 @@ h1 {
 }
 
 .post h6 {
-  font-size: .725em;
+  font-size: 0.725em;
 }
 
 .post-title {
@@ -204,7 +204,7 @@ h1 {
 
 .post-date {
   color: #777;
-  font-size: .8em;
+  font-size: 0.8em;
 }
 
 .post p {
@@ -242,6 +242,21 @@ iframe {
 }
 
 /* About Page */
+.headshot {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+  -moz-transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+  -o-transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+  -ms-transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+  transition: filter 0.4s ease-in-out, -webkit-filter 0.4s ease-in-out;
+}
+
+.headshot:hover {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
 .devicon-list {
   list-style-type: none;
   padding: 0;
@@ -255,11 +270,11 @@ iframe {
 
 .devicon {
   font-size: 2em;
-  -webkit-transition: color .4s ease-in-out;
-  -moz-transition: color .4s ease-in-out;
-  -o-transition: color .4s ease-in-out;
-  -ms-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
+  -webkit-transition: color 0.4s ease-in-out;
+  -moz-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  -ms-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 .devicon-html5-plain:hover {
@@ -339,11 +354,11 @@ iframe {
   padding: 1em 2em;
   background: #444;
   text-decoration: none;
-  -webkit-transition: background .4s ease-in-out;
-  -moz-transition: background .4s ease-in-out;
-  -o-transition: background .4s ease-in-out;
-  -ms-transition: background .4s ease-in-out;
-  transition: background .4s ease-in-out;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  -ms-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 
 a.contact-btn:hover {
@@ -397,11 +412,11 @@ a.contact-btn:hover {
   padding: 1em 2em;
   background: #444;
   text-decoration: none;
-  -webkit-transition: background .4s ease-in-out;
-  -moz-transition: background .4s ease-in-out;
-  -o-transition: background .4s ease-in-out;
-  -ms-transition: background .4s ease-in-out;
-  transition: background .4s ease-in-out;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  -ms-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 
 .previous {
@@ -431,12 +446,12 @@ a.previous:hover, a.next:hover {
 
 i {
   color: #444;
-  padding: 0 .0625em;
-  -webkit-transition: color .4s ease-in-out;
-  -moz-transition: color .4s ease-in-out;
-  -o-transition: color .4s ease-in-out;
-  -ms-transition: color .4s ease-in-out;
-  transition: color .4s ease-in-out;
+  padding: 0 0.0625em;
+  -webkit-transition: color 0.4s ease-in-out;
+  -moz-transition: color 0.4s ease-in-out;
+  -o-transition: color 0.4s ease-in-out;
+  -ms-transition: color 0.4s ease-in-out;
+  transition: color 0.4s ease-in-out;
 }
 
 i:hover {
@@ -468,11 +483,11 @@ Pace
 Solution to hide everything on page until loaded: http://goo.gl/XGB1zj
 */
 body > :not(.pace),body:before,body:after {
-  -webkit-transition:opacity .4s ease-in-out;
-  -moz-transition:opacity .4s ease-in-out;
-  -o-transition:opacity .4s ease-in-out;
-  -ms-transition:opacity .4s ease-in-out;
-  transition:opacity .4s ease-in-out
+  -webkit-transition:opacity 0.4s ease-in-out;
+  -moz-transition:opacity 0.4s ease-in-out;
+  -o-transition:opacity 0.4s ease-in-out;
+  -ms-transition:opacity 0.4s ease-in-out;
+  transition:opacity 0.4s ease-in-out
 }
 
 body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-done):after {
@@ -510,7 +525,7 @@ body:not(.pace-done) > :not(.pace),body:not(.pace-done):before,body:not(.pace-do
   display: block;
   position: absolute;
   top: 0;
-  right: .5rem;
+  right: 0.5rem;
   content: attr(data-progress-text);
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;

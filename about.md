@@ -5,7 +5,9 @@ permalink: /about/
 ---
 
 <p>I am Thomas Vaeth and I am a web developer in Seattle.</p>
-<img src="/assets/images/me-color.jpeg">
+<figure class="headshot">
+	<img src="/assets/images/me-color.jpeg" alt="Headshot"/>
+</figure>
 <p>I love being able to learn something everyday by engaging in experiments and working on projects. One of my interests in web development that inspires me is to make everyday routines easier where your life is simplified and your free time is actually free.</p>
 <p>Here are some things I know:</p>
 <ul class="devicon-list">
