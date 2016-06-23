@@ -22,5 +22,9 @@ defaults:
       layout: "post"
       comments: true
 
+# Sass
+sass:
+  style: compressed
+
 # Gems
-gems: [jekyll-paginate]
+gems: [jekyll-paginate, octopress-autoprefixer]
