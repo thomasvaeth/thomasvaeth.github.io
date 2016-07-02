@@ -5,6 +5,8 @@ email: thomas.vaeth@gmail.com
 description: Thomas Vaeth is a web developer at Urban Influence in Seattle, Washington.
 baseurl: ""
 url: "http://thomasvaeth.com"
+twitter:
+  username: thomasvaeth
 paginate: 5
 paginate_path: "/blog/page-:num"
 
@@ -27,4 +29,4 @@ sass:
   style: compressed
 
 # Gems
-gems: [jekyll-paginate, octopress-autoprefixer]
+gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, octopress-autoprefixer]
