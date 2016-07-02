@@ -5,7 +5,7 @@ date: 2015-09-08
 related: ["Random Quote Generator"]
 ---
 <p>I had a busy Labor Day weekend. After finishing the random quote generator I jumped straight into another <a href="http://www.freecodecamp.com/challenges/zipline-show-the-local-weather">project</a> on FreeCodeCamp. This one was to show the visitor&rsquo;s local weather in Fahrenheit or Celsius and to have a background picture similar to what it looked like outside.</p>
-<img src="/assets/images/weather-1.png">
+<img src="/assets/images/fcc/weather-1.png" alt="Local Weather Screenshot"/>
 <p>I used the same Bootsrap template that I used for the random quote generator because it was another project for developing my JavaScript and jQuery skills.</p>
 <script src="https://gist.github.com/thomasvaeth/e83fbf199d5a94ada4ce.js"></script>
 <p>The project required the use of two APIs. I used an <a href="http://ip-api.com/#">API</a> to get the IP address of the visitor to find out where they were from. I also used an <a href="http://openweathermap.org/api">API</a> to get the local weather of the visitor based on the latitude and longitude of the IP address. The temparture was easy to get and convert from Kelvin to Fahrenheit or Celsius. The weather proved a little more difficult because I could not find a list of all the possible outputs. I had to use the <a href="http://openweathermap.org/weather-conditions">weather icon</a> output, which has two possibilities for day and night so that is why I used a substring of only the first two characters. Whatever the two character string comes back as is what the background image will be. It is not as accurate as the main weather output, but it still works for what I am doing.</p>

@@ -8,7 +8,7 @@ I wrote this for the <a href="https://www.freecodecamp.com/wiki/en/gulp-basics/"
 
 Gulp can do **a lot**. This is just an overview of the basics. Once you understand this, then you can add more to Gulp on your own. The documentation for different packages I have used has been great and we also have a great community on FreeCodeCamp ready to help with any project.
 
-<img src="/assets/images/gulp-basics/gulp-1.jpg" alt="Gulp Logo"/>
+<img src="/assets/images/fcc/gulp-1.jpg" alt="Gulp Logo"/>
 
 <h2>What is Gulp?</h2>
 Gulp is a JavaScript build/task runner. Are you using Jade, but need HTML? Sass, but need CSS? CoffeeScript, but need JavaScript? Or maybe you just want to concatenate and/or minify what you already have? Gulp can do all of this for you easily, so you do not have to keep going back to your terminal after every little change.

@@ -6,9 +6,9 @@ related: ["Gulp", "React on Free Code Camp"]
 ---
 The past week has been all about Pokémon and React in ES2015. I had so many problems, but I learned so much. I have been wanting to build something with the Pokémon API for a while and finally got the chance to do so. Unfortunately the sprites are not on V2 of the API yet, so the homepage is doing two calls to V1 and the Pokédex is doing one call to V2.
 
-<img src="/assets/images/pokemon-1.png">
+<img src="/assets/images/misc/pokemon-1.png" alt="Pokemon Screenshot"/>
 
-<img src="/assets/images/pokemon-2.png">
+<img src="/assets/images/misc/pokemon-2.png" alt="Pokemon Screenshot"/>
 
 I was using five CDNs for everything I needed for React to work and the page was taking forever to load. I wanted to get rid of as many as I could. It took me a few hours to figure out, but I finally got what I needed. I installed the following packages to speed everything up: `babel-preset-es2015`, `babel-preset-react`, `babelify`, `browserify`, `gulp`, `gulp-rename`, `gulp-uglify`, `jquery`, `react`, `react-dom`, `react-router`, and `vinyl-source-stream`.
 
