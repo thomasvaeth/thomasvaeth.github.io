@@ -5,7 +5,7 @@ date: 2016-02-06
 related: ["Free Code Camp", "Random Quote Generator"]
 ---
 
-<img src="/assets/images/free-code-camp-2.png">
+<img src="/assets/images/fcc/free-code-camp-2.png" alt="FreeCodeCamp Certificate"/>
 
 I went back and finished Free Code Camp's Front End Development Program. 38 algorithms and 10 front end projects. I did a lot of it before starting General Assembly, but I wanted to go back and finish the remaining projects. I got to use some combination of HTML, CSS, JavaScript, jQuery, AngularJS, CoffeeScript, and Jade (I do not really like Jade, but maybe it is because I am so use to seeing HTML).
 
