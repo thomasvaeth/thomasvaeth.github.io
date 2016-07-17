@@ -237,6 +237,15 @@ iframe {
   max-width: 100% !important;
 }
 
+/* Portfolio Page */
+.portfolio-preview {
+
+  a {
+    margin: 0 0.125em;
+    text-decoration: none;
+  }
+}
+
 /* About Page */
 .headshot {
   -webkit-filter: grayscale(100%);
@@ -424,6 +433,11 @@ a.previous:hover, a.next:hover {
   padding: 2em 0;
   color: #444;
   text-align: center;
+
+  a {
+    margin: 0.125em;
+    text-decoration: none;
+  }
 }
 
 i {
@@ -437,6 +451,9 @@ i {
 }
 
 .fa {
+  font-size: 1.33333333em;
+  line-height: .75em;
+  vertical-align: -15%;
 
   &-envelope-o:hover {
     color: #db4437;
