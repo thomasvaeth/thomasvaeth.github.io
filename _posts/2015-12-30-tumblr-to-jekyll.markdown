@@ -5,7 +5,7 @@ date: 2015-12-30
 ---
 This was my blog on Tumblr...
 
-<img src="/assets/images/blog/tumblr-1.png" alt="Blog Screenshot"/>
+<img src="/assets/images/misc/tumblr-1.png" alt="Blog Screenshot"/>
 
 But then I made the switch to <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>. Jekyll is a simple, blog aware, static site generator. It is bundled as a Ruby gem, but you only need to know HTML to make your website. You do not even need to know CSS or JavaScript yet unless you wanted to customize your site from the template Jekyll starts you on. Why is this better than using Tumblr (or WordPress)? The main reason I made the switch is the pages load faster since there is no database or content management system (CMS) for each page.
 
