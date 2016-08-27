@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<p>I am Thomas Vaeth and I am a web developer in Seattle.</p>
+<p>I am Thomas Vaeth and I am a web developer at Urban Influence in Seattle.</p>
 <figure class="headshot">
 	<img src="/assets/images/me-color.jpeg" alt="Headshot"/>
 </figure>
@@ -17,15 +17,15 @@ permalink: /about/
 	<li><i class="devicon devicon-jquery-plain" title="jQuery"></i></li>
 	<li><i class="devicon devicon-nodejs-plain" title="Node.js"></i></li>
 	<li><i class="devicon devicon-github-plain" title="GitHub"></i></li><br>
-	<li><i class="devicon devicon-angularjs-plain" title="AngularJS"></i></li>
 	<li><i class="devicon devicon-react-original" title="React"></i></li>
+	<li><i class="devicon devicon-angularjs-plain" title="AngularJS"></i></li>
+	<li><i class="devicon devicon-sass-original" title="Sass"></i></li>
 	<li><i class="devicon devicon-bootstrap-plain" title="Bootstrap"></i></li>
 	<li><i class="devicon devicon-foundation-plain" title="Foundation"></i></li>
-	<li><i class="devicon devicon-sass-original" title="Sass"></i></li>
 	<li><i class="devicon devicon-gulp-plain" title="Gulp"></i></li><br>
+	<li><i class="devicon devicon-wordpress-plain" title="WordPress"></i></li>
 	<li><i class="devicon devicon-heroku-original" title="Heroku"></i></li>
 	<li><i class="devicon devicon-mongodb-plain" title="MongoDB"></i></li>
-	<li><i class="devicon devicon-postgresql-plain" title="PostgreSQL"></i></li>
 	<li><i class="devicon devicon-python-plain" title="Python"></i></li>
 	<li><i class="devicon devicon-ruby-plain" title="Ruby"></i></li>
 	<li><i class="devicon devicon-rails-plain" title="Ruby on Rails"></i></li>
