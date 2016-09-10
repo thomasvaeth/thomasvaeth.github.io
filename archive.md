@@ -3,7 +3,6 @@ layout: page
 title: Archive
 permalink: /archive/
 ---
-
 <div class="post-list">
   <ul>
     {% for post in site.posts %}
