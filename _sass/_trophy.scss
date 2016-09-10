@@ -1,0 +1,184 @@
+/**
+ * Base Variables
+ */
+$font-header: 'Space Mono', monospace;
+$font-body: 'Inconsolata', monospace;
+
+$color-alpha: #9f8f68;
+$color-alpha--light: #f5f3ef;
+
+$color-black: #0a0a0a;
+$color-grey: #f8f9f9;
+$color-white: #fff;
+
+$mq-xs: 20em;
+$mq-sm: 30em;
+$mq-md: 54em;
+$mq-lg: 64em;
+$mq-xl: 76.5em;
+$mq-xxl: 114em;
+
+/**
+ * Mixins
+ * Button Slide
+ * Need to still add hover state in parent element
+ * box-shadow: inset 175px 0 0 0 $color-alpha;
+ * color: $color-white;
+ */
+@mixin button-slide($pad: 0.5em, $border: 3px) {
+  display: inline-block;
+  padding: $pad;
+
+  font-family: $font-header;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-alpha;
+  border: $border solid $color-alpha;
+  box-shadow: inset 0 0 0 0 $color-alpha;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    box-shadow: inset 200px 0 0 0 $color-alpha;
+    color: $color-white;
+  }
+}
+
+/**
+ * Base Settings/Overwrite Normalize
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 1em;
+
+  font-family: $font-body;
+  font-feature-settings: 'liga' 0;
+  font-size: 100%;
+  line-height: 1.6;
+  background-color: $color-grey;
+
+  @media (min-width: $mq-xs) {
+    font-size: 102.5%;
+  }
+
+  @media (min-width: $mq-sm) {
+    font-size: 105%;
+  }
+
+  @media (min-width: $mq-md) {
+    font-size: 107.5%;
+  }
+
+  @media (min-width: $mq-lg) {
+    font-size: 110%;
+  }
+
+  @media (min-width: $mq-xl) {
+    font-size: 115%;
+  }
+
+  @media (min-width: $mq-xxl) {
+    font-size: 125%;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+h1 {
+  $fontSize: 3em;
+
+  margin: 0;
+
+  font-family: $font-header;
+  color: $color-alpha;
+
+  @media (min-width: $mq-md) {
+    font-size: $fontSize;
+  }
+
+  @media (min-width: $mq-xl) {
+    font-size: $fontSize + 0.5em;
+  }
+}
+
+span {
+  display: block;
+
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+  transition: color 0.4s ease-in-out;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color-alpha;
+  }
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+/**
+ * Text Selection
+ */
+::selection {
+  color: $color-white;
+  background-color: $color-alpha;
+  text-shadow: none;
+}
+
+/**
+ * Trophy
+ */
+.trophy {
+  text-align: center;
+
+  &__container {
+    padding-top: 1em;
+  }
+
+  &__link {
+    @include button-slide();
+
+    &:last-child {
+      
+      @media (max-width: $mq-xs) {
+        margin-top: 0.5em;
+      }
+    }
+  }
+}
+
+/**
+ * Footer
+ */
+.footer {
+  position: absolute;
+  bottom: 1em;
+
+  &__list {
+    display: flex;
+
+    & > *:not(:last-child) {
+      margin-right: 0.5em;
+    }
+  }
+}

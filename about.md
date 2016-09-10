@@ -3,7 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-
 <p>I am Thomas Vaeth and I am a web developer at Urban Influence in Seattle.</p>
 <figure class="headshot">
 	<img src="/assets/images/me-color.jpeg" alt="Headshot"/>
