@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Trophy – A Blog Theme for Jekyll"
-date: 2016-08-15
+date: 2016-09-11
 related: ["Tumblr to Jekyll"]
 description: Trophy is a blog theme for Jekyll built by Thomas Vaeth in Seattle, WA using Jekyll, HTML, Sass, and JavaScript. It is avaiable to download for free on GitHub.
 image: http://thomasvaeth.com/assets/images/trophy/screenshot-1.png
