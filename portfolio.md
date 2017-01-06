@@ -3,6 +3,14 @@ layout: page
 title: Portfolio
 permalink: /portfolio/
 ---
+<h3>Trophy</h3>
+<a href="http://thomasvaeth.com/trophy/" target="_blank"><img src="/assets/images/trophy/screenshot-1.png" alt="Trophy Desktop"/></a>
+<p>Trophy is a blog theme using Jekyll, HTML, Sass, JavaScript, and WOW.js.</p>
+<div class="portfolio-preview">
+  <a href="http://thomasvaeth.com/trophy-jekyll/" target="_blank"><i class="fa fa-laptop"></i></a>
+  <a href="https://github.com/thomasvaeth/trophy-jekyll" target="_blank"><i class="fa fa-github"></i></a>
+</div>
+
 <h3>Pokémon React</h3>
 <a href="http://pokemon-react.herokuapp.com/" target="_blank"><img src="/assets/images/misc/pokemon-1.png" alt="Pokemon Desktop"/></a>
 <p>Pokémon React is a full stack web application using React, ES2015, Express/Node.js, MongoDB, Jade, Sass, JavaScript, jQuery, Gulp, and Pokémon API.</p>
