@@ -1,38 +1,63 @@
 ---
 layout: default
 ---
-<div class="home" itemscope itemtype="http://schema.org/Blog">
+<section class="profile">
+  <div class="profile__container">
+    <p>Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was an Associate Scientist at Johnson &amp; Johnson, but now he's a Web Developer at Urban Influence. 👨‍🔬 👨‍💻 You can reach him at <a class="profile__link" href="mailto:thomas.vaeth@gmail.com"><span>thomas.vaeth@</span>g<span>mail.com</span></a>.</p>
+  </div>
+</section>
 
-  {% for post in paginator.posts %}
-    <article class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-      <h2 class="post-title" itemprop="name">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" itemprop="url">{{ post.title }}</a>
-      </h2>
-
-      <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%B %d, %Y' }}</time>
-
-      <div itemprop="description">
-        {{ post.content }}
-      </div>
-
-      <hr>
-    </article>
-  {% endfor %}
-
-  {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-      {% else %}
-        <span class="inactive previous">Previous</span>
-      {% endif %}
-
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-      {% else %}
-        <span class="inactive next">Next</span>
-      {% endif %}
-    </div>
-  {% endif %}
-
-</div>
+<section class="portfolio">
+  <div class="portfolio__container">
+    <h2 class="portfolio__header">Recent Work</h2>
+    <ul class="portfolio__list">
+      <li class="portfolio__item">
+        <a href="https://themeforest.net/item/cartwheel-a-simple-clean-portfolio-theme-for-jekyll/19438322" target="_blank">
+          <figure class="portfolio__img">
+            <img src="/assets/images/cartwheel.png" alt="Cartwheel"/>
+          </figure>
+        </a>
+      </li>
+      <li class="portfolio__item">
+        <figure class="portfolio__img">
+          <img src="/assets/images/grayscale.png" alt="Grayscale Design Studio"/>
+        </figure>
+      </li>
+      <li class="portfolio__item">
+        <a href="http://inrix.com" target="_blank">
+          <figure class="portfolio__img">
+            <img src="/assets/images/inrix.png" alt="INRIX"/>
+          </figure>
+        </a>
+      </li>
+      <li class="portfolio__item">
+        <a href="http://thomasvaeth.com/instafetch.js" target="_blank">
+          <figure class="portfolio__img">
+            <img src="/assets/images/instafetch.png" alt="Instafetch.js"/>
+          </figure>
+        </a>
+      </li>
+      <li class="portfolio__item">
+        <a href="http://naf.org/annual-report" target="_blank">
+          <figure class="portfolio__img">
+            <img src="/assets/images/naf.png" alt="NAF"/>
+          </figure>
+        </a>
+      </li>
+      <li class="portfolio__item">
+        <a href="http://thomasvaeth.com/trophy" target="_blank">
+          <figure class="portfolio__img">
+            <img src="/assets/images/trophy.png" alt="Trophy"/>
+          </figure>
+        </a>
+      </li>
+      <li class="portfolio__item">
+        <a href="http://thenewbev.com" target="_blank">
+          <figure class="portfolio__img">
+            <img src="/assets/images/new-bev.png" alt="New Beverly Cinema"/>
+          </figure>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>

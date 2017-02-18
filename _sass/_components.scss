@@ -1,0 +1,78 @@
+/**
+ * Profile
+ */
+.profile {
+  padding-right: 1em;
+  padding-left: 1em;
+
+  &__container {
+    max-width: 28em;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+  }
+
+  &__link {
+
+    span {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        height: 2px;
+        width: 100%;
+
+        background-color: $color-alpha;
+      }
+    }
+  }
+}
+
+/**
+ * Portfolio
+ */
+.portfolio {
+  margin-top: $margin;
+  margin-bottom: $margin;
+  padding-right: 2em;
+  padding-left: 2em;
+
+  &__container {
+    max-width: 25em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__header {
+    text-align: center;
+  }
+
+  &__list {
+    padding-top: 3em;
+
+    list-style-type: none;
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: $margin-sm;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: $margin-sm;
+    }
+  }
+
+  &__img {
+
+    img {
+      width: 100%;
+    }
+  }
+}
