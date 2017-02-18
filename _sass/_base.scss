@@ -1,0 +1,80 @@
+/**
+ * Base Variables
+ */
+$font: "Plain", Arial, Helvetica, sans-serif;
+
+$color-alpha: #0048ff;
+
+$color-black: #000;
+$color-grey: #f2f2f2;
+$color-white: #fff;
+
+$mq-xs: 20em;
+$mq-sm: 30em;
+$mq-md: 54em;
+$mq-lg: 64em;
+$mq-xl: 76.5em;
+$mq-xxl: 114em;
+
+/**
+ * Base Settings/Overwrite Normalize
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  font-weight: 500;
+  font-size: 100%;
+  line-height: 1.6;
+
+  @media (min-width: $mq-sm) {
+    font-size: 102.5%;
+  }
+
+  @media (min-width: $mq-md) {
+    font-size: 105%;
+  }
+
+  @media (min-width: $mq-lg) {
+    font-size: 107.5%;
+  }
+
+  @media (min-width: $mq-xl) {
+    font-size: 110%;
+  }
+
+  @media (min-width: $mq-xxl) {
+    font-size: 115%;
+  }
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ol, ul {
+  margin: 0;
+  padding: 0;
+}

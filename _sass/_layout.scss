@@ -1,0 +1,38 @@
+/**
+ * Body
+ */
+body {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/**
+ * Footer
+ */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__list {
+    display: flex;
+    margin-top: 2em;
+    margin-bottom: 2em;
+
+    list-style-type: none;
+
+    & > * {
+
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
+    }
+  }
+
+  a {
+    font-size: 1.1em;
+  }
+}

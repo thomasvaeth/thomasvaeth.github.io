@@ -1,0 +1,59 @@
+/**
+ * Profile
+ */
+.profile {
+  @extend %section;
+
+  padding-right: 1em;
+  padding-left: 1em;
+
+  &__container {
+    max-width: 28em;
+    margin-right: auto;
+    margin-left: auto;
+
+    text-align: center;
+  }
+}
+
+/**
+ * Portfolio
+ */
+.portfolio {
+  @extend %section;
+
+  &__container {
+    max-width: 25em;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &__header {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  &__list {
+    padding-top: 3em;
+
+    list-style-type: none;
+  }
+
+  &__item {
+
+    &:not(:first-child) {
+      margin-top: 4em;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4em;
+    }
+  }
+
+  &__img {
+
+    img {
+      width: 100%;
+    }
+  }
+}

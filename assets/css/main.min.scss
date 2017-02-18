@@ -1,4 +1,11 @@
 ---
 ---
 
-@import '_main';
+@import 
+  '_base',
+  'extends',
+  '_layout',
+  '_components',
+  '_helpers'
+;
+
