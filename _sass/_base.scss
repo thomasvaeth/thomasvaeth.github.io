@@ -1,7 +1,7 @@
 /**
  * Base Variables
  */
-$font: "Plain", Arial, Helvetica, sans-serif;
+$font: "Sofia", Arial, Helvetica, sans-serif;
 
 $color-alpha: #0048ff;
 
@@ -15,6 +15,9 @@ $mq-md: 54em;
 $mq-lg: 64em;
 $mq-xl: 76.5em;
 $mq-xxl: 114em;
+
+$margin: 6em;
+$margin-sm: 4em;
 
 /**
  * Base Settings/Overwrite Normalize
@@ -74,7 +77,38 @@ img {
   max-width: 100%;
 }
 
-ol, ul {
+ul {
   margin: 0;
   padding: 0;
+}
+
+/**
+ * Text Selection
+ */
+::selection {
+  color: $color-white;
+  background-color: $color-black;
+  text-shadow: none;
+}
+
+/**
+ * Scrollbar
+ */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 0; 
+  border-radius: 0;
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: $color-black; 
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: $color-black; 
 }

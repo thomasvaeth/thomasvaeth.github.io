@@ -2,8 +2,6 @@
  * Profile
  */
 .profile {
-  @extend %section;
-
   padding-right: 1em;
   padding-left: 1em;
 
@@ -20,7 +18,10 @@
  * Portfolio
  */
 .portfolio {
-  @extend %section;
+  margin-top: $margin;
+  margin-bottom: $margin;
+  padding-right: 2em;
+  padding-left: 2em;
 
   &__container {
     max-width: 25em;
@@ -42,11 +43,11 @@
   &__item {
 
     &:not(:first-child) {
-      margin-top: 4em;
+      margin-top: $margin-sm;
     }
 
     &:not(:last-child) {
-      margin-bottom: 4em;
+      margin-bottom: $margin-sm;
     }
   }
 

@@ -4,9 +4,24 @@
 body {
   position: relative;
 
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  background-color: $color-grey;
+}
+
+/**
+ * Header
+ */
+.header {
+  margin-top: $margin;
+  margin-bottom: $margin-sm;
+
+  &__img {
+
+    img {
+      width: 3em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 /**
@@ -16,11 +31,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: $margin-sm;
+  padding-right: 1em;
+  padding-left: 1em;
 
   &__list {
     display: flex;
-    margin-top: 2em;
-    margin-bottom: 2em;
 
     list-style-type: none;
 
@@ -33,6 +49,6 @@ body {
   }
 
   a {
-    font-size: 1.1em;
+    font-size: 0.9em;
   }
 }
