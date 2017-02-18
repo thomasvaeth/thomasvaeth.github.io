@@ -5,7 +5,7 @@ var PleaseDontGo = (function() {
     settings: {
       originalTitle: document.title,
       // New title when tab is changed
-      newTitle: 'You make me sick.',
+      newTitle: 'You make me sick',
       favicon: document.querySelectorAll('[rel="icon"]')[0],
       originalFavicon: document.querySelectorAll('[rel="icon"]')[0].href,
       // New favicon when tab is changed
