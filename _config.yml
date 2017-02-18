@@ -1,32 +1,21 @@
 # Site settings
-title: Thomas Vaeth
-tagline: Full Stack Web Developer
 email: thomas.vaeth@gmail.com
-description: Thomas Vaeth is a web developer at Urban Influence in Seattle, Washington.
-baseurl: ""
+
+# SEO settings
+title: Thomas Vaeth
+description: Thomas Vaeth is a Web Developer at Urban Influence in Seattle, Washington.
 url: "http://thomasvaeth.com"
-twitter:
-  username: thomasvaeth
-paginate: 5
-paginate_path: "/blog/page-:num"
+twitter_username: thomasvaeth
+default_img: https://source.unsplash.com/qHblAFPy2uU/2000x1200
 
 # Build settings
+exclude: ["CNAME", "Gemfile", "Gemfile.lock", "README.md"]
 markdown: kramdown
 permalink: pretty
-
-# Default settings
-defaults:
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true
 
 # Sass
 sass:
   style: compressed
 
 # Gems
-gems: [jekyll-paginate, jekyll-seo-tag, jekyll-sitemap, octopress-autoprefixer]
+gems: [octopress-autoprefixer]
