@@ -30,6 +30,7 @@ body {
   font-family: $font;
   font-weight: 500;
   font-size: 100%;
+  -webkit-font-smoothing: antialiased;
   line-height: 1.6;
 
   @media (min-width: $mq-sm) {
