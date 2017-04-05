@@ -56,6 +56,10 @@ body {
 
   &__img {
     @extend .header__img;
+
+    &:hover {
+      animation: shaka 0.6s ease-in-out;
+    }
   }
 
   &__list {
