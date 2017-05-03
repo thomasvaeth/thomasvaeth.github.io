@@ -41,10 +41,9 @@
   </script>
   <script>
     function trackOutboundLink(url) {
-       ga('send', 'event', 'outbound', 'click', url, {
-         'transport': 'beacon',
-         'hitCallback': function(){document.location = url;}
-       });
+      ga('send', 'event', 'outbound', 'click', url, {});
+
+      return true;
     }
   </script>
 </head>
