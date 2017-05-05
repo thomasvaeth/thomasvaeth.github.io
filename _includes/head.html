@@ -41,8 +41,7 @@
   </script>
   <script>
     function trackOutboundLink(url) {
-      ga('send', 'event', 'outbound', 'click', url, {});
-
+      ga('send', 'event', 'Social Media Link', 'click', url, {transport: 'beacon'});
       return true;
     }
   </script>
