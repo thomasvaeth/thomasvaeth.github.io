@@ -1,6 +1,9 @@
 # [Thomas Vaeth](http://thomasvaeth.com/)
 
 ## Awards
+[INRIX](https://www.awwwards.com/sites/inrix)
+![INRIX](https://github.com/thomasvaeth/thomasvaeth.github.io/blob/master/assets/images/awwwards-inrix.jpg "CSS Design Awards Special Kudos - INRIX")
+
 [INRIX](http://cssdesignawards.com/sites/inrix/30488/)
 ![INRIX](https://github.com/thomasvaeth/thomasvaeth.github.io/blob/master/assets/images/cssda-inrix.jpg "CSS Design Awards Special Kudos - INRIX")
 
