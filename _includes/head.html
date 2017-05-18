@@ -41,11 +41,7 @@
   </script>
   <script>
     function trackOutboundLink(url, type) {
-      if (type === 'portfolio') {
-        ga('send', 'event', 'Portfolio Link', 'click', url, {transport: 'beacon'});
-      } else if (type === 'social') {
-        ga('send', 'event', 'Social Media Link', 'click', url, {transport: 'beacon'});
-      }
+      ga('send', 'event', type.charAt(0).toUpperCase() + type.slice(1) + ' Link', 'click', url, {transport: 'beacon'});
       
       return true;
     }
