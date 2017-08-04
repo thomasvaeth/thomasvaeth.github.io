@@ -5,7 +5,7 @@
 ![S&P Real Estate](https://github.com/thomasvaeth/thomasvaeth.github.io/blob/master/assets/images/awwwards-sandp.jpg "Awwwards Honorable Mention - S&P Real Estate")
 
 [S&P Real Estate](http://cssdesignawards.com/sites/s-p-real-estate/31111/)
-![S&P Real Estate](https://github.com/thomasvaeth/thomasvaeth.github.io/blob/master/assets/images/cssda-inrix.jpg "CSS Design Awards Special Kudos - S&P Real Estate")
+![S&P Real Estate](https://github.com/thomasvaeth/thomasvaeth.github.io/blob/master/assets/images/cssda-sandp.jpg "CSS Design Awards Special Kudos - S&P Real Estate")
 
 [INRIX](https://www.awwwards.com/sites/inrix)
 ![INRIX](https://github.com/thomasvaeth/thomasvaeth.github.io/blob/master/assets/images/awwwards-inrix.jpg "Awwwards Honorable Mention - INRIX")
