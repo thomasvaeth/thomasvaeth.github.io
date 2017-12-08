@@ -1,9 +1,6 @@
----
----
-
-/**
- * Base Variables
- */
+//----------------------------------------------
+// Config / Base
+//---------------------------------------------- 
 $font-header: "Space Mono", monospace;
 $font-body: "Inconsolata", monospace;
 
@@ -21,13 +18,9 @@ $mq-lg: 64em;
 $mq-xl: 76.5em;
 $mq-xxl: 114em;
 
-/**
- * Mixins
- * Button Slide
- * Need to still add hover state in parent element
- * box-shadow: inset 175px 0 0 0 $color-alpha;
- * color: $color-white;
- */
+//----------------------------------------------
+// Mixins
+//---------------------------------------------- 
 @mixin button-slide($pad: 0.5em, $border: 3px) {
   display: inline-block;
   padding: $pad;
@@ -47,12 +40,15 @@ $mq-xxl: 114em;
   }
 }
 
-/**
- * Base Settings/Overwrite Normalize
- */
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+//----------------------------------------------
+// Vendor: Normalize
+//---------------------------------------------- 
+@import 'vendor/_normalize';
+@import 'base/_normalizer';
+
+//----------------------------------------------
+// Base
+//---------------------------------------------- 
 
 body {
   display: flex;
@@ -121,18 +117,18 @@ span {
   text-transform: uppercase;
 }
 
-/**
- * Text Selection
- */
+//----------------------------------------------
+// Text Selection
+//---------------------------------------------- 
 ::selection {
   color: $color-white;
   background-color: $color-alpha;
   text-shadow: none;
 }
 
-/**
- * Trophy
- */
+//----------------------------------------------
+// Trophy
+//---------------------------------------------- 
 .trophy {
   text-align: center;
 

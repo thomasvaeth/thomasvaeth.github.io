@@ -1,0 +1,52 @@
+//----------------------------------------------   
+//  Main Styling Build
+//  
+//  Tools:      Configs, variables
+//  Base:       Styles for base level elements
+//  Vendor:     Vendor specific styles
+//  Regions:    Main layouts
+//  Components: Modular components -> Most styles
+//  Utils:      Utilities, animations
+//---------------------------------------------- 
+
+//----------------------------------------------
+// Tools: Main Config & Global Variables
+//---------------------------------------------- 
+@import 'tools/_config';
+
+//----------------------------------------------
+// Vendor: Normalize
+//---------------------------------------------- 
+@import 'vendor/_normalize';
+@import 'base/_normalizer';
+
+//----------------------------------------------   
+// Base
+//---------------------------------------------- 
+@import 'base/_links';
+@import 'base/_lists';
+@import 'base/_media';
+@import 'base/_typography';
+
+//----------------------------------------------   
+// Vendor
+//----------------------------------------------  
+
+//----------------------------------------------
+// Regions
+//---------------------------------------------- 
+@import 'regions/_footer';
+@import 'regions/_header';
+
+//----------------------------------------------   
+// Components
+//---------------------------------------------- 
+@import 'components/_one-page-love';
+@import 'components/_portfolio';
+@import 'components/_profile';
+
+//----------------------------------------------   
+// Utils
+//---------------------------------------------- 
+@import 'utils/_animations-keyframes';
+@import 'utils/_decor';

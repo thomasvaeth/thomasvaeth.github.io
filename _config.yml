@@ -1,5 +1,6 @@
 # Site settings
 email: thomas.vaeth@gmail.com
+google_analytics: UA-57782903-1
 
 # SEO settings
 title: Thomas Vaeth
@@ -9,13 +10,18 @@ twitter_username: thomasvaeth
 default_img: http://thomasvaeth.com/assets/images/me.jpg
 
 # Build settings
-exclude: ["CNAME", "Gemfile", "Gemfile.lock", "README.md"]
 markdown: kramdown
 permalink: pretty
-
-# Sass
-sass:
-  style: compressed
-
-# Gems
-gems: [octopress-autoprefixer]
+compress_html:
+  clippings: all
+  comments: all
+  startings: [html, head, body]
+exclude:
+  - node_modules
+  - .DS_Store
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - README.md

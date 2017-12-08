@@ -1,0 +1,9 @@
+//----------------------------------------------
+// Shaka
+//---------------------------------------------- 
+@keyframes shaka {
+  25% { transform: rotate(8deg); }
+  50% { transform: rotate(0); }
+  75% { transform: rotate(-8deg); }
+  100% { transform: rotate(0); }
+}

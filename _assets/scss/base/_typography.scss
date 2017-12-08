@@ -1,0 +1,71 @@
+//----------------------------------------------
+// Base typography
+//---------------------------------------------- 
+body {
+  font-family: $font;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  line-height: $base-lineheight;
+  color: $color-black;
+  background-color: $color-grey;
+}
+
+//----------------------------------------------
+// Fluid body sizing
+//---------------------------------------------- 
+body {
+  font-size: 100%;
+
+  @media (min-width: $mq-small) {
+    font-size: 102.5%;
+  }
+
+  @media (min-width: $mq-med) {
+    font-size: 105%;
+  }
+
+  @media (min-width: $mq-large) {
+    font-size: 107.5%;
+  }
+
+  @media (min-width: $mq-xlarge) {
+    font-size: 110%;
+  }
+
+  @media (min-width: $mq-xxlarge) {
+    font-size: 115%;
+  }
+}
+
+//----------------------------------------------
+// Headings
+//---------------------------------------------- 
+h1,
+h2 {
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+}
+
+//----------------------------------------------
+// Paragraphs
+//---------------------------------------------- 
+p {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+
+  font-size: 1.1em;
+}
+
+//----------------------------------------------
+// Selection
+//---------------------------------------------- 
+::selection {
+  color: $color-white;
+  background-color: $color-alpha;
+  text-shadow: none;
+}

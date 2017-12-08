@@ -1,0 +1,38 @@
+//----------------------------------------------
+// Profile
+//---------------------------------------------- 
+.profile {
+  padding: {
+    right: 1em;
+    left: 1em;
+  }
+
+  &__container {
+    max-width: 30em;
+    margin: {
+      right: auto;
+      left: auto;
+    }
+
+    text-align: center;
+  }
+
+  &__link {
+
+    span {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        height: 2px;
+        width: 100%;
+
+        background-color: $color-alpha;
+      }
+    }
+  }
+}
