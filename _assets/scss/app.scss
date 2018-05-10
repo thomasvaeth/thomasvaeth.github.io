@@ -1,18 +1,26 @@
 //----------------------------------------------   
 //  Main Styling Build
 //  
-//  Tools:      Configs, variables
+//  Tools:      Configs, variables, extends, mixins
 //  Base:       Styles for base level elements
 //  Vendor:     Vendor specific styles
 //  Regions:    Main layouts
 //  Components: Modular components -> Most styles
-//  Utils:      Utilities, animations
+//  Utils:      Helper classes, utilities, animations
 //---------------------------------------------- 
 
 //----------------------------------------------
 // Tools: Main Config & Global Variables
 //---------------------------------------------- 
 @import 'tools/_config';
+
+//----------------------------------------------
+// Tools: Mixins
+//---------------------------------------------- 
+
+//----------------------------------------------
+// Tools: Extends
+//---------------------------------------------- 
 
 //----------------------------------------------
 // Vendor: Normalize

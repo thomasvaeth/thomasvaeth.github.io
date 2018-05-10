@@ -1,17 +1,23 @@
-# Site settings
+# Site/SEO settings
 email: thomas.vaeth@gmail.com
+paginate: 12
+paginate_path: page/:num
+permalink: /:year/:month/:day/:title
 google_analytics: UA-57782903-1
 
-# SEO settings
+name: Thomas Vaeth
 title: Thomas Vaeth
-description: Thomas Vaeth is a Software Engineer at Getty Images in Seattle, Washington.
+description: >
+  Thomas Vaeth is a Software Engineer at Getty Images in Seattle, Washington.
 url: http://thomasvaeth.com
 twitter_username: thomasvaeth
 default_img: http://thomasvaeth.com/assets/images/me.jpg
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
 compress_html:
   clippings: all
   comments: all
