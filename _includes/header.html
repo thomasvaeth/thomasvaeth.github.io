@@ -1,10 +1,5 @@
 <header class="header">
-  <figure class="header__img">
-    <img src="/assets/images/logo.png" alt="Thomas Vaeth"/>
-  </figure>
-  <div class="header__title">
-    <div class="header__subtitle">
-      <h1>Thomas Vaeth</h1>
-    </div>
-  </div>
+  <a class="header__title" href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
+
+  {% include navigation.html %}
 </header>

@@ -3,7 +3,7 @@
 // ----------------------------------------------
 import $ from 'jquery';
 import AOS from 'aos';
-import PageTransition from './components/_pageTransition.js';
+import { miscBarba } from './components/_miscellaneous.js'
 import PleaseDontGo from './components/_pleaseDontGo.js';
 
 // ----------------------------------------------
@@ -17,7 +17,8 @@ $(() => {
     easing: 'ease-in-out',
     once: true
   });
-  PageTransition.init();
   PleaseDontGo.init();
+
+  miscBarba();
 
 });

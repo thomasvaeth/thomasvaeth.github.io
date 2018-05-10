@@ -3,17 +3,6 @@
 //---------------------------------------------- 
 .footer {
 
-  &__img {
-    @extend .header__img;
-
-    img {
-
-      &:hover {
-        animation: shaka 0.6s ease-in-out;
-      }
-    }
-  }
-
   &__list {
     display: flex;
     justify-content: center;

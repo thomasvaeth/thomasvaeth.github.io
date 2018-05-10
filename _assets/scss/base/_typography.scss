@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   line-height: $base-lineheight;
   color: $color-black;
-  background-color: $color-lightgrey;
+  background-color: $color-white;
 }
 
 //----------------------------------------------
@@ -49,12 +49,17 @@ body {
 // Headings
 //---------------------------------------------- 
 h1,
-h2 {
-  margin: 0;
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %font-header;
 
-  font-weight: 500;
-  font-size: 1em;
-  letter-spacing: 0.05em;
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
 }
 
 //----------------------------------------------
@@ -63,10 +68,76 @@ h2 {
 p {
   margin: {
     top: 0;
-    bottom: 0;
+    bottom: 0.75em;
   }
+}
 
-  font-size: 1.1em;
+//----------------------------------------------
+// Blockquote
+//---------------------------------------------- 
+q,
+blockquote {
+  @extend %text-center;
+
+  margin: 0 0 1.5rem;
+
+  font-family: $font;
+  font-weight: 400;
+  font-size: 1.25em;
+  color: $color-black;
+  line-height: 1.4;
+
+  @media (min-width: $mq-small) {
+    font-size: 1.5em;
+  }
+}
+
+cite {
+  @extend %font-header;
+
+  display: block;
+
+  font-family: $font;
+  font-size: $font-xxxsmall;
+  font-style: normal;
+  color: $color-black;
+  line-height: $base-lineheight;
+
+  &:before {
+    content: "\2014 \0020";
+  }
+}
+
+//----------------------------------------------
+// Misc
+//---------------------------------------------- 
+strong {
+  @extend %letter-spacing;
+}
+
+small {
+  font-size: $font-xsmall;
+}
+
+strong {
+  font-weight: 700;
+}
+
+sup,
+sub {
+  font-size: $font-xxsmall;
+}
+
+sup {
+  top: -0.75em;
+}
+
+sub {
+  bottom: -0.75em;
+}
+
+mark {
+  color: $color-black;
 }
 
 //----------------------------------------------

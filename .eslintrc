@@ -6,6 +6,7 @@
     "indent": ["error", 2],
     "no-inner-declarations": "off",
     "no-undef": "off",
+    "no-underscore-dangle": "off",
     "no-unused-vars": "warn",
     "no-use-before-define": "warn",
     "quotes": ["error", "single"],

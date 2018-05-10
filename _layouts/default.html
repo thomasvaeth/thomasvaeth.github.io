@@ -8,17 +8,21 @@ layout: compress
   {% include head.html %}
 
 </head>
-<body class="🍕">
+<body>
+  <div id="barba-wrapper">
+    <div class="barba-container">
 
-  {% include header.html %}
+      {% include header.html %}
 
-  <main>
+      <main>
 
-    {{ content }}
-    
-  </main>
+        {{ content }}
+        
+      </main>
 
-  {% include footer.html %}
+      {% include footer.html %}
 
+    </div>
+  </div>
 </body>
 </html>
