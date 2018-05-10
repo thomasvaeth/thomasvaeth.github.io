@@ -41,6 +41,7 @@ gulp.task('trophy', () => {
 
 gulp.task('lint', () => {
   return gulp.src([
+    './_assets/js/components/_pageTransition.js',
     './_assets/js/components/_pleaseDontGo.js',
     './_assets/js/_inits.js'
   ])

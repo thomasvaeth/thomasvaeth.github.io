@@ -17,10 +17,14 @@
 //----------------------------------------------
 // Tools: Mixins
 //---------------------------------------------- 
+@import 'tools/_mixins-animations';
+@import 'tools/_mixins-grid';
 
 //----------------------------------------------
 // Tools: Extends
 //---------------------------------------------- 
+@import 'tools/_extends-type';
+@import 'tools/_extends';
 
 //----------------------------------------------
 // Vendor: Normalize
@@ -49,12 +53,12 @@
 //----------------------------------------------   
 // Components
 //---------------------------------------------- 
-@import 'components/_one-page-love';
-@import 'components/_portfolio';
-@import 'components/_profile';
 
 //----------------------------------------------   
 // Utils
 //---------------------------------------------- 
 @import 'utils/_animations-keyframes';
 @import 'utils/_decor';
+@import 'utils/_helpers-grid';
+@import 'utils/_helpers';
+@import 'utils/_page-transitions';

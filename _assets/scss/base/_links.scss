@@ -2,13 +2,5 @@
 // Links
 //---------------------------------------------- 
 a {
-  color: $color-black;
   text-decoration: none;
-  transition: color 100ms ease-in-out;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: $color-alpha;
-  }
 }
