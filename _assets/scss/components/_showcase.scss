@@ -1,0 +1,36 @@
+//----------------------------------------------
+// Showcase
+//---------------------------------------------- 
+.showcase {
+  padding: 7vw;
+
+  &__container {
+    @include flex-grid(1, 2, $pad: 3.5vw);
+
+    align-items: center;
+  }
+
+  &__link {
+    color: $color-black;
+  }
+
+  &__img {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__header {
+    margin-top: 1em;
+  }
+
+  &__title {
+
+  }
+
+  &__text {
+    width: 80%;
+    margin-bottom: 0;
+  }
+}

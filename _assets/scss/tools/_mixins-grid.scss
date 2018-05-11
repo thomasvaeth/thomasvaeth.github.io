@@ -4,7 +4,7 @@
 //  @param:       $sm, $md, $lg, $xl: [null] - Media sizes
 //  @param:       $pad: [0] - Padding of child elements and negative margin of parent
 //----------------------------------------------
-@mixin flex-grid($xs, $sm, $md, $lg: null, $xl: null, $pad: 0) {
+@mixin flex-grid($xs, $sm, $md: null, $lg: null, $xl: null, $pad: 0) {
   display: flex;
   flex-flow: wrap;
   flex-direction: row;
@@ -21,9 +21,11 @@
       max-width: 100% / $sm;
     }
 
-    @media (min-width: $mq-med) {
-      flex-basis: 100% / $md;
-      max-width: 100% / $md;
+    @if $md {
+      @media (min-width: $mq-med) {
+        flex-basis: 100% / $md;
+        max-width: 100% / $md;
+      }
     }
 
     @if $lg {

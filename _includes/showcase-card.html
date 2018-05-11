@@ -1,0 +1,14 @@
+{% if work.showcase %}
+  <article>
+    <a class="showcase__link" href="{{ work.url | prepend: site.baseurl }}">
+      <figure class="showcase__img">
+        <img src="{{ work.showcase_image }}" alt="{{ work.title }}"/>
+      </figure>
+      <header class="showcase__header">
+        <h3 class="showcase__title">{{ work.title }}</h3>
+        <p class="showcase__text">{{ work.showcase_description }}</p>
+      </header>
+    </a>
+  </article>
+{% endif %}
+      

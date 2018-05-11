@@ -31,3 +31,9 @@ exclude:
   - gulpfile.js
   - package.json
   - README.md
+
+# Collections
+collections:
+  work:
+    output: true
+    permalink: /work/:path

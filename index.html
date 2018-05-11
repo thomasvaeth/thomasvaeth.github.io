@@ -1,3 +1,15 @@
 ---
 layout: default
 ---
+<section class="showcase">
+  <div class="showcase__container">
+
+    {% assign shuffled_work = site.work | shuffle %}
+    {% for work in shuffled_work %}
+      
+      {% include showcase-card.html %}
+
+    {% endfor %}
+
+  </div>
+</section>
