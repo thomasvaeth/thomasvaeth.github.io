@@ -1,17 +1,26 @@
 //----------------------------------------------
 // Page Transition
 //---------------------------------------------- 
-// main,
-// footer {
-//   opacity: 0;
+.transition {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
 
-//   .js-page-loaded & {
-//     opacity: 1;
-//     transition: opacity 600ms ease-in-out;
-//   }
+  display: none;
+  height: 100%;
+  width: 100%;
 
-//   .js-page-exiting & {
-//     opacity: 0;
-//     transition: opacity 400ms ease-in-out;
-//   }
-// }
+  background-color: $color-grey;
+
+  &--out {
+    left: 100%;
+
+    display: block;
+  }
+
+  &--in {
+    left: 0;
+
+    display: block;
+  }
+}

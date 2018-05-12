@@ -9,20 +9,22 @@ import Barba from 'barba.js';
 // Barba
 // ----------------------------------------------
 const miscBarba = () => {
-  const FadeTransition = Barba.BaseTransition.extend({
+  const SlideTransition = Barba.BaseTransition.extend({
     start() {
-      Promise
-        .all([this.newContainerLoading, this.fadeOut()])
-        .then(this.fadeIn.bind(this));
+      Promise.all([this.newContainerLoading, this.slideOut(), new Promise(resolve => {
+        setTimeout(() => {
+          resolve();
+        }, 800);
+      })]).then(this.slideIn.bind(this));
     },
 
-    fadeOut() {
-      const oldContainer = this.oldContainer;
+    slideOut() {
+      $('.transition').addClass('transition--out');
 
       return new Promise(resolve => {
         anime({
-          targets: oldContainer,
-          opacity: 0,
+          targets: '.transition',
+          translateX: '-=100%',
           easing: 'easeInQuart',
           duration: 400,
           complete() {
@@ -32,20 +34,19 @@ const miscBarba = () => {
       });
     },
 
-    fadeIn() {
+    slideIn() {
+      $('.transition').removeClass('transition--out').addClass('transition--in');
+
       const _this = this;
-      const oldContainer = this.oldContainer;
-      const newContainer = this.newContainer;
 
       window.scrollTo(0, 0);
-      oldContainer.style.display = 'none';
-      newContainer.style.visibility = 'visible';
-      newContainer.style.opacity = 0;
+      this.oldContainer.style.display = 'none';
+      this.newContainer.style.visibility = 'visible';
       anime({
-        targets: newContainer,
-        opacity: 1,
+        targets: '.transition',
+        translateY: '-100%',
         easing: 'easeOutQuart',
-        duration: 1000,
+        duration: 800,
         complete() {
           _this.done();
         }
@@ -53,8 +54,12 @@ const miscBarba = () => {
     }
   });
 
+  Barba.Dispatcher.on('transitionCompleted', (currentStatus, oldStatus, container) => {
+    $('.transition').removeClass('transition--in');
+  });
+
   Barba.Pjax.getTransition = function() {
-    return FadeTransition;
+    return SlideTransition;
   };
 
   Barba.Pjax.start();

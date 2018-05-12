@@ -2,7 +2,7 @@
 // Showcase
 //---------------------------------------------- 
 .showcase {
-  padding: 7vw;
+  padding: 3.5vw 7vw 7vw;
 
   &__container {
     @include flex-grid(1, 2, $pad: 3.5vw);
@@ -15,6 +15,7 @@
   }
 
   &__img {
+    background-color: $color-lightgrey;
 
     img {
       display: block;

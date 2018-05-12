@@ -4,8 +4,8 @@ layout: default
 <section class="showcase">
   <div class="showcase__container">
 
-    {% assign shuffled_work = site.work | shuffle %}
-    {% for work in shuffled_work %}
+    {% assign ordered_work = site.work | sort: 'showcase_order' %}
+    {% for work in ordered_work %}
       
       {% include showcase-card.html %}
 
