@@ -3,7 +3,7 @@
 // ----------------------------------------------
 import $ from 'jquery';
 import AOS from 'aos';
-import { miscBarba } from './components/_miscellaneous.js'
+import { miscBarba } from './components/_miscellaneous.js';
 import PleaseDontGo from './components/_pleaseDontGo.js';
 
 // ----------------------------------------------

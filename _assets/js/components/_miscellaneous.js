@@ -14,7 +14,7 @@ const miscBarba = () => {
       Promise.all([this.newContainerLoading, this.slideOut(), new Promise(resolve => {
         setTimeout(() => {
           resolve();
-        }, 800);
+        }, 700);
       })]).then(this.slideIn.bind(this));
     },
 
@@ -38,15 +38,26 @@ const miscBarba = () => {
       $('.transition').removeClass('transition--out').addClass('transition--in');
 
       const _this = this;
+      const oldContainer = this.oldContainer;
+      const newContainer = this.newContainer;
 
       window.scrollTo(0, 0);
-      this.oldContainer.style.display = 'none';
-      this.newContainer.style.visibility = 'visible';
+      oldContainer.style.display = 'none';
+      newContainer.style.visibility = 'visible';
+      newContainer.querySelector('main').style.opacity = 0;
+
+      anime({
+        targets: 'main',
+        opacity: 1,
+        easing: 'easeOutQuart',
+        duration: 700,
+        delay: 200
+      });
       anime({
         targets: '.transition',
         translateY: '-100%',
         easing: 'easeOutQuart',
-        duration: 800,
+        duration: 350,
         complete() {
           _this.done();
         }
@@ -54,13 +65,11 @@ const miscBarba = () => {
     }
   });
 
-  Barba.Dispatcher.on('transitionCompleted', (currentStatus, oldStatus, container) => {
+  Barba.Dispatcher.on('transitionCompleted', () => {
     $('.transition').removeClass('transition--in');
   });
 
-  Barba.Pjax.getTransition = function() {
-    return SlideTransition;
-  };
+  Barba.Pjax.getTransition = () => SlideTransition;
 
   Barba.Pjax.start();
 };
