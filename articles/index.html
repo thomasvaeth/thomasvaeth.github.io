@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<section class="posts section-padding">
+  <div class="posts__container">
+
+    {% for post in paginator.posts %}
+
+      {% include post-card.html %}
+
+    {% endfor %}
+
+  </div>
+</section>

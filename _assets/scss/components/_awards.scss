@@ -2,12 +2,18 @@
 // Awards
 //---------------------------------------------- 
 .awards {
+  @extend .work;
 
   &__container {
-    @include flex-grid(2, 4);
+    @include flex-grid(2, 4, 7, $pad: 0.5em);
+  }
+
+  &__link {
+    display: block;
   }
 
   &__img {
+    background-color: $color-lightgrey;
 
     img {
       display: block;

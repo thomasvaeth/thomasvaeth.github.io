@@ -1,0 +1,16 @@
+//-------------------------------------------- 
+// Sections
+//--------------------------------------------
+section {
+  position: relative;
+}
+
+.section-padding {
+  @extend %auto-margin;
+
+  max-width: $max-width--xl;
+  padding: {
+    right: 4em;
+    left: 4em;
+  }
+}

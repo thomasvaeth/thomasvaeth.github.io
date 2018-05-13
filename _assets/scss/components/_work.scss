@@ -3,21 +3,32 @@
 //---------------------------------------------- 
 .work {
   padding: {
-    top: 3.5vw;
-    bottom: 7vw;
+    top: 10em;
+    bottom: 4em;
   }
 
   &--featured {
+    padding-top: 4em;
+
     border-top: 1px solid rgba($color-black, 0.1);
   }
 
   &__container {
-    @include flex-grid(1, 2, $pad: 3.5vw);
+    @include flex-grid(1, 2, $pad: 1em);
 
     align-items: center;
+
+    & > article {
+      padding: {
+        top: 2em;
+        bottom: 2em;
+      }
+    }
   }
 
   &__link {
+    display: block;
+
     color: $color-black;
 
     &:hover {
@@ -54,5 +65,18 @@
   &__text {
     width: 80%;
     margin-bottom: 0;
+  }
+}
+
+//----------------------------------------------
+// Work Mast
+//---------------------------------------------- 
+.work-mast {
+  @extend %flex-center;
+  
+  height: 100vh;
+
+  &__container {
+
   }
 }

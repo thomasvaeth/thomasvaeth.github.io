@@ -2,10 +2,16 @@
 // Header
 //---------------------------------------------- 
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-99;
+
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
-  padding-top: 5vw;
+  height: 6em;
+  width: 100%;
 
   &__title {
     font-size: 1.25em;

@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-<section class="intro">
+<section class="intro section-padding">
   <div class="intro__container">
     <h1>Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.</h1>
   </div>
 </section>
 
-<section class="work work--featured">
+<section class="work work--featured section-padding">
   <h2>Featured work</h2>
   <div class="work__container">
 
@@ -23,9 +23,15 @@ layout: default
   </div>
 </section>
 
-<section class="posts posts--latest">
+<section class="posts posts--latest section-padding">
   <h2>Recent articles</h2>
-  <div class="posts__container">
+  <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
     
+    {% for post in site.posts limit: 3 %}
+
+      {% include post-card.html %}
+
+    {% endfor %}
+
   </div>
 </section>

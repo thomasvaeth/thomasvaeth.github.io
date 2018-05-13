@@ -3,10 +3,10 @@
 //---------------------------------------------- 
 .footer {
   padding: {
-    top: 7vw;
-    bottom: 7vw;
+    top: 4em;
+    bottom: 4em;
   }
-
+  
   border-top: 1px solid rgba($color-black, 0.1);
 
   &__list {
@@ -22,15 +22,5 @@
     font-size: 1.1em;
     font-weight: 400;
     color: $color-black;
-  }
-}
-
-//----------------------------------------------
-// Body
-//---------------------------------------------- 
-body {
-  padding: {
-    right: 7vw;
-    left: 7vw;
   }
 }
