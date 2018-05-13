@@ -16,6 +16,7 @@
 
   &__img {
     background-color: $color-lightgrey;
+    overflow: hidden;
 
     img {
       display: block;

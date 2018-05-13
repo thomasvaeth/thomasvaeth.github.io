@@ -41,8 +41,9 @@ gulp.task('trophy', () => {
 
 gulp.task('lint', () => {
   return gulp.src([
+    './_assets/js/components/_anime.js',
+    './_assets/js/components/_barba.js',
     './_assets/js/components/_miscellaneous.js',
-    './_assets/js/components/_pleaseDontGo.js',
     './_assets/js/_inits.js'
   ])
   .pipe(eslint())

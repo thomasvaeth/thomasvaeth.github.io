@@ -19,7 +19,6 @@
   },
   "dependencies": {
     "animejs": "^2.2.0",
-    "aos": "^2.2.0",
     "barba.js": "^1.0.0",
     "jquery": "2.2.4"
   },
