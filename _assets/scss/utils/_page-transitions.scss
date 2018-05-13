@@ -12,13 +12,13 @@
 
   background-color: $color-grey;
 
-  &--out {
+  &-out {
     left: 100%;
 
     display: block;
   }
 
-  &--in {
+  &-in {
     left: 0;
 
     display: block;

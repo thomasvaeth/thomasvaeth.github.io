@@ -1,0 +1,12 @@
+<article>
+  <a class="work__link" href="{{ work.url | prepend: site.baseurl }}">
+    <figure class="work__img">
+      <img src="{{ work.link_image }}" alt="{{ work.title }}"/>
+    </figure>
+    <header class="work__header">
+      <h3 class="work__title">{{ work.title }}</h3>
+      <p class="work__text">{{ work.link_description }}</p>
+    </header>
+  </a>
+</article>
+      

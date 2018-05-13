@@ -1,7 +1,7 @@
 //----------------------------------------------
-// Showcase
+// Work
 //---------------------------------------------- 
-.showcase {
+.work {
   padding: 3.5vw 7vw 7vw;
 
   &__container {
@@ -12,14 +12,27 @@
 
   &__link {
     color: $color-black;
+
+    &:hover {
+
+      .work__img {
+        transform: scale(0.97);
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
   }
 
   &__img {
     background-color: $color-lightgrey;
     overflow: hidden;
+    transition: transform 300ms ease-in-out;
 
     img {
       display: block;
+      transition: transform 300ms ease-in-out;
     }
   }
 

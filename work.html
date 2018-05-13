@@ -4,13 +4,11 @@ layout: default
 <section class="work">
   <div class="work__container">
 
-    {% assign featured_work = site.work | sort: 'featured_order' %}
-    {% for work in featured_work %}
-      {% if work.featured %}
-
+    {% assign ordered_work = site.work | sort: 'order' %}
+    {% for work in ordered_work %}
+      
       {% include work-card.html %}
 
-      {% endif %}
     {% endfor %}
 
   </div>

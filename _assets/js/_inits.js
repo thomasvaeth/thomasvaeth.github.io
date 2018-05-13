@@ -2,8 +2,7 @@
 // Imports
 // ----------------------------------------------
 import $ from 'jquery';
-import barba from './components/_barba.js';
-import { animeShowcase } from './components/_anime.js';
+import { miscBarba } from './components/_miscellaneous.js';
 
 // ----------------------------------------------
 // Inits
@@ -11,7 +10,6 @@ import { animeShowcase } from './components/_anime.js';
 $(() => {
 
   // Inits
-  barba();
-  animeShowcase();
+  miscBarba();
 
 });
