@@ -53,6 +53,9 @@
 //----------------------------------------------   
 // Components
 //---------------------------------------------- 
+@import 'components/_awards';
+@import 'components/_intro';
+@import 'components/_posts';
 @import 'components/_work';
 
 //----------------------------------------------   
@@ -60,6 +63,5 @@
 //---------------------------------------------- 
 @import 'utils/_animations-keyframes';
 @import 'utils/_decor';
-@import 'utils/_helpers-grid';
 @import 'utils/_helpers';
 @import 'utils/_page-transitions';

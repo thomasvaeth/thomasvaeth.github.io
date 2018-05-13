@@ -20,7 +20,17 @@
 
   &__link {
     font-size: 1.1em;
-    font-weight: 700;
+    font-weight: 400;
     color: $color-black;
+  }
+}
+
+//----------------------------------------------
+// Body
+//---------------------------------------------- 
+body {
+  padding: {
+    right: 7vw;
+    left: 7vw;
   }
 }

@@ -1,7 +1,14 @@
 ---
 layout: default
 ---
-<section class="work">
+<section class="intro">
+  <div class="intro__container">
+    <h1>Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.</h1>
+  </div>
+</section>
+
+<section class="work work--featured">
+  <h2>Featured work</h2>
   <div class="work__container">
 
     {% assign featured_work = site.work | sort: 'featured_order' %}
@@ -13,5 +20,12 @@ layout: default
       {% endif %}
     {% endfor %}
 
+  </div>
+</section>
+
+<section class="posts posts--latest">
+  <h2>Recent articles</h2>
+  <div class="posts__container">
+    
   </div>
 </section>
