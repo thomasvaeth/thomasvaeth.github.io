@@ -1,8 +1,16 @@
 <article>
   <a class="work__link" href="{{ work.url | prepend: site.baseurl }}">
-    <figure class="work__img">
-      <img src="{{ work.link_image }}" alt="{{ work.title }}"/>
-    </figure>
+    {% if work.link_video %}
+      <div class="work__vid">
+        <video autoplay loop muted>
+          <source type="video/mp4" src="{{ work.link_video }}">
+        </video>
+      </div>
+    {% elsif work.link_image %}
+      <figure class="work__img">
+        <img src="{{ work.link_image }}" alt="{{ work.title }}"/>
+      </figure>
+    {% endif %}
     <header class="work__header">
       <h3 class="work__title">{{ work.title }}</h3>
       <p class="work__text">{{ work.link_description }}</p>

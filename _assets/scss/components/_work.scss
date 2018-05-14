@@ -33,6 +33,14 @@
 
     &:hover {
 
+      .work__vid {
+        transform: scale(0.97);
+
+        video {
+          transform: scale(1.1);
+        }
+      }
+
       .work__img {
         transform: scale(0.97);
 
@@ -40,6 +48,39 @@
           transform: scale(1.1);
         }
       }
+    }
+  }
+
+  &__vid {
+    position: relative;
+
+    background-color: $color-lightgrey;
+    overflow: hidden;
+    transition: transform 300ms ease-in-out;
+
+    &:before {
+      content: "";
+
+      display: block;
+      padding-top: 80%;
+    }
+
+    video {
+      @extend %auto-margin;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: $z-0;
+
+      min-height: 100%;
+      min-width: 100%;
+      height: auto;
+      width: auto;
+
+      background-size: cover;
+      object-fit: cover;
+      transition: transform 300ms ease-in-out;
     }
   }
 
@@ -73,7 +114,7 @@
 //---------------------------------------------- 
 .work-mast {
   @extend %flex-center;
-  
+
   height: 100vh;
 
   &__container {
