@@ -10,7 +10,14 @@ section {
 
   max-width: $max-width--xl;
   padding: {
-    right: 4em;
-    left: 4em;
+    right: 2em;
+    left: 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: {
+      right: 4em;
+      left: 4em;
+    }
   }
 }

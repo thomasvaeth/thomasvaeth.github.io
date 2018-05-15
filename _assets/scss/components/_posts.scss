@@ -9,7 +9,7 @@
   }
 
   &__container {
-    @include flex-grid(1, 3, $pad: 1em);
+    @include flex-grid(1, 1, 3, $pad: 1em);
   }
 
   &__post {
@@ -55,6 +55,10 @@
 
   &__header {
     @extend .work__header;
+  }
+
+  &__pages {
+    display: none;
   }
 
   &__pagination {

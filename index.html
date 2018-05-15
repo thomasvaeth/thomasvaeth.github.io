@@ -36,6 +36,7 @@ pagination:
   </div>
 
   {% if paginator.next_page %}
+    <div class="posts__pages" data-pages="{{ paginator.total_pages }}"></div>
     <div class="posts__pagination">
       <span class="posts__next">Load More Articles</span>
     </div>

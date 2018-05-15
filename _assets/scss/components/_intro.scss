@@ -8,7 +8,12 @@
   }
 
   &__container {
-    width: 80%;
+    @extend %auto-margin;
+    
     max-width: $mq-med;
+
+    @media (min-width: $mq-med) {
+      width: 80%;
+    }
   }
 }

@@ -15,6 +15,7 @@ const InfiniteScroll = (() => {
         container: $('.posts__container'),
         next: $('.posts__next'),
         currentPage: 1,
+        maxPages: $('.posts__pages').data('pages'),
         pathname: window.location.pathname.replace(/#(.*)$/g, '').replace('//g', '/'),
         isLoading: false
       };
@@ -32,8 +33,7 @@ const InfiniteScroll = (() => {
     },
 
     fetchPosts() {
-      if (s.isLoading || s.currentPage === maxPages) {
-        console.log('Fucked');
+      if (s.isLoading || s.currentPage === s.maxPages) {
         return;
       }
 
@@ -56,7 +56,7 @@ const InfiniteScroll = (() => {
                 s.container.append(post);
               });
 
-              if (s.currentPage === maxPages) {
+              if (s.currentPage === s.maxPages) {
                 s.next.text('No More Articles');
               }
             }, 400);

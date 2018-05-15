@@ -10,7 +10,7 @@
   border-top: 1px solid rgba($color-black, 0.1);
 
   &__container {
-    @include flex-grid(2, 4, $pad: 0.25em);
+    @include flex-grid(2, 3, 4, $pad: 0.25em);
 
     padding-top: 1.5em;
   }
