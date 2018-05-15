@@ -10,50 +10,56 @@ pagination:
 </section>
 
 <section class="work work--featured section-padding">
-  <h2>Featured work</h2>
-  <div class="work__container">
+  <div class="section-width">
+    <h2>Featured work</h2>
+    <div class="work__container">
 
-    {% assign ordered_work = site.work | sort: 'order' %}
-    {% for work in ordered_work %}
+      {% assign ordered_work = site.work | sort: 'order' %}
+      {% for work in ordered_work %}
 
-      {% include work-card.html %}
+        {% include work-card.html %}
 
-    {% endfor %}
+      {% endfor %}
 
+    </div>
   </div>
 </section>
 
 <section class="posts posts--latest section-padding">
-  <h2>Recent articles</h2>
-  <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
-    
-    {% for post in paginator.posts %}
+  <div class="section-width">
+    <h2>Recent articles</h2>
+    <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
+      
+      {% for post in paginator.posts %}
 
-      {% include post-card.html %}
+        {% include post-card.html %}
 
-    {% endfor %}
+      {% endfor %}
+
+    </div>
+
+    {% if paginator.next_page %}
+      <div class="posts__pages" data-pages="{{ paginator.total_pages }}"></div>
+      <div class="posts__pagination">
+        <span class="posts__next">Load More Articles</span>
+      </div>
+    {% endif %}
 
   </div>
-
-  {% if paginator.next_page %}
-    <div class="posts__pages" data-pages="{{ paginator.total_pages }}"></div>
-    <div class="posts__pagination">
-      <span class="posts__next">Load More Articles</span>
-    </div>
-  {% endif %}
-
 </section>
 
 <section class="awards section-padding">
-  <h2>Recognition</h2>
-  <div class="awards__container">
+  <div class="section-width">
+    <h2>Recognition</h2>
+    <div class="awards__container">
 
-    {% assign ordered_awards = site.awards | sort: 'order' | reverse %}
-    {% for award in ordered_awards %}
+      {% assign ordered_awards = site.awards | sort: 'order' | reverse %}
+      {% for award in ordered_awards %}
 
-      {% include award-card.html %}
+        {% include award-card.html %}
 
-    {% endfor %}
+      {% endfor %}
 
+    </div>
   </div>
 </section>

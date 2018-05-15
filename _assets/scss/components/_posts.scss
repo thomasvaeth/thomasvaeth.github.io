@@ -58,6 +58,9 @@
   }
 
   &__pages {
+    position: absolute; 
+    left: -9999px;
+
     display: none;
   }
 
@@ -69,5 +72,10 @@
     font-weight: 700;
     font-size: $font-small;
     cursor: pointer;
+    transition: color 100ms ease-in-out;
+
+    &--none {
+      color: $color-grey;
+    }
   }
 }

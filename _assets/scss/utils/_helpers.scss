@@ -6,9 +6,6 @@ section {
 }
 
 .section-padding {
-  @extend %auto-margin;
-
-  max-width: $max-width--xl;
   padding: {
     right: 2em;
     left: 2em;
@@ -20,4 +17,10 @@ section {
       left: 4em;
     }
   }
+}
+
+.section-width {
+  @extend %auto-margin;
+
+  max-width: $max-width--xl;
 }

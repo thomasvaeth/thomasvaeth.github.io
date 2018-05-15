@@ -12,6 +12,17 @@
   justify-content: space-between;
   height: 6em;
   width: 100%;
+  padding: {
+    right: 2em;
+    left: 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: {
+      right: 4em;
+      left: 4em;
+    }
+  }
 
   &__title {
     font-size: 1.25em;

@@ -57,7 +57,7 @@ const InfiniteScroll = (() => {
               });
 
               if (s.currentPage === s.maxPages) {
-                s.next.text('No More Articles');
+                s.next.addClass('posts__next--none').text('No More Articles');
               }
             }, 400);
           }
