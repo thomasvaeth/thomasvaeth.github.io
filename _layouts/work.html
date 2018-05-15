@@ -1,8 +1,21 @@
 ---
 layout: default
 ---
-<section class="work-mast section-padding">
-  <div class="work-mast__container">
+<section class="mast section-padding">
+
+  {% if page.link_video %}
+    <div class="absolute-vid">
+      <video autoplay loop muted poster="{{ page.link_image }}">
+        <source type="video/mp4" src="{{ page.link_video }}">
+      </video>
+    </div>
+  {% elsif page.title != 'The Stable Seattle' and page.title != 'CryptoLogg' %}
+    <figure class="absolute-bg" style="background-image: url('{{ page.link_image }}');"></figure>
+  {% endif %}
+
+  <div class="mast__container">
     <h1>{{ page.title }}</h1>
   </div>
 </section>
+
+{{ content }}

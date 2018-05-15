@@ -9,10 +9,10 @@ layout: compress
 
 </head>
 <body>
-  {% include header.html %}
-
   <div id="barba-wrapper">
-    <div class="barba-container">
+    <div class="barba-container {{ page.title | downcase | slugify }}">
+
+      {% include header.html %}
 
       <main>
 

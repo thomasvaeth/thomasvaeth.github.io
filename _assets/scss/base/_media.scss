@@ -40,6 +40,38 @@ iframe {
 }
 
 //----------------------------------------------
+// Absolute Video
+//---------------------------------------------- 
+.absolute-vid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-0;
+
+  height: 100%;
+  width: 100%;
+  
+  overflow: hidden;
+
+  video {
+    @extend %auto-margin;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-0;
+
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+
+    background-size: cover;
+    object-fit: cover;
+  }
+}
+
+//----------------------------------------------
 // Flex Vid
 //----------------------------------------------
 .flex-vid {

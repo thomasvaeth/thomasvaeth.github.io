@@ -1,0 +1,29 @@
+//----------------------------------------------
+// Mast
+//---------------------------------------------- 
+.mast {
+  @extend %flex-center;
+
+  position: relative;
+
+  height: 100vh;
+
+  background-color: $color-black;
+
+  .cryptologg & {
+    background-color: $color-lightgrey;
+  }
+
+  .the-stable-seattle & {
+    background-color: #feefe5;
+  }
+
+  .absolute-bg,
+  .absolute-vid {
+    opacity: 0.8;
+  }
+
+  &__container {
+    position: relative;
+  }
+}

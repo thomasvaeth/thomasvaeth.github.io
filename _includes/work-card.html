@@ -10,7 +10,7 @@
       </div>
     {% elsif work.link_video %}
       <div class="work__vid">
-        <video autoplay loop muted>
+        <video autoplay loop muted poster="{{ work.link_image }}">
           <source type="video/mp4" src="{{ work.link_video }}">
         </video>
       </div>
