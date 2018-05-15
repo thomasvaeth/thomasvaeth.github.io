@@ -10,12 +10,12 @@
 
   &__container {
     @include flex-grid(1, 3, $pad: 1em);
+  }
 
-    & > article {
-      padding: {
-        top: 2em;
-        bottom: 2em;
-      }
+  &__post {
+    padding: {
+      top: 2em;
+      bottom: 2em;
     }
   }
 

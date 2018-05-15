@@ -34,4 +34,25 @@ pagination:
     {% endfor %}
 
   </div>
+
+  {% if paginator.next_page %}
+    <div class="posts__pagination">
+      <span class="posts__next">Load More</span>
+    </div>
+  {% endif %}
+
+</section>
+
+<section class="awards section-padding">
+  <h2>Recognition</h2>
+  <div class="awards__container">
+
+    {% assign ordered_awards = site.awards | sort: 'order' | reverse %}
+    {% for award in ordered_awards %}
+
+      {% include award-card.html %}
+
+    {% endfor %}
+
+  </div>
 </section>
