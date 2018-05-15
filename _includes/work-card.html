@@ -1,6 +1,14 @@
 <article>
   <a class="work__link" href="{{ work.url | prepend: site.baseurl }}">
-    {% if work.link_video %}
+    {% if work.title == 'CryptoLogg' %}
+      <div class="work__cryptologg">
+        <div class="cycle">
+          <span>🤑</span>
+          <span class="hidden">🙃</span>
+          <span class="hidden">😵</span>
+        </div>
+      </div>
+    {% elsif work.link_video %}
       <div class="work__vid">
         <video autoplay loop muted>
           <source type="video/mp4" src="{{ work.link_video }}">

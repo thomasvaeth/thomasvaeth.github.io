@@ -14,3 +14,25 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+//----------------------------------------------
+// Work Card
+//----------------------------------------------
+%work-card {
+  background-color: $color-lightgrey;
+  overflow: hidden;
+  transition: transform 300ms ease-in-out;
+}
+
+//----------------------------------------------
+// Pseudo Square
+//----------------------------------------------
+%pseudo-square {
+
+  &:before {
+    content: "";
+
+    display: block;
+    padding-top: 80%;
+  }
+}

@@ -59,6 +59,8 @@ const miscBarba = () => {
   Barba.Dispatcher.on('transitionCompleted', () => {
     $('.transition').removeClass('transition-in');
 
+    miscCycle();
+
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();
     }
@@ -85,9 +87,26 @@ const miscTime = () => {
 };
 
 // ----------------------------------------------
+// Cycle
+// ----------------------------------------------
+const miscCycle = () => {
+  $('.cycle').each((idx, ele) => {
+    let count = 0;
+    const emoji = $(ele).children();
+    const length = emoji.length;
+    const interval = setInterval(() => {
+      emoji.eq(count).addClass('hidden');
+      count = count === length - 1 ? 0 : ++count;
+      emoji.eq(count).removeClass('hidden');
+    }, 1000);
+  });
+}
+
+// ----------------------------------------------
 // Exports
 // ----------------------------------------------
 module.exports = {
   miscBarba,
-  miscTime
+  miscTime,
+  miscCycle
 };
