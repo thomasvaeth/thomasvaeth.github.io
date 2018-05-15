@@ -14,7 +14,6 @@ const InfiniteScroll = (() => {
       return {
         container: $('.posts__container'),
         next: $('.posts__next'),
-        class: 'js-posts-loading',
         currentPage: 1,
         pathname: window.location.pathname.replace(/#(.*)$/g, '').replace('//g', '/'),
         isLoading: false
@@ -28,7 +27,6 @@ const InfiniteScroll = (() => {
 
     bindEvents() {
       s.next.on('click', () => {
-        s.next.addClass(s.class);
         this.fetchPosts();
       });
     },
@@ -51,8 +49,6 @@ const InfiniteScroll = (() => {
           const parse = document.createRange().createContextualFragment(response);
           const posts = parse.querySelectorAll('.posts__post');
 
-          console.log(posts, 'Posts');
-
           if (posts.length) {
             setTimeout(() => {
               [].forEach.call(posts, post => {
@@ -60,12 +56,10 @@ const InfiniteScroll = (() => {
                 s.container.append(post);
               });
 
-              s.next.removeClass(s.class);
-
               if (s.currentPage === maxPages) {
-                $('.posts__pagination').remove();
+                s.next.text('No More Articles');
               }
-            }, 750);
+            }, 400);
           }
         },
         error: error => {

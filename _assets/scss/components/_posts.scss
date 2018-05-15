@@ -56,4 +56,14 @@
   &__header {
     @extend .work__header;
   }
+
+  &__pagination {
+    @extend %text-center;
+  }
+
+  &__next {
+    font-weight: 700;
+    font-size: $font-small;
+    cursor: pointer;
+  }
 }

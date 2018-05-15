@@ -64,9 +64,22 @@ const miscBarba = () => {
   Barba.Pjax.start();
 };
 
+const miscTime = () => {
+  const date = new Date();
+  const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+
+  // -7 (PDT) or -8 (PST)
+  const time = new Date(utc + (3600000 * -7));
+
+  $('.header__time time').text(time.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}));
+
+  setTimeout(miscTime, 1000);
+};
+
 // ----------------------------------------------
 // Exports
 // ----------------------------------------------
 module.exports = {
-  miscBarba
+  miscBarba,
+  miscTime
 };

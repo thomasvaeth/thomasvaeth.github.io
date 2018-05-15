@@ -19,24 +19,7 @@
     color: $color-black;
   }
 
-  &__list {
-    @extend %no-list-style;
-
-    display: flex;
-    align-items: center;
-
-    & > li:not(:last-child) {
-      margin-right: 2em;
-    }
-  }
-
-  &__link {
+  &__time {
     font-size: 1.25em;
-    font-weight: 400;
-    color: $color-black;
-
-    &:hover {
-      border-bottom: 1px solid $color-black;
-    }
   }
 }
