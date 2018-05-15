@@ -1,8 +1,6 @@
 # Site/SEO settings
 email: thomas.vaeth@gmail.com
-paginate: 12
-paginate_path: /articles/page/:num
-permalink: /articles/:year/:month/:day/:title
+permalink: /:year/:month/:day/:title
 google_analytics: UA-57782903-1
 
 name: Thomas Vaeth
@@ -16,7 +14,7 @@ default_img: http://thomasvaeth.com/assets/images/me.jpg
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
 compress_html:
   clippings: all
@@ -32,8 +30,18 @@ exclude:
   - package.json
   - README.md
 
+# Pagination
+pagination:
+  enabled: true
+  per_page: 3
+  permalink: '/page/:num/'
+  title: ':title'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+
 # Collections
 collections:
   work:
     output: true
-    permalink: /work/:path
+    permalink: /:path

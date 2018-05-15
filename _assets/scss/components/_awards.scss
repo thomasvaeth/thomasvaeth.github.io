@@ -5,7 +5,9 @@
   @extend .work;
 
   &__container {
-    @include flex-grid(2, 4, 7, $pad: 0.5em);
+    @include flex-grid(2, 4, $pad: 0.5em);
+
+    padding-top: 1.5em;
   }
 
   &__link {

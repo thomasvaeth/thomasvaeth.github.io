@@ -1,5 +1,7 @@
 ---
 layout: default
+pagination: 
+  enabled: true
 ---
 <section class="intro section-padding">
   <div class="intro__container">
@@ -11,13 +13,11 @@ layout: default
   <h2>Featured work</h2>
   <div class="work__container">
 
-    {% assign featured_work = site.work | sort: 'featured_order' %}
-    {% for work in featured_work %}
-      {% if work.featured %}
+    {% assign ordered_work = site.work | sort: 'order' %}
+    {% for work in ordered_work %}
 
       {% include work-card.html %}
 
-      {% endif %}
     {% endfor %}
 
   </div>
@@ -27,7 +27,7 @@ layout: default
   <h2>Recent articles</h2>
   <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
     
-    {% for post in site.posts limit: 3 %}
+    {% for post in paginator.posts %}
 
       {% include post-card.html %}
 
