@@ -24,10 +24,20 @@
     }
   }
 
+  &__title,
+  &__time {
+    color: $color-black;
+
+    .s-p-real-estate &,
+    .kaiser-permanente &,
+    .inrix & {
+      color: $color-white;
+    }
+  }
+
   &__title {
     font-size: 1.25em;
     font-weight: 700;
-    color: $color-black;
   }
 
   &__time {

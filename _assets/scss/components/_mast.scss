@@ -8,7 +8,7 @@
 
   height: 100vh;
 
-  background-color: $color-black;
+  background-color: $color-lightgrey;
 
   .cryptologg & {
     background-color: $color-lightgrey;
@@ -20,10 +20,43 @@
 
   .absolute-bg,
   .absolute-vid {
-    opacity: 0.8;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: $z-9;
+
+      height: 100%;
+      width: 100%;
+
+      background-color: rgba($color-darkgrey, 0.5);
+    }
   }
 
   &__container {
+    @extend %auto-margin;
+
     position: relative;
+    
+    max-width: $mq-med;
+
+    @media (min-width: $mq-med) {
+      width: 80%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 0;
+
+    font-size: 1.75em;
+    line-height: 1.4;
+
+    .s-p-real-estate &,
+    .kaiser-permanente &,
+    .inrix & {
+      color: $color-white;
+    }
   }
 }

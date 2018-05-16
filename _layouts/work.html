@@ -1,20 +1,20 @@
 ---
 layout: default
 ---
-<section class="mast section-padding">
+<section class="mast section-padding rellax" data-rellax-speed="-4">
 
   {% if page.link_video %}
     <div class="absolute-vid">
-      <video autoplay loop muted poster="{{ page.link_image }}">
+      <video autoplay loop muted>
         <source type="video/mp4" src="{{ page.link_video }}">
       </video>
     </div>
   {% elsif page.title != 'The Stable Seattle' and page.title != 'CryptoLogg' %}
-    <figure class="absolute-bg" style="background-image: url('{{ page.link_image }}');"></figure>
+    <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
   {% endif %}
 
   <div class="mast__container">
-    <h1>{{ page.title }}</h1>
+    <p class="mast__text">{{ page.mast }}</p>
   </div>
 </section>
 

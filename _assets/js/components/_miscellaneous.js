@@ -4,6 +4,7 @@
 import $ from 'jquery';
 import anime from 'animejs';
 import Barba from 'barba.js';
+import Rellax from 'rellax';
 import InfiniteScroll from './_infiniteScroll.js';
 
 // ----------------------------------------------
@@ -61,6 +62,10 @@ const miscBarba = () => {
 
     miscCycle();
 
+    if ($('.rellax').length) {
+      const rellax = new Rellax('.rellax');
+    }
+
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();
     }
@@ -94,13 +99,14 @@ const miscCycle = () => {
     let count = 0;
     const emoji = $(ele).children();
     const length = emoji.length;
-    const interval = setInterval(() => {
+
+    setInterval(() => {
       emoji.eq(count).addClass('hidden');
       count = count === length - 1 ? 0 : ++count;
       emoji.eq(count).removeClass('hidden');
     }, 1000);
   });
-}
+};
 
 // ----------------------------------------------
 // Exports
