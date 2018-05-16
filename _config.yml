@@ -1,6 +1,6 @@
 # Site/SEO settings
 email: thomas.vaeth@gmail.com
-permalink: /:year/:month/:day/:title
+permalink: /:year/:month/:day/:title/
 google_analytics: UA-57782903-1
 
 name: Thomas Vaeth
@@ -44,6 +44,6 @@ pagination:
 collections:
   work:
     output: true
-    permalink: /:path
+    permalink: /:path/
   awards:
     output: false
