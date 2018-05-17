@@ -4,7 +4,6 @@
 import $ from 'jquery';
 import anime from 'animejs';
 import Barba from 'barba.js';
-import Rellax from 'rellax';
 import InfiniteScroll from './_infiniteScroll.js';
 
 // ----------------------------------------------
@@ -62,10 +61,6 @@ const miscBarba = () => {
 
     miscCycle();
 
-    if ($('.rellax').length) {
-      const rellax = new Rellax('.rellax');
-    }
-
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();
     }
@@ -79,17 +74,17 @@ const miscBarba = () => {
 // ----------------------------------------------
 // Time
 // ----------------------------------------------
-const miscTime = () => {
-  const date = new Date();
-  const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+// const miscTime = () => {
+//   const date = new Date();
+//   const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
 
-  // -7 (PDT) or -8 (PST)
-  const time = new Date(utc + (3600000 * -7));
+//   // -7 (PDT) or -8 (PST)
+//   const time = new Date(utc + (3600000 * -7));
 
-  $('.header__time time').text(time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+//   $('.header__time time').text(time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
 
-  setTimeout(miscTime, 1000);
-};
+//   setTimeout(miscTime, 1000);
+// };
 
 // ----------------------------------------------
 // Cycle
@@ -113,6 +108,5 @@ const miscCycle = () => {
 // ----------------------------------------------
 module.exports = {
   miscBarba,
-  miscTime,
   miscCycle
 };

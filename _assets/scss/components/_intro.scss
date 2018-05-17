@@ -2,18 +2,8 @@
 // Intro
 //---------------------------------------------- 
 .intro {
-  padding: {
-    top: 14em;
-    bottom: 8em;
-  }
 
   &__container {
-    @extend %auto-margin;
-    
-    max-width: $mq-med;
 
-    @media (min-width: $mq-med) {
-      width: 80%;
-    }
   }
 }

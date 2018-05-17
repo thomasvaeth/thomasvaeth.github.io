@@ -4,8 +4,8 @@
       <figure class="absolute-bg" style="background-image: url('{{ post.image  }}');"></figure>
     </div>
     <header class="posts__header">
-      <h3 class="posts__title" itemprop="name">{{ post.title }}</h3>
-      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <h3 itemprop="name">{{ post.title }}</h3>
+      <time class="posts__time" datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>
     </header>
   </a>
 </article>

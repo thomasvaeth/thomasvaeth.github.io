@@ -6,16 +6,14 @@ section {
 }
 
 .section-padding {
-  padding: {
-    right: 2em;
-    left: 2em;
+  padding: 2em 1em;
+
+  @media (min-width: $mq-small) {
+    padding: 3em 2em;
   }
 
   @media (min-width: $mq-med) {
-    padding: {
-      right: 4em;
-      left: 4em;
-    }
+    padding: 4em;
   }
 }
 

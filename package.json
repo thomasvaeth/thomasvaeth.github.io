@@ -20,8 +20,7 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "barba.js": "^1.0.0",
-    "jquery": "2.2.4",
-    "rellax": "^1.6.2"
+    "jquery": "2.2.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

@@ -2,16 +2,16 @@
 // Awards
 //---------------------------------------------- 
 .awards {
-  padding: {
-    top: 4em;
-    bottom: 4em;
-  }
-
   border-top: 1px solid rgba($color-black, 0.1);
+
+  &__title {
+    @extend .work__title;
+  }
 
   &__container {
     @include flex-grid(2, 3, 4, $pad: 0.25em);
 
+    margin-top: 1em;
     padding-top: 1.5em;
   }
 

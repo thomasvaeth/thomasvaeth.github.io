@@ -5,13 +5,13 @@ pagination:
 ---
 <section class="intro section-padding">
   <div class="intro__container">
-    <h1>Thomas Vaeth was born in New York, raised in Pennsylvania, and transplanted in Washington. He was a Web Developer at Urban Influence, but now he's a Software Engineer at Getty Images.</h1>
+
   </div>
 </section>
 
 <section class="work work--featured section-padding">
   <div class="section-width">
-    <h2>Featured work</h2>
+    <h2 class="work__title">Selected projects</h2>
     <div class="work__container">
 
       {% assign ordered_work = site.work | sort: 'order' %}
@@ -27,7 +27,7 @@ pagination:
 
 <section class="posts posts--latest section-padding">
   <div class="section-width">
-    <h2>Recent articles</h2>
+    <h2 class="posts__title">Recent articles</h2>
     <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
       
       {% for post in paginator.posts %}
@@ -50,7 +50,7 @@ pagination:
 
 <section class="awards section-padding">
   <div class="section-width">
-    <h2>Recognition</h2>
+    <h2 class="awards__title">Recognition</h2>
     <div class="awards__container">
 
       {% assign ordered_awards = site.awards | sort: 'order' | reverse %}

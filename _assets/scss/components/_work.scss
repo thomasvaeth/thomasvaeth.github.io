@@ -2,21 +2,17 @@
 // Work
 //---------------------------------------------- 
 .work {
-  padding: {
-    top: 10em;
-    bottom: 4em;
-  }
+  border-top: 1px solid rgba($color-black, 0.1);
 
-  &--featured {
-    padding-top: 4em;
-
-    border-top: 1px solid rgba($color-black, 0.1);
+  &__title {
+    @extend %text-center;
   }
 
   &__container {
     @include flex-grid(1, 1, 2, $pad: 1em);
 
     align-items: center;
+    margin-top: 1em;
 
     & > article {
       padding: {
@@ -123,12 +119,11 @@
     margin-top: 1em;
   }
 
-  &__title {
-
-  }
-
   &__text {
     width: 80%;
-    margin-bottom: 0;
+    margin: {
+      top: 0.25em;
+      bottom: 0;
+    }
   }
 }
