@@ -1,9 +1,9 @@
 // ----------------------------------------------
 // Imports
 // ----------------------------------------------
-import $ from 'jquery';
 import anime from 'animejs';
 import Barba from 'barba.js';
+import waypoint from '../../../node_modules/waypoints/lib/jquery.waypoints.js';
 import InfiniteScroll from './_infiniteScroll.js';
 
 // ----------------------------------------------
