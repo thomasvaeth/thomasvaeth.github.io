@@ -17,8 +17,23 @@ figure {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 iframe {
   border: none;
+}
+
+//----------------------------------------------
+// Media
+//---------------------------------------------- 
+.media {
+  position: relative;
+
+  padding-bottom: 56.5%;
+
+  background-color: $color-lightgrey;
 }
 
 //----------------------------------------------

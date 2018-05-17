@@ -2,20 +2,26 @@
 layout: default
 ---
 <section class="mast section-padding">
+  <header class="mast__header">
+    <h1 class="mast__title">{{ page.title }}</h1>
+    <p class="mast__text">{{ page.mast }}</p>
+  </header>
+</section>
 
-  {% if page.link_video %}
+{% if page.link_video %}
+  <section class="media">
     <div class="absolute-vid">
       <video autoplay loop muted>
         <source type="video/mp4" src="{{ page.link_video }}">
       </video>
     </div>
-  {% elsif page.title != 'The Stable Seattle' and page.title != 'CryptoLogg' %}
+  </section>
+{% elsif page.title != 'The Stable Seattle' and page.title != 'CryptoLogg' %}
+  <section class="media">
     <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
-  {% endif %}
+  </section>
+{% endif %}
 
-  <div class="mast__container">
-    <p class="mast__text">{{ page.mast }}</p>
-  </div>
+<section class="study">
+  {{ content }}
 </section>
-
-{{ content }}

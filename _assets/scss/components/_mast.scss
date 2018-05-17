@@ -2,60 +2,28 @@
 // Mast
 //---------------------------------------------- 
 .mast {
-  @extend %flex-center;
 
-  position: relative;
-
-  height: 100vh;
-
-  background-color: $color-lightgrey;
-
-  .cryptologg & {
-    background-color: $color-lightgrey;
-  }
-
-  .the-stable-seattle & {
-    background-color: #feefe5;
-  }
-
-  .absolute-bg,
-  .absolute-vid {
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: $z-9;
-
-      height: 100%;
-      width: 100%;
-
-      background-color: rgba($color-darkgrey, 0.5);
+  &__header {
+    padding: {
+      top: 2em;
+      bottom: 4em;
     }
+
+    line-height: 1.2;
   }
 
-  &__container {
-    @extend %auto-margin;
+  &__title,
+  &__text {
+    font-size: 3em;
+  }
 
-    position: relative;
-    
-    max-width: $mq-med;
-
-    @media (min-width: $mq-med) {
-      width: 80%;
-    }
+  &__title {
+    font-weight: 700;
   }
 
   &__text {
     margin-bottom: 0;
 
-    font-size: 1.75em;
-
-    .s-p-real-estate &,
-    .kaiser-permanente &,
-    .inrix & {
-      color: $color-white;
-    }
+    color: $color-grey;
   }
 }

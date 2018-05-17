@@ -2,14 +2,6 @@
 // Header
 //---------------------------------------------- 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: $z-99;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
   width: 100%;
   padding: 2em;
 
@@ -23,11 +15,5 @@
   &__title {
     font-weight: 700;
     color: $color-black;
-
-    .s-p-real-estate &,
-    .kaiser-permanente &,
-    .inrix & {
-      color: $color-white;
-    }
   }
 }
