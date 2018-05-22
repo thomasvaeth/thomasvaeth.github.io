@@ -13,12 +13,18 @@
 
     align-items: center;
     margin-top: 1em;
+  }
 
-    & > article {
-      padding: {
-        top: 2em;
-        bottom: 2em;
-      }
+  &__work {
+    padding: {
+      top: 2em;
+      bottom: 2em;
+    }
+
+    visibility: hidden;
+
+    &.js-waypoints {
+      visibility: visible;
     }
   }
 
@@ -26,6 +32,8 @@
     display: block;
 
     color: $color-black;
+    transform: translateY(20%);
+    transition: transform 1s ease;
 
     &:hover {
       .work__cryptologg,
@@ -54,6 +62,26 @@
           transform: scale(1.1);
         }
       }
+    }
+
+    .js-waypoints & {
+      transform: translateY(0);
+    }
+  }
+
+  &__scale {
+
+    .work__vid & {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 100%;
+    }
+
+    .js-waypoints & {
+      animation: scale 1s ease both;
     }
   }
 

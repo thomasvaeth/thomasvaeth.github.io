@@ -1,22 +1,28 @@
-<article>
+<article class="work__work">
   <a class="work__link" href="{{ work.url | prepend: site.baseurl }}">
     {% if work.title == 'CryptoLogg' %}
       <div class="work__cryptologg">
-        <div class="cycle">
-          <span>🤑</span>
-          <span class="hidden">🙃</span>
-          <span class="hidden">😵</span>
+        <div class="work__scale">
+          <div class="cycle">
+            <span>🤑</span>
+            <span class="hidden">🙃</span>
+            <span class="hidden">😵</span>
+          </div>
         </div>
       </div>
     {% elsif work.link_video %}
       <div class="work__vid">
-        <video autoplay loop muted poster="{{ work.link_image }}">
-          <source type="video/mp4" src="{{ work.link_video }}">
-        </video>
+        <div class="work__scale">
+          <video autoplay loop muted poster="{{ work.link_image }}">
+            <source type="video/mp4" src="{{ work.link_video }}">
+          </video>
+        </div>
       </div>
     {% elsif work.link_image %}
       <figure class="work__img">
-        <img src="{{ work.link_image }}" alt="{{ work.title }}"/>
+        <div class="work__scale">
+          <img src="{{ work.link_image }}" alt="{{ work.title }}"/>
+        </div>
       </figure>
     {% endif %}
     <header class="work__header">

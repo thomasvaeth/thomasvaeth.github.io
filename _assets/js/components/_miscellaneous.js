@@ -60,6 +60,7 @@ const miscBarba = () => {
     $('.transition').removeClass('transition-in');
 
     miscCycle();
+    miscWaypoints();
 
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();
@@ -101,6 +102,33 @@ const miscCycle = () => {
       emoji.eq(count).removeClass('hidden');
     }, 1000);
   });
+};
+
+// ----------------------------------------------
+// Waypoints
+// ----------------------------------------------
+const miscWaypoints = () => {
+  // Work
+  $('.work__work, .posts__post').each((idx, ele) => {
+    $(ele).waypoint({
+      handler() {
+        $(ele).addClass('js-waypoints');
+        this.destroy();
+      },
+      offset: '90%'
+    });
+  });
+
+  // Posts
+  // $('.post__post').each((idx, ele) => {
+  //   $(ele).waypoint({
+  //     handler() {
+  //       $(ele).addClass('js-waypoints');
+  //       this.destroy();
+  //     },
+  //     offset: '90%'
+  //   });
+  // });
 };
 
 // ----------------------------------------------

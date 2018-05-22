@@ -15,10 +15,7 @@
   }
 
   &__post {
-    padding: {
-      top: 2em;
-      bottom: 2em;
-    }
+    @extend .work__work;
   }
 
   &__link {
