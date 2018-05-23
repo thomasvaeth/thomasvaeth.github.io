@@ -2,8 +2,16 @@
 // Header
 //---------------------------------------------- 
 .header {
-  width: 100%;
-  padding: 2em;
+  display: flex;
+  justify-content: center;
+  padding: 2em 1em;
+
+  @media (min-width: $mq-small) {
+    padding: {
+      right: 2em;
+      left: 2em;
+    }
+  }
 
   @media (min-width: $mq-med) {
     padding: {
@@ -13,7 +21,7 @@
   }
 
   &__title {
-    font-weight: 700;
-    color: $color-black;
+    font-size: 1.1em;
+    color: $color-alpha;
   }
 }

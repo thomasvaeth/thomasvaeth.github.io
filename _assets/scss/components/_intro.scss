@@ -4,6 +4,16 @@
 .intro {
 
   &__container {
+    margin-bottom: 2em;
+  }
 
+  &__text {
+    @extend %text-center;
+
+    margin-bottom: 0;
+
+    font-weight: 700;
+    font-size: 5em;
+    line-height: 1.3;
   }
 }

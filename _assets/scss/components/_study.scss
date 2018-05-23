@@ -3,4 +3,17 @@
 //---------------------------------------------- 
 .study {
 
+  &__double {
+    @include flex-grid(1, 2, $pad: 1em);
+
+    & > div {
+
+      @media (min-width: $mq-small) {
+        padding: {
+          top: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
 }

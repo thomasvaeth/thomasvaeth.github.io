@@ -118,17 +118,6 @@ const miscWaypoints = () => {
       offset: '90%'
     });
   });
-
-  // Posts
-  // $('.post__post').each((idx, ele) => {
-  //   $(ele).waypoint({
-  //     handler() {
-  //       $(ele).addClass('js-waypoints');
-  //       this.destroy();
-  //     },
-  //     offset: '90%'
-  //   });
-  // });
 };
 
 // ----------------------------------------------
