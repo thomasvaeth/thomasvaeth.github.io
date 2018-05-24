@@ -4,14 +4,16 @@ pagination:
   enabled: true
 ---
 <section class="intro section-padding">
-  <div class="intro__container">
-    <p class="intro__text">I’m Thomas, a front-end developer based in Seattle.</p>
+  <div class="grid">
+    <div class="intro__container">
+      <h1 class="intro__text">I’m Thomas, a front-end developer based in Seattle.</h1>
+    </div>
   </div>
 </section>
 
 <section class="work section-padding">
   <div class="grid">
-    <h2 class="work__title">Selected projects</h2>
+    <h2>Selected projects</h2>
     <div class="work__container">
 
       {% assign ordered_work = site.work | sort: 'order' %}
@@ -27,7 +29,7 @@ pagination:
 
 <section class="posts section-padding">
   <div class="grid">
-    <h2 class="posts__title">Recent articles</h2>
+    <h2>Recent articles</h2>
     <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
       
       {% for post in paginator.posts %}
@@ -45,21 +47,5 @@ pagination:
       </div>
     {% endif %}
 
-  </div>
-</section>
-
-<section class="awards section-padding">
-  <div class="grid">
-    <h2 class="awards__title">Recognition</h2>
-    <div class="awards__container">
-
-      {% assign ordered_awards = site.awards | sort: 'order' | reverse %}
-      {% for award in ordered_awards %}
-
-        {% include award-card.html %}
-
-      {% endfor %}
-
-    </div>
   </div>
 </section>

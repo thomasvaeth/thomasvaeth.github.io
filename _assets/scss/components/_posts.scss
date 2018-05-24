@@ -2,11 +2,6 @@
 // Posts
 //---------------------------------------------- 
 .posts {
-  @extend .work;
-
-  &__title {
-    @extend .work__title;
-  }
 
   &__container {
     @include flex-grid(1, 1, 3, $pad: 1em);
@@ -36,7 +31,7 @@
   &__img {
     position: relative;
 
-    background-color: $color-lightgrey;
+    background-color: $color-white;
     overflow: hidden;
     transition: transform 300ms ease-in-out;
 
