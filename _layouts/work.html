@@ -2,10 +2,12 @@
 layout: default
 ---
 <section class="mast section-padding">
-  <header class="mast__header">
-    <h1 class="mast__title">{{ page.title }}</h1>
-    <p class="mast__text">{{ page.mast }}</p>
-  </header>
+  <div class="grid">
+    <header>
+      <h1>{{ page.title }}</h1>
+      <p class="mast__text">{{ page.mast }}</p>
+    </header>
+  </div>
 </section>
 
 {% if page.link_video %}

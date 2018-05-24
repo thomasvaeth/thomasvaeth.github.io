@@ -23,6 +23,7 @@ section {
 .grid {
   @extend %auto-margin;
 
+  width: 100%;
   max-width: $max-width--xl;
 }
 

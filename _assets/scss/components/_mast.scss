@@ -2,28 +2,15 @@
 // Mast
 //---------------------------------------------- 
 .mast {
+  @extend .intro;
 
-  &__header {
-    padding: {
-      top: 2em;
-      bottom: 4em;
+  &__text {
+    max-width: 54rem;
+    margin: {
+      top: 0.25em;
+      bottom: 0;
     }
 
-    line-height: 1.2;
-  }
-
-  &__title,
-  &__text {
-    font-size: 3em;
-  }
-
-  &__title {
-    font-weight: 700;
-  }
-
-  &__text {
-    margin-bottom: 0;
-
-    color: $color-grey;
+    font-size: 1.25em;
   }
 }

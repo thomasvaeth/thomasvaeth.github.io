@@ -2,7 +2,19 @@
 // Header
 //---------------------------------------------- 
 .header {
-  padding: 2em 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-99;
+
+  display: flex;
+  align-items: center;
+  height: $header-height;
+  width: 100%;
+  padding: {
+    right: 1em;
+    left: 1em;
+  }
 
   @media (min-width: $mq-small) {
     padding: {

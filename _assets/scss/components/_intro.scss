@@ -2,12 +2,15 @@
 // Intro
 //---------------------------------------------- 
 .intro {
-
-  &__container {
-    margin-bottom: 2em;
-  }
+  display: flex;
+  align-items: center;
+  height: 24em;
+  min-height: 60vh;
 
   &__text {
-    line-height: 1.3;
+
+    @media (min-width: $mq-small) {
+      max-width: 80%;
+    }
   }
 }
