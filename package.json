@@ -20,8 +20,8 @@
   },
   "dependencies": {
     "animejs": "^2.2.0",
-    "barba.js": "^1.0.0",
-    "waypoints": "^4.0.1"
+    "aos": "^2.3.0",
+    "barba.js": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

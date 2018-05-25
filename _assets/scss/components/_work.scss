@@ -16,20 +16,12 @@
       top: 2em;
       bottom: 2em;
     }
-
-    visibility: hidden;
-
-    &.js-waypoints {
-      visibility: visible;
-    }
   }
 
   &__link {
     display: block;
 
     color: $color-black;
-    transform: translateY(20%);
-    transition: transform 1s ease;
 
     &:hover {
       .work__cryptologg,
@@ -59,10 +51,6 @@
         }
       }
     }
-
-    .js-waypoints & {
-      transform: translateY(0);
-    }
   }
 
   &__scale {
@@ -74,10 +62,6 @@
 
       height: 100%;
       width: 100%;
-    }
-
-    .js-waypoints & {
-      animation: scale 1s ease both;
     }
   }
 
@@ -142,8 +126,16 @@
     margin-top: 1em;
   }
 
+  &__title {
+    overflow: hidden;
+
+    span {
+      display: block;
+    }
+  }
+
   &__text {
-    width: 80%;
+    max-width: 26em;
     margin: {
       top: 0.25em;
       bottom: 0;
