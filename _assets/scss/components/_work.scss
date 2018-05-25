@@ -2,13 +2,11 @@
 // Work
 //---------------------------------------------- 
 .work {
-  background-color: $color-lightgrey;
 
   &__container {
-    @include flex-grid(1, 1, 2, $pad: 1em);
+    @include flex-grid(1, 2, $pad: 1em);
 
     align-items: center;
-    margin-top: 1em;
   }
 
   &__work {

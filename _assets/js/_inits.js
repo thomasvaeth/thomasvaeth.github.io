@@ -5,7 +5,7 @@ import anime from 'animejs';
 import AOS from 'aos';
 import Barba from 'barba.js';
 import InfiniteScroll from './components/_infiniteScroll.js';
-import { miscCycle } from './components/_miscellaneous.js';
+import { miscCycle, miscClip } from './components/_miscellaneous.js';
 
 // ----------------------------------------------
 // Inits
@@ -69,10 +69,13 @@ $(() => {
     });
 
     miscCycle();
+    miscClip();
 
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();
     }
+
+    $(window).on('load resize scroll', miscClip);
   });
 
   Barba.Pjax.getTransition = () => SlideTransition;

@@ -2,6 +2,8 @@
 // Sections
 //--------------------------------------------
 section {
+  @include z-index-layers(3);
+
   position: relative;
 }
 
@@ -28,17 +30,24 @@ section {
 }
 
 //-------------------------------------------- 
-// Viewport Height
+// Hidden
 //--------------------------------------------
-.viewport-height {
-  position: relative;
-
-  height: 100vh;
+.hidden {
+  display: none;
 }
 
 //-------------------------------------------- 
 // Hidden
 //--------------------------------------------
-.hidden {
-  display: none;
+.clip {
+  position: fixed;
+  top: 4em;
+  left: 4em;
+  z-index: $z-1;
+  
+  span {
+    font-weight: 700;
+    font-size: 1.25em;
+    color: $color-alpha;
+  }
 }

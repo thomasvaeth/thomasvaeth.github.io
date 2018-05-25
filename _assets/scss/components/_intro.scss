@@ -5,9 +5,20 @@
   display: flex;
   align-items: center;
   height: 24em;
-  min-height: 60vh;
+  padding: 4em 1em;
+
+  @media (min-width: $mq-small) {
+    padding: 6em 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: 8em 4em;
+    min-height: 90vh;
+  }
 
   &__text {
+    @extend %auto-margin;
+    @extend %text-center;
 
     @media (min-width: $mq-small) {
       max-width: 80%;
