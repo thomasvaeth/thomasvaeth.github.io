@@ -2,32 +2,19 @@
 // Header
 //---------------------------------------------- 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 1em;
+  left: 1em;
   z-index: $z-99;
 
-  display: flex;
-  align-items: center;
-  height: $header-height;
-  width: 100%;
-  padding: {
-    right: 1em;
-    left: 1em;
-  }
-
   @media (min-width: $mq-small) {
-    padding: {
-      right: 2em;
-      left: 2em;
-    }
+    top: 2em;
+    left: 2em;
   }
 
   @media (min-width: $mq-med) {
-    padding: {
-      right: 4em;
-      left: 4em;
-    }
+    top: 4em;
+    left: 4em;
   }
 
   &__title {
