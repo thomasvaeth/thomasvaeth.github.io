@@ -4,6 +4,28 @@
 .mast {
   @extend .intro;
 
+  &--media {
+    position: relative;
+
+    padding-bottom: 56.5%;
+
+    background-color: $color-lightgrey;
+
+    .grid {
+      @extend %text-center;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+      
+      .s-p-real-estate & {
+        color: $color-white;
+      }
+    }
+  }
+
   &__text {
     max-width: 54rem;
     margin: {

@@ -12,18 +12,20 @@ layout: compress
   <div id="barba-wrapper">
     <div class="barba-container {{ page.title | downcase | slugify }}">
 
-      {% include header.html %}
-
       <main>
 
         {{ content }}
         
       </main>
 
+      {% include footer.html %}
+
     </div>
   </div>
 
-  {% include footer.html %}
+  <div class="transition"></div>
 
+  <script src="{{ '/assets/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/assets/js/app.min.js' | prepend: site.baseurl }}"></script>
 </body>
 </html>

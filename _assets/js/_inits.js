@@ -75,7 +75,7 @@ $(() => {
       InfiniteScroll.init();
     }
 
-    $(window).on('load resize scroll', miscClip);
+    $(window).on('resize scroll', miscClip);
   });
 
   Barba.Pjax.getTransition = () => SlideTransition;

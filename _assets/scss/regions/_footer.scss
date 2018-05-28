@@ -2,29 +2,33 @@
 // Footer
 //---------------------------------------------- 
 .footer {
-  padding: {
-    top: 4em;
-    bottom: 4em;
-  }
+  position: relative;
+  z-index: 4;
+
+  height: 100vh;
+  // padding: {
+  //   top: 4em;
+  //   bottom: 4em;
+  // }
   
-  border-top: 1px solid rgba($color-black, 0.1);
+  // border-top: 1px solid rgba($color-black, 0.1);
 
-  &__list {
-    @extend %flex-center;
-    @extend %no-list-style;
+  // &__list {
+  //   @extend %flex-center;
+  //   @extend %no-list-style;
 
-    & > li:not(:last-child) {
-      margin-right: 1em;
-    }
-  }
+  //   & > li:not(:last-child) {
+  //     margin-right: 1em;
+  //   }
+  // }
 
-  &__link {
-    font-size: 1.1em;
-    font-weight: 400;
-    color: $color-black;
+  // &__link {
+  //   font-size: 1.1em;
+  //   font-weight: 400;
+  //   color: $color-black;
 
-    // &:hover {
-    //   border-bottom: 1px solid $color-black;
-    // }
-  }
+  //   // &:hover {
+  //   //   border-bottom: 1px solid $color-black;
+  //   // }
+  // }
 }
