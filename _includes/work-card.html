@@ -1,8 +1,8 @@
 <article class="work__work">
-  <a class="work__link" href="{{ work.url | prepend: site.baseurl }}" data-aos="slide-up" data-aos-duration="1000">
+  <a class="work__link" href="{{ work.url | prepend: site.baseurl }}" data-aos="slide-up">
     {% if work.title == 'CryptoLogg' %}
       <div class="work__cryptologg">
-        <div class="work__scale" data-aos="scale-down" data-aos-duration="1000">
+        <div class="work__scale" data-aos="scale-down">
           <div class="cycle">
             <span>🤑</span>
             <span class="hidden">🙃</span>
@@ -12,7 +12,7 @@
       </div>
     {% elsif work.link_video %}
       <div class="work__vid">
-        <div class="work__scale" data-aos="scale-down" data-aos-duration="1000">
+        <div class="work__scale" data-aos="scale-down">
           <video autoplay loop muted poster="{{ work.link_image }}">
             <source type="video/mp4" src="{{ work.link_video }}">
           </video>
@@ -20,16 +20,16 @@
       </div>
     {% elsif work.link_image %}
       <figure class="work__img">
-        <div class="work__scale" data-aos="scale-down" data-aos-duration="1000">
+        <div class="work__scale" data-aos="scale-down">
           <img src="{{ work.link_image }}" alt="{{ work.title }}"/>
         </div>
       </figure>
     {% endif %}
     <header class="work__header">
       <h3 class="work__title">
-        <span data-aos="slice-up">{{ work.title }}</span>
+        <span data-aos="slice-up" data-aos-duration="400">{{ work.title }}</span>
       </h3>
-      <p class="work__text" data-aos="fade-in" data-aos-delay="100">{{ work.link_description }}</p>
+      <p class="work__text" data-aos="fade-in" data-aos-duration="400" data-aos-delay="100">{{ work.link_description }}</p>
     </header>
   </a>
 </article>

@@ -29,8 +29,19 @@ layout: default
       </div>
     </div>
   </section>
+{% elsif page.title == 'The Stable Seattle' %}
+  <section class="mast bg-the-stable">
+    <span class="clip">
+      <a href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
+    </span>
+    <div class="grid">
+      <div>
+        <h1>{{ page.title }}</h1>
+      </div>
+    </div>
+  </section>
 {% else %}
-  <section class="mast">
+  <section class="mast bg-white">
     <span class="clip">
       <a href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
     </span>

@@ -63,7 +63,7 @@ $(() => {
     $('.transition').removeClass('transition-in');
 
     AOS.init({
-      duration: 400,
+      duration: 1000,
       easing: 'ease',
       once: true
     });
