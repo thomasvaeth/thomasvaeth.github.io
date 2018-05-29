@@ -24,6 +24,11 @@
 
     background-color: $color-lightgrey;
 
+    .absolute-bg,
+    .absolute-vid {
+      opacity: 0.8;
+    }
+
     .grid {
       @extend %text-center;
 
@@ -33,7 +38,8 @@
 
       transform: translate(-50%, -50%);
       
-      .s-p-real-estate & {
+      .s-p-real-estate &,
+      .inrix & {
         color: $color-white;
       }
     }

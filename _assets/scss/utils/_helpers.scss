@@ -27,6 +27,29 @@ section {
 
   width: 100%;
   max-width: $max-width--xl;
+
+  @media (min-width: $mq-med) {
+    width: 95%;
+  }
+
+  @media (min-width: $mq-xlarge) {
+    width: 80%;
+  }
+}
+
+.grid-small {
+  @extend %auto-margin;
+
+  width: 100%;
+  max-width: $max-width;
+
+  @media (min-width: $mq-med) {
+    width: 65%;
+  }
+
+  @media (min-width: $mq-xlarge) {
+    width: 50%;
+  }
 }
 
 //-------------------------------------------- 
@@ -34,35 +57,4 @@ section {
 //--------------------------------------------
 .hidden {
   display: none;
-}
-
-//-------------------------------------------- 
-// Hidden
-//--------------------------------------------
-.clip {
-  position: fixed;
-  top: 1em;
-  left: 1em;
-  z-index: $z-1;
-
-  @media (min-width: $mq-small) {
-    top: 2em;
-    left: 2em;
-  }
-
-  @media (min-width: $mq-med) {
-    top: 4em;
-    left: 4em;
-  }
-  
-  a,
-  span {
-    font-weight: 700;
-    font-size: 1.25em;
-    color: $color-black;
-
-    .footer & {
-      color: $color-white;
-    }
-  }
 }

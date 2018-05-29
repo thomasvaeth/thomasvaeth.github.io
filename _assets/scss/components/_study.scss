@@ -3,6 +3,18 @@
 //---------------------------------------------- 
 .study {
 
+  &__intro {
+
+    p {
+      margin: {
+        top: 0.25em;
+        bottom: 0;
+      }
+
+      font-size: 1.25em;
+    }
+  }
+
   &__double {
     @include flex-grid(1, 2, $pad: 1em);
 

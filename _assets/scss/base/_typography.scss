@@ -86,9 +86,9 @@ h1, %font-h1 {
 // H2 Theme
 //---------------------------------------------- 
 h2 {
-  $font-size: 2.5em;
+  $font-size: 2em;
 
-  font-size: $font-size - 0.75em;
+  font-size: $font-size - 0.5em;
 
   @media (min-width: $mq-small) {
     font-size: $font-size - 0.25em;

@@ -1,0 +1,32 @@
+//-------------------------------------------- 
+// Hidden
+//--------------------------------------------
+.clip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  z-index: $z-1;
+
+  @media (min-width: $mq-small) {
+    top: 2em;
+    left: 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    top: 4em;
+    left: 4em;
+  }
+  
+  a,
+  span {
+    font-weight: 700;
+    font-size: 1.25em;
+    color: $color-black;
+
+    .footer &,
+    .s-p-real-estate .mast--media &,
+    .inrix .mast--media & {
+      color: $color-white;
+    }
+  }
+}
