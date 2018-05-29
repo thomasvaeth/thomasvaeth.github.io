@@ -4,16 +4,27 @@
 .work {
 
   &__container {
-    @include flex-grid(1, 2, $pad: 1em);
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    margin: {
+      right: -1em;
+      left: -1em;
+    }
 
-    align-items: center;
+    & > div {
+      flex-basis: 100%;
+      max-width: 100%;
+
+      @media (min-width: $mq-small) {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
   }
 
   &__work {
-    padding: {
-      top: 2em;
-      bottom: 2em;
-    }
+    padding: 2em 1em;
   }
 
   &__link {

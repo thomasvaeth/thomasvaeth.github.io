@@ -20,14 +20,25 @@ pagination:
   </span>
   <div class="grid">
     <div class="work__container">
-
       {% assign ordered_work = site.work | sort: 'order' %}
-      {% for work in ordered_work %}
+      <div>
+        {% for work in ordered_work %}
+          {% if work.order == 0 or work.order == 2 or work.order == 4 %}
 
-        {% include work-card.html %}
+            {% include work-card.html %}
 
-      {% endfor %}
+          {%endif %}
+        {% endfor %}
+      </div>
+      <div>
+        {% for work in ordered_work %}
+          {% if work.order == 1 or work.order == 3 or work.order == 5 %}
 
+            {% include work-card.html %}
+
+          {% endif %}
+        {% endfor %}
+      </div>
     </div>
   </div>
 </section>
