@@ -2,33 +2,53 @@
 // Footer
 //---------------------------------------------- 
 .footer {
+  @extend .mast;
+
   position: relative;
   z-index: 4;
 
-  height: 100vh;
-  // padding: {
-  //   top: 4em;
-  //   bottom: 4em;
-  // }
-  
-  // border-top: 1px solid rgba($color-black, 0.1);
+  &__contact {
+    @extend %font-h1;
 
-  // &__list {
-  //   @extend %flex-center;
-  //   @extend %no-list-style;
+    color: $color-white;
 
-  //   & > li:not(:last-child) {
-  //     margin-right: 1em;
-  //   }
-  // }
+    &:hover {
+      border-bottom: 4px solid $color-white;
+    }
+  }
 
-  // &__link {
-  //   font-size: 1.1em;
-  //   font-weight: 400;
-  //   color: $color-black;
+  &__list {
+    @extend %no-list-style;
 
-  //   // &:hover {
-  //   //   border-bottom: 1px solid $color-black;
-  //   // }
-  // }
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    z-index: $z-1;
+
+    display: flex;
+
+    @media (min-width: $mq-small) {
+      right: 2em;
+      bottom: 2em;
+    }
+
+    @media (min-width: $mq-med) {
+      right: 4em;
+      bottom: 4em;
+    }
+
+    & > li:not(:last-child) {
+      margin-right: 1.25em;
+    }
+  }
+
+  &__link {
+    font-size: 1.25em;
+    font-weight: 700;
+    color: $color-white;
+
+    &:hover {
+      border-bottom: 2px solid $color-white;
+    }
+  }
 }

@@ -2,7 +2,20 @@
 // Mast
 //---------------------------------------------- 
 .mast {
-  @extend .intro;
+  @extend %text-center;
+
+  display: flex;
+  align-items: center;
+  min-height: 24em;
+  padding: 4em 1em;
+
+  @media (min-width: $mq-small) {
+    padding: 6em 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: 8em 4em;
+  }
 
   &--media {
     position: relative;
