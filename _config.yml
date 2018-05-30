@@ -45,5 +45,3 @@ collections:
   work:
     output: true
     permalink: /:path/
-  awards:
-    output: false
