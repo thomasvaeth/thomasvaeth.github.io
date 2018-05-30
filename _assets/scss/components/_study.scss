@@ -14,12 +14,26 @@
     }
 
     p {
-      margin: {
-        top: 0.25em;
-        bottom: 0;
+      font-size: 1.1em;
+
+      &:first-of-type {
+        margin-top: 0.25em;
       }
 
-      font-size: 1.25em;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $color-black;
+      border-bottom: 1px solid $color-black;
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        color: $color-grey;
+        border-bottom: 1px solid $color-grey;
+      }
     }
   }
 
