@@ -41,7 +41,7 @@ const miscClip = () => {
   $('.clip').each((idx, ele) => {
     const layerOffset = $(ele).closest('section, footer').offset();
     const containerOffset = layerOffset.top - $(window).scrollTop();
-    const clip = containerOffset - $(ele).css('top').replace(/[^-\d\.]/g, '') - $(ele).css('margin-top').replace(/[^-\d\.]/g, '');
+    const clip = containerOffset - $(ele).css('top').replace(/[^-\d.]/g, '') - $(ele).css('margin-top').replace(/[^-\d.]/g, '');
 
     $(ele).css('clip', `rect(${clip}px, auto, auto, auto)`);
   });

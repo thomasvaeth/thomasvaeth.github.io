@@ -30,7 +30,7 @@ $(() => {
           targets: '.transition',
           translateX: '-=100%',
           easing: 'easeInQuart',
-          duration: 400,
+          duration: 350,
           complete() {
             resolve();
           }
@@ -41,26 +41,25 @@ $(() => {
     slideIn() {
       $('.transition').removeClass('transition-out').addClass('transition-in');
 
-      const _this = this;
-
       window.scrollTo(0, 0);
       this.oldContainer.style.display = 'none';
       this.newContainer.style.visibility = 'visible';
 
-      anime({
-        targets: '.transition',
-        translateY: '-100%',
-        easing: 'easeOutQuart',
-        duration: 350,
-        complete() {
-          _this.done();
-        }
-      });
+      this.done();
     }
   });
 
   Barba.Dispatcher.on('transitionCompleted', () => {
-    $('.transition').removeClass('transition-in');
+    anime({
+      targets: '.transition',
+      translateY: '-100%',
+      easing: 'easeOutQuart',
+      duration: 350,
+      delay: 200,
+      complete() {
+        $('.transition').removeClass('transition-in');
+      }
+    });
 
     AOS.init({
       duration: 1000,

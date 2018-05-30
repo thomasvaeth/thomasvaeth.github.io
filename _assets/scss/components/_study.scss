@@ -5,6 +5,14 @@
 
   &__intro {
 
+    h2 {
+      overflow: hidden;
+
+      span {
+        display: block;
+      }
+    }
+
     p {
       margin: {
         top: 0.25em;
