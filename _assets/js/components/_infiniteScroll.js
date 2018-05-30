@@ -1,4 +1,9 @@
 // ----------------------------------------------
+// Imports
+// ----------------------------------------------
+import AOS from 'aos';
+
+// ----------------------------------------------
 // Infinite Scroll
 // ----------------------------------------------
 const InfiniteScroll = (() => {
@@ -47,8 +52,9 @@ const InfiniteScroll = (() => {
           if (posts.length) {
             setTimeout(() => {
               [].forEach.call(posts, post => {
-                post.classList.add('fade-up');
+                // post.classList.add('fade-up');
                 s.container.append(post);
+                AOS.refreshHard();
               });
 
               if (s.currentPage === s.maxPages) {

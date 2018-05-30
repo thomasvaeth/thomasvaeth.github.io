@@ -144,12 +144,8 @@
   }
 
   &__text {
+    @extend .posts__text;
+    
     max-width: 26em;
-    margin: {
-      top: 0.25em;
-      bottom: 0;
-    }
-
-    font-size: 1.1em;
   }
 }
