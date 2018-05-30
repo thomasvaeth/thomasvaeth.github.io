@@ -2,10 +2,7 @@
 layout: default
 ---
 {% if page.link_video %}
-  <section class="mast--media bg-black">
-    <span class="clip">
-      <a href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
-    </span>
+  <section class="mast--media bg-black rellax" data-rellax-speed="-4">
     <div class="absolute-vid">
       <video autoplay loop muted>
         <source type="video/mp4" src="{{ page.link_video }}">
@@ -18,10 +15,7 @@ layout: default
     </div>
   </section>
 {% elsif page.title != 'The Stable Seattle' and page.title != 'CryptoLogg' %}
-  <section class="mast--media bg-black">
-    <span class="clip">
-      <a href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
-    </span>
+  <section class="mast--media bg-black rellax" data-rellax-speed="-4">
     <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
     <div class="grid">
       <div>
@@ -30,10 +24,7 @@ layout: default
     </div>
   </section>
 {% elsif page.title == 'The Stable Seattle' %}
-  <section class="mast bg-the-stable">
-    <span class="clip">
-      <a href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
-    </span>
+  <section class="mast bg-the-stable rellax" data-rellax-speed="-4">
     <div class="grid">
       <div>
         <h1>{{ page.title }}</h1>
@@ -41,10 +32,7 @@ layout: default
     </div>
   </section>
 {% else %}
-  <section class="mast bg-lightgrey">
-    <span class="clip">
-      <a href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
-    </span>
+  <section class="mast bg-lightgrey rellax" data-rellax-speed="-4">
     <div class="grid">
       <div>
         <h1>{{ page.title }}</h1>
@@ -54,8 +42,5 @@ layout: default
 {% endif %}
 
 <section class="study">
-  <span class="clip">
-    <a href="{{ '/' | prepend: site.baseurl }}">{{ page.title }}</a>
-  </span>
   {{ content }}
 </section>

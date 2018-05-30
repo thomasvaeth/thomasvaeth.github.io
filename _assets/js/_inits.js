@@ -4,8 +4,9 @@
 import anime from 'animejs';
 import AOS from 'aos';
 import Barba from 'barba.js';
+import Rellax from 'rellax';
 import InfiniteScroll from './components/_infiniteScroll.js';
-import { miscCycle, miscClip } from './components/_miscellaneous.js';
+import { miscCycle } from './components/_miscellaneous.js';
 
 // ----------------------------------------------
 // Inits
@@ -67,14 +68,13 @@ $(() => {
       once: true
     });
 
+    const rellax = new Rellax('.rellax');
+
     miscCycle();
-    miscClip();
 
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();
     }
-
-    $(window).on('resize scroll', miscClip);
   });
 
   Barba.Pjax.getTransition = () => SlideTransition;

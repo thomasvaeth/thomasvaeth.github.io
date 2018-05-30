@@ -3,10 +3,7 @@ layout: default
 pagination: 
   enabled: true
 ---
-<section class="intro bg-white">
-  <span class="clip">
-    <span>Thomas Vaeth</span>
-  </span>
+<section class="intro bg-white rellax" data-rellax-speed="-4">
   <div class="grid">
     <div>
       <h1 class="intro__text">Hi, I’m Thomas. A front-end developer based in Seattle.</h1>
@@ -15,9 +12,6 @@ pagination:
 </section>
 
 <section class="work section-padding bg-lightgrey">
-  <span class="clip">
-    <span>Selected Projects</span>
-  </span>
   <div class="grid">
     <div class="work__container">
       {% assign ordered_work = site.work | sort: 'order' %}
@@ -44,9 +38,6 @@ pagination:
 </section>
 
 <section class="posts section-padding bg-white">
-  <span class="clip">
-    <span>Recent Articles</span>
-  </span>
   <div class="grid">
     <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
       

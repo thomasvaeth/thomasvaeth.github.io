@@ -52,7 +52,6 @@ const InfiniteScroll = (() => {
           if (posts.length) {
             setTimeout(() => {
               [].forEach.call(posts, post => {
-                // post.classList.add('fade-up');
                 s.container.append(post);
                 AOS.refreshHard();
               });
