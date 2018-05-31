@@ -1,6 +1,6 @@
 <header class="header">
   {% if page.url == '/index.html' %}
-    <a class="header__title" href="{{ '/#' | prepend: site.baseurl }}" data-scroll>Thomas Vaeth</a>
+    <a class="header__title" href="#" data-scroll>Thomas Vaeth</a>
   {% else %}
     <a class="header__title" href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
   {% endif %}
@@ -14,7 +14,7 @@
         <a class="header__link" href="{{ '/#articles' | prepend: site.baseurl }}" data-scroll>Articles</a>
       </li>
       <li>
-        <a class="header__link" href="{{ '/#contact' | prepend: site.baseurl }}" data-scroll>Contact</a>
+        <a class="header__link" href="#contact" data-scroll>Contact</a>
       </li>
     </ul>
   </nav>
