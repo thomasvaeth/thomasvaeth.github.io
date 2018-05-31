@@ -12,6 +12,8 @@ layout: compress
   <div id="barba-wrapper">
     <div class="barba-container {{ page.title | downcase | slugify }}">
 
+      {% include header.html %}
+
       <main>
 
         {{ content }}

@@ -5,7 +5,6 @@
   @extend .mast;
 
   position: relative;
-  z-index: 4;
 
   &__contact {
     @extend %font-h1;
@@ -43,7 +42,7 @@
   }
 
   &__link {
-    font-size: 1.25em;
+    font-size: 1.1em;
     font-weight: 700;
     color: $color-white;
 

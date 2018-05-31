@@ -5,6 +5,7 @@ import anime from 'animejs';
 import AOS from 'aos';
 import Barba from 'barba.js';
 import Rellax from 'rellax';
+import SmoothScroll from 'smooth-scroll';
 import InfiniteScroll from './components/_infiniteScroll.js';
 import { miscCycle } from './components/_miscellaneous.js';
 
@@ -69,6 +70,9 @@ $(() => {
     });
 
     const rellax = new Rellax('.rellax');
+    const scroll = new SmoothScroll('a[href*="#"]', {
+      updateURL: false
+    });
 
     miscCycle();
 

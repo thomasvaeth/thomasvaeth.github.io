@@ -1,0 +1,21 @@
+<header class="header">
+  {% if page.url == '/index.html' %}
+    <a class="header__title" href="{{ '/#' | prepend: site.baseurl }}" data-scroll>Thomas Vaeth</a>
+  {% else %}
+    <a class="header__title" href="{{ '/' | prepend: site.baseurl }}">Thomas Vaeth</a>
+  {% endif %}
+
+  <nav>
+    <ul class="header__list">
+      <li>
+        <a class="header__link" href="{{ '/#projects' | prepend: site.baseurl }}" data-scroll>Projects</a>
+      </li>
+      <li>
+        <a class="header__link" href="{{ '/#articles' | prepend: site.baseurl }}" data-scroll>Articles</a>
+      </li>
+      <li>
+        <a class="header__link" href="{{ '/#contact' | prepend: site.baseurl }}" data-scroll>Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>

@@ -22,7 +22,8 @@
     "animejs": "^2.2.0",
     "aos": "^2.3.0",
     "barba.js": "^1.0.0",
-    "rellax": "^1.6.2"
+    "rellax": "^1.6.2",
+    "smooth-scroll": "^14.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

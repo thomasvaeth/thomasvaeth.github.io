@@ -2,5 +2,53 @@
 // Header
 //--------------------------------------------
 .header {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  right: 1em;
+  z-index: $z-998;
 
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 3em;
+
+  background-color: $color-white;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    box-shadow: 0px 1px 0px 1px rgba($color-black, 0.02), 0px 4px 16px rgba($color-black, 0.09);
+  }
+
+  &__title,
+  &__link {
+    font-weight: 700;
+    font-size: 1.1em;
+    color: $color-black;
+  }
+
+  &__title {
+
+  }
+
+  &__list {
+    @extend %no-list-style;
+
+    display: flex;
+
+    & > li:not(:last-child) {
+      margin-right: 1.25em;
+    }
+  }
+
+  &__link {
+
+  }
 }

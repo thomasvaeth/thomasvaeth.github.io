@@ -114,16 +114,3 @@
     }
   }
 }
-
-//---------------------------------------------- 
-//  Z Index Layers - z-index-layers()
-//  @description: Add increasing z-index to layers
-//  @param:       $layers: [null] - Number of sections
-//----------------------------------------------
-@mixin z-index-layers($layers) {
-  @for $i from 1 through $layers {
-    &:nth-child(#{$i}) {   
-      z-index: $i; 
-    }
-  }
-}
