@@ -4,13 +4,13 @@
 .header {
   position: fixed;
   top: 1em;
-  left: 1em;
-  right: 1em;
+  left: 0;
   z-index: $z-998;
 
   display: flex;
   justify-content: space-between;
-  padding: 1em 3em;
+  width: 100%;
+  padding: 1em 4em;
 
   background-color: $color-white;
 

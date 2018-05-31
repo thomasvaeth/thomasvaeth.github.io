@@ -1,6 +1,7 @@
 // ----------------------------------------------
 // Imports
 // ----------------------------------------------
+import SmoothScroll from 'smooth-scroll';
 
 // ----------------------------------------------
 // Time
@@ -35,8 +36,23 @@ const miscCycle = () => {
 };
 
 // ----------------------------------------------
+// Anchor
+// ----------------------------------------------
+const miscAnchor = anchor => {
+  setTimeout(() => {
+    const scroll = new SmoothScroll();
+    const scrollTo = document.querySelector(`#${anchor}`);
+
+    scroll.animateScroll(scrollTo, 0, {
+      offset: 50
+    });
+  }, 1250);
+};
+
+// ----------------------------------------------
 // Exports
 // ----------------------------------------------
 module.exports = {
-  miscCycle
+  miscCycle,
+  miscAnchor
 };

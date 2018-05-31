@@ -5,6 +5,8 @@
 
   &__container {
     @include flex-grid(1, 2, 3, $pad: 1em);
+
+    margin-top: 1em;
   }
 
   &__post {

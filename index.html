@@ -13,6 +13,7 @@ pagination:
 
 <section id="projects" class="work section-padding bg-lightgrey">
   <div class="grid">
+    <h2>Selected projects</h2>
     <div class="work__container">
       {% assign ordered_work = site.work | sort: 'order' %}
       <div>
@@ -39,6 +40,7 @@ pagination:
 
 <section id="articles" class="posts section-padding bg-white">
   <div class="grid">
+    <h2>Recent articles</h2>
     <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
       
       {% for post in paginator.posts %}
