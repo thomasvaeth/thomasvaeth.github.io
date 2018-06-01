@@ -8,6 +8,7 @@ import Rellax from 'rellax';
 import SmoothScroll from 'smooth-scroll';
 import InfiniteScroll from './components/_infiniteScroll.js';
 import { miscCycle, miscAnchor } from './components/_miscellaneous.js';
+import NavigationScroll from './components/_navigationScroll.js';
 
 // ----------------------------------------------
 // Inits
@@ -70,10 +71,9 @@ $(() => {
     });
 
     const rellax = new Rellax('.rellax');
-    const scroll = new SmoothScroll('a[href*="#"]', {
-      offset: 50
-    });
+    const scroll = new SmoothScroll('a[href*="#"]');
 
+    NavigationScroll.init();
     miscCycle();
 
     $('.header__link').on('click', eve => {

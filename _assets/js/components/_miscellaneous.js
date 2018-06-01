@@ -43,9 +43,7 @@ const miscAnchor = anchor => {
     const scroll = new SmoothScroll();
     const scrollTo = document.querySelector(`#${anchor}`);
 
-    scroll.animateScroll(scrollTo, 0, {
-      offset: 50
-    });
+    scroll.animateScroll(scrollTo);
   }, 1250);
 };
 
