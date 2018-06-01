@@ -20,20 +20,25 @@
     @extend %no-list-style;
 
     position: absolute;
-    right: 1em;
+    left: 0;
     bottom: 1em;
     z-index: $z-1;
 
     display: flex;
+    justify-content: center;
+    width: 100%;
 
     @media (min-width: $mq-small) {
-      right: 2em;
       bottom: 2em;
+
+      justify-content: flex-end;
+      padding-right: 2em;
     }
 
     @media (min-width: $mq-med) {
-      right: 4em;
       bottom: 4em;
+
+      padding-right: 4em;
     }
 
     & > li:not(:last-child) {

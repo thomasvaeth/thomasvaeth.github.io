@@ -4,13 +4,30 @@
 .header {
   position: absolute;
   top: 4em;
-  left: 1em;
-  right: 1em;
+  left: 0;
+  right: 0;
   z-index: $z-998;
 
   display: flex;
   justify-content: space-between;
-  padding: 1em 3em;
+  padding: 1em;
+
+  @media (min-width: $mq-small) {
+    padding: {
+      right: 2em;
+      left: 2em;
+    }
+  }
+
+  @media (min-width: $mq-med) {
+    left: 1em;
+    right: 1em;
+
+    padding: {
+      right: 3em;
+      left: 3em;
+    }
+  }
 
   .js-scrolling-up &,
   .js-scrolling-down & {
@@ -29,29 +46,21 @@
     animation: slide-up 700ms ease-in-out both;
   }
 
-  // &:after {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: -1;
-
-  //   height: 100%;
-  //   width: 100%;
-
-  //   box-shadow: 0px 1px 0px 1px rgba($color-black, 0.02), 0px 4px 16px rgba($color-black, 0.09);
-  //   opacity: 0;
-
-  //   .js-scrolling-up & {
-  //     animation: fade-down 1s ease-in-out both;
-  //   }
-  // }
-
   &__title,
   &__link {
     font-weight: 700;
     font-size: 1.1em;
     color: $color-black;
+
+    .s-p-real-estate &,
+    .inrix & {
+      color: $color-white;
+    }
+
+    .js-scrolling-up &,
+    .js-scrolling-down & {
+      color: $color-black;
+    }
   }
 
   &__title {

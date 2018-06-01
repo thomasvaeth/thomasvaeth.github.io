@@ -52,7 +52,13 @@ $(() => {
     }
   });
 
+  // Barba.Dispatcher.on('newPageReady', () => {
+  //   $('body').removeClass('js-scrolling-down js-scrolling-up');
+  // });
+
   Barba.Dispatcher.on('transitionCompleted', () => {
+    $('body').removeClass('js-scrolling-down js-scrolling-up');
+    
     anime({
       targets: '.transition',
       translateY: '-100%',
