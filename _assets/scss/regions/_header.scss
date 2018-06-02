@@ -3,7 +3,7 @@
 //--------------------------------------------
 .header {
   position: absolute;
-  top: 4em;
+  top: 1em;
   left: 0;
   right: 0;
   z-index: $z-998;
@@ -13,6 +13,8 @@
   padding: 1em;
 
   @media (min-width: $mq-small) {
+    top: 2em;
+
     padding: {
       right: 2em;
       left: 2em;
@@ -20,6 +22,7 @@
   }
 
   @media (min-width: $mq-med) {
+    top: 4em;
     left: 1em;
     right: 1em;
 

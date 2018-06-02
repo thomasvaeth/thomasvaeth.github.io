@@ -25,7 +25,14 @@
   }
 
   &__work {
-    padding: 2em 1em;
+    padding: 1em;
+
+    @media (min-width: $mq-small) {
+      padding: {
+        top: 2em;
+        bottom: 2em;
+      }
+    }
   }
 
   &__link {

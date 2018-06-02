@@ -2,9 +2,22 @@
 // Footer
 //---------------------------------------------- 
 .footer {
-  @extend .mast;
+  @extend %flex-align;
+  @extend %text-center;
 
   position: relative;
+
+  min-height: 18em;
+  padding: 4em 1em;
+
+  @media (min-width: $mq-small) {
+    min-height: 24em;
+    padding: 6em 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: 8em 4em;
+  }
 
   &__contact {
     @extend %font-h1;

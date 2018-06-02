@@ -10,9 +10,12 @@
   }
 
   &__post {
-    padding: {
-      top: 2em;
-      bottom: 2em;
+
+    @media (min-width: $mq-small) {
+      padding: {
+        top: 2em;
+        bottom: 2em;
+      }
     }
 
     &:nth-child(3n+1) {

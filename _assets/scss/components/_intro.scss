@@ -2,12 +2,13 @@
 // Intro
 //---------------------------------------------- 
 .intro {
-  display: flex;
-  align-items: center;
+  @extend %flex-align;
+
   height: 24em;
   padding: 4em 1em;
 
   @media (min-width: $mq-small) {
+    height: 38em;
     padding: 6em 2em;
   }
 

@@ -2,10 +2,9 @@
 // Mast
 //---------------------------------------------- 
 .mast {
+  @extend %flex-align;
   @extend %text-center;
 
-  display: flex;
-  align-items: center;
   min-height: 24em;
   padding: 4em 1em;
 
@@ -20,9 +19,8 @@
   &--media {
     position: relative;
 
+    min-height: 24em;
     padding-bottom: 56.5%;
-
-    background-color: $color-lightgrey;
 
     .absolute-bg,
     .absolute-vid {
