@@ -3,28 +3,18 @@ layout: default
 ---
 <div class="post">
   <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="post__header section-padding--double">
-      <div class="grid-small">
-        <h2 itemprop="name headline">{{ page.title }}</h2>
-
-        <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d %b %Y" }}</time>
-      </div>
-    </div>
-
-    {% if page.image %}
-      <div class="post__img">
-        <div>
-          <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
-        </div>
-      </div>
-    {% endif %}
-
-    <div class="post__content section-padding">
+    <section class="mast bg-lightgrey rellax" data-rellax-speed="-4">
       <div class="grid">
-        <div id="markdown" itemprop="articleBody">
-          {{ content }}
+        <div>
+          <h1 class="mast__title" itemprop="name headline">{{ page.title }}</h1>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section class="post__content">
+      <div id="markdown" itemprop="articleBody">
+        {{ content }}
+      </div>
+    </section>
   </article>
 </div>

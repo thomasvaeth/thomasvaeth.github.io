@@ -1,46 +1,50 @@
 ---
 layout: default
 ---
-{% if page.link_video %}
-  <section class="mast--media bg-black rellax" data-rellax-speed="-4">
-    <div class="absolute-vid">
-      <video autoplay loop muted>
-        <source type="video/mp4" src="{{ page.link_video }}">
-      </video>
-    </div>
-    <div class="grid">
-      <div>
-        <h1 class="mast__title">{{ page.title }}</h1>
-      </div>
-    </div>
-  </section>
-{% elsif page.title != 'The Stable Seattle' and page.title != 'CryptoLogg' %}
-  <section class="mast--media bg-black rellax" data-rellax-speed="-4">
-    <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
-    <div class="grid">
-      <div>
-        <h1 class="mast__title">{{ page.title }}</h1>
-      </div>
-    </div>
-  </section>
-{% elsif page.title == 'The Stable Seattle' %}
-  <section class="mast bg-the-stable rellax" data-rellax-speed="-4">
-    <div class="grid">
-      <div>
-        <h1 class="mast__title">{{ page.title }}</h1>
-      </div>
-    </div>
-  </section>
-{% else %}
-  <section class="mast bg-lightgrey rellax" data-rellax-speed="-4">
-    <div class="grid">
-      <div>
-        <h1 class="mast__title">{{ page.title }}</h1>
-      </div>
-    </div>
-  </section>
-{% endif %}
+<div class="study">
+  <article>
+    {% if page.link_video %}
+      <section class="mast--media bg-black rellax" data-rellax-speed="-4">
+        <div class="absolute-vid">
+          <video autoplay loop muted>
+            <source type="video/mp4" src="{{ page.link_video }}">
+          </video>
+        </div>
+        <div class="grid">
+          <div>
+            <h1 class="mast__title">{{ page.title }}</h1>
+          </div>
+        </div>
+      </section>
+    {% elsif page.title != 'The Stable Seattle' and page.title != 'CryptoLogg' %}
+      <section class="mast--media bg-black rellax" data-rellax-speed="-4">
+        <figure class="absolute-bg" style="background-image: url('{{ page.image }}');"></figure>
+        <div class="grid">
+          <div>
+            <h1 class="mast__title">{{ page.title }}</h1>
+          </div>
+        </div>
+      </section>
+    {% elsif page.title == 'The Stable Seattle' %}
+      <section class="mast bg-the-stable rellax" data-rellax-speed="-4">
+        <div class="grid">
+          <div>
+            <h1 class="mast__title">{{ page.title }}</h1>
+          </div>
+        </div>
+      </section>
+    {% else %}
+      <section class="mast bg-lightgrey rellax" data-rellax-speed="-4">
+        <div class="grid">
+          <div>
+            <h1 class="mast__title">{{ page.title }}</h1>
+          </div>
+        </div>
+      </section>
+    {% endif %}
 
-<section class="study">
-  {{ content }}
-</section>
+    <section class="study__content">
+      {{ content }}
+    </section>
+  </article>
+</div>

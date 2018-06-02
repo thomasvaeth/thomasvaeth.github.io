@@ -44,4 +44,8 @@
       color: $color-white;
     }
   }
+
+  &__title {
+    @extend .intro__text;
+  }
 }

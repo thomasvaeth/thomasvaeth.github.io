@@ -22,7 +22,7 @@ const OpacityScroll = (() => {
       });
 
       $(window).on('resize', () => {
-        s.halfmastHeight = $('.intro, .mast, .mast--media').outerHeight() / 2;
+        s.halfMastHeight = $('.intro, .mast, .mast--media').outerHeight() / 2;
         this.opacityScroll();
       });
     },
