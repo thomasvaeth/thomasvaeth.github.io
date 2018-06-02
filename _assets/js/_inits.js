@@ -9,6 +9,7 @@ import SmoothScroll from 'smooth-scroll';
 import InfiniteScroll from './components/_infiniteScroll.js';
 import { miscCycle, miscAnchor } from './components/_miscellaneous.js';
 import NavigationScroll from './components/_navigationScroll.js';
+import OpacityScroll from './components/_opacityScroll.js';
 
 // ----------------------------------------------
 // Inits
@@ -52,13 +53,9 @@ $(() => {
     }
   });
 
-  // Barba.Dispatcher.on('newPageReady', () => {
-  //   $('body').removeClass('js-scrolling-down js-scrolling-up');
-  // });
-
   Barba.Dispatcher.on('transitionCompleted', () => {
     $('body').removeClass('js-scrolling-down js-scrolling-up');
-    
+
     anime({
       targets: '.transition',
       translateY: '-100%',
@@ -80,6 +77,7 @@ $(() => {
     const scroll = new SmoothScroll('a[href*="#"]');
 
     NavigationScroll.init();
+    OpacityScroll.init();
     miscCycle();
 
     $('.header__link').on('click', eve => {
