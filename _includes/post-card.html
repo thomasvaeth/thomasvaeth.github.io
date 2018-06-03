@@ -10,7 +10,7 @@
         <span data-aos="slice-up" data-aos-duration="400">{{ post.title }}</span>
       </h3>
       <p class="posts__text" data-aos="fade-in" data-aos-duration="400">
-        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %Y" }}</time> – <span itemprop="description">{{ post.content | strip_html | truncatewords: 25, "..." }}</span>
+        <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %Y" }}</time> – <span itemprop="description">{{ post.content | strip_html | truncatewords: 22, "..." }}</span>
       </p>
     </header>
   </a>

@@ -20,6 +20,10 @@
     p {
       font-size: 1.1em;
 
+      @media (min-width: $mq-small) {
+        font-size: 1.25em;
+      }
+
       &:first-of-type {
         margin-top: 0.25em;
       }

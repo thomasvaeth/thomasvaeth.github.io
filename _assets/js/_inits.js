@@ -83,7 +83,9 @@ $(() => {
     $('.header__link').on('click', eve => {
       const attr = $(eve.target).attr('data-anchor');
 
-      miscAnchor(attr);
+      if (attr) {
+        miscAnchor(attr);
+      }
     });
 
     if ($('.posts').length && $('.posts__next').length) {

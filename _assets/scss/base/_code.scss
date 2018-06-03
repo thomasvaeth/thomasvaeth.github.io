@@ -12,30 +12,23 @@ samp {
 pre {
   margin: {
     top: 0;
-    bottom: 0;
+    bottom: 1.5rem;
   }
-  padding: 2em 0.75em;
+  padding: 1.5em 0.75em;
 
-  line-height: 1.8;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  line-height: $base-lineheight;
+  white-space: pre;
+  word-wrap: normal;
   color: $color-black;
   background: $color-lightgrey;
   border-radius: 5px;
-  overflow: hidden;
+  overflow: auto;
 
   @media (min-width: $mq-med) {
+    width: 110%;
     padding: {
       right: 2em;
       left: 2em;
-    }
-  }
-
-  #markdown & {
-    margin-bottom: 1.5rem;
-
-    @media (min-width: $mq-med) {
-      min-width: 110%;
     }
   }
 

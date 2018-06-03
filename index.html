@@ -13,7 +13,9 @@ pagination:
 
 <section id="projects" class="work section-padding bg-lightgrey">
   <div class="grid">
-    <h2>Selected projects</h2>
+    <h2 class="work__title">
+      <span data-aos="slice-up" data-aos-duration="400">Selected</span> <span data-aos="slice-up" data-aos-duration="400" data-aos-delay="100">projects</span>
+    </h2>
     <div class="work__container">
       {% assign ordered_work = site.work | sort: 'order' %}
       <div>
@@ -40,7 +42,9 @@ pagination:
 
 <section id="articles" class="posts section-padding bg-white">
   <div class="grid">
-    <h2>Recent articles</h2>
+    <h2 class="posts__title">
+      <span data-aos="slice-up" data-aos-duration="400">Recent</span> <span data-aos="slice-up" data-aos-duration="400" data-aos-delay="100">articles</span>
+    </h2>
     <div class="posts__container" itemscope itemtype="http://schema.org/Blog">
       
       {% for post in paginator.posts %}
