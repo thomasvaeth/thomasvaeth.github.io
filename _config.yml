@@ -14,7 +14,7 @@ default_img: http://thomasvaeth.com/assets/images/me.jpg
 # Build settings
 markdown: kramdown
 plugins:
-  - jekyll-paginate-v2
+  - jekyll-paginate
   - jekyll-sitemap
 compress_html:
   clippings: all
@@ -31,14 +31,8 @@ exclude:
   - README.md
 
 # Pagination
-pagination:
-  enabled: true
-  per_page: 3
-  permalink: '/page/:num/'
-  title: ':title'
-  limit: 0
-  sort_field: 'date'
-  sort_reverse: true
+paginate: 3
+paginate_path: '/page/:num/'
 
 # Collections
 collections:
