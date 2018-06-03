@@ -7,7 +7,7 @@ import Barba from 'barba.js';
 import Rellax from 'rellax';
 import SmoothScroll from 'smooth-scroll';
 import InfiniteScroll from './components/_infiniteScroll.js';
-import { miscCycle, miscAnchor } from './components/_miscellaneous.js';
+import { miscAnchor, miscCycle, miscNavigation } from './components/_miscellaneous.js';
 import NavigationScroll from './components/_navigationScroll.js';
 import OpacityScroll from './components/_opacityScroll.js';
 
@@ -78,15 +78,9 @@ $(() => {
 
     NavigationScroll.init();
     OpacityScroll.init();
+    miscAnchor();
     miscCycle();
-
-    $('.header__link').on('click', eve => {
-      const attr = $(eve.target).attr('data-anchor');
-
-      if (attr) {
-        miscAnchor(attr);
-      }
-    });
+    miscNavigation();
 
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();

@@ -4,19 +4,22 @@
 import SmoothScroll from 'smooth-scroll';
 
 // ----------------------------------------------
-// Time
+// Anchor
 // ----------------------------------------------
-// const miscTime = () => {
-//   const date = new Date();
-//   const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+const miscAnchor = () => {
+  $('.header__link').on('click', eve => {
+    const anchor = $(eve.target).attr('data-anchor');
 
-//   // -7 (PDT) or -8 (PST)
-//   const time = new Date(utc + (3600000 * -7));
+    if (anchor) {
+      setTimeout(() => {
+        const scroll = new SmoothScroll();
+        const scrollTo = document.querySelector(`#${anchor}`);
 
-//   $('.header__time time').text(time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
-
-//   setTimeout(miscTime, 1000);
-// };
+        scroll.animateScroll(scrollTo);
+      }, 1250);
+    }
+  });
+};
 
 // ----------------------------------------------
 // Cycle
@@ -36,21 +39,34 @@ const miscCycle = () => {
 };
 
 // ----------------------------------------------
-// Anchor
+// Navigation
 // ----------------------------------------------
-const miscAnchor = anchor => {
-  setTimeout(() => {
-    const scroll = new SmoothScroll();
-    const scrollTo = document.querySelector(`#${anchor}`);
-
-    scroll.animateScroll(scrollTo);
-  }, 1250);
+const miscNavigation = () => {
+  $('.hamburger').on('click', () => {
+    $('.barba-container').toggleClass('js-hamburger');
+  });
 };
+
+// ----------------------------------------------
+// Time
+// ----------------------------------------------
+// const miscTime = () => {
+//   const date = new Date();
+//   const utc = date.getTime() + (date.getTimezoneOffset() * 60000);
+
+//   // -7 (PDT) or -8 (PST)
+//   const time = new Date(utc + (3600000 * -7));
+
+//   $('.header__time time').text(time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+
+//   setTimeout(miscTime, 1000);
+// };
 
 // ----------------------------------------------
 // Exports
 // ----------------------------------------------
 module.exports = {
+  miscAnchor,
   miscCycle,
-  miscAnchor
+  miscNavigation
 };

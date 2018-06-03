@@ -30,7 +30,14 @@ fetch(url, options).then(function(response) {
 <hr/>
 
 <h2>Download</h2>
-<p>Instafetch.js is currently available on NPM, Bower, and GitHub.</p>
+<p>Instafetch.js is currently available on CDNJS, NPM, Bower, and GitHub.</p>
+
+<h3>CDNJS</h3>
+<pre>
+<code>
+&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/instafetch.js/1.5.0/instafetch.min.js"&gt;&lt;/script&gt;
+</code>
+</pre>
 
 <h3>NPM</h3>
 <pre>

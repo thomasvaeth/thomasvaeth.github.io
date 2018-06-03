@@ -8,13 +8,14 @@
   right: 0;
   z-index: $z-998;
 
-  display: flex;
-  justify-content: space-between;
+  display: none;
   padding: 1em;
 
   @media (min-width: $mq-small) {
     top: 2em;
 
+    display: flex;
+    justify-content: space-between;
     padding: {
       right: 2em;
       left: 2em;
@@ -99,6 +100,115 @@
 
       &:hover {
         border-bottom: 2px solid $color-black;
+      }
+    }
+  }
+}
+
+//----------------------------------------------
+// Header Mobile
+//---------------------------------------------- 
+.header {
+
+  &--mobile {
+    @extend %flex-align;
+
+    position: fixed;
+    top: 1em;
+    left: 0;
+    right: 0;
+    z-index: $z-998;
+
+    justify-content: space-between;
+    padding: 1em;
+
+    background-color: $color-white;
+    box-shadow: 0px 1px 0px 1px rgba($color-black, 0.02), 0px 4px 16px rgba($color-black, 0.09);
+
+    @media (min-width: $mq-small) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    width: 100%;
+    padding: 1em;
+
+    background-color: $color-white;
+
+    .js-hamburger & {
+      display: block;
+    }
+  }
+}
+
+//----------------------------------------------
+// Hamburger
+//---------------------------------------------- 
+.hamburger {
+  z-index: $z-999;
+
+  height: 15px;
+  width: 26px;
+
+  cursor: pointer;
+
+  & > div {
+    height: 2px;
+    width: 26px;
+    margin-left: auto;
+
+    background-color: $color-black;
+    transition: all 200ms ease-in-out;
+
+    &:nth-of-type(2) {
+      margin: {
+        top: 5px;
+        bottom: 5px;
+      }
+    }
+
+    &:nth-of-type(3) {
+      width: 18px;
+    }
+  }
+
+  &:hover {
+
+    & > div {
+
+      &:nth-of-type(2) {
+        width: 18px;
+      }
+
+      &:nth-of-type(3) {
+        width: 26px;
+      }
+    }
+  }
+
+  .js-hamburger & {
+
+    & > div {
+      background-color: $color-black;
+
+      &:nth-of-type(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        width: 26px;
+
+        transform: translateY(-7px) rotate(-45deg);
       }
     }
   }

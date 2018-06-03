@@ -84,6 +84,17 @@
     max-width: none;
   }
 
+  .browser {
+    margin-bottom: 1.5rem;
+
+    &__img {
+
+      img {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .flex-vid {
     margin-bottom: 1.5rem;
 

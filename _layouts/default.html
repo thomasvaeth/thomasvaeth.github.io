@@ -20,10 +20,14 @@ layout: compress
         
       </main> 
 
+      {% include footer.html %}
+
     </div>
   </div>
 
-  {% include footer.html %}
+  <div class="transition transition-in"></div>
 
+  <script src="{{ '/assets/js/jquery.min.js' | prepend: site.baseurl }}"></script>
+  <script src="{{ '/assets/js/app.min.js' | prepend: site.baseurl }}"></script>
 </body>
 </html>
