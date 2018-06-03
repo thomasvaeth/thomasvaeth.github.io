@@ -5,11 +5,9 @@ date: 2018-05-17
 description: 
 image: /assets/images/posts/roccia-wedding.jpg
 ---
-<h2>
-  <span data-aos="slice-up" data-aos-duration="400">“Super prime” real estate</span>
-</h2>
-<p data-aos="fade-in" data-aos-duration="400" data-aos-delay="100">S&P is an international real estate boutique specializing in the design, marketing, and sale of luxury and "super prime" real estate and the website needed to reflect the properties in their portfolio. The WordPress website does that through its reserved color palette, animations and interactions, and architectural imagery. The CMS uses drag and drop modules, so they can continue following these patterns with no guidance from designers or developers.</p>
-<p data-aos="fade-in" data-aos-duration="400" data-aos-delay="100">The S&P website has received recognition from <a href="https://www.awwwards.com/sites/s-p-real-estate-1" target="_blank">Awwwards</a> and <a href="https://www.cssdesignawards.com/sites/s-p-real-estate/31111/" target="_blank">CSS Design Awards</a></p>
+<p>One of my sister's, Jessica, is getting married in a couple of days. She started building a website for herself on The Knot, but didn't want something so generic. I told her I could help her out and build a one-page website that she could send to her family and friends.</p>
+<p>The website uses a "dusty rose" color that she was already using with fade-in animations. The website was designed to not be a lot, so everyone could focus on the story with her soon to be husband, Chris, and their engagement photos. The website also provides the needed information for her out-of-town wedding guests that she didn't want to include in the envelope with her beautiful wedding invitations.</p>
+<p>🤵👰💐💒</p>
 
 <div class="browser">
   <span class="browser__dots"></span>

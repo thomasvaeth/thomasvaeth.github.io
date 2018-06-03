@@ -5,7 +5,7 @@
   @extend %flex-align;
   @extend %text-center;
 
-  min-height: 24em;
+  min-height: 26em;
   padding: 4em 1em;
 
   @media (min-width: $mq-small) {
@@ -45,5 +45,17 @@
 
   &__title {
     @extend .intro__text;
+  }
+
+  &__date {
+    display: inline-block;
+    margin-top: 0.25em;
+
+    font-weight: 700;
+    font-size: 1.1em;
+
+    @media (min-width: $mq-small) {
+      font-size: 1.25em;
+    }
   }
 }

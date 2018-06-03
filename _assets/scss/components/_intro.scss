@@ -4,7 +4,7 @@
 .intro {
   @extend %flex-align;
 
-  height: 24em;
+  height: 26em;
   padding: 4em 1em;
 
   @media (min-width: $mq-small) {

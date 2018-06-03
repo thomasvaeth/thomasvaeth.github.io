@@ -82,5 +82,24 @@
 
   &__link {
 
+    &:hover {
+      border-bottom: 2px solid $color-black;
+    }
+
+    .s-p-real-estate &,
+    .inrix & {
+
+      &:hover {
+        border-bottom: 2px solid $color-white;
+      }
+    }
+
+    .js-scrolling-up &,
+    .js-scrolling-down & {
+
+      &:hover {
+        border-bottom: 2px solid $color-black;
+      }
+    }
   }
 }

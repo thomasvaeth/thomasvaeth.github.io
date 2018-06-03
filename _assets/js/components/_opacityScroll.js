@@ -32,9 +32,9 @@ const OpacityScroll = (() => {
       const opacity = 1 - (scrollTop - s.halfMastHeight) / scrollTop * 2;
 
       if (scrollTop >= s.halfMastHeight) {
-        $('.intro__text, .mast__title').css('opacity', opacity > 0 ? opacity : 0);
+        $('.intro__text, .mast__container').css('opacity', opacity > 0 ? opacity : 0);
       } else {
-        $('.intro__text, .mast__title').css('opacity', 1);
+        $('.intro__text, .mast__container').css('opacity', 1);
       }
     }
   };

@@ -1,17 +1,18 @@
 ---
 layout: default
 ---
-<div class="post">
+<div>
   <article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
     <section class="mast bg-lightgrey rellax" data-rellax-speed="-4">
       <div class="grid">
-        <div>
+        <div class="mast__container">
           <h1 class="mast__title" itemprop="name headline">{{ page.title }}</h1>
+          <time class="mast__date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %Y" }}</time>
         </div>
       </div>
     </section>
 
-    <section class="post__content section-padding bg-white">
+    <section class="section-padding bg-white">
       <div class="grid-small">
         <div id="markdown" itemprop="articleBody">
           {{ content }}
