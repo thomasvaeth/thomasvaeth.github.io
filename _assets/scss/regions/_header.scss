@@ -58,7 +58,10 @@
 
     .s-p-real-estate &,
     .inrix & {
-      color: $color-white;
+
+      @media (min-width: $mq-small) {
+        color: $color-white;
+      }
     }
 
     .js-scrolling-up &,
@@ -135,14 +138,46 @@
     top: 0;
     left: 0;
 
-    display: none;
     width: 100%;
     padding: 1em;
 
     background-color: $color-white;
+    visibility: hidden;
+    opacity: 0;
 
     .js-hamburger & {
       display: block;
+
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__list {
+
+    .header--mobile & {
+      overflow: hidden;
+
+      & > li {
+        transform: translateY(110%);
+        transition: transform 400ms ease;
+
+        &:nth-of-type(1) {
+          transition-delay: 100ms;
+        }
+
+        &:nth-of-type(2) {
+          transition-delay: 200ms;
+        }
+
+        &:nth-of-type(3) {
+          transition-delay: 300ms;
+        }
+
+        .js-hamburger & {
+          transform: translateY(0);
+        }
+      }
     }
   }
 }
@@ -167,27 +202,10 @@
     transition: all 200ms ease-in-out;
 
     &:nth-of-type(2) {
-      margin: {
-        top: 5px;
-        bottom: 5px;
-      }
-    }
-
-    &:nth-of-type(3) {
       width: 18px;
-    }
-  }
-
-  &:hover {
-
-    & > div {
-
-      &:nth-of-type(2) {
-        width: 18px;
-      }
-
-      &:nth-of-type(3) {
-        width: 26px;
+      margin: {
+        top: 4px;
+        bottom: 4px;
       }
     }
   }
@@ -198,7 +216,7 @@
       background-color: $color-black;
 
       &:nth-of-type(1) {
-        transform: translateY(7px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
       }
 
       &:nth-of-type(2) {
@@ -206,9 +224,7 @@
       }
 
       &:nth-of-type(3) {
-        width: 26px;
-
-        transform: translateY(-7px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
       }
     }
   }
