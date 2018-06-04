@@ -12,6 +12,6 @@ image: /assets/images/posts/roccia-wedding.jpg
 <div class="browser">
   <span class="browser__dots"></span>
   <figure class="browser__img">
-    <img src="/assets/images/posts/roccia-wedding-1.jpg" alt=""/>
+    <img src="/assets/images/posts/roccia-wedding-1.jpg" alt="Roccia Wedding Website"/>
   </figure>
 </div>
