@@ -20,13 +20,8 @@
   }
 
   &__contact {
+    @include link-underline(4px, $color-white);
     @extend %font-h1;
-
-    color: $color-white;
-
-    &:hover {
-      border-bottom: 4px solid $color-white;
-    }
   }
 
   &__list {
@@ -60,12 +55,9 @@
   }
 
   &__link {
+    @include link-underline(2px, $color-white);
+
     font-weight: 700;
     font-size: 1.1em;
-    color: $color-white;
-
-    &:hover {
-      border-bottom: 2px solid $color-white;
-    }
   }
 }

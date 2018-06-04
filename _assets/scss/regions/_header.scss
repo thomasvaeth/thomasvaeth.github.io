@@ -70,10 +70,6 @@
     }
   }
 
-  &__title {
-
-  }
-
   &__list {
     @extend %no-list-style;
 
@@ -85,24 +81,52 @@
   }
 
   &__link {
+    position: relative;
 
-    &:hover {
-      border-bottom: 2px solid $color-black;
-    }
+    color: $color-black;
+    transition: all 400ms ease;
 
-    .s-p-real-estate &,
-    .inrix & {
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
 
-      &:hover {
-        border-bottom: 2px solid $color-white;
+      height: 2px;
+      width: 0;
+      
+      background-color: $color-black;
+      transition: all 400ms ease;
+
+      .s-p-real-estate &,
+      .inrix & {
+        background-color: $color-white;
+      }
+
+      .js-scrolling-up &,
+      .js-scrolling-down & {
+        background-color: $color-black;
       }
     }
 
-    .js-scrolling-up &,
-    .js-scrolling-down & {
+    &:hover {
 
-      &:hover {
-        border-bottom: 2px solid $color-black;
+      &:before {
+        left: 0;
+
+        width: 100%;
+        
+        background-color: $color-black;
+
+        .s-p-real-estate &,
+        .inrix & {
+          background-color: $color-white;
+        }
+
+        .js-scrolling-up &,
+        .js-scrolling-down & {
+          background-color: $color-black;
+        }
       }
     }
   }

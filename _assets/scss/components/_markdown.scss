@@ -48,13 +48,26 @@
   }
 
   a {
+    @include link-underline(1px, $color-grey);
+
     color: $color-black;
-    border-bottom: 1px solid $color-black;
-    transition: all 250ms ease-in-out;
+    white-space: nowrap;
+    transition: color 400ms ease-in-out;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      height: 1px;
+      width: 100%;
+      
+      background-color: $color-black;
+    }
 
     &:hover {
       color: $color-grey;
-      border-bottom: 1px solid $color-grey;
     }
   }
 

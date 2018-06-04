@@ -4,3 +4,41 @@
 a {
   text-decoration: none;
 }
+
+//---------------------------------------------- 
+//  Link Underline - link-underline()
+//  @description: Underline for link elements
+//  @param:       $height: [null] - Height
+//  @param:       $color: [null] - Color
+//----------------------------------------------
+@mixin link-underline($height, $color) {
+  position: relative;
+
+  color: $color;
+  transition: all 400ms ease;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: $z-9;
+
+    height: $height;
+    width: 0;
+    
+    background-color: $color;
+    transition: all 400ms ease;
+  }
+
+  &:hover {
+
+    &:before {
+      left: 0;
+
+      width: 100%;
+      
+      background-color: $color;
+    }
+  }
+}
