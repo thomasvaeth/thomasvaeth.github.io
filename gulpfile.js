@@ -30,14 +30,23 @@ gulp.task('fonts', () => {
   .pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('trophy', () => {
-  return gulp.src('./_assets/scss/trophy.scss')
+gulp.task('instafetch.js', () => {
+  return gulp.src('./_assets/scss/instafetch.js.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
   .pipe(cleanCSS())
   .pipe(rename({suffix: '.min'}))
   .pipe(gulp.dest('./assets/css'));
 });
+
+// gulp.task('trophy', () => {
+//   return gulp.src('./_assets/scss/trophy.scss')
+//   .pipe(sass().on('error', sass.logError))
+//   .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
+//   .pipe(cleanCSS())
+//   .pipe(rename({suffix: '.min'}))
+//   .pipe(gulp.dest('./assets/css'));
+// });
 
 gulp.task('lint', () => {
   return gulp.src([
