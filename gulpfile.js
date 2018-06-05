@@ -30,8 +30,17 @@ gulp.task('fonts', () => {
   .pipe(gulp.dest('./assets/css'));
 });
 
-gulp.task('instafetch.js', () => {
-  return gulp.src('./_assets/scss/instafetch.js.scss')
+// gulp.task('instafetch.js', () => {
+//   return gulp.src('./_assets/scss/instafetch.js.scss')
+//   .pipe(sass().on('error', sass.logError))
+//   .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
+//   .pipe(cleanCSS())
+//   .pipe(rename({suffix: '.min'}))
+//   .pipe(gulp.dest('./assets/css'));
+// });
+
+gulp.task('please-dont-go', () => {
+  return gulp.src('./_assets/scss/please-dont-go.scss')
   .pipe(sass().on('error', sass.logError))
   .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
   .pipe(cleanCSS())
