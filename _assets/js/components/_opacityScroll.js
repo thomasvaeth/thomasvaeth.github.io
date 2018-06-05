@@ -7,7 +7,7 @@ const OpacityScroll = (() => {
   return {
     settings() {
       return {
-        halfMastHeight: $('.intro, .mast, .mast--media').outerHeight() / 2
+        quarterMastHeight: $('.intro, .mast, .mast--media').outerHeight() / 4
       };
     },
 
@@ -22,16 +22,18 @@ const OpacityScroll = (() => {
       });
 
       $(window).on('resize', () => {
-        s.halfMastHeight = $('.intro, .mast, .mast--media').outerHeight() / 2;
+        s.quarterMastHeight = $('.intro, .mast, .mast--media').outerHeight() / 4;
         this.opacityScroll();
       });
     },
 
     opacityScroll() {
       const scrollTop = $(window).scrollTop();
-      const opacity = 1 - (scrollTop - s.halfMastHeight) / scrollTop * 2;
+      const opacity = 1 - (scrollTop - s.quarterMastHeight) / scrollTop * 1.5;
 
-      if (scrollTop >= s.halfMastHeight) {
+      console.log(opacity);
+
+      if (scrollTop >= s.quarterMastHeight) {
         $('.intro__text, .mast__container').css('opacity', opacity > 0 ? opacity : 0);
       } else {
         $('.intro__text, .mast__container').css('opacity', 1);
