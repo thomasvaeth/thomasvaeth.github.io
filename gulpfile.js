@@ -4,7 +4,6 @@ const babelify = require('babelify');
 const browserify = require('browserify');
 const buffer = require('vinyl-buffer');
 const cleanCSS = require('gulp-clean-css');
-const eslint = require('gulp-eslint');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const source = require('vinyl-source-stream');
@@ -56,19 +55,6 @@ gulp.task('please-dont-go', () => {
 //   .pipe(rename({suffix: '.min'}))
 //   .pipe(gulp.dest('./assets/css'));
 // });
-
-gulp.task('lint', () => {
-  return gulp.src([
-    './_assets/js/components/_infiniteScroll.js',
-    './_assets/js/components/_miscellaneous.js',
-    './_assets/js/components/_navigationScroll.js',
-    './_assets/js/components/_opacityScroll.js',
-    './_assets/js/_inits.js'
-  ])
-  .pipe(eslint())
-  .pipe(eslint.format())
-  .pipe(eslint.failAfterError());
-});
 
 gulp.task('browserify', () => {
   return browserify('./_assets/js/app.js')

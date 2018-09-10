@@ -31,8 +31,6 @@ const OpacityScroll = (() => {
       const scrollTop = $(window).scrollTop();
       const opacity = 1 - (scrollTop - s.quarterMastHeight) / scrollTop * 1.5;
 
-      console.log(opacity);
-
       if (scrollTop >= s.quarterMastHeight) {
         $('.intro__text, .mast__container').css('opacity', opacity > 0 ? opacity : 0);
       } else {

@@ -3,8 +3,8 @@
   "version": "3.1.0",
   "description": "Thomas Vaeth is a Software Engineer at Getty Images in Seattle, Washington.",
   "scripts": {
-    "deploy": "gulp build && bundle exec jekyll build && s3-website deploy _site",
-    "start": "gulp"
+    "gulp": "gulp",
+    "lint": "eslint --ext .js _assets"
   },
   "author": {
     "name": "Thomas Vaeth",
@@ -36,7 +36,6 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
-    "gulp-eslint": "^4.0.2",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "^2.6.4",
