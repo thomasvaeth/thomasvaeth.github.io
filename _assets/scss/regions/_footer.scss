@@ -22,6 +22,8 @@
   &__contact {
     @include link-underline(4px, $color-white);
     @extend %font-h1;
+
+    font-weight: 700;
   }
 
   &__list {
@@ -44,7 +46,7 @@
     }
 
     @media (min-width: $mq-med) {
-      bottom: 4em;
+      bottom: 3em;
 
       padding-right: 4em;
     }
