@@ -16,7 +16,7 @@ image: /assets/images/posts/getty-images-homepage.jpg
 <div class="flex-vid">
   <iframe height="575" scrolling="no" title="CSS Grid for Getty Images" src="//codepen.io/thomasvaeth/embed/mjLLKO/?height=575&theme-id=0&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true" style="width: 100%;"></iframe>
 </div>
-<p>The demo is bested viewed with the SCSS tab closed and the zoom set to 0.5x or 0.25x.</p>
+<p>The demo is best viewed with the SCSS tab closed and the zoom set to 0.5x or 0.25x.</p>
 
 <h3>Production</h3>
 <div class="browser">
