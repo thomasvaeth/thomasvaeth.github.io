@@ -3,7 +3,7 @@
 //---------------------------------------------- 
 body {
   font-family: $font;
-  font-weight: 400;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   line-height: $base-lineheight;
   color: $color-black;
@@ -56,6 +56,7 @@ h3 {
     bottom: 0;
   }
 
+  font-family: $font-header;
   font-weight: 700;
 }
 

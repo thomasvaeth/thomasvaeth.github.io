@@ -52,7 +52,8 @@
 
   &__title,
   &__link {
-    font-weight: 700;
+    font-family: $font-header;
+    font-weight: 400;
     font-size: 1.1em;
     color: $color-black;
 

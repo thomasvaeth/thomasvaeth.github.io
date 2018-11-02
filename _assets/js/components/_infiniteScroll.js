@@ -14,6 +14,7 @@ const InfiniteScroll = (() => {
       return {
         container: $('.posts__container'),
         next: $('.posts__next'),
+        class: 'js-posts-loading',
         currentPage: 1,
         maxPages: $('.posts__pages').data('pages'),
         pathname: window.location.pathname.replace(/#(.*)$/g, '').replace('//g', '/'),
@@ -28,6 +29,7 @@ const InfiniteScroll = (() => {
 
     bindEvents() {
       s.next.on('click', () => {
+        s.next.addClass(s.class);
         this.fetchPosts();
       });
     },
@@ -56,10 +58,12 @@ const InfiniteScroll = (() => {
                 AOS.refreshHard();
               });
 
+              s.next.removeClass(s.class);
+
               if (s.currentPage === s.maxPages) {
                 s.next.addClass('posts__next--none').text('No More Articles');
               }
-            }, 400);
+            }, 800);
           }
         },
         error: error => {
