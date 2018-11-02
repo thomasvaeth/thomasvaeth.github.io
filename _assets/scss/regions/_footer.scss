@@ -23,6 +23,7 @@
     @include link-underline(4px, $color-white);
     @extend %font-h1;
 
+    font-family: $font-header;
     font-weight: 700;
   }
 
@@ -59,7 +60,7 @@
   &__link {
     @include link-underline(2px, $color-white);
 
-    font-weight: 700;
+    font-family: $font-header;
     font-size: 1.1em;
   }
 }
