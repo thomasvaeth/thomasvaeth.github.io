@@ -18,7 +18,12 @@
   }
 
   &__text {
-    @extend .mast__title;
+    @extend %auto-margin;
+    @extend %text-center;
+
+    @media (min-width: $mq-small) {
+      max-width: 90%;
+    }
 
     @media (min-width: $mq-large) {
       max-width: 65%;
