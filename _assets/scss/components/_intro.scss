@@ -18,11 +18,10 @@
   }
 
   &__text {
-    @extend %auto-margin;
-    @extend %text-center;
+    @extend .mast__title;
 
-    @media (min-width: $mq-small) {
-      max-width: 90%;
+    @media (min-width: $mq-large) {
+      max-width: 65%;
     }
   }
 }

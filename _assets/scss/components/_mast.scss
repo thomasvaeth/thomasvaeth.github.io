@@ -44,7 +44,12 @@
   }
 
   &__title {
-    @extend .intro__text;
+    @extend %auto-margin;
+    @extend %text-center;
+
+    @media (min-width: $mq-small) {
+      max-width: 90%;
+    }
   }
 
   &__date {
