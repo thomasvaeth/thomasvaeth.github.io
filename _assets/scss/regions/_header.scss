@@ -71,6 +71,13 @@
     }
   }
 
+  &__title {
+
+    .contact & {
+      color: $color-white;
+    }
+  }
+
   &__list {
     @extend %no-list-style;
 

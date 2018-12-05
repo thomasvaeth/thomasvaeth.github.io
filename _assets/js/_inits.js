@@ -6,6 +6,7 @@ import AOS from 'aos';
 import Barba from 'barba.js';
 import Rellax from 'rellax';
 import SmoothScroll from 'smooth-scroll';
+import Canvas from './components/_canvas.js';
 import InfiniteScroll from './components/_infiniteScroll.js';
 import { miscAnchor, miscCycle, miscNavigation } from './components/_miscellaneous.js';
 import NavigationScroll from './components/_navigationScroll.js';
@@ -73,7 +74,10 @@ $(() => {
       once: true
     });
 
-    const rellax = new Rellax('.rellax');
+    if ($('.rellax').length) {
+      const rellax = new Rellax('.rellax');
+    }
+
     const scroll = new SmoothScroll('a[href*="#"]');
 
     NavigationScroll.init();
@@ -81,6 +85,10 @@ $(() => {
     miscAnchor();
     miscCycle();
     miscNavigation();
+
+    if ($('#canvas').length) {
+      Canvas.init();
+    }
 
     if ($('.posts').length && $('.posts__next').length) {
       InfiniteScroll.init();

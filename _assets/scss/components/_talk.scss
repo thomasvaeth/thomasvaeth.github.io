@@ -1,0 +1,26 @@
+//----------------------------------------------
+// Talk
+//---------------------------------------------- 
+.talk {
+
+  &__left {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 50%;
+  }
+
+  &__right {
+    min-height: 100vh;
+    margin-left: 50%;
+  }
+}
+
+#canvas {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}

@@ -62,5 +62,9 @@
 
     font-family: $font-header;
     font-size: 1.1em;
+
+    .footer--contact & {
+      @include link-underline(2px, $color-black);
+    }
   }
 }
