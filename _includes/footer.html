@@ -1,22 +1,7 @@
-{% if page.url == "/contact/" %}
-  <footer class="footer--contact">
-    <ul class="footer__list">
-      <li><a class="footer__link" href="https://github.com/thomasvaeth" target="_blank">GitHub</a></li>
-      <li><a class="footer__link" href="http://codepen.io/thomasvaeth" target="_blank">CodePen</a></li>
-      <li><a class="footer__link" href="https://www.linkedin.com/in/thomasvaeth" target="_blank">LinkedIn</a></li>
-    </ul>
-  </footer>
-{% else %}
-  <footer class="footer bg-black">
-    <div class="grid">
-      <div>
-        <a class="footer__contact" href="{{ '/contact' | prepend: site.baseurl }}">Let’s talk</a>
-      </div>
-    </div>
-    <ul class="footer__list">
-      <li><a class="footer__link" href="https://github.com/thomasvaeth" target="_blank">GitHub</a></li>
-      <li><a class="footer__link" href="http://codepen.io/thomasvaeth" target="_blank">CodePen</a></li>
-      <li><a class="footer__link" href="https://www.linkedin.com/in/thomasvaeth" target="_blank">LinkedIn</a></li>
-    </ul>
-  </footer>
-{% endif %}
+<footer class="footer">
+  <ul class="footer__list">
+    <li><a class="footer__link" href="https://github.com/thomasvaeth" target="_blank">GitHub</a></li>
+    <li><a class="footer__link" href="http://codepen.io/thomasvaeth" target="_blank">CodePen</a></li>
+    <li><a class="footer__link" href="https://www.linkedin.com/in/thomasvaeth" target="_blank">LinkedIn</a></li>
+  </ul>
+</footer>

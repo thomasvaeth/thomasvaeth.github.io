@@ -33,7 +33,7 @@ const Canvas = (() => {
 
       const move = coors => {
         if (this.isDrawing) {
-          s.context.strokeStyle = '#f4f4f4';
+          s.context.strokeStyle = '#ffffff';
           s.context.lineJoin = 'round';
           s.context.lineWidth = 3;
           s.context.lineTo(coors.x, coors.y);

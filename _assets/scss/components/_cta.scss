@@ -1,0 +1,29 @@
+//----------------------------------------------
+// CTA
+//---------------------------------------------- 
+.cta {
+  @extend %flex-align;
+  @extend %text-center;
+
+  position: relative;
+
+  min-height: 18em;
+  padding: 4em 1em;
+
+  @media (min-width: $mq-small) {
+    min-height: 24em;
+    padding: 6em 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: 8em 4em;
+  }
+
+  &__contact {
+    @include link-underline(4px, $color-white);
+    @extend %font-h1;
+
+    font-family: $font-header;
+    font-weight: 700;
+  }
+}

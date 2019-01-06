@@ -3,23 +3,24 @@
 //---------------------------------------------- 
 .transition {
   position: fixed;
-  top: 0;
+  left: 0;
+  bottom: 0;
   z-index: 9999;
 
   display: none;
   height: 100%;
   width: 100%;
 
-  background-color: $color-darkgrey;
+  background-color: $color-black;
 
   &-out {
-    left: 100%;
+    // bottom: 0;
 
     display: block;
   }
 
   &-in {
-    left: 0;
+    // left: 0;
 
     display: block;
   }

@@ -23,7 +23,7 @@ $(() => {
       Promise.all([this.newContainerLoading, this.slideOut(), new Promise(resolve => {
         setTimeout(() => {
           resolve();
-        }, 700);
+        }, 1200);
       })]).then(this.slideIn.bind(this));
     },
 
@@ -33,9 +33,9 @@ $(() => {
       return new Promise(resolve => {
         anime({
           targets: '.transition',
-          translateX: '-=100%',
+          translateY: '-=100%',
           easing: 'easeInQuart',
-          duration: 350,
+          duration: 600,
           complete() {
             resolve();
           }
@@ -61,10 +61,11 @@ $(() => {
       targets: '.transition',
       translateY: '-100%',
       easing: 'easeOutQuart',
-      duration: 350,
-      delay: 200,
+      duration: 600,
+      delay: 400,
       complete() {
         $('.transition').removeClass('transition-in');
+        $('.transition').css('transform', 'translateY(100%)');
       }
     });
 

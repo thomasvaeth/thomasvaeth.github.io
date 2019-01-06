@@ -2,69 +2,75 @@
 // Footer
 //---------------------------------------------- 
 .footer {
-  @extend %flex-align;
-  @extend %text-center;
-
-  position: relative;
-
-  min-height: 18em;
-  padding: 4em 1em;
+  padding: {
+    top: 1em;
+    bottom: 1em;
+  }
 
   @media (min-width: $mq-small) {
-    min-height: 24em;
-    padding: 6em 2em;
+    padding: {
+      top: 2em;
+      bottom: 2em;
+    }
   }
 
   @media (min-width: $mq-med) {
-    padding: 8em 4em;
+    padding: {
+      top: 3em;
+      bottom: 3em;
+    }
   }
 
-  &__contact {
-    @include link-underline(4px, $color-white);
-    @extend %font-h1;
+  .contact & {
+    position: relative;
 
-    font-family: $font-header;
-    font-weight: 700;
+    padding: {
+      top: 0;
+      bottom: 0;
+    }
   }
 
   &__list {
     @extend %no-list-style;
 
-    position: absolute;
-    left: 0;
-    bottom: 1em;
-    z-index: $z-1;
-
     display: flex;
     justify-content: center;
-    width: 100%;
 
     @media (min-width: $mq-small) {
-      bottom: 2em;
-
       justify-content: flex-end;
       padding-right: 2em;
     }
 
     @media (min-width: $mq-med) {
-      bottom: 3em;
-
       padding-right: 4em;
     }
 
     & > li:not(:last-child) {
       margin-right: 1.25em;
     }
+
+    .contact & {
+      position: absolute;
+      left: 0;
+      bottom: 1em;
+      z-index: $z-1;
+
+      width: 100%;
+
+      @media (min-width: $mq-small) {
+        bottom: 2em;
+      }
+
+      @media (min-width: $mq-med) {
+        bottom: 3em;
+      }
+    }
   }
 
   &__link {
-    @include link-underline(2px, $color-white);
+    @include link-underline(2px, $color-black);
 
     font-family: $font-header;
     font-size: 1.1em;
-
-    .footer--contact & {
-      @include link-underline(2px, $color-black);
-    }
   }
 }
