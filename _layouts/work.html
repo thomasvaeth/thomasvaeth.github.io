@@ -48,3 +48,28 @@ layout: default
     </section>
   </article>
 </div>
+
+{% assign ordered_work = site.work | sort: 'order' %}
+{% if page.order == ordered_work.first.order %}
+  {% assign previous_post = ordered_work.last %}
+  {% assign next_post = ordered_work[1] %}
+{% elsif page.order == ordered_work.last.order %} 
+  {% assign previous = ordered_work | size | minus: 2 %}
+
+  {% assign previous_post = ordered_work[previous] %}
+  {% assign next_post = ordered_work.first %}
+{% else %}
+  {% assign previous = page.order | minus: 1 %}
+  {% assign next = page.order | plus: 1 %}
+
+  {% assign previous_post = ordered_work[previous] %}
+  {% assign next_post = ordered_work[next] %}
+{% endif %}
+<div class="pagination">
+  <a class="pagination__link section-padding" href="{{ previous_post.url | prepend: site.baseurl }}">
+    <span class="pagination__text">{{ previous_post.title }}</span>
+  </a>
+  <a class="pagination__link section-padding" href="{{ next_post.url | prepend: site.baseurl }}">
+    <span class="pagination__text">{{ next_post.title }}</span>
+  </a>
+</div>

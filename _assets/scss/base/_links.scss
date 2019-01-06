@@ -28,7 +28,7 @@ a {
     width: 0;
     
     background-color: $color;
-    transition: all 400ms ease;
+    transition: width 400ms ease;
   }
 
   &:hover {
@@ -37,8 +37,6 @@ a {
       left: 0;
 
       width: 100%;
-      
-      background-color: $color;
     }
   }
 }

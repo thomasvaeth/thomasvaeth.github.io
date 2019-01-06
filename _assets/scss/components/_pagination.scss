@@ -1,0 +1,32 @@
+//----------------------------------------------
+// Pagination
+//---------------------------------------------- 
+.pagination {
+  display: flex;
+
+  &__link {
+    @extend %text-center;
+
+    flex: 1;
+
+    color: $color-white;
+    background-color: $color-black;
+
+    &:first-child {
+      border-right: 1px solid $color-white;
+    }
+
+    &:last-child {
+      margin-left: -1px;
+
+      border-left: 1px solid $color-white;
+    }
+  }
+
+  &__text {
+    @extend %font-h3;
+
+    font-family: $font-header;
+    font-weight: 700;
+  }
+}

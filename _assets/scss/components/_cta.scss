@@ -2,28 +2,63 @@
 // CTA
 //---------------------------------------------- 
 .cta {
-  @extend %flex-align;
-  @extend %text-center;
 
-  position: relative;
+  &__link {
+    @extend %flex-center;
 
-  min-height: 18em;
-  padding: 4em 1em;
+    min-height: 18em;
+    padding: 4em 1em;
 
-  @media (min-width: $mq-small) {
-    min-height: 24em;
-    padding: 6em 2em;
+    color: $color-white;
+
+    @media (min-width: $mq-small) {
+      min-height: 24em;
+      padding: {
+        top: 6em;
+        bottom: 6em;
+      }
+    }
+
+    @media (min-width: $mq-med) {
+      padding: {
+        top: 8em;
+        bottom: 8em;
+      }
+    }
+
+    &:hover {
+
+      .cta__text {
+
+        &:before {
+          left: 0;
+
+          width: 100%;
+        }
+      }
+    }
   }
 
-  @media (min-width: $mq-med) {
-    padding: 8em 4em;
-  }
-
-  &__contact {
-    @include link-underline(4px, $color-white);
+  &__text {
     @extend %font-h1;
+
+    position: relative;
 
     font-family: $font-header;
     font-weight: 700;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: $z-9;
+
+      height: 4px;
+      width: 0;
+      
+      background-color: $color-white;
+      transition: width 400ms ease;
+    }
   }
 }
