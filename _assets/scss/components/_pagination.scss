@@ -5,6 +5,7 @@
   display: flex;
 
   &__link {
+    @extend %flex-center;
     @extend %text-center;
 
     flex: 1;
@@ -21,12 +22,22 @@
 
       border-left: 1px solid $color-white;
     }
+
+    &:hover {
+
+      .pagination__text {
+
+        &:before {
+          left: 0;
+
+          width: 100%;
+        }
+      }
+    }
   }
 
   &__text {
+    @include block-underline(2px);
     @extend %font-h3;
-
-    font-family: $font-header;
-    font-weight: 700;
   }
 }

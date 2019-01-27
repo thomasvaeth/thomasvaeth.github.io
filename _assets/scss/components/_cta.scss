@@ -40,25 +40,7 @@
   }
 
   &__text {
+    @include block-underline(4px);
     @extend %font-h1;
-
-    position: relative;
-
-    font-family: $font-header;
-    font-weight: 700;
-
-    &:before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      z-index: $z-9;
-
-      height: 4px;
-      width: 0;
-      
-      background-color: $color-white;
-      transition: width 400ms ease;
-    }
   }
 }
