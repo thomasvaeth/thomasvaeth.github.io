@@ -2,31 +2,31 @@
 // Footer
 //---------------------------------------------- 
 .footer {
-  padding: {
-    top: 1em;
-    bottom: 1em;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+
+  font-family: $font-header;
 
   @media (min-width: $mq-small) {
-    padding: {
-      top: 2em;
-      bottom: 2em;
-    }
+    padding: 2em;
   }
 
   @media (min-width: $mq-med) {
-    padding: {
-      top: 3em;
-      bottom: 3em;
-    }
+    padding: 3em 4em;
   }
 
   .contact & {
-    position: relative;
 
-    padding: {
-      top: 0;
-      bottom: 0;
+    @media (min-width: $mq-med) {
+      position: absolute;
+      left: 4em;
+      bottom: 3em;
+      right: 4em;
+      z-index: $z-1;
+
+      padding: 0;
     }
   }
 
@@ -34,43 +34,22 @@
     @extend %no-list-style;
 
     display: flex;
-    justify-content: center;
-
-    @media (min-width: $mq-small) {
-      justify-content: flex-end;
-      padding-right: 2em;
-    }
-
-    @media (min-width: $mq-med) {
-      padding-right: 4em;
-    }
 
     & > li:not(:last-child) {
-      margin-right: 1.25em;
-    }
-
-    .contact & {
-      position: absolute;
-      left: 0;
-      bottom: 1em;
-      z-index: $z-1;
-
-      width: 100%;
+      margin-right: 1em;
 
       @media (min-width: $mq-small) {
-        bottom: 2em;
-      }
-
-      @media (min-width: $mq-med) {
-        bottom: 3em;
+        margin-right: 1.25em;
       }
     }
   }
 
+  &__copy,
+  &__link {
+    font-size: 1.1em;
+  }
+
   &__link {
     @include link-underline(2px, $color-black);
-
-    font-family: $font-header;
-    font-size: 1.1em;
   }
 }

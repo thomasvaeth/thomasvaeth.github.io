@@ -2,25 +2,117 @@
 // Talk
 //---------------------------------------------- 
 .talk {
+  display: flex;
+  flex-direction: column-reverse;
 
   &__left {
-    position: fixed;
-    top: 0;
-    left: 0;
+    padding: 0.5em 1em;
 
-    height: 100%;
-    width: 50%;
+    @media (min-width: $mq-med) {
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 50%;
+      // padding: {
+      //   right: 1em;
+      //   left: 1em;
+      // }
+
+      overflow-y: auto;
+      -ms-overflow-style: none;
+      overflow: -moz-scrollbars-none;
+
+      &::-webkit-scrollbar { 
+        display: none;
+      }
+    }
   }
 
   &__right {
-    min-height: 100vh;
-    margin-left: 50%;
+    display: flex;
+    align-items: center;
+    height: 26em;
+
+    @media (min-width: $mq-med) {
+      height: auto;
+      min-height: 100vh;
+      margin-left: 50%;
+    }
+  }
+
+  &__text {
+    @extend %font-h2;
+
+    margin-bottom: 0;
+  }
+
+  &__link {
+    @include link-underline(1px, $color-grey);
+
+    color: $color-black;
+    white-space: nowrap;
+    transition: color 400ms ease-in-out;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      height: 1px;
+      width: 100%;
+      
+      background-color: $color-black;
+    }
+
+    &:hover {
+      color: $color-grey;
+    }
   }
 }
 
-#canvas {
-  background-position: 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
+// #canvas {
+//   background-position: 50%;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   cursor: pointer;
+// }
+
+//----------------------------------------------
+// Instagram
+//---------------------------------------------- 
+#instagram {
+  @include flex-grid(1, 2, $pad: 0.5em);
+
+  a {
+    position: relative;
+
+    display: block;
+
+    background-color: $color-lightgrey;
+    overflow: hidden;
+    transition: transform 300ms ease-in-out;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+
+    &:hover {
+      transform: scale(0.97);
+
+      figure {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  figure {
+    @extend .absolute-bg;
+
+    transition: transform 300ms ease-in-out;
+  }
 }

@@ -73,12 +73,12 @@
     }
   }
 
-  &__title {
+  // &__title {
 
-    .contact & {
-      color: $color-white;
-    }
-  }
+  //   .contact & {
+  //     color: $color-white;
+  //   }
+  // }
 
   &__list {
     @extend %no-list-style;

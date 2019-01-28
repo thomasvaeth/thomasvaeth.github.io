@@ -6,7 +6,7 @@ import AOS from 'aos';
 import Barba from 'barba.js';
 import Rellax from 'rellax';
 import SmoothScroll from 'smooth-scroll';
-import Canvas from './components/_canvas.js';
+// import Canvas from './components/_canvas.js';
 import InfiniteScroll from './components/_infiniteScroll.js';
 import { miscAnchor, miscCycle, miscNavigation } from './components/_miscellaneous.js';
 import NavigationScroll from './components/_navigationScroll.js';
@@ -87,8 +87,37 @@ $(() => {
     miscCycle();
     miscNavigation();
 
-    if ($('#canvas').length) {
-      Canvas.init();
+    // if ($('#canvas').length) {
+    //   Canvas.init();
+    // }
+
+    if ($('.contact').length) {
+      $.ajax({
+        url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=3980752.1677ed0.62bb6a2ad3ef4dc0a6aad768ab8939ab&count=20&callback=?',
+        method: 'GET',
+        dataType: 'jsonp',
+        success(json) {
+          const targetEl = document.getElementById('instagram');
+          let article, a, figure, attr;
+
+          json.data.forEach(data => {
+            article = document.createElement('article');
+            a = document.createElement('a');
+            a.href = data.link;
+            a.target = '_blank';
+            figure = document.createElement('figure');
+            attr = document.createAttribute('style');
+            attr.value = `background-image: url('${data.images.standard_resolution.url}');`;
+            figure.setAttributeNode(attr);
+            a.appendChild(figure);
+            article.appendChild(a);
+            targetEl.appendChild(article);
+          });
+        },
+        error(error) {
+          console.error(error);
+        }
+      });
     }
 
     if ($('.posts').length && $('.posts__next').length) {
