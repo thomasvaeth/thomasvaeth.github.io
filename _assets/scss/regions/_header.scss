@@ -57,7 +57,9 @@
     font-size: 1.1em;
     color: $color-black;
 
+    .cryptologg &,
     .s-p-real-estate &,
+    .the-stable-seattle &,
     .inrix & {
 
       @media (min-width: $mq-small) {
@@ -106,7 +108,9 @@
       background-color: $color-black;
       transition: all 400ms ease;
 
+      .cryptologg &,
       .s-p-real-estate &,
+      .the-stable-seattle &,
       .inrix & {
         background-color: $color-white;
       }
@@ -126,7 +130,9 @@
         
         background-color: $color-black;
 
+        .cryptologg &,
         .s-p-real-estate &,
+        .the-stable-seattle &,
         .inrix & {
           background-color: $color-white;
         }
