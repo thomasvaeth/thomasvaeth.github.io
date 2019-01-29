@@ -6,7 +6,6 @@ import AOS from 'aos';
 import Barba from 'barba.js';
 import Rellax from 'rellax';
 import SmoothScroll from 'smooth-scroll';
-// import Canvas from './components/_canvas.js';
 import InfiniteScroll from './components/_infiniteScroll.js';
 import { miscAnchor, miscCycle, miscNavigation } from './components/_miscellaneous.js';
 import NavigationScroll from './components/_navigationScroll.js';
@@ -86,10 +85,6 @@ $(() => {
     miscAnchor();
     miscCycle();
     miscNavigation();
-
-    // if ($('#canvas').length) {
-    //   Canvas.init();
-    // }
 
     if ($('.contact').length) {
       $.ajax({
