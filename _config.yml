@@ -1,15 +1,15 @@
 # Site/SEO settings
-email: thomas.vaeth@gmail.com
+email: saide.koolivand2018@gmail.com
 permalink: /:year/:month/:title/
 google_analytics: UA-57782903-1
 
-name: Thomas Vaeth
-title: Thomas Vaeth
+name: Saide Koolivand Salouki
+title: Saide Koolivand Salouki
 description: >
-  My name is Thomas Vaeth. I am front-end developer based in Seattle, Washington. I currently work at Redfin and have previously worked at Urban Influence and Getty Images.
-url: http://thomasvaeth.com
-twitter_username: thomasvaeth
-default_img: http://thomasvaeth.com/assets/images/me.jpg
+  My name is Saide Koolivand Salouki. I am an Industrial Designer and Idea developer
+url: http://saide-koolivand.github.io
+#twitter_username: 
+#default_img: http://thomasvaeth.com/assets/images/me.jpg
 
 # Build settings
 markdown: kramdown
