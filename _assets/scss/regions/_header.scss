@@ -119,6 +119,10 @@
       .js-scrolling-down & {
         background-color: $color-black;
       }
+
+      @media (hover: none) {
+        content: none;
+      }
     }
 
     &:hover {
