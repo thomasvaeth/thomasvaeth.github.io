@@ -92,21 +92,13 @@ $(() => {
         method: 'GET',
         dataType: 'jsonp',
         success(json) {
-          const targetEl = document.getElementById('instagram');
-          let article, a, figure, attr;
+          const targetEl = $('#instagram');
+          let article;
 
-          json.data.forEach(data => {
-            article = document.createElement('article');
-            a = document.createElement('a');
-            a.href = data.link;
-            a.target = '_blank';
-            figure = document.createElement('figure');
-            attr = document.createAttribute('style');
-            attr.value = `background-image: url('${data.images.standard_resolution.url}');`;
-            figure.setAttributeNode(attr);
-            a.appendChild(figure);
-            article.appendChild(a);
-            targetEl.appendChild(article);
+          json.data.forEach((data, idx) => {
+            let article = targetEl.children('article').eq(idx);
+            article.find('a').attr('href', data.link);
+            article.find('figure').addClass('scale-down').css('background-image', `url(${data.images.standard_resolution.url})`);
           });
         },
         error(error) {

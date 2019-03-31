@@ -6,7 +6,19 @@ image:
 ---
 <section class="talk">
   <div class="talk__left">
-    <div id="instagram"></div>
+    <div id="instagram">
+      
+      {% for num in (1..20) %}
+
+        <article>
+          <a href="#" target="_blank">
+            <figure></figure>
+          </a>
+        </article>
+
+      {% endfor %}
+
+    </div>
   </div>
   <div class="talk__right section-padding bg-lightgrey">
     <p class="talk__text">Please get in touch at <a class="talk__link" href="mailto:thomas.vaeth@gmail.com">thomas.vaeth@gmail.com</a> for professional opportunities.</p>
