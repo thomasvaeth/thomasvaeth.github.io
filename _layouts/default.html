@@ -9,8 +9,8 @@ layout: compress
 
 </head>
 <body>
-  <div id="barba-wrapper">
-    <div class="barba-container {{ page.title | downcase | slugify }}">
+  <div data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="{{ page.title | downcase | slugify }}" class="{{ page.title | downcase | slugify }}">
 
       {% include header.html %}
 

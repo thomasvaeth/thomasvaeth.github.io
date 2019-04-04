@@ -19,9 +19,9 @@
     "url": "https://github.com/thomasvaeth/thomasvaeth.github.io/issues"
   },
   "dependencies": {
+    "@barba/core": "^2.1.0",
     "animejs": "^3.0.1",
     "aos": "^2.3.0",
-    "barba.js": "^1.0.0",
     "rellax": "^1.7.2",
     "smooth-scroll": "^15.0.0"
   },
