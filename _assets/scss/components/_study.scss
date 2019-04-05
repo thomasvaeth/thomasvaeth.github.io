@@ -59,16 +59,14 @@
   }
 
   &__double {
-    @include flex-grid(1, 2, $pad: 1em);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
 
-    & > div {
-
-      @media (min-width: $mq-small) {
-        padding: {
-          top: 0;
-          bottom: 0;
-        }
-      }
+    @media (min-width: $mq-small) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-row-gap: 0;
     }
   }
 }

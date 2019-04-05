@@ -4,19 +4,23 @@
 .posts {
 
   &__container {
-    @include flex-grid(1, 2, 3, $pad: 1em);
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 4em;
     margin-top: 1em;
+
+    @media (min-width: $mq-small) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 3em;
+    }
+
+    @media (min-width: $mq-med) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &__post {
-
-    @media (min-width: $mq-small) {
-      padding: {
-        top: 2em;
-        bottom: 2em;
-      }
-    }
 
     &:nth-child(3n+1) {
 
@@ -123,6 +127,10 @@
     @extend %text-center;
 
     margin-top: 1em;
+
+    @media (min-width: $mq-small) {
+      margin-top: 3em;
+    }
   }
 
   &__next {

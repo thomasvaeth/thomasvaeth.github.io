@@ -2,7 +2,9 @@
 // Pagination
 //---------------------------------------------- 
 .pagination {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 1px;
 
   &__link {
     @extend %flex-center;
@@ -12,16 +14,6 @@
 
     color: $color-white;
     background-color: $color-black;
-
-    &:first-child {
-      border-right: 1px solid $color-white;
-    }
-
-    &:last-child {
-      margin-left: -1px;
-
-      border-left: 1px solid $color-white;
-    }
 
     &:hover {
 
