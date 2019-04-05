@@ -1,7 +1,7 @@
 {
   "name": "thomasvaeth.github.io",
   "version": "3.1.0",
-  "description": "Thomas Vaeth is a Software Engineer at Getty Images in Seattle, Washington.",
+  "description": "Thomas Vaeth is a Software Developer at Redfin in Seattle, Washington.",
   "scripts": {
     "gulp": "gulp",
     "lint": "eslint --ext .js _assets"
@@ -19,7 +19,8 @@
     "url": "https://github.com/thomasvaeth/thomasvaeth.github.io/issues"
   },
   "dependencies": {
-    "@barba/core": "^2.1.0",
+    "@barba/core": "^2.1.1-next.112",
+    "@barba/prefetch": "^2.1.1-next.112",
     "animejs": "^3.0.1",
     "aos": "^2.3.0",
     "rellax": "^1.7.2",

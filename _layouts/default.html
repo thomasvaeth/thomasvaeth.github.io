@@ -10,7 +10,13 @@ layout: compress
 </head>
 <body>
   <div data-barba="wrapper">
-    <div data-barba="container" data-barba-namespace="{{ page.title | downcase | slugify }}" class="{{ page.title | downcase | slugify }}">
+    {% assign namespace = '' %}
+    {% if page.namespace %}
+      {% assign namespace = page.namespace %}
+    {% else %}
+      {% assign namespace = page.layout %}
+    {% endif %}
+    <div data-barba="container" data-barba-namespace="{{ namespace }}" class="{{ page.title | downcase | slugify }}">
 
       {% include header.html %}
 

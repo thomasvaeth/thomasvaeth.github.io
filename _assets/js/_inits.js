@@ -4,6 +4,7 @@
 import anime from 'animejs';
 import AOS from 'aos';
 import barba from '@barba/core';
+// import barbaPrefetch from '@barba/prefetch';
 import Rellax from 'rellax';
 import SmoothScroll from 'smooth-scroll';
 import InfiniteScroll from './components/_infiniteScroll.js';
@@ -17,6 +18,8 @@ import OpacityScroll from './components/_opacityScroll.js';
 $(() => {
 
   // Barba
+  // barba.use(barbaPrefetch);
+
   barba.init({
     transitions: [{
       appear() {
@@ -32,29 +35,13 @@ $(() => {
           }
         });
 
-        // AOS.init({
-        //   duration: 1000,
-        //   easing: 'ease',
-        //   once: true
-        // });
+        const scroll = new SmoothScroll('a[href*="#"]');
 
-        // if ($('.rellax').length) {
-        //   const rellax = new Rellax('.rellax');
-        // }
-
-        // const scroll = new SmoothScroll('a[href*="#"]');
-
-        // NavigationScroll.init();
-        // OpacityScroll.init();
-        // miscAnchor();
-        // miscCycle();
-        // miscNavigation();
-
-        // if ($('.posts').length && $('.posts__next').length) {
-        //   InfiniteScroll.init();
-        // }
+        NavigationScroll.init();
+        miscAnchor();
+        miscNavigation();
       },
-      leave({ current, next, trigger }) {
+      leave() {
         $('.transition').addClass('transition-out');
 
         return new Promise(resolve => {
@@ -69,8 +56,9 @@ $(() => {
           });
         });
       },
-      enter({ current, next, trigger }) {
+      enter() {
         $('.transition').removeClass('transition-out').addClass('transition-in');
+        $('[data-barba]').removeClass('js-hamburger');
 
         window.scrollTo(0, 0);
 
@@ -93,69 +81,77 @@ $(() => {
       }
     }],
     views: [{
-      namespace: 'contact',
-      beforeAppear() {
-        console.log('beforeAppear');
-
-        // $.ajax({
-        //   url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=3980752.1677ed0.62bb6a2ad3ef4dc0a6aad768ab8939ab&count=20&callback=?',
-        //   method: 'GET',
-        //   dataType: 'jsonp',
-        //   success(json) {
-        //     const targetEl = $('#instagram');
-        //     let article;
-
-        //     json.data.forEach((data, idx) => {
-        //       let article = targetEl.children('article').eq(idx);
-        //       article.find('a').attr('href', data.link);
-        //       article.find('figure').addClass('scale-down').css('background-image', `url(${data.images.standard_resolution.url})`);
-        //     });
-        //   },
-        //   error(error) {
-        //     console.error(error);
-        //   }
-        // });
-      },
-      afterAppear() {
-        console.log('afterAppear');
-      },
-      beforeLeave() {
-        console.log('beforeLeave');
-      },
-      afterLeave() {
-        console.log('afterLeave');
-      },
+      namespace: 'home',
       beforeEnter() {
-        console.log('beforeEnter');
+        AOS.init({
+          duration: 1000,
+          easing: 'ease',
+          once: true
+        });
+
+        // const rellax = new Rellax('.rellax');
+
+        OpacityScroll.init();
+        miscCycle();
+
+        if ($('.posts').length && $('.posts__next').length) {
+          InfiniteScroll.init();
+        }
+      }
+    }, {
+      namespace: 'work',
+      beforeEnter() {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease',
+          once: true
+        });
+
+        // OpacityScroll.init();
       },
       afterEnter() {
-        console.log('afterEnter');
+        const rellax = new Rellax('.rellax');
+
+        OpacityScroll.init();
+      }
+    }, {
+      namespace: 'post',
+      afterEnter() {
+        const rellax = new Rellax('.rellax');
+
+        OpacityScroll.init();
+      }
+    }, {
+      namespace: 'contact',
+      beforeEnter() {
+        $.ajax({
+          url: 'https://api.instagram.com/v1/users/self/media/recent/?access_token=3980752.1677ed0.62bb6a2ad3ef4dc0a6aad768ab8939ab&count=20&callback=?',
+          method: 'GET',
+          dataType: 'jsonp',
+          success(json) {
+            const targetEl = $('#instagram');
+            let article;
+
+            json.data.forEach((data, idx) => {
+              article = targetEl.children('article').eq(idx);
+              article.find('a').attr('href', data.link);
+              article.find('figure').addClass('scale-down').css('background-image', `url(${data.images.standard_resolution.url})`);
+            });
+          },
+          error(error) {
+            console.error(error);
+          }
+        });
       }
     }]
   });
 
-  // barba.hooks.after(() => {
-  //   AOS.init({
-  //     duration: 1000,
-  //     easing: 'ease',
-  //     once: true
-  //   });
+  barba.hooks.after(() => {
+    const scroll = new SmoothScroll('a[href*="#"]');
 
-  //   if ($('.rellax').length) {
-  //     const rellax = new Rellax('.rellax');
-  //   }
-
-  //   const scroll = new SmoothScroll('a[href*="#"]');
-
-  //   NavigationScroll.init();
-  //   OpacityScroll.init();
-  //   miscAnchor();
-  //   miscCycle();
-  //   miscNavigation();
-
-  //   if ($('.posts').length && $('.posts__next').length) {
-  //     InfiniteScroll.init();
-  //   }
-  // });
+    NavigationScroll.init();
+    miscAnchor();
+    miscNavigation();
+  });
 
 });

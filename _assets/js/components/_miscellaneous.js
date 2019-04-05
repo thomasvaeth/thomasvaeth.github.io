@@ -43,7 +43,7 @@ const miscCycle = () => {
 // ----------------------------------------------
 const miscNavigation = () => {
   $('.hamburger').on('click', () => {
-    $('.barba-container').toggleClass('js-hamburger');
+    $('[data-barba]').toggleClass('js-hamburger');
   });
 };
 
