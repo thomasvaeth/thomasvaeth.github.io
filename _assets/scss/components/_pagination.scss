@@ -12,8 +12,8 @@
 
     flex: 1;
 
-    color: $color-white;
-    background-color: $color-black;
+    color: var(--white);
+    background-color: var(--black);
 
     &:hover {
 

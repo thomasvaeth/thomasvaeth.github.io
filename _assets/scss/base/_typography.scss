@@ -1,4 +1,17 @@
 //----------------------------------------------
+// Colors
+//---------------------------------------------- 
+:root {
+  --white: #fff;
+  --white-rgb: 255, 255, 255;
+  --lightgrey: #f4f4f4;
+  --grey: #bbb;
+  --darkgrey: #191919;
+  --black: #000;
+  --black-rgb: 0, 0, 0;
+}
+
+//----------------------------------------------
 // Base typography
 //---------------------------------------------- 
 body {
@@ -6,8 +19,8 @@ body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   line-height: $base-lineheight;
-  color: $color-black;
-  background-color: $color-white;
+  color: var(--black);
+  background-color: var(--white);
 }
 
 //----------------------------------------------
@@ -124,7 +137,7 @@ blockquote {
   font-family: $font;
   font-weight: 400;
   font-size: 1.25em;
-  color: $color-black;
+  color: var(--black);
   line-height: 1.4;
 
   @media (min-width: $mq-small) {
@@ -140,7 +153,7 @@ cite {
   font-family: $font;
   font-size: $font-xxxsmall;
   font-style: normal;
-  color: $color-black;
+  color: var(--black);
   line-height: $base-lineheight;
 
   &:before {
@@ -173,14 +186,14 @@ sub {
 }
 
 mark {
-  color: $color-black;
+  color: var(--black);
 }
 
 //----------------------------------------------
 // Selection
 //---------------------------------------------- 
 ::selection {
-  color: $color-white;
-  background-color: $color-darkgrey;
+  color: var(--white);
+  background-color: var(--darkgrey);
   text-shadow: none;
 }

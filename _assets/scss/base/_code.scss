@@ -20,8 +20,8 @@ pre {
   line-height: $base-lineheight;
   white-space: pre;
   word-wrap: normal;
-  color: $color-black;
-  background: $color-lightgrey;
+  color: var(--black);
+  background: var(--lightgrey);
   border-radius: 5px;
   overflow: auto;
 
@@ -41,6 +41,6 @@ pre {
 code {
   padding: 0.25em 0.5em;
 
-  color: $color-black;
-  background: $color-lightgrey;
+  color: var(--black);
+  background: var(--lightgrey);
 }

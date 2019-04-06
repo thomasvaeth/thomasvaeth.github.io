@@ -62,7 +62,7 @@ a {
     height: $height;
     width: 0;
     
-    background-color: $color-white;
+    background-color: var(--white);
     transition: width 400ms ease;
   }
 }

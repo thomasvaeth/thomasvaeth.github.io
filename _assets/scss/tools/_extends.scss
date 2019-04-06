@@ -27,7 +27,7 @@
 // Work Card
 //----------------------------------------------
 %work-card {
-  background-color: $color-white;
+  background-color: var(--white);
   overflow: hidden;
   transition: transform 300ms ease-in-out;
 }

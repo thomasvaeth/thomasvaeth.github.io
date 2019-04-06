@@ -9,7 +9,7 @@
     min-height: 18em;
     padding: 4em 1em;
 
-    color: $color-white;
+    color: var(--white);
 
     @media (min-width: $mq-small) {
       min-height: 24em;

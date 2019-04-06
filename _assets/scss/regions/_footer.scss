@@ -50,6 +50,6 @@
   }
 
   &__link {
-    @include link-underline(2px, $color-black);
+    @include link-underline(2px, var(--black));
   }
 }

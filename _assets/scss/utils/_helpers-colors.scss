@@ -2,15 +2,15 @@
 // Background Colors
 //--------------------------------------------
 .bg-white {
-  background-color: $color-white;
+  background-color: var(--white);
 }
 
 .bg-lightgrey {
-  background-color: $color-lightgrey;
+  background-color: var(--lightgrey);
 }
 
 .bg-black {
-  background-color: $color-black;
+  background-color: var(--black);
 }
 
 .bg-cryptologg {

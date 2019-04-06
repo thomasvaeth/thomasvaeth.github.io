@@ -38,8 +38,8 @@
     position: fixed;
     top: 1em;
 
-    background-color: $color-white;
-    box-shadow: 0px 1px 0px 1px rgba($color-black, 0.02), 0px 4px 16px rgba($color-black, 0.09);
+    background-color: var(--white);
+    box-shadow: 0px 1px 0px 1px rgba(var(--black-rgb), 0.02), 0px 4px 16px rgba(var(--black-rgb), 0.09);
   }
 
   .js-scrolling-up & {
@@ -55,7 +55,7 @@
     font-family: $font-header;
     font-weight: 400;
     font-size: 1.1em;
-    color: $color-black;
+    color: var(--black);
 
     .cryptologg &,
     .s-p-real-estate &,
@@ -63,20 +63,20 @@
     .inrix & {
 
       @media (min-width: $mq-small) {
-        color: $color-white;
+        color: var(--white);
       }
     }
 
     .js-scrolling-up &,
     .js-scrolling-down & {
-      color: $color-black;
+      color: var(--black);
     }
   }
 
   // &__title {
 
   //   .contact & {
-  //     color: $color-white;
+  //     color: var(--white);
   //   }
   // }
 
@@ -93,7 +93,7 @@
   &__link {
     position: relative;
 
-    color: $color-black;
+    color: var(--black);
     transition: all 400ms ease;
 
     &:before {
@@ -105,19 +105,19 @@
       height: 2px;
       width: 0;
       
-      background-color: $color-black;
+      background-color: var(--black);
       transition: all 400ms ease;
 
       .cryptologg &,
       .s-p-real-estate &,
       .the-stable-seattle &,
       .inrix & {
-        background-color: $color-white;
+        background-color: var(--white);
       }
 
       .js-scrolling-up &,
       .js-scrolling-down & {
-        background-color: $color-black;
+        background-color: var(--black);
       }
 
       @media (hover: none) {
@@ -132,18 +132,18 @@
 
         width: 100%;
         
-        background-color: $color-black;
+        background-color: var(--black);
 
         .cryptologg &,
         .s-p-real-estate &,
         .the-stable-seattle &,
         .inrix & {
-          background-color: $color-white;
+          background-color: var(--white);
         }
 
         .js-scrolling-up &,
         .js-scrolling-down & {
-          background-color: $color-black;
+          background-color: var(--black);
         }
       }
     }
@@ -167,8 +167,8 @@
     justify-content: space-between;
     padding: 1em;
 
-    background-color: $color-white;
-    box-shadow: 0px 1px 0px 1px rgba($color-black, 0.02), 0px 4px 16px rgba($color-black, 0.09);
+    background-color: var(--white);
+    box-shadow: 0px 1px 0px 1px rgba(var(--black-rgb), 0.02), 0px 4px 16px rgba(var(--black-rgb), 0.09);
 
     @media (min-width: $mq-small) {
       display: none;
@@ -183,7 +183,7 @@
     width: 100%;
     padding: 1em;
 
-    background-color: $color-white;
+    background-color: var(--white);
     visibility: hidden;
     opacity: 0;
 
@@ -240,7 +240,7 @@
     width: 26px;
     margin-left: auto;
 
-    background-color: $color-black;
+    background-color: var(--black);
     transition: all 200ms ease-in-out;
 
     &:nth-of-type(2) {
@@ -255,7 +255,7 @@
   .js-hamburger & {
 
     & > div {
-      background-color: $color-black;
+      background-color: var(--black);
 
       &:nth-of-type(1) {
         transform: translateY(6px) rotate(45deg);

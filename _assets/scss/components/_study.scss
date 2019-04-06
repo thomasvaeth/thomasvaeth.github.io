@@ -34,9 +34,9 @@
     }
 
     a {
-      @include link-underline(1px, $color-grey);
+      @include link-underline(1px, var(--grey));
 
-      color: $color-black;
+      color: var(--black);
       white-space: nowrap;
       transition: color 400ms ease-in-out;
 
@@ -49,11 +49,11 @@
         height: 1px;
         width: 100%;
         
-        background-color: $color-black;
+        background-color: var(--black);
       }
 
       &:hover {
-        color: $color-grey;
+        color: var(--grey);
       }
     }
   }

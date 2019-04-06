@@ -8,10 +8,6 @@
     grid-template-columns: 1fr;
     grid-column-gap: 2em;
     margin-top: 1em;
-    padding: {
-      right: 1em;
-      left: 1em;
-    }
 
     @media (min-width: $mq-small) {
       grid-template-columns: repeat(2, 1fr);
@@ -35,7 +31,7 @@
   &__link {
     display: block;
 
-    color: $color-black;
+    color: var(--black);
 
     &:hover {
       .work__cryptologg,

@@ -74,7 +74,7 @@
   &__img {
     position: relative;
 
-    background-color: $color-lightgrey;
+    background-color: var(--lightgrey);
     overflow: hidden;
     transition: transform 300ms ease-in-out;
 
@@ -142,7 +142,7 @@
     transition: color 100ms ease-in-out;
 
     &--none {
-      color: $color-grey;
+      color: var(--grey);
       cursor: not-allowed;
     }
 
