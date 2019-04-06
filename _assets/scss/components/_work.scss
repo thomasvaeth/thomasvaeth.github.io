@@ -4,28 +4,25 @@
 .work {
 
   &__container {
-    display: flex;
-    flex-flow: wrap;
-    flex-direction: row;
-    margin: {
-      top: 1em;
-      right: -1em;
-      left: -1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2em;
+    margin-top: 1em;
+    padding: {
+      right: 1em;
+      left: 1em;
     }
 
-    & > div {
-      flex-basis: 100%;
-      max-width: 100%;
-
-      @media (min-width: $mq-small) {
-        flex-basis: 50%;
-        max-width: 50%;
-      }
+    @media (min-width: $mq-small) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   &__work {
-    padding: 1em;
+    padding: {
+      top: 1em;
+      bottom: 1em;
+    }
 
     @media (min-width: $mq-small) {
       padding: {
