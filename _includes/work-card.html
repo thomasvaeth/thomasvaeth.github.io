@@ -1,16 +1,6 @@
 <article class="work__work">
   <a class="work__link" href="{{ work.url | prepend: site.baseurl }}" data-aos="slide-up">
-    {% if work.title == 'CryptoLogg' %}
-      <div class="work__cryptologg">
-        <div class="work__scale" data-aos="scale-down">
-          <div class="cycle">
-            <span>🤑</span>
-            <span class="hidden">🙃</span>
-            <span class="hidden">😵</span>
-          </div>
-        </div>
-      </div>
-    {% elsif work.link_video %}
+    {% if work.link_video %}
       <div class="work__vid">
         <div class="work__scale" data-aos="scale-down">
           <video autoplay loop muted poster="{{ work.link_image }}">
