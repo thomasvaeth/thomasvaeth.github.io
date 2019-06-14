@@ -96,7 +96,7 @@ $(() => {
           let article;
 
           json.data.forEach((data, idx) => {
-            let article = targetEl.children('article').eq(idx);
+            article = targetEl.children('article').eq(idx);
             article.find('a').attr('href', data.link);
             article.find('figure').addClass('scale-down').css('background-image', `url(${data.images.standard_resolution.url})`);
           });
