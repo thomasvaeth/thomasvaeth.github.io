@@ -1,4 +1,4 @@
-# [Thomas Vaeth](http://thomasvaeth.com/)
+# [Thomas Vaeth](https://thomasvaeth.com/)
 
 ## Awards
 [CryptoLogg](https://onepagelove.com/cryptologg)
