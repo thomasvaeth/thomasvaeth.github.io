@@ -2,8 +2,8 @@
 layout: post
 title: "Full Viewport Z-Index Scroll"
 date: 2017-10-13
-description: 
-image: /assets/images/posts/full-viewport.jpg
+description:
+image: "/assets/images/posts/full-viewport.jpg"
 ---
 <p>I originally built this script for Innovation at Getty Images to showcase all of the projects the team was working on at the time. Unfortunately, I never had the opportunity to launch anything before the team was disolved and we were moved to new positions. I had a lot of fun and frustration building this, so I was a hugely disappointed to never see it in production. I decided to post the script on CodePen and it was one of <a href="https://codepen.io/2017/popular/pens/" target="_blank">The Most Hearted of 2017</a>.</p>
 
@@ -50,10 +50,10 @@ body {
 
 .image {
   position: relative;
-  
+
   height: 100vh;
   width: 100%;
-  
+
   &__bg {
     position: absolute;
     top: 0;

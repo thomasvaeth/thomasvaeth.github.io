@@ -2,8 +2,8 @@
 layout: post
 title: "Getty Images Homepage"
 date: 2018-10-17
-description: 
-image: /assets/images/posts/getty-images-homepage.jpg
+description:
+image: "/assets/images/posts/getty-images-homepage.jpg"
 ---
 <p>The website for Getty Images is currently undergoing a complete redesign. The company is rolling the build out in phases, so only a few pages have been redeveloped so far. It has been a lot of work, but everything is bringing the brand in the right direction.</p>
 

@@ -2,8 +2,8 @@
 layout: post
 title: "Wraparound Progress Bar"
 date: 2018-03-02
-description: A progress bar only at the top of the page is boring. Really boring. So I built a wraparound progress bar.
-image: /assets/images/posts/wraparound-progress-bar.jpg
+description: "A progress bar only at the top of the page is boring. Really boring. So I built a wraparound progress bar."
+image: "/assets/images/posts/wraparound-progress-bar.jpg"
 ---
 <p>A progress bar only at the top of the page is boring. Really boring. Everyone does it because <code>progress</code> is already a native HTML element. I wanted to build something that was made specifically for longer pages with a lot of content. I also wanted to add some style to the page where the content is being framed as you scroll. So I built a wraparound progress bar.</p>
 

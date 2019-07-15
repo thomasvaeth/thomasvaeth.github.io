@@ -2,8 +2,8 @@
 layout: post
 title: "Instafetch.js"
 date: 2017-12-26
-description: A 6KB JavaScript plugin for the Instagram API using fetch instead of jQuery.
-image: /assets/images/posts/instafetch-js.jpg
+description: "A 6KB JavaScript plugin for the Instagram API using fetch instead of jQuery."
+image: "/assets/images/posts/instafetch-js.jpg"
 ---
 <p>I have nothing against jQuery. It does exactly what it’s supposed to do. jQuery simplifies a lot of the complicated things in JavaScript, so it is easier to use (and I do use it here on this website).</p>
 <p>But why use an 87KB file only to write more JavaScript that is only being used for AJAX to return some JSONP? Every project doesn’t need it. So let’s use fetch instead to hit the endpoints of the Instagram API.</p>

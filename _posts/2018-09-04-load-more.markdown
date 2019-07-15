@@ -2,8 +2,8 @@
 layout: post
 title: "Load More"
 date: 2018-09-04
-description: 
-image: /assets/images/posts/load-more.jpg
+description:
+image: "/assets/images/posts/load-more.jpg"
 ---
 <p>I make blog layouts a lot and wanted a nicer way of loading new posts without loading a new page. I also wanted to do that without using jQuery. So I wrote a script to load more posts for static site generators.</p>
 
@@ -79,7 +79,7 @@ const LoadMore = (() => {
 
       request.open('GET', nextPage, true);
       request.send();
-      
+
       request.onreadystatechange = () => {
         if (request.readyState < 4) {
           s.next.classList.add(s.class);
