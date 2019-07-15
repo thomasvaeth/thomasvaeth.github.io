@@ -49,7 +49,6 @@ a {
 @mixin block-underline($height) {
   position: relative;
 
-  font-family: $font-header;
   font-weight: 700;
 
   &:before {
