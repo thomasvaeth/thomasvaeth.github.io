@@ -45,7 +45,7 @@
 
     function trackOutboundLink(url, type) {
       ga('send', 'event', type.charAt(0).toUpperCase() + type.slice(1) + ' Link', 'click', url, {transport: 'beacon'});
-      
+
       return true;
     }
   </script>

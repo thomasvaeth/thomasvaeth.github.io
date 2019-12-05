@@ -50,7 +50,7 @@ function serve(done) {
 function styles() {
   return gulp.src(paths.styles.src)
     .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({browsers: ['last 2 versions'], cascade: false}))
+    .pipe(autoprefixer({cascade: false}))
     .pipe(cleanCSS())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(paths.styles.dest))
