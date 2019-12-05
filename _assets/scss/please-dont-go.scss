@@ -1,6 +1,6 @@
 //----------------------------------------------
 // Config / Base
-//---------------------------------------------- 
+//----------------------------------------------
 $font-header: "Circular", sans-serif;
 $font-body: "Cormorant Garamond", serif;
 
@@ -19,27 +19,27 @@ $mq-xxl: 114em;
 
 //----------------------------------------------
 // Mixins
-//---------------------------------------------- 
+//----------------------------------------------
 @mixin nth-animation-delay($items: 15, $time: 0.1s) {
   @for $i from 1 through $items {
-    
-    &:nth-child(#{$i}) {   
-      animation-delay: $time * $i; 
+
+    &:nth-child(#{$i}) {
+      animation-delay: $time * $i;
     }
   }
 }
 
 //----------------------------------------------
 // Fonts
-//---------------------------------------------- 
+//----------------------------------------------
 @import 'fonts/_circular';
 @import 'fonts/_cormorant-garamond';
 
 //----------------------------------------------
 // Base
-//---------------------------------------------- 
-*, 
-*:before, 
+//----------------------------------------------
+*,
+*:before,
 *:after {
   box-sizing: border-box;
 }
@@ -102,14 +102,6 @@ div {
   }
 }
 
-footer {
-  position: absolute;
-  bottom: 1em;
-  left: 50%;
-
-  transform: translateX(-50%);
-}
-
 h1 {
   $fontSize: 2.5em;
 
@@ -156,28 +148,9 @@ a {
   }
 }
 
-ul {
-  display: flex;
-  margin: 0;
-  padding: 0;
-
-  list-style-type: none;
-
-  & > * {
-
-    &:not(:last-child) {
-      margin-right: 0.5em;
-    }
-  }
-
-  a {
-    color: $color-black;
-  }
-}
-
 //----------------------------------------------
 // Animations Keyframes
-//---------------------------------------------- 
+//----------------------------------------------
 @keyframes spanTitle {
   0% { opacity: 0; transform: translate3d(0, 100%, 0); }
   90% { opacity: 1; }
