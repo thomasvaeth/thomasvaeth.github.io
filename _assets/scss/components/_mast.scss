@@ -1,6 +1,6 @@
 //----------------------------------------------
 // Mast
-//---------------------------------------------- 
+//----------------------------------------------
 .mast {
   @extend %flex-align;
   @extend %text-center;
@@ -37,6 +37,7 @@
       transform: translate(-50%, -50%);
     }
 
+    .art-by-elina &,
     .getty-images &,
     .s-p-real-estate &,
     .the-stable-seattle &,
