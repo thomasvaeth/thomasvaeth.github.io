@@ -159,8 +159,12 @@
     right: 0;
     z-index: $z-998;
 
+    height: 3.5em;
     justify-content: space-between;
-    padding: 1em;
+    padding: {
+      right: 1em;
+      left: 1em;
+    }
 
     background-color: var(--white);
     box-shadow: 0px 1px 0px 1px rgba(var(--black-rgb), 0.02), 0px 4px 16px rgba(var(--black-rgb), 0.09);

@@ -5,10 +5,13 @@
   @extend %flex-align;
   @extend %text-center;
 
-  min-height: 26em;
+  min-height: 22em;
+  margin-top: 3.5em;
   padding: 4em 1em;
 
   @media (min-width: $mq-small) {
+    min-height: 26em;
+    margin-top: 0;
     padding: 6em 2em;
   }
 
@@ -20,7 +23,12 @@
     position: relative;
 
     min-height: 24em;
+    margin-top: 3.5em;
     padding-bottom: 56.5%;
+
+    @media (min-width: $mq-small) {
+      margin-top: 0;
+    }
 
     .absolute-bg,
     .absolute-vid {

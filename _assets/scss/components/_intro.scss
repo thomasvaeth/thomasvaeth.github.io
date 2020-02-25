@@ -1,14 +1,16 @@
 //----------------------------------------------
 // Intro
-//---------------------------------------------- 
+//----------------------------------------------
 .intro {
   @extend %flex-align;
 
-  height: 26em;
+  height: 22em;
+  margin-top: 3.5em;
   padding: 4em 1em;
 
   @media (min-width: $mq-small) {
     height: 38em;
+    margin-top: 0;
     padding: 6em 2em;
   }
 

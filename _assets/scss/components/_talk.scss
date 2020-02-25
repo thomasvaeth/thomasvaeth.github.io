@@ -1,6 +1,6 @@
 //----------------------------------------------
 // Talk
-//---------------------------------------------- 
+//----------------------------------------------
 .talk {
   display: flex;
   flex-direction: column-reverse;
@@ -23,12 +23,16 @@
   &__right {
     display: flex;
     align-items: center;
-    height: 26em;
+    height: 22em;
+    margin-top: 3.5em;
 
     @media (min-width: $mq-med) {
       height: auto;
       min-height: 100vh;
-      margin-left: 50%;
+      margin: {
+        top: 0;
+        left: 50%;
+      }
     }
   }
 
@@ -53,7 +57,7 @@
 
       height: 1px;
       width: 100%;
-      
+
       background-color: var(--black);
     }
 
@@ -72,7 +76,7 @@
 
 //----------------------------------------------
 // Instagram
-//---------------------------------------------- 
+//----------------------------------------------
 #instagram {
   display: grid;
   grid-template-columns: 1fr;
