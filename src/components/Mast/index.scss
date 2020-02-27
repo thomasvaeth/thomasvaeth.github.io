@@ -1,0 +1,78 @@
+@import '../../styles/tools/_config';
+@import '../../styles/tools/_extends-type';
+@import '../../styles/tools/_extends';
+
+.mast {
+  @extend %flex-align;
+  @extend %text-center;
+
+  min-height: 22em;
+  margin-top: 3.5em;
+  padding: 4em 1em;
+
+  @media (min-width: $mq-small) {
+    min-height: 26em;
+    margin-top: 0;
+    padding: 6em 2em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: 8em 4em;
+  }
+
+  &--media {
+    position: relative;
+
+    min-height: 24em;
+    margin-top: 3.5em;
+    padding-bottom: 56.5%;
+
+    @media (min-width: $mq-small) {
+      margin-top: 0;
+    }
+
+    .absolute-bg,
+    .absolute-vid {
+      opacity: 0.8;
+    }
+
+    .grid {
+      @extend %text-center;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+
+    .art-by-elina &,
+    .getty-images &,
+    .s-p-real-estate &,
+    .the-stable-seattle &,
+    .inrix & {
+      color: var(--white);
+    }
+  }
+
+  &__title {
+    @extend %auto-margin;
+    @extend %text-center;
+
+    @media (min-width: $mq-small) {
+      max-width: 90%;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    margin-top: 0.25em;
+
+    font-weight: 500;
+    font-size: 1.1em;
+
+    @media (min-width: $mq-small) {
+      font-size: 1.25em;
+    }
+  }
+}

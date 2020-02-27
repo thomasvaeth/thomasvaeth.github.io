@@ -1,10 +1,15 @@
 {
   "name": "thomasvaeth.github.io",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Thomas Vaeth is a Software Developer at Redfin in Seattle, Washington.",
   "scripts": {
-    "gulp": "gulp",
-    "lint": "eslint --ext .js _assets"
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "author": {
     "name": "Thomas Vaeth",
@@ -19,30 +24,28 @@
     "url": "https://github.com/thomasvaeth/thomasvaeth.github.io/issues"
   },
   "dependencies": {
-    "@barba/core": "^2.9.7",
-    "@barba/prefetch": "^2.1.10",
-    "animejs": "^3.1.0",
-    "aos": "^2.3.4",
-    "rellax": "^1.12.1",
-    "smooth-scroll": "^16.1.2"
+    "gatsby": "^2.19.7",
+    "gatsby-image": "^2.2.39",
+    "gatsby-plugin-layout": "^1.1.22",
+    "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-sass": "^2.1.29",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-remark-copy-linked-files": "^2.1.37",
+    "gatsby-remark-images": "^3.1.44",
+    "gatsby-remark-responsive-iframe": "^2.2.32",
+    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-transformer-remark": "^2.6.53",
+    "gatsby-transformer-sharp": "^2.3.15",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "rellax": "^1.12.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "@babel/preset-env": "^7.8.4",
-    "babel-eslint": "^10.0.3",
-    "babelify": "^10.0.0",
-    "browser-sync": "^2.26.7",
-    "browserify": "^16.5.0",
-    "eslint": "^6.8.0",
-    "eslint-config-eslint": "^6.0.0",
-    "eslint-plugin-node": "^11.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
+    "prettier": "^1.19.1"
   }
 }
