@@ -30,7 +30,12 @@ function Instagram(props) {
 
     return (
       <article className="instagram" key={id}>
-        <a className="instagram__link" href={`https://www.instagram.com/p/${id}/`} target="_blank">
+        <a
+          className="instagram__link"
+          href={`https://www.instagram.com/p/${id}/`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <figure className="absolute-bg scale-down" style={{ backgroundImage: `url('${localFile.childImageSharp.fixed.src}')` }} />
         </a>
       </article>

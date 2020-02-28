@@ -15,7 +15,7 @@ import '../styles/app.scss';
 function DefaultLayout({ children, location }) {
   return (
     <Fragment>
-      <SEO />
+      <SEO className={location.pathname.replace(/\//g, '')} />
       <Header />
       <main>
         {children}

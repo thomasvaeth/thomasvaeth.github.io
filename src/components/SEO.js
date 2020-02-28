@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
 
 function SEO({ title, description, url, image, pathname, article, lang, meta }) {
   const { site } = useStaticQuery(
@@ -33,6 +33,9 @@ function SEO({ title, description, url, image, pathname, article, lang, meta }) 
     <Helmet
       htmlAttributes={{
         lang,
+      }}
+      bodyAttributes={{
+        class: title && title.replace(/ +/g, '-').toLowerCase(),
       }}
       title={title ? `${title} | ${defaultTitle}` : defaultTitle}
       meta={[
