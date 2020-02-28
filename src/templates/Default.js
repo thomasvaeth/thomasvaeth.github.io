@@ -3,33 +3,24 @@
 // ----------------------------------------------
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { useStaticQuery, graphql } from 'gatsby';
 
 // import Transition from '../components/Transition';
 import SEO from '../components/SEO';
-// import Header from '../components/Header/Header';
-// import Footer from '../components/Footer/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 import '../styles/fonts.scss';
 import '../styles/app.scss';
 
 function DefaultLayout({ children, location }) {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
   return (
     <Fragment>
       <SEO />
+      <Header />
       <main>
         {children}
       </main>
+      <Footer />
     </Fragment>
   );
 }

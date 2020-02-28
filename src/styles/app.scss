@@ -42,25 +42,11 @@
 @import 'base/_typography';
 
 //----------------------------------------------
-// Vendor
-//----------------------------------------------
-
-//----------------------------------------------
-// Regions
-//----------------------------------------------
-@import 'regions/_header';
-@import 'regions/_footer';
-
-//----------------------------------------------
 // Components
 //----------------------------------------------
 @import 'components/_browser';
-@import 'components/_cta';
-@import 'components/_intro';
 @import 'components/_pagination';
-@import 'components/_posts';
 @import 'components/_study';
-@import 'components/_talk';
 @import 'components/_work';
 
 //----------------------------------------------

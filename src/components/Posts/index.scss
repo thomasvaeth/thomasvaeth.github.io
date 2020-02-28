@@ -1,0 +1,64 @@
+//--------------------------------------------
+// Imports
+//--------------------------------------------
+@import '../../styles/tools/_config';
+@import '../../styles/tools/_extends-type';
+
+//----------------------------------------------
+// Posts
+//----------------------------------------------
+.posts {
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2em;
+    grid-row-gap: 4em;
+    margin-top: 1em;
+
+    @media (min-width: $mq-small) {
+      grid-template-columns: repeat(2, 1fr);
+      margin-top: 3em;
+    }
+
+    @media (min-width: $mq-med) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__title {
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  &__pagination {
+    @extend %text-center;
+
+    margin-top: 1em;
+
+    @media (min-width: $mq-small) {
+      margin-top: 3em;
+    }
+  }
+
+  &__next {
+    position: relative;
+    z-index: 1;
+
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 100ms ease-in-out;
+
+    &--none {
+      color: var(--grey);
+      cursor: not-allowed;
+    }
+
+    &.js-posts-loading {
+      cursor: wait;
+    }
+  }
+}

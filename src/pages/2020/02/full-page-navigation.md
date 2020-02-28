@@ -4,7 +4,7 @@ date: 2020-02-03
 description: ""
 image: "../../../images/work/art-by-elina/mast.jpg"
 ---
-<p>There was a challenge on <a href="https://codepen.io/challenges/2020/january/2" target="_blank">CodePen</a> during the second week of January to build a full-page navigation. I just happened to recently finish working on one for the new <a href="/art-by-elina">Art by Elina</a> website. I built something that transitioned horizontally because the page transitions on Art by Elina were done vertically. So this is the script I wrote and used to do that.</p>
+There was a challenge on <a href="https://codepen.io/challenges/2020/january/2" target="_blank">CodePen</a> during the second week of January to build a full-page navigation. I just happened to recently finish working on one for the new <a href="/art-by-elina">Art by Elina</a> website. I built something that transitioned horizontally because the page transitions on Art by Elina were done vertically. So this is the script I wrote and used to do that.
 
 <hr/>
 

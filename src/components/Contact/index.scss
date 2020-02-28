@@ -1,3 +1,10 @@
+//--------------------------------------------
+// Imports
+//--------------------------------------------
+@import '../../styles/tools/_config';
+@import '../../styles/tools/_extends-type';
+@import '../../styles/tools/_mixins';
+
 //----------------------------------------------
 // Talk
 //----------------------------------------------
@@ -6,6 +13,15 @@
   flex-direction: column-reverse;
 
   &__left {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    padding: 1em;
+
+    @media (min-width: $mq-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
 
     @media (min-width: $mq-med) {
       position: fixed;
@@ -64,57 +80,5 @@
     &:hover {
       color: var(--grey);
     }
-  }
-}
-
-// #canvas {
-//   background-position: 50%;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   cursor: pointer;
-// }
-
-//----------------------------------------------
-// Instagram
-//----------------------------------------------
-#instagram {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1em;
-  grid-row-gap: 1em;
-  padding: 1em;
-
-  @media (min-width: $mq-small) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  a {
-    position: relative;
-
-    display: block;
-
-    background-color: var(--lightgrey);
-    overflow: hidden;
-    transition: transform 300ms ease-in-out;
-
-    &:before {
-      content: "";
-      display: block;
-      padding-top: 100%;
-    }
-
-    &:hover {
-      transform: scale(0.97);
-
-      figure {
-        transform: scale(1.1);
-      }
-    }
-  }
-
-  figure {
-    @extend .absolute-bg;
-
-    transition: transform 300ms ease-in-out;
   }
 }

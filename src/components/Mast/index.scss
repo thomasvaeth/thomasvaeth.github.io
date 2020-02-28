@@ -1,7 +1,13 @@
+//--------------------------------------------
+// Imports
+//--------------------------------------------
 @import '../../styles/tools/_config';
 @import '../../styles/tools/_extends-type';
 @import '../../styles/tools/_extends';
 
+//--------------------------------------------
+// Mast
+//--------------------------------------------
 .mast {
   @extend %flex-align;
   @extend %text-center;

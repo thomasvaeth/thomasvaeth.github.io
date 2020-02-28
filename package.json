@@ -24,6 +24,7 @@
     "url": "https://github.com/thomasvaeth/thomasvaeth.github.io/issues"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-layout": "^1.1.22",
@@ -36,6 +37,7 @@
     "gatsby-remark-images": "^3.1.44",
     "gatsby-remark-responsive-iframe": "^2.2.32",
     "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-source-instagram": "^0.6.1",
     "gatsby-transformer-remark": "^2.6.53",
     "gatsby-transformer-sharp": "^2.3.15",
     "node-sass": "^4.13.1",

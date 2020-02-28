@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
 
-import DefaultLayout from '../Default';
 import Mast from '../../components/Mast';
 import SEO from '../../components/SEO';
 

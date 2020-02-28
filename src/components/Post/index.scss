@@ -1,0 +1,110 @@
+//--------------------------------------------
+// Imports
+//--------------------------------------------
+@import '../../styles/tools/_config';
+@import '../../styles/tools/_extends-type';
+
+//----------------------------------------------
+// Post
+//----------------------------------------------
+.post {
+
+  &:nth-child(3n+1) {
+
+    .post__text {
+      transition-delay: 100ms;
+    }
+  }
+
+  &:nth-child(3n+2) {
+
+    .post__link,
+    .post__scale,
+    .post__title span {
+      transition-delay: 100ms;
+    }
+
+    .post__text {
+      transition-delay: 200ms;
+    }
+  }
+
+  &:nth-child(3n+3) {
+
+    .post__link,
+    .post__scale,
+    .post__title span {
+      transition-delay: 200ms;
+    }
+
+    .post__text {
+      transition-delay: 300ms;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    color: var(--black);
+
+    &:hover {
+
+      .post__img {
+        transform: scale(0.97);
+
+        figure {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+
+    background-color: var(--lightgrey);
+    overflow: hidden;
+    transition: transform 300ms ease-in-out;
+
+    &:before {
+      content: "";
+
+      display: block;
+      padding-top: 80%;
+    }
+
+    figure {
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
+  &__scale {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 100%;
+  }
+
+  &__header {
+    margin-top: 1em;
+  }
+
+  &__title {
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  &__text {
+    margin: {
+      top: 0.25em;
+      bottom: 0;
+    }
+
+    font-size: 1.1em;
+  }
+}
