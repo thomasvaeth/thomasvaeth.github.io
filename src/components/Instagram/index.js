@@ -21,11 +21,13 @@ function Instagram() {
     `
   );
 
-  return allInstaNode.edges.map(node => {
+  const images = allInstaNode.edges.map(node => {
     const { id, localFile } = node.node;
 
+    if (!id || !localFile) return null;
+
     return (
-      <article className="instagram" key={id}>
+      <article key={id}>
         <a
           className="instagram__link"
           href={`https://www.instagram.com/p/${id}/`}
@@ -36,7 +38,13 @@ function Instagram() {
         </a>
       </article>
     );
-  });
+  }).filter(obj => obj);
+
+  return (
+    <div className="instagram">
+      {images.length % 2 === 0 ? images : images.slice(0, -1)}
+    </div>
+  )
 }
 
 export default Instagram;

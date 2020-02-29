@@ -13,16 +13,6 @@
   flex-direction: column-reverse;
 
   &__left {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
-    padding: 1em;
-
-    @media (min-width: $mq-small) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
     @media (min-width: $mq-med) {
       position: fixed;
       top: 0;
