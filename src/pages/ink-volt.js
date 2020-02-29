@@ -1,8 +1,8 @@
 import React from 'react';
 import Project from '../templates/Project';
 
-import mastImage from '../images/work/ink-volt/mast.jpg';
-import mastVideo from '../images/work/ink-volt/mast.mp4';
+import mastImage from '../images/projects/ink-volt/mast.jpg';
+import mastVideo from '../images/projects/ink-volt/mast.mp4';
 
 function InkVoltPage(props) {
   return (

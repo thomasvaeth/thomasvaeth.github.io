@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import './index.scss';
 
-function Instagram(props) {
+function Instagram() {
   const { allInstaNode } = useStaticQuery(
     graphql`
       query {

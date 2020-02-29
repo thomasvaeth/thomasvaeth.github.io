@@ -1,55 +1,53 @@
 import React from 'react';
+import { graphql } from 'gatsby';
 import Project from '../templates/Project';
+import Browser from '../components/Browser';
+import Content from '../components/Content';
 import useAnimateOnScroll from '../utils/useAnimateOnScroll';
 
-import mastImage from '../images/work/art-by-elina/mast.jpg';
+import mastImage from '../images/projects/art-by-elina/mast.jpg';
 
-function ArtByElinaPage(props) {
+function ArtByElinaPage({ data, path }) {
   useAnimateOnScroll();
+
+  let about, gallery, home, menuOne;
+
+  data.allFile.edges.forEach(image => {
+    if (image.node.name === 'about') {
+      about = image.node.childImageSharp.fluid;
+    } else if (image.node.name === 'gallery') {
+      gallery = image.node.childImageSharp.fluid;
+    } else if (image.node.name === 'home') {
+      home = image.node.childImageSharp.fluid;
+    } else if (image.node.name === 'menu-1') {
+      menuOne = image.node.childImageSharp.fluid;
+    }
+  });
 
   return (
     <Project
       title="Art by Elina"
       image={mastImage}
+      pathname={path}
     >
-      <div className="study__intro section-padding--double bg-white">
-        <div className="grid-small">
-          <h2>
-            <span data-aos="slice-up" data-aos-duration="400">Inspired paintings</span>
-          </h2>
-          <p data-aos="fade-in" data-aos-duration="400" data-aos-delay="100">Elina Dmitruk is a fine artist using oil paints to create inspired paintings both realistic and imaginary. She needed a website to tell her story and showcase her work. I partnered with Mary Rauzi at <a href="https://embrcreative.com/" target="_blank" rel="noopener noreferrer">Embr Creative</a>, who redesigned the website, while I handled the redevelopment of a generic Squarespace page to a custom WordPress build.</p>
-        </div>
-      </div>
+      <Content header="Inspired paintings">
+        <p>Elina Dmitruk is a fine artist using oil paints to create inspired paintings both realistic and imaginary. She needed a website to tell her story and showcase her work. I partnered with Mary Rauzi at <a href="https://embrcreative.com/" target="_blank" rel="noopener noreferrer">Embr Creative</a>, who redesigned the website, while I handled the redevelopment of a generic Squarespace page to a custom WordPress build.</p>
+      </Content>
 
       <div className="section-padding bg-lightgrey">
         <div className="grid">
-          <div className="browser" data-aos="fade-in">
-            <span className="browser__dots"></span>
-            <figure className="browser__img">
-              <img src="/assets/images/work/art-by-elina/menu-1.jpg" alt="Art by Elina Menu"/>
-            </figure>
-          </div>
+          <Browser image={menuOne} />
         </div>
       </div>
 
       <div className="section-padding bg-white">
         <div className="grid">
-          <div className="study__double">
+          <div className="project__double">
             <div>
-              <div className="browser" data-aos="fade-in">
-                <span className="browser__dots"></span>
-                <figure className="browser__img">
-                  <img src="/assets/images/work/art-by-elina/home.jpg" alt="Art by Elina Home Page"/>
-                </figure>
-              </div>
+              <Browser image={home} />
             </div>
             <div>
-              <div className="browser" data-aos="fade-in" data-aos-delay="400">
-                <span className="browser__dots"></span>
-                <figure className="browser__img">
-                  <img src="/assets/images/work/art-by-elina/about.jpg" alt="Art by Elina About Page"/>
-                </figure>
-              </div>
+              <Browser image={about} />
             </div>
           </div>
         </div>
@@ -57,12 +55,7 @@ function ArtByElinaPage(props) {
 
       <div className="section-padding bg-lightgrey">
         <div className="grid">
-          <div className="browser" data-aos="fade-in">
-            <span className="browser__dots"></span>
-            <figure className="browser__img">
-              <img src="/assets/images/work/art-by-elina/gallery.jpg" alt="Art by Elina Gallery Page"/>
-            </figure>
-          </div>
+          <Browser image={gallery} />
         </div>
       </div>
     </Project>
@@ -70,3 +63,23 @@ function ArtByElinaPage(props) {
 }
 
 export default ArtByElinaPage;
+
+export const projectQuery = graphql`
+  query ImageQuery {
+    allFile(filter: {
+        extension: { regex: "/(jpg)/" }
+        relativeDirectory: {eq: "projects/art-by-elina"}
+    }) {
+      edges {
+        node {
+          name
+          childImageSharp {
+            fluid(maxWidth: 1400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;

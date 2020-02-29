@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import CTA from '../components/CTA';
 import Intro from '../components/Intro';
@@ -6,8 +6,6 @@ import Posts from '../components/Posts';
 import Projects from '../components/Projects';
 
 function IndexPage(props) {
-  const [postsLoaded, setPostsLoaded] = useState(3);
-
   const { site, allMarkdownRemark } = useStaticQuery(graphql`
     query {
       site {
@@ -43,19 +41,11 @@ function IndexPage(props) {
   const projects = site.siteMetadata.projects;
   const posts = allMarkdownRemark.edges;
 
-  const onClick = () => {
-    setPostsLoaded(postsLoaded + 3);
-  };
-
   return (
     <Fragment>
       <Intro />
       <Projects projects={projects} />
-      <Posts
-        posts={posts.slice(0, postsLoaded)}
-        onClick={onClick}
-        loadMore={postsLoaded < posts.length}
-      />
+      <Posts posts={posts} />
       <CTA />
     </Fragment>
   );

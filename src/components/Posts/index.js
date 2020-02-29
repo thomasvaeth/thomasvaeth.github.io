@@ -1,18 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 import Post from '../Post';
 
 import './index.scss';
 
 function Posts(props) {
+  const [postsLoaded, setPostsLoaded] = useState(3);
   useAnimateOnScroll();
 
-  const posts = props.posts.map(({ node }) => <Post node={node} key={node.fields.slug} />);
-  const loadMore = props.loadMore ?
+  const onClick = () => {
+    setPostsLoaded(postsLoaded + 3);
+  };
+
+  const posts = props.posts.slice(0, postsLoaded).map(({ node }) => <Post node={node} key={node.fields.slug} />);
+  const loadMore = postsLoaded < props.posts.length ?
     <span
       className="posts__next"
-      onClick={props.onClick}
-      onKeyPress={props.onClick}
+      onClick={onClick}
+      onKeyPress={onClick}
       role="button"
       tabIndex="0"
     >
@@ -28,15 +33,11 @@ function Posts(props) {
           <span data-aos="slice-up" data-aos-duration="400">Recent</span> <span data-aos="slice-up" data-aos-duration="400" data-aos-delay="100">articles</span>
         </h2>
         <div className="posts__container" itemScope itemType="http://schema.org/Blog">
-
           {posts}
-
         </div>
-
         <div className="posts__pagination">
           {loadMore}
         </div>
-
       </div>
     </section>
   );

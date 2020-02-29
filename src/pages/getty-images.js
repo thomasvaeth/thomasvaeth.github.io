@@ -1,7 +1,7 @@
 import React from 'react';
 import Project from '../templates/Project';
 
-import mastImage from '../images/work/getty-images/mast.jpg';
+import mastImage from '../images/projects/getty-images/mast.jpg';
 
 function GettyImagesPage(props) {
   return (

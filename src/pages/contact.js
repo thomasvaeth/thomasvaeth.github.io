@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import Contact from '../components/Contact';
 import SEO from '../components/SEO';
 
-function ContactPage() {
+function ContactPage({ path }) {
   return (
     <Fragment>
       <SEO
         title="Contact"
-        pathname="/contact"
+        pathname={path}
       />
       <Contact />
     </Fragment>

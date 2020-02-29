@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import { graphql } from 'gatsby';
-
 import Mast from '../../components/Mast';
 import SEO from '../../components/SEO';
 
@@ -33,13 +32,8 @@ function Post(props) {
 
 export default Post;
 
-export const pageQuery = graphql`
+export const postQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    site {
-      siteMetadata {
-        url
-      }
-    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {

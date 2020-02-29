@@ -1,6 +1,6 @@
 import React from 'react';
-import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 import { Link } from 'gatsby';
+import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 
 import './index.scss';
 

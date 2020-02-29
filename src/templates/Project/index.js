@@ -14,16 +14,16 @@ function Project({ title, description, pathname, image, video, children }) {
         image={image}
         pathname={pathname}
       />
-      <div className="study">
         <article>
           <Mast
             title={title}
             backgroundImage={image}
             backgroundVideo={video}
           />
-          {children}
+          <section className="project">
+            {children}
+          </section>
         </article>
-      </div>
     </Fragment>
   );
 }

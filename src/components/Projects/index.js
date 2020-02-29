@@ -14,9 +14,9 @@ function Projects(props) {
     const link = project.title.replace(/[ ++]/g, '-').replace(/&/g, '').toLowerCase();
 
     if (idx % 2 === 0) {
-      leftProjects.push(<Project key={link} link={link} {...project} />);
+      leftProjects.push(<Project key={link} link={`/${link}/`} {...project} />);
     } else {
-      rightProjects.push(<Project key={link} link={link} {...project} />);
+      rightProjects.push(<Project key={link} link={`/${link}/`} {...project} />);
     }
   });
 

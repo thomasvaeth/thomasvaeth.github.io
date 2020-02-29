@@ -1,7 +1,7 @@
 import React from 'react';
 import Project from '../templates/Project';
 
-import mastImage from '../images/work/the-stable-seattle/mast.jpg';
+import mastImage from '../images/projects/the-stable-seattle/mast.jpg';
 
 function TheStableSeattle(props) {
   return (
