@@ -3,7 +3,7 @@ import Instagram from '../Instagram';
 
 import './index.scss';
 
-function Contact(props) {
+function Contact() {
   return (
     <section className="talk">
       <div className="talk__left">

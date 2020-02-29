@@ -5,6 +5,20 @@ module.exports = {
     url: 'https://thomasvaeth.com',
     image: '/images/seo.jpg',
     twitterUsername: '@thomasvaeth',
+    social: [
+      {
+        title: 'GitHub',
+        link: 'https://github.com/thomasvaeth',
+      },
+      {
+        title: 'CodePen',
+        link: 'http://codepen.io/thomasvaeth',
+      },
+      {
+        title: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/thomasvaeth',
+      },
+    ],
     projects: [
       {
         title: 'Art by Elina',

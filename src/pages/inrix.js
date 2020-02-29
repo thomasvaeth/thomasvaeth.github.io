@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Mast from '../components/Mast';
+import SEO from '../components/SEO';
 
-function InrixPage(props) {
+import mastImage from '../images/work/inrix/mast.jpg';
+
+function INRIXPage(props) {
   return (
-    <div />
+    <Fragment>
+      <SEO title="INRIX" />
+      <Mast
+        title="INRIX"
+        backgroundImage={mastImage}
+      />
+    </Fragment>
   );
 }
 
-export default InrixPage;
+export default INRIXPage;

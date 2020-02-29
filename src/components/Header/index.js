@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import './index.scss';
 
-function Header(props) {
+function Header() {
   return (
     <Fragment>
       <header className="header">
@@ -12,10 +12,10 @@ function Header(props) {
         <nav>
           <ul className="header__list">
             <li>
-              <a className="header__link" href="#projects" data-scroll>Projects</a>
+              <Link className="header__link" to="/#projects">Projects</Link>
             </li>
             <li>
-              <a className="header__link" href="#articles" data-scroll>Articles</a>
+              <Link className="header__link" to="/#articles">Articles</Link>
             </li>
             <li>
               <Link className="header__link" to="/contact">Contact</Link>
@@ -25,7 +25,7 @@ function Header(props) {
       </header>
 
       <header className="header--mobile">
-        <Link className="header__title" to="/" data-scroll>Thomas Vaeth</Link>
+        <Link className="header__title" to="/">Thomas Vaeth</Link>
 
         <div className="hamburger">
           <div></div>
@@ -35,10 +35,10 @@ function Header(props) {
         <nav className="header__nav">
           <ul className="header__list">
             <li>
-              <a className="header__link" href="#projects" data-scroll>Projects</a>
+              <Link className="header__link" href="/#projects">Projects</Link>
             </li>
             <li>
-              <a className="header__link" href="#articles" data-scroll>Articles</a>
+              <Link className="header__link" to="/#articles">Articles</Link>
             </li>
             <li>
               <Link className="header__link" to="/contact">Contact</Link>

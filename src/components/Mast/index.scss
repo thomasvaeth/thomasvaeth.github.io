@@ -33,6 +33,8 @@
     margin-top: 3.5em;
     padding-bottom: 56.5%;
 
+    color: var(--white);
+
     @media (min-width: $mq-small) {
       margin-top: 0;
     }
@@ -52,12 +54,8 @@
       transform: translate(-50%, -50%);
     }
 
-    .art-by-elina &,
-    .getty-images &,
-    .s-p-real-estate &,
-    .the-stable-seattle &,
-    .inrix & {
-      color: var(--white);
+    .ink-volt & {
+      color: var(--black);
     }
   }
 

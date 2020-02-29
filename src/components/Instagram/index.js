@@ -12,11 +12,7 @@ function Instagram(props) {
             node {
               id
               localFile {
-                childImageSharp {
-                  fixed(width: 494, height: 494) {
-                    ...GatsbyImageSharpFixed
-                  }
-                }
+                publicURL
               }
             }
           }
@@ -36,7 +32,7 @@ function Instagram(props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <figure className="absolute-bg scale-down" style={{ backgroundImage: `url('${localFile.childImageSharp.fixed.src}')` }} />
+          <figure className="absolute-bg scale-down" style={{ backgroundImage: `url('${localFile.publicURL}')` }} />
         </a>
       </article>
     );
