@@ -1,18 +1,15 @@
-import React, { Fragment } from 'react';
-import Mast from '../components/Mast';
-import SEO from '../components/SEO';
+import React from 'react';
+import Project from '../templates/Project';
 
 import mastImage from '../images/work/inrix/mast.jpg';
 
 function INRIXPage(props) {
   return (
-    <Fragment>
-      <SEO title="INRIX" />
-      <Mast
-        title="INRIX"
-        backgroundImage={mastImage}
-      />
-    </Fragment>
+    <Project
+      title="INRIX"
+      image={mastImage}
+    >
+    </Project>
   );
 }
 

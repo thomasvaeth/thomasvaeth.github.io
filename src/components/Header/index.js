@@ -7,7 +7,7 @@ function Header() {
   return (
     <Fragment>
       <header className="header">
-        <Link className="header__title" to="/" data-scroll>Thomas Vaeth</Link>
+        <Link className="header__title" to="/">Thomas Vaeth</Link>
 
         <nav>
           <ul className="header__list">
@@ -35,7 +35,7 @@ function Header() {
         <nav className="header__nav">
           <ul className="header__list">
             <li>
-              <Link className="header__link" href="/#projects">Projects</Link>
+              <Link className="header__link" to="/#projects">Projects</Link>
             </li>
             <li>
               <Link className="header__link" to="/#articles">Articles</Link>

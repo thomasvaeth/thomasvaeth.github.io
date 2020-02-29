@@ -12,10 +12,10 @@ import Footer from '../components/Footer';
 import '../styles/fonts.scss';
 import '../styles/app.scss';
 
-function DefaultLayout({ children, location }) {
+function DefaultLayout({ children }) {
   return (
     <Fragment>
-      <SEO className={location.pathname.replace(/\//g, '')} />
+      <SEO />
       <Header />
       <main>
         {children}

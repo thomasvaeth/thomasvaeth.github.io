@@ -13,14 +13,14 @@ function Mast(props) {
   let media = null;
   if (props.backgroundVideo) {
     media = (
-      <div class="absolute-vid">
+      <div className="absolute-vid">
         <video autoPlay loop muted>
           <source type="video/mp4" src={props.backgroundVideo} />
         </video>
       </div>
     );
   } else if (props.backgroundImage) {
-    media = <figure class="absolute-bg" style={{ backgroundImage: `url('${props.backgroundImage}')` }} />;
+    media = <figure className="absolute-bg" style={{ backgroundImage: `url('${props.backgroundImage}')` }} />;
   }
 
   return (
