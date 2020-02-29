@@ -11,6 +11,6 @@ CryptoLogg has received recognition from <a href="https://onepagelove.com/crypto
 <div class="browser">
   <span class="browser__dots"></span>
   <figure class="browser__img">
-    <img src="/assets/images/posts/cryptologg-1.jpg" alt="CryptoLogg Website" />
+    <img src="../../../images/posts/cryptologg-1.jpg" alt="CryptoLogg Website" />
   </figure>
 </div>

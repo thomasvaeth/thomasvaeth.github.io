@@ -21,7 +21,7 @@ The website for Getty Images is currently undergoing a complete redesign. The co
 <div class="browser">
   <span class="browser__dots"></span>
   <figure class="browser__img">
-    <img src="/assets/images/posts/getty-images-homepage-1.jpg" alt="Getty Images Website"/>
+    <img src="../../../images/posts/getty-images-homepage-1.jpg" alt="Getty Images Website"/>
   </figure>
 </div>
 
@@ -33,7 +33,7 @@ The website for Getty Images is currently undergoing a complete redesign. The co
 <div class="browser">
   <span class="browser__dots"></span>
   <figure class="browser__img">
-    <img src="/assets/images/posts/getty-images-homepage-2.jpg" alt="Getty Images Website"/>
+    <img src="../../../images/posts/getty-images-homepage-2.jpg" alt="Getty Images Website"/>
   </figure>
 </div>
 
@@ -42,6 +42,6 @@ The website for Getty Images is currently undergoing a complete redesign. The co
 <div class="browser">
   <span class="browser__dots"></span>
   <figure class="browser__img">
-    <img src="/assets/images/posts/getty-images-homepage-3.jpg" alt="Getty Images Website"/>
+    <img src="../../../images/posts/getty-images-homepage-3.jpg" alt="Getty Images Website"/>
   </figure>
 </div>

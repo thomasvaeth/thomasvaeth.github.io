@@ -13,6 +13,6 @@ The website uses a "dusty rose" color that she was already using with fade-in an
 <div class="browser">
   <span class="browser__dots"></span>
   <figure class="browser__img">
-    <img src="/assets/images/posts/roccia-wedding-1.jpg" alt="Roccia Wedding Website"/>
+    <img src="../../../images/posts/roccia-wedding-1.jpg" alt="Roccia Wedding Website"/>
   </figure>
 </div>
