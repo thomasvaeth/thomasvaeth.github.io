@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import useOpacityScroll from '../../helpers/useOpacityScroll';
+import useOpacityScroll from '../../utils/useOpacityScroll';
 
 import './index.scss';
 

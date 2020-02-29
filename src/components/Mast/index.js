@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
-import useOpacityScroll from '../../helpers/useOpacityScroll';
+import useOpacityScroll from '../../utils/useOpacityScroll';
 
 import './index.scss';
 

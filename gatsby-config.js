@@ -5,6 +5,44 @@ module.exports = {
     url: 'https://thomasvaeth.com',
     image: '/images/seo.jpg',
     twitterUsername: '@thomasvaeth',
+    projects: [
+      {
+        title: 'Art by Elina',
+        description: 'Website development to showcase Elina Dmitruk\'s oil paintings',
+        image: '/art-by-elina-link.gif',
+        video: '',
+      },
+      {
+        title: 'The Stable Seattle',
+        description: 'Website development for an event space in Seattle',
+        image: '/the-stable-seattle-link.jpg',
+        video: '',
+      },
+      {
+        title: 'Getty Images',
+        description: 'Website redesign for the world\'s best photo library',
+        image: '/getty-images-link.jpg',
+        video: '',
+      },
+      {
+        title: 'Ink+Volt',
+        description: 'Website development for Kate Matsudaira\'s product line of notebooks and planners',
+        image: '/ink-volt-link.jpg',
+        video: '/ink-volt-link.mp4',
+      },
+      {
+        title: 'S&P Real Estate',
+        description: 'Website development for a boutique real estate firm in Vancouver',
+        image: '/sp-real-estate-link.jpg',
+        video: '',
+      },
+      {
+        title: 'INRIX',
+        description: 'Interactive data visualization for a leader in big data analytics',
+        image: '/inrix-link.jpg',
+        video: '',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',

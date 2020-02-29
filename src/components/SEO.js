@@ -35,7 +35,7 @@ function SEO({ title, description, url, image, pathname, article, lang, meta }) 
         lang,
       }}
       bodyAttributes={{
-        class: title && title.replace(/ +/g, '-').toLowerCase(),
+        class: title && title.replace(/[ ++]/g, '-').replace(/&/g, '').toLowerCase(),
       }}
       title={title ? `${title} | ${defaultTitle}` : defaultTitle}
       meta={[

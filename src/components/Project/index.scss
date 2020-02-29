@@ -1,0 +1,109 @@
+//--------------------------------------------
+// Imports
+//--------------------------------------------
+@import '../../styles/tools/_config';
+@import '../../styles/tools/_extends-type';
+@import '../../styles/tools/_extends';
+
+//----------------------------------------------
+// Project
+//----------------------------------------------
+.project {
+  padding: {
+    top: 1em;
+    bottom: 1em;
+  }
+
+  @media (min-width: $mq-small) {
+    padding: {
+      top: 2em;
+      bottom: 2em;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    color: var(--black);
+
+    &:hover {
+      .project__vid,
+      .project__img {
+        transform: scale(0.97);
+      }
+
+      .project__vid {
+
+        video {
+          transform: scale(1.1);
+        }
+      }
+
+      .project__img {
+
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__scale {
+
+    .project__vid & {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__vid {
+    @extend %project-card;
+    @extend %pseudo-square;
+
+    position: relative;
+
+    video {
+      @extend %auto-margin;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: $z-0;
+
+      min-height: 100%;
+      min-width: 100%;
+      height: auto;
+      width: auto;
+
+      background-size: cover;
+      object-fit: cover;
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
+  &__img {
+    @extend %project-card;
+
+    img {
+      transition: transform 300ms ease-in-out;
+    }
+  }
+
+  &__header {
+    margin-top: 1em;
+  }
+
+  &__text {
+    max-width: 26em;
+    margin: {
+      top: 0.25em;
+      bottom: 0;
+    }
+
+    font-size: 1.1em;
+  }
+}

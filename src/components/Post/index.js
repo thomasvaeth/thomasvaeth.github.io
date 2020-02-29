@@ -1,9 +1,12 @@
 import React from 'react';
+import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 import { Link } from 'gatsby';
 
 import './index.scss';
 
 function Post({ node }) {
+  useAnimateOnScroll();
+
   return (
     <article className="post" itemProp="blogPost" itemScope itemType="http://schema.org/BlogPosting">
       <Link className="post__link" to={node.fields.slug} itemProp="url" data-aos="slide-up">

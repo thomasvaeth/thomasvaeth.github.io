@@ -1,9 +1,12 @@
 import React from 'react';
+import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 import Post from '../Post';
 
 import './index.scss';
 
 function Posts(props) {
+  useAnimateOnScroll();
+
   const posts = props.posts.map(({ node }) => <Post node={node} key={node.fields.slug} />);
   const loadMore = props.loadMore ?
     <span

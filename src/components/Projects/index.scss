@@ -1,0 +1,29 @@
+//--------------------------------------------
+// Imports
+//--------------------------------------------
+@import '../../styles/tools/_config';
+
+//----------------------------------------------
+// Project
+//----------------------------------------------
+.projects {
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 2em;
+    margin-top: 1em;
+
+    @media (min-width: $mq-small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__title {
+    overflow: hidden;
+
+    span {
+      display: inline-block;
+    }
+  }
+}

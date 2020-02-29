@@ -1,15 +1,25 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import AOS from 'aos';
 import CTA from '../components/CTA';
 import Intro from '../components/Intro';
 import Posts from '../components/Posts';
+import Projects from '../components/Projects';
 
 function IndexPage(props) {
   const [postsLoaded, setPostsLoaded] = useState(3);
 
-  const { allMarkdownRemark } = useStaticQuery(graphql`
+  const { site, allMarkdownRemark } = useStaticQuery(graphql`
     query {
+      site {
+        siteMetadata {
+          projects {
+            description
+            image
+            title
+            video
+          }
+        }
+      }
       allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         edges {
           node {
@@ -30,14 +40,7 @@ function IndexPage(props) {
     }
   `);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease',
-      once: true
-    });
-  }, []);
-
+  const projects = site.siteMetadata.projects;
   const posts = allMarkdownRemark.edges;
 
   const onClick = () => {
@@ -47,6 +50,7 @@ function IndexPage(props) {
   return (
     <Fragment>
       <Intro />
+      <Projects projects={projects} />
       <Posts
         posts={posts.slice(0, postsLoaded)}
         onClick={onClick}
