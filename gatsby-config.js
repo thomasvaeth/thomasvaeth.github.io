@@ -96,14 +96,8 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 2000,
+              maxWidth: 1400,
               linkImagesToOriginal: false,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1.5rem',
             },
           },
           'gatsby-remark-copy-linked-files',

@@ -39,8 +39,8 @@
     }
   }
 
-  .js-scrolling-up &,
-  .js-scrolling-down & {
+  &--scrolling-up,
+  &--scrolling-down {
     position: fixed;
     top: 1em;
 
@@ -48,11 +48,11 @@
     box-shadow: 0px 1px 0px 1px rgba(var(--black-rgb), 0.02), 0px 4px 16px rgba(var(--black-rgb), 0.09);
   }
 
-  .js-scrolling-up & {
+  &--scrolling-up {
     animation: slide-down 700ms ease-in-out both;
   }
 
-  .js-scrolling-down & {
+  &--scrolling-down {
     animation: slide-up 700ms ease-in-out both;
   }
 
@@ -73,8 +73,8 @@
       }
     }
 
-    .js-scrolling-up &,
-    .js-scrolling-down & {
+    .header--scrolling-up &,
+    .header--scrolling-down & {
       color: var(--black);
     }
   }
@@ -115,8 +115,8 @@
         background-color: var(--white);
       }
 
-      .js-scrolling-up &,
-      .js-scrolling-down & {
+      .header--scrolling-up &,
+      .header--scrolling-down & {
         background-color: var(--black);
       }
 
@@ -142,8 +142,8 @@
           background-color: var(--white);
         }
 
-        .js-scrolling-up &,
-        .js-scrolling-down & {
+        .header--scrolling-up &,
+        .header--scrolling-down & {
           background-color: var(--black);
         }
       }
@@ -192,7 +192,7 @@
     visibility: hidden;
     opacity: 0;
 
-    .js-hamburger & {
+    .hamburger--open & {
       display: block;
 
       visibility: visible;
@@ -220,10 +220,13 @@
         &:nth-of-type(3) {
           transition-delay: 300ms;
         }
+      }
+    }
 
-        .js-hamburger & {
-          transform: translateY(0);
-        }
+    .hamburger--open & {
+
+      & > li {
+        transform: translateY(0);
       }
     }
   }
@@ -257,7 +260,7 @@
     }
   }
 
-  .js-hamburger & {
+  .hamburger--open & {
 
     & > div {
       background-color: var(--black);
