@@ -3,13 +3,10 @@ import { graphql } from 'gatsby';
 import Project from '../templates/Project';
 import Browser from '../components/Browser';
 import Content from '../components/Content';
-import useAnimateOnScroll from '../utils/useAnimateOnScroll';
 
 import mastImage from '../images/projects/art-by-elina/mast.jpg';
 
 function ArtByElinaPage({ data, path }) {
-  useAnimateOnScroll();
-
   let about, gallery, home, menuOne;
 
   data.allFile.edges.forEach(image => {
@@ -67,7 +64,7 @@ function ArtByElinaPage({ data, path }) {
 export default ArtByElinaPage;
 
 export const projectQuery = graphql`
-  query ImageQuery {
+  query ArtByElinaQuery {
     allFile(filter: {
         extension: { regex: "/(jpg)/" }
         relativeDirectory: {eq: "projects/art-by-elina"}

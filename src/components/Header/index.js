@@ -74,7 +74,7 @@ function Header() {
       <header className={mobileClasses}>
         <Link className="header__title" to="/">Thomas Vaeth</Link>
 
-        <div className="hamburger" 
+        <div className="hamburger"
           onClick={onClick}
           onKeyPress={onClick}
           role="button"

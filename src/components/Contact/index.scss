@@ -32,13 +32,14 @@
     height: 22em;
     margin-top: 3.5em;
 
+    @media (min-width: $mq-small) {
+      margin-top: 0;
+    }
+
     @media (min-width: $mq-med) {
       height: auto;
       min-height: 100vh;
-      margin: {
-        top: 0;
-        left: 50%;
-      }
+      margin-left: 50%;
     }
   }
 
