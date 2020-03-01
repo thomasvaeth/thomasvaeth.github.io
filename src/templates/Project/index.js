@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Mast from '../../components/Mast';
+import Pagination from '../../components/Pagination';
 import SEO from '../../components/SEO';
 
 import './index.scss';
@@ -23,6 +24,7 @@ function Project({ title, description, pathname, image, video, children }) {
           <section className="project">
             {children}
           </section>
+          <Pagination current={title} />
         </article>
     </Fragment>
   );

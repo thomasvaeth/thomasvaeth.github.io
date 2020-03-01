@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
+import slugify from '../utils/slugify';
 
 function SEO({ title, description, url, image, pathname, article, lang, meta }) {
   const { site } = useStaticQuery(
@@ -35,7 +36,7 @@ function SEO({ title, description, url, image, pathname, article, lang, meta }) 
         lang,
       }}
       bodyAttributes={{
-        class: title && title.replace(/[ ++]/g, '-').replace(/&/g, '').toLowerCase(),
+        class: title && slugify(title),
       }}
       title={title ? `${title} | ${defaultTitle}` : defaultTitle}
       meta={[

@@ -13,14 +13,16 @@ function ArtByElinaPage({ data, path }) {
   let about, gallery, home, menuOne;
 
   data.allFile.edges.forEach(image => {
-    if (image.node.name === 'about') {
-      about = image.node.childImageSharp.fluid;
-    } else if (image.node.name === 'gallery') {
-      gallery = image.node.childImageSharp.fluid;
-    } else if (image.node.name === 'home') {
-      home = image.node.childImageSharp.fluid;
-    } else if (image.node.name === 'menu-1') {
-      menuOne = image.node.childImageSharp.fluid;
+    const node = image.node;
+
+    if (node.name === 'about') {
+      about = node.childImageSharp.fluid;
+    } else if (node.name === 'gallery') {
+      gallery = node.childImageSharp.fluid;
+    } else if (node.name === 'home') {
+      home = node.childImageSharp.fluid;
+    } else if (node.name === 'menu-1') {
+      menuOne = node.childImageSharp.fluid;
     }
   });
 
