@@ -3,7 +3,7 @@ module.exports = {
     title: 'Thomas Vaeth',
     description: 'My name is Thomas Vaeth. I am front-end developer based in Seattle, Washington. I currently work at Redfin and have previously worked at Urban Influence and Getty Images.',
     url: 'https://thomasvaeth.com',
-    image: '/images/seo.jpg',
+    image: '/images/me.jpg',
     twitterUsername: '@thomasvaeth',
     social: [
       {

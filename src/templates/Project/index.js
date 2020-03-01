@@ -21,7 +21,7 @@ function Project({ title, description, pathname, image, video, children }) {
             backgroundImage={image}
             backgroundVideo={video}
           />
-          <section className="project">
+          <section>
             {children}
           </section>
           <Pagination current={title} />

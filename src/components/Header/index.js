@@ -1,16 +1,24 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import classNames from 'classnames';
 
 import './index.scss';
 
-function Header() {
+function Header({ pathname }) {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [hamburgerMenu, setHamburgerMenu] = useState(null);
   const headerRef = useRef(null);
   const scrollRef = useRef(null);
+  const locationRef = useRef(null);
 
   scrollRef.current = 0;
+
+  if (locationRef.current && locationRef.current !== pathname) {
+    setScrollDirection(null);
+  }
+
+  locationRef.current = pathname;
 
   const headerDirection = () => {
     const scrollTop = window.pageYOffset;
@@ -101,5 +109,9 @@ function Header() {
     </Fragment>
   );
 }
+
+Header.propTypes = {
+  pathname: PropTypes.string.isRequired,
+};
 
 export default Header;

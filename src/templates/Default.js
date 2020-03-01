@@ -1,6 +1,3 @@
-// ----------------------------------------------
-// Imports
-// ----------------------------------------------
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
@@ -12,11 +9,11 @@ import Footer from '../components/Footer';
 import '../styles/fonts.scss';
 import '../styles/app.scss';
 
-function DefaultLayout({ children }) {
+function DefaultLayout({ location, children }) {
   return (
     <Fragment>
       <SEO />
-      <Header />
+      <Header pathname={location.pathname} />
       <main>
         {children}
       </main>
@@ -26,6 +23,9 @@ function DefaultLayout({ children }) {
 }
 
 DefaultLayout.propTypes = {
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
   children: PropTypes.node.isRequired,
 };
 
