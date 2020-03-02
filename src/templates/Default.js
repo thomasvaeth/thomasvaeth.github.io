@@ -1,7 +1,5 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-
-// import Transition from '../components/Transition';
 import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -13,11 +11,13 @@ function DefaultLayout({ location, children }) {
   return (
     <Fragment>
       <SEO />
-      <Header pathname={location.pathname} />
-      <main>
-        {children}
-      </main>
-      <Footer />
+      <div>
+        <Header pathname={location.pathname} />
+        <main>
+          {children}
+        </main>
+        <Footer />
+      </div>
     </Fragment>
   );
 }

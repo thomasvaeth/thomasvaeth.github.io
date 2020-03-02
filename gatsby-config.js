@@ -62,6 +62,8 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-smoothscroll',
+    'gatsby-plugin-transition-link',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-layout',

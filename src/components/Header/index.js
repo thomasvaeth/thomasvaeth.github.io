@@ -1,7 +1,9 @@
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
 import classNames from 'classnames';
+import scrollTo from 'gatsby-plugin-smoothscroll';
+import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link';
+import { TimelineMax, Power3 } from 'gsap';
 
 import './index.scss';
 
@@ -9,6 +11,7 @@ function Header({ pathname }) {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [hamburgerMenu, setHamburgerMenu] = useState(null);
   const headerRef = useRef(null);
+  const transitionRef = useRef(null);
   const scrollRef = useRef(null);
   const locationRef = useRef(null);
 
@@ -56,6 +59,38 @@ function Header({ pathname }) {
     setHamburgerMenu(!hamburgerMenu ? 'hamburger--open' : null);
   };
 
+  const verticalAnimation = ({ length }) => {
+    return new TimelineMax()
+      .set(transitionRef.current, { y: '100%' })
+      .to(transitionRef.current, length, {
+        y: '0%',
+        ease: Power3.easeOut,
+      })
+      .to(transitionRef.current, length, {
+        y: '-100%',
+        ease: Power3.easeIn,
+      });
+  };
+
+  const Link = ({ className, to, children }) => {
+    return (
+      <TransitionLink
+        className={className || 'header__link'}
+        to={to}
+        exit={{
+          length: 0.6,
+          trigger: ({ exit }) => verticalAnimation(exit),
+        }}
+        entry={{
+          delay: 0.6,
+          length: 0.6,
+        }}
+      >
+        {children}
+      </TransitionLink>
+    );
+  };
+
   const desktopClasses = classNames('header', scrollDirection, hamburgerMenu);
   const mobileClasses = classNames('header--mobile', hamburgerMenu);
 
@@ -67,13 +102,33 @@ function Header({ pathname }) {
         <nav>
           <ul className="header__list">
             <li>
-              <Link className="header__link" to="/#projects">Projects</Link>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#projects')}
+                  onKeyPress={() => scrollTo('#projects')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Projects
+                </span>
+              ) : <Link to="/#projects">Projects</Link>}
             </li>
             <li>
-              <Link className="header__link" to="/#articles">Articles</Link>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#articles')}
+                  onKeyPress={() => scrollTo('#articles')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Articles
+                </span>
+              ) : <Link to="/#articles">Articles</Link>}
             </li>
             <li>
-              <Link className="header__link" to="/contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -95,10 +150,30 @@ function Header({ pathname }) {
         <nav className="header__nav">
           <ul className="header__list">
             <li>
-              <Link className="header__link" to="/#projects">Projects</Link>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#projects')}
+                  onKeyPress={() => scrollTo('#projects')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Projects
+                </span>
+              ) : <Link to="/#projects">Projects</Link>}
             </li>
             <li>
-              <Link className="header__link" to="/#articles">Articles</Link>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#articles')}
+                  onKeyPress={() => scrollTo('#articles')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Articles
+                </span>
+              ) : <Link to="/#projects">Articles</Link>}
             </li>
             <li>
               <Link className="header__link" to="/contact">Contact</Link>
@@ -106,6 +181,16 @@ function Header({ pathname }) {
           </ul>
         </nav>
       </header>
+
+      <TransitionPortal>
+        <div
+          ref={transitionRef}
+          className="transition"
+          style={{
+            transform: 'translateY(100%)',
+          }}
+        />
+      </TransitionPortal>
     </Fragment>
   );
 }
