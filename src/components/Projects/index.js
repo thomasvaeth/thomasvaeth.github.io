@@ -1,17 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 import Project from '../Project';
 import slugify from '../../utils/slugify';
 
 import './index.scss';
 
-function Projects(props) {
+function Projects({ projects }) {
   useAnimateOnScroll();
 
   const leftProjects = [];
   const rightProjects = [];
 
-  props.projects.forEach((project, idx) => {
+  projects.forEach((project, idx) => {
     const slug = `/${slugify(project.title)}/`;
 
     if (idx % 2 === 0) {
@@ -39,5 +40,9 @@ function Projects(props) {
     </section>
   );
 }
+
+Projects.propTypes = {
+  projects: PropTypes.array.isRequired,
+};
 
 export default Projects;

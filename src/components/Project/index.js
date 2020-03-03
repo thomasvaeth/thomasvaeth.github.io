@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContextConsumer from '../../templates/Context';
 import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 
@@ -49,5 +50,17 @@ function Project(props) {
     </ContextConsumer>
   );
 }
+
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  video: PropTypes.string,
+};
+
+Project.defaultProps = {
+  video: '',
+};
 
 export default Project;

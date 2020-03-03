@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Project from '../templates/Project';
 import Browser from '../components/Browser';
@@ -85,6 +86,11 @@ function GettyImagesPage({ data, path }) {
     </Project>
   );
 }
+
+GettyImagesPage.propTypes = {
+  data: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
+};
 
 export default GettyImagesPage;
 

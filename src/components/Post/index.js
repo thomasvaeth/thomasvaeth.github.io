@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ContextConsumer from '../../templates/Context';
 import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 
@@ -46,5 +47,9 @@ function Post({ node }) {
     </ContextConsumer>
   );
 }
+
+Post.propTypes = {
+  node: PropTypes.object.isRequired,
+};
 
 export default Post;

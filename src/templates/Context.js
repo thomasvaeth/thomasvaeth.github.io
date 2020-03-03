@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
 import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link';
 import { TimelineMax, Power3 } from 'gsap';
 
@@ -67,5 +68,9 @@ function ContextProvider({ children }) {
     </Provider>
   );
 }
+
+ContextProvider.propTypes = {
+  children: PropTypes.array.isRequired,
+};
 
 export { Consumer as default, ContextProvider };

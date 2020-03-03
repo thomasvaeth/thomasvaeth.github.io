@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Project from '../templates/Project';
 import Browser from '../components/Browser';
@@ -60,6 +61,11 @@ function ArtByElinaPage({ data, path }) {
     </Project>
   );
 }
+
+ArtByElinaPage.propTypes = {
+  data: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
+};
 
 export default ArtByElinaPage;
 

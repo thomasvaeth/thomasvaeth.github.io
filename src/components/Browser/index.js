@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 
@@ -24,5 +25,15 @@ function Browser({ image, video }) {
     </div>
   );
 }
+
+Browser.propTypes = {
+  image: PropTypes.object,
+  video: PropTypes.string,
+};
+
+Browser.defaultProp = {
+  image: '',
+  video: '',
+};
 
 export default Browser;

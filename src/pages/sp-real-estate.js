@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Project from '../templates/Project';
 import Browser from '../components/Browser';
@@ -104,6 +105,11 @@ function SPRealEstate({ data, path }) {
     </Project>
   );
 }
+
+SPRealEstate.propTypes = {
+  data: PropTypes.object.isRequired,
+  path: PropTypes.string.isRequired,
+};
 
 export default SPRealEstate;
 

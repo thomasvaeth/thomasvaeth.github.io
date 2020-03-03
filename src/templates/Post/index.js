@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Mast from '../../components/Mast';
 import SEO from '../../components/SEO';
 
 import './index.scss';
 
-function Post(props) {
-  const post = props.data.markdownRemark;
+function Post({ data }) {
+  const post = data.markdownRemark;
 
   return (
     <Fragment>
@@ -29,6 +30,10 @@ function Post(props) {
     </Fragment>
   );
 }
+
+Post.propTypes = {
+  data: PropTypes.object.isRequired,
+};
 
 export default Post;
 

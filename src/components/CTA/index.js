@@ -1,15 +1,27 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import ContextConsumer from '../../templates/Context';
 
 import './index.scss';
 
 function CTA() {
   return (
-    <section className="cta bg-black">
-      <Link className="cta__link" to="/contact">
-        <span className="cta__text">Let’s talk</span>
-      </Link>
-    </section>
+    <ContextConsumer>
+      {({ link, transitionElement }) => {
+        const TransitionLink = link;
+
+        return (
+          <section className="cta bg-black">
+            <TransitionLink
+              className="cta__link"
+              to="/contact"
+              transitionElement={transitionElement}
+            >
+              <span className="cta__text">Let’s talk</span>
+            </TransitionLink>
+          </section>
+        );
+      }}
+    </ContextConsumer>
   );
 }
 
