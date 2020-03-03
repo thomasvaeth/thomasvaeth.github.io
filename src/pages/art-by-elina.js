@@ -31,7 +31,13 @@ function ArtByElinaPage({ data, path }) {
       pathname={path}
     >
       <Content header="Inspired paintings">
-        <p>Elina Dmitruk is a fine artist using oil paints to create inspired paintings both realistic and imaginary. She needed a website to tell her story and showcase her work. I partnered with Mary Rauzi at <a href="https://embrcreative.com/" target="_blank" rel="noopener noreferrer">Embr Creative</a>, who redesigned the website, while I handled the redevelopment of a generic Squarespace page to a custom WordPress build.</p>
+        <p>
+          Elina Dmitruk is a fine artist using oil paints to create inspired paintings both realistic and imaginary.
+          She needed a website to tell her story and showcase her work. I partnered with Mary Rauzi at
+          <a href="https://embrcreative.com/" target="_blank" rel="noopener noreferrer">Embr Creative</a>, who
+          redesigned the website, while I handled the redevelopment of a generic Squarespace page to a custom WordPress
+          build.
+        </p>
       </Content>
 
       <div className="section-padding bg-lightgrey">

@@ -43,7 +43,12 @@ function TheStableSeattle({ data, path }) {
       pathname={path}
     >
       <Content header="Celebratory space">
-        <p>The Stable needed a one-page website that showed off their event space and had the ability to take reservations. I developed them something on WordPress, while I working for Urban Influence, where I ripped out all the extra things they would never need, but still let them manage content and reservations from the CMS. Make sure to click the centaur in the corner to see a secret animation.</p>
+        <p>
+          The Stable needed a one-page website that showed off their event space and had the ability to take
+          reservations. I developed them something on WordPress, while I working for Urban Influence, where I ripped out
+          all the extra things they would never need, but still let them manage content and reservations from the CMS.
+          Make sure to click the centaur in the corner to see a secret animation.
+        </p>
       </Content>
 
       <div className="section-padding bg-lightgrey">

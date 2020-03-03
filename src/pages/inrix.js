@@ -49,8 +49,15 @@ function INRIXPage({ data, path }) {
       pathname={path}
     >
       <Content header="Analytics for driving, parking, and traffic">
-        <p>The new INRIX website was a large-scale WordPress build. The company offers a large set of products and solutions, so a CMS to handle all the content creation was very important.</p>
-        <p>In addition to their marketing website and CMS, a separate project was built to visualize their traffic data on 1,064 cities in 38 countries. A SPA-style dashboard of city ranking stats was the result after collaborating with their in-house data scientists.</p>
+        <p>
+          The new INRIX website was a large-scale WordPress build. The company offers a large set of products and
+          solutions, so a CMS to handle all the content creation was very important.
+        </p>
+        <p>
+          In addition to their marketing website and CMS, a separate project was built to visualize their traffic data
+          on 1,064 cities in 38 countries. A SPA-style dashboard of city ranking stats was the result after
+          collaborating with their in-house data scientists.
+        </p>
         <p>
           The INRIX website was done at Urban Influence and has received recognition from <a href="https://www.awwwards.com/sites/inrix" target="_blank" rel="noopener noreferrer">Awwwards</a> and <a href="https://www.cssdesignawards.com/sites/inrix/30488/" target="_blank" rel="noopener noreferrer">CSS Design Awards</a>.
           The Global Traffic Scorecards received a lot of high profile attention, including articles on <a href="https://www.wired.com/2017/02/love-driving-hellish-traffic-visit-cities/" target="_blank" rel="noopener noreferrer">WIRED</a>, <a href="https://www.geekwire.com/2017/think-seattle-worlds-worst-traffic-not-even-close-says-new-study/" target="_blank" rel="noopener noreferrer">GeekWire</a>, <a href="https://www.seattletimes.com/seattle-news/transportation/seattle-is-a-world-class-city-for-traffic-congestion/" target="_blank" rel="noopener noreferrer">The Seattle Times</a>, <a href="https://www.washingtonpost.com/news/dr-gridlock/wp/2017/02/21/d-c-area-lags-in-new-survey-of-global-traffic-congestion/?noredirect=on&utm_term=.afe95a5d838f" target="_blank" rel="noopener noreferrer">The Washington Post</a>, <a href="http://www.phillyvoice.com/traffic-scorecard-ranks-philadelphia-as-one-of-most-congested-cities-in-the-us-/" target="_blank" rel="noopener noreferrer">PhillyVoice</a>, and <a href="http://www.foxnews.com/auto/2017/02/20/traffic-study-ranks-los-angeles-as-worlds-most-clogged-city.html" target="_blank" rel="noopener noreferrer">Fox News</a>.
