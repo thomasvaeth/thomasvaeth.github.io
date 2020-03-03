@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link';
-import { TimelineMax, Power3 } from 'gsap';
+import { gsap, CSSPlugin, TimelineMax, Power3 } from 'gsap';
 
 const contextValue = {
   link({ transitionElement, className, to, children }) {
+    gsap.registerPlugin(CSSPlugin);
+
     const verticalAnimation = ({ length }) => {
       return new TimelineMax()
         .set(transitionElement, { y: '100%' })
@@ -34,13 +36,14 @@ const contextValue = {
         {children}
       </TransitionLink>
     );
-  }
+  },
+  transitionElement: null,
 };
 
 const { Provider, Consumer } = React.createContext(contextValue);
 
 function ContextProvider({ children }) {
-  const [value, setValue] = useState({ ...contextValue, transitionElement: null });
+  const [value, setValue] = useState({ ...contextValue });
   const transitionRef = useRef(null);
 
   useEffect(() => {
@@ -60,7 +63,7 @@ function ContextProvider({ children }) {
             zIndex: 9999,
             height: '100%',
             width: '100%',
-            backgroundColor: getComputedStyle(document.documentElement).getPropertyValue('--black'),
+            backgroundColor: '#000000',
             transform: 'translateY(100%)',
           }}
         />
