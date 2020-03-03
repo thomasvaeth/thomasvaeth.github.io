@@ -1,5 +1,6 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import { ContextProvider } from './Context';
 import SEO from '../components/SEO';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -9,7 +10,7 @@ import '../styles/app.scss';
 
 function DefaultLayout({ location, children }) {
   return (
-    <Fragment>
+    <ContextProvider>
       <SEO />
       <div>
         <Header pathname={location.pathname} />
@@ -18,7 +19,7 @@ function DefaultLayout({ location, children }) {
         </main>
         <Footer />
       </div>
-    </Fragment>
+    </ContextProvider>
   );
 }
 

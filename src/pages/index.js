@@ -5,7 +5,7 @@ import Intro from '../components/Intro';
 import Posts from '../components/Posts';
 import Projects from '../components/Projects';
 
-function IndexPage(props) {
+function IndexPage() {
   const { site, allMarkdownRemark } = useStaticQuery(graphql`
     query {
       site {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import ContextConsumer from '../../templates/Context';
 import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 
 import './index.scss';
@@ -24,17 +24,29 @@ function Project(props) {
   );
 
   return (
-    <article className="project">
-      <Link className="project__link" to={props.link} data-aos="slide-up">
-        {media}
-        <header className="project__header">
-          <h3 className="project__title">
-            <span data-aos="slice-up" data-aos-duration="400">{props.title}</span>
-          </h3>
-          <p className="project__text" data-aos="fade-in" data-aos-duration="400" data-aos-delay="100">{props.description}</p>
-        </header>
-      </Link>
-    </article>
+    <ContextConsumer>
+      {({ link, transitionElement }) => {
+        const TransitionLink = link;
+
+        return (
+          <article className="project" data-aos="slide-up">
+            <TransitionLink
+              className="project__link"
+              to={props.link}
+              transitionElement={transitionElement}
+            >
+              {media}
+              <header className="project__header">
+                <h3 className="project__title">
+                  <span data-aos="slice-up" data-aos-duration="400">{props.title}</span>
+                </h3>
+                <p className="project__text" data-aos="fade-in" data-aos-duration="400" data-aos-delay="100">{props.description}</p>
+              </header>
+            </TransitionLink>
+          </article>
+        );
+      }}
+    </ContextConsumer>
   );
 }
 

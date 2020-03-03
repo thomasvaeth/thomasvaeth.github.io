@@ -2,8 +2,7 @@ import React, { Fragment, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link';
-import { TimelineMax, Power3 } from 'gsap';
+import ContextConsumer from '../../templates/Context';
 
 import './index.scss';
 
@@ -11,7 +10,6 @@ function Header({ pathname }) {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [hamburgerMenu, setHamburgerMenu] = useState(null);
   const headerRef = useRef(null);
-  const transitionRef = useRef(null);
   const scrollRef = useRef(null);
   const locationRef = useRef(null);
 
@@ -59,139 +57,161 @@ function Header({ pathname }) {
     setHamburgerMenu(!hamburgerMenu ? 'hamburger--open' : null);
   };
 
-  const verticalAnimation = ({ length }) => {
-    return new TimelineMax()
-      .set(transitionRef.current, { y: '100%' })
-      .to(transitionRef.current, length, {
-        y: '0%',
-        ease: Power3.easeOut,
-      })
-      .to(transitionRef.current, length, {
-        y: '-100%',
-        ease: Power3.easeIn,
-      });
-  };
-
-  const Link = ({ className, to, children }) => {
-    return (
-      <TransitionLink
-        className={className || 'header__link'}
-        to={to}
-        exit={{
-          length: 0.6,
-          trigger: ({ exit }) => verticalAnimation(exit),
-        }}
-        entry={{
-          delay: 0.6,
-          length: 0.6,
-        }}
-      >
-        {children}
-      </TransitionLink>
-    );
-  };
-
   const desktopClasses = classNames('header', scrollDirection, hamburgerMenu);
   const mobileClasses = classNames('header--mobile', hamburgerMenu);
 
   return (
-    <Fragment>
-      <header className={desktopClasses} ref={headerRef}>
-        <Link className="header__title" to="/">Thomas Vaeth</Link>
+    <ContextConsumer>
+      {({ link, transitionElement }) => {
+        const TransitionLink = link;
 
-        <nav>
-          <ul className="header__list">
-            <li>
-              {pathname === '/' ? (
-                <span
-                  className="header__link"
-                  onClick={() => scrollTo('#projects')}
-                  onKeyPress={() => scrollTo('#projects')}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Projects
-                </span>
-              ) : <Link to="/#projects">Projects</Link>}
-            </li>
-            <li>
-              {pathname === '/' ? (
-                <span
-                  className="header__link"
-                  onClick={() => scrollTo('#articles')}
-                  onKeyPress={() => scrollTo('#articles')}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Articles
-                </span>
-              ) : <Link to="/#articles">Articles</Link>}
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+        return (
+          <Fragment>
+            <header className={desktopClasses} ref={headerRef}>
+              <TransitionLink
+                className="header__title"
+                to="/"
+                transitionElement={transitionElement}
+              >
+                Thomas Vaeth
+              </TransitionLink>
 
-      <header className={mobileClasses}>
-        <Link className="header__title" to="/">Thomas Vaeth</Link>
+              <nav>
+                <ul className="header__list">
+                  <li>
+                    {pathname === '/' ? (
+                      <span
+                        className="header__link"
+                        onClick={() => scrollTo('#projects')}
+                        onKeyPress={() => scrollTo('#projects')}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Projects
+                      </span>
+                    ) : (
+                      <TransitionLink
+                        className="header__link"
+                        to="/#projects"
+                        transitionElement={transitionElement}
+                      >
+                        Projects
+                      </TransitionLink>
+                    )}
+                  </li>
+                  <li>
+                    {pathname === '/' ? (
+                      <span
+                        className="header__link"
+                        onClick={() => scrollTo('#articles')}
+                        onKeyPress={() => scrollTo('#articles')}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Articles
+                      </span>
+                    ) : (
+                      <TransitionLink
+                        className="header__link"
+                        to="/#articles"
+                        transitionElement={transitionElement}
+                      >
+                        Articles
+                      </TransitionLink>
+                    )}
+                  </li>
+                  <li>
+                    <TransitionLink
+                      className="header__link"
+                      to="/contact"
+                      transitionElement={transitionElement}
+                    >
+                      Contact
+                    </TransitionLink>
+                  </li>
+                </ul>
+              </nav>
+            </header>
 
-        <div className="hamburger"
-          onClick={onClick}
-          onKeyPress={onClick}
-          role="button"
-          tabIndex="0"
-        >
-          <div />
-          <div />
-          <div />
-        </div>
-        <nav className="header__nav">
-          <ul className="header__list">
-            <li>
-              {pathname === '/' ? (
-                <span
-                  className="header__link"
-                  onClick={() => scrollTo('#projects')}
-                  onKeyPress={() => scrollTo('#projects')}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Projects
-                </span>
-              ) : <Link to="/#projects">Projects</Link>}
-            </li>
-            <li>
-              {pathname === '/' ? (
-                <span
-                  className="header__link"
-                  onClick={() => scrollTo('#articles')}
-                  onKeyPress={() => scrollTo('#articles')}
-                  role="button"
-                  tabIndex="0"
-                >
-                  Articles
-                </span>
-              ) : <Link to="/#projects">Articles</Link>}
-            </li>
-            <li>
-              <Link className="header__link" to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
+            <header className={mobileClasses}>
+              <TransitionLink
+                className="header__title"
+                to="/"
+                transitionElement={transitionElement}
+              >
+                Thomas Vaeth
+              </TransitionLink>
 
-      <TransitionPortal>
-        <div
-          ref={transitionRef}
-          className="transition"
-          style={{
-            transform: 'translateY(100%)',
-          }}
-        />
-      </TransitionPortal>
-    </Fragment>
+              <div className="hamburger"
+                onClick={onClick}
+                onKeyPress={onClick}
+                role="button"
+                tabIndex="0"
+              >
+                <div />
+                <div />
+                <div />
+              </div>
+              <nav className="header__nav">
+                <ul className="header__list">
+                  <li>
+                    {pathname === '/' ? (
+                      <span
+                        className="header__link"
+                        onClick={() => scrollTo('#projects')}
+                        onKeyPress={() => scrollTo('#projects')}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Projects
+                      </span>
+                    ) : (
+                      <TransitionLink
+                        className="header__link"
+                        to="/#projects"
+                        transitionElement={transitionElement}
+                      >
+                        Projects
+                      </TransitionLink>
+                    )}
+                  </li>
+                  <li>
+                    {pathname === '/' ? (
+                      <span
+                        className="header__link"
+                        onClick={() => scrollTo('#articles')}
+                        onKeyPress={() => scrollTo('#articles')}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        Articles
+                      </span>
+                    ) : (
+                      <TransitionLink
+                        className="header__link"
+                        to="/#projects"
+                        transitionElement={transitionElement}
+                      >
+                        Articles
+                      </TransitionLink>
+                    )}
+                  </li>
+                  <li>
+                    <TransitionLink
+                      className="header__link"
+                      to="/contact"
+                      transitionElement={transitionElement}
+                    >
+                      Contact
+                    </TransitionLink>
+                  </li>
+                </ul>
+              </nav>
+            </header>
+          </Fragment>
+        );
+      }}
+    </ContextConsumer>
   );
 }
 
