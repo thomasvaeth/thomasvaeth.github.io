@@ -149,6 +149,10 @@
         }
       }
     }
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -243,6 +247,10 @@
   width: 26px;
 
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 
   & > div {
     height: 2px;

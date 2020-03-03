@@ -52,6 +52,10 @@
     cursor: pointer;
     transition: color 100ms ease-in-out;
 
+    &:focus {
+      outline: none;
+    }
+
     &--none {
       color: var(--grey);
       cursor: not-allowed;
