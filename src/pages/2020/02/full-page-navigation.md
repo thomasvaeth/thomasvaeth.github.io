@@ -4,7 +4,7 @@ date: 2020-02-03
 description: ""
 image: "../../../images/projects/art-by-elina/mast.jpg"
 ---
-There was a challenge on <a href="https://codepen.io/challenges/2020/january/2" target="_blank">CodePen</a> during the second week of January to build a full-page navigation. I just happened to recently finish working on one for the new <a href="/art-by-elina">Art by Elina</a> website. I built something that transitioned horizontally because the page transitions on Art by Elina were done vertically. So this is the script I wrote and used to do that.
+There was a challenge on <a href="https://codepen.io/challenges/2020/january/2" target="_blank" rel="noopener noreferrer">CodePen</a> during the second week of January to build a full-page navigation. I just happened to recently finish working on one for the new <a href="https://artbyelina.com/" target="_blank" rel="noopener noreferrer">Art by Elina</a> website. I built something that transitioned horizontally because the page transitions on Art by Elina were done vertically. So this is the script I wrote and used to do that.
 
 <hr/>
 
@@ -90,7 +90,7 @@ There was a challenge on <a href="https://codepen.io/challenges/2020/january/2" 
 <hr/>
 
 ## The Script
-<p>jQuery and <a href="https://animejs.com/" target="_blank">anime.js</a> v3 have to be included for the script to work. The timeline does not work in v2.</p>
+<p>jQuery and <a href="https://animejs.com/" target="_blank" rel="noopener noreferrer">anime.js</a> v3 have to be included for the script to work. The timeline does not work in v2.</p>
 
 ~~~~
 const Menu = (() => {
@@ -202,4 +202,4 @@ Menu.init();
 <hr/>
 
 ## The Demo
-<p><a href="https://artbyelina.com/" target="_blank">Art by Elina</a></p>
+<p><a href="https://artbyelina.com/" target="_blank" rel="noopener noreferrer">Art by Elina</a></p>

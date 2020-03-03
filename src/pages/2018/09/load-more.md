@@ -113,5 +113,5 @@ LoadMore.init();
 <hr/>
 
 ## Demos
-<p><a href="http://barber.samesies.io/" target="_blank">Barber</a> – Custom Blog for <a href="https://github.com/samesies/barber-jekyll" target="_blank">Jekyll</a> and <a href="https://github.com/samesies/barber-ghost" target="_blank">Ghost</a></p>
-<p><a href="https://github.com/samesies/Casper" target="_blank">Casper</a> – Fork of Ghost Blog</p>
+<p><a href="http://barber.samesies.io/" target="_blank" rel="noopener noreferrer">Barber</a> – Custom Blog for <a href="https://github.com/samesies/barber-jekyll" target="_blank" rel="noopener noreferrer">Jekyll</a> and <a href="https://github.com/samesies/barber-ghost" target="_blank" rel="noopener noreferrer">Ghost</a></p>
+<p><a href="https://github.com/samesies/Casper" target="_blank" rel="noopener noreferrer">Casper</a> – Fork of Ghost Blog</p>
