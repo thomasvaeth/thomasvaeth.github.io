@@ -38,7 +38,7 @@ function Instagram() {
         </a>
       </article>
     );
-  }).filter(obj => obj);
+  }).filter(Boolean);
 
   return (
     <div className="instagram">

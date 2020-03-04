@@ -1,14 +1,15 @@
-import React, { Fragment, useEffect, useRef, useState } from 'react';
+import React, { Fragment, useContext, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import scrollTo from 'gatsby-plugin-smoothscroll';
-import ContextConsumer from '../../templates/Context';
+import TransitionContext from '../../templates/Context';
 
 import './index.scss';
 
 function Header({ pathname }) {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [hamburgerMenu, setHamburgerMenu] = useState(null);
+  const { link, transitionElement } = useContext(TransitionContext);
   const headerRef = useRef(null);
   const scrollRef = useRef(null);
   const locationRef = useRef(null);
@@ -57,161 +58,155 @@ function Header({ pathname }) {
     setHamburgerMenu(!hamburgerMenu ? 'hamburger--open' : null);
   };
 
+  const TransitionLink = link;
+
   const desktopClasses = classNames('header', scrollDirection, hamburgerMenu);
   const mobileClasses = classNames('header--mobile', hamburgerMenu);
 
   return (
-    <ContextConsumer>
-      {({ link, transitionElement }) => {
-        const TransitionLink = link;
+    <Fragment>
+      <header className={desktopClasses} ref={headerRef}>
+        <TransitionLink
+          className="header__title"
+          to="/"
+          transitionElement={transitionElement}
+        >
+          Thomas Vaeth
+        </TransitionLink>
 
-        return (
-          <Fragment>
-            <header className={desktopClasses} ref={headerRef}>
+        <nav>
+          <ul className="header__list">
+            <li>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#projects')}
+                  onKeyPress={() => scrollTo('#projects')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Projects
+                </span>
+              ) : (
+                <TransitionLink
+                  className="header__link"
+                  to="/#projects"
+                  transitionElement={transitionElement}
+                >
+                  Projects
+                </TransitionLink>
+              )}
+            </li>
+            <li>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#articles')}
+                  onKeyPress={() => scrollTo('#articles')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Articles
+                </span>
+              ) : (
+                <TransitionLink
+                  className="header__link"
+                  to="/#articles"
+                  transitionElement={transitionElement}
+                >
+                  Articles
+                </TransitionLink>
+              )}
+            </li>
+            <li>
               <TransitionLink
-                className="header__title"
-                to="/"
+                className="header__link"
+                to="/contact"
                 transitionElement={transitionElement}
               >
-                Thomas Vaeth
+                Contact
               </TransitionLink>
+            </li>
+          </ul>
+        </nav>
+      </header>
 
-              <nav>
-                <ul className="header__list">
-                  <li>
-                    {pathname === '/' ? (
-                      <span
-                        className="header__link"
-                        onClick={() => scrollTo('#projects')}
-                        onKeyPress={() => scrollTo('#projects')}
-                        role="button"
-                        tabIndex="0"
-                      >
-                        Projects
-                      </span>
-                    ) : (
-                      <TransitionLink
-                        className="header__link"
-                        to="/#projects"
-                        transitionElement={transitionElement}
-                      >
-                        Projects
-                      </TransitionLink>
-                    )}
-                  </li>
-                  <li>
-                    {pathname === '/' ? (
-                      <span
-                        className="header__link"
-                        onClick={() => scrollTo('#articles')}
-                        onKeyPress={() => scrollTo('#articles')}
-                        role="button"
-                        tabIndex="0"
-                      >
-                        Articles
-                      </span>
-                    ) : (
-                      <TransitionLink
-                        className="header__link"
-                        to="/#articles"
-                        transitionElement={transitionElement}
-                      >
-                        Articles
-                      </TransitionLink>
-                    )}
-                  </li>
-                  <li>
-                    <TransitionLink
-                      className="header__link"
-                      to="/contact"
-                      transitionElement={transitionElement}
-                    >
-                      Contact
-                    </TransitionLink>
-                  </li>
-                </ul>
-              </nav>
-            </header>
+      <header className={mobileClasses}>
+        <TransitionLink
+          className="header__title"
+          to="/"
+          transitionElement={transitionElement}
+        >
+          Thomas Vaeth
+        </TransitionLink>
 
-            <header className={mobileClasses}>
+        <div className="hamburger"
+          onClick={onClick}
+          onKeyPress={onClick}
+          role="button"
+          tabIndex="0"
+        >
+          <div />
+          <div />
+          <div />
+        </div>
+        <nav className="header__nav">
+          <ul className="header__list">
+            <li>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#projects')}
+                  onKeyPress={() => scrollTo('#projects')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Projects
+                </span>
+              ) : (
+                <TransitionLink
+                  className="header__link"
+                  to="/#projects"
+                  transitionElement={transitionElement}
+                >
+                  Projects
+                </TransitionLink>
+              )}
+            </li>
+            <li>
+              {pathname === '/' ? (
+                <span
+                  className="header__link"
+                  onClick={() => scrollTo('#articles')}
+                  onKeyPress={() => scrollTo('#articles')}
+                  role="button"
+                  tabIndex="0"
+                >
+                  Articles
+                </span>
+              ) : (
+                <TransitionLink
+                  className="header__link"
+                  to="/#projects"
+                  transitionElement={transitionElement}
+                >
+                  Articles
+                </TransitionLink>
+              )}
+            </li>
+            <li>
               <TransitionLink
-                className="header__title"
-                to="/"
+                className="header__link"
+                to="/contact"
                 transitionElement={transitionElement}
               >
-                Thomas Vaeth
+                Contact
               </TransitionLink>
-
-              <div className="hamburger"
-                onClick={onClick}
-                onKeyPress={onClick}
-                role="button"
-                tabIndex="0"
-              >
-                <div />
-                <div />
-                <div />
-              </div>
-              <nav className="header__nav">
-                <ul className="header__list">
-                  <li>
-                    {pathname === '/' ? (
-                      <span
-                        className="header__link"
-                        onClick={() => scrollTo('#projects')}
-                        onKeyPress={() => scrollTo('#projects')}
-                        role="button"
-                        tabIndex="0"
-                      >
-                        Projects
-                      </span>
-                    ) : (
-                      <TransitionLink
-                        className="header__link"
-                        to="/#projects"
-                        transitionElement={transitionElement}
-                      >
-                        Projects
-                      </TransitionLink>
-                    )}
-                  </li>
-                  <li>
-                    {pathname === '/' ? (
-                      <span
-                        className="header__link"
-                        onClick={() => scrollTo('#articles')}
-                        onKeyPress={() => scrollTo('#articles')}
-                        role="button"
-                        tabIndex="0"
-                      >
-                        Articles
-                      </span>
-                    ) : (
-                      <TransitionLink
-                        className="header__link"
-                        to="/#projects"
-                        transitionElement={transitionElement}
-                      >
-                        Articles
-                      </TransitionLink>
-                    )}
-                  </li>
-                  <li>
-                    <TransitionLink
-                      className="header__link"
-                      to="/contact"
-                      transitionElement={transitionElement}
-                    >
-                      Contact
-                    </TransitionLink>
-                  </li>
-                </ul>
-              </nav>
-            </header>
-          </Fragment>
-        );
-      }}
-    </ContextConsumer>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </Fragment>
   );
 }
 

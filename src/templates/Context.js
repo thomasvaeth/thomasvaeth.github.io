@@ -40,7 +40,7 @@ const contextValue = {
   transitionElement: null,
 };
 
-const { Provider, Consumer } = React.createContext(contextValue);
+const TransitionContext = React.createContext(contextValue);
 
 function ContextProvider({ children }) {
   const [value, setValue] = useState({ ...contextValue });
@@ -51,7 +51,7 @@ function ContextProvider({ children }) {
   }, []);
 
   return (
-    <Provider value={value}>
+    <TransitionContext.Provider value={value}>
       {children}
       <TransitionPortal>
         <div
@@ -68,7 +68,7 @@ function ContextProvider({ children }) {
           }}
         />
       </TransitionPortal>
-    </Provider>
+    </TransitionContext.Provider>
   );
 }
 
@@ -76,4 +76,4 @@ ContextProvider.propTypes = {
   children: PropTypes.array.isRequired,
 };
 
-export { Consumer as default, ContextProvider };
+export { TransitionContext as default, ContextProvider };

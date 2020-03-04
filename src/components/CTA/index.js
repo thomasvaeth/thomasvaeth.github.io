@@ -1,27 +1,22 @@
-import React from 'react';
-import ContextConsumer from '../../templates/Context';
+import React, { useContext } from 'react';
+import TransitionContext from '../../templates/Context';
 
 import './index.scss';
 
 function CTA() {
-  return (
-    <ContextConsumer>
-      {({ link, transitionElement }) => {
-        const TransitionLink = link;
+  const { link, transitionElement } = useContext(TransitionContext);
+  const TransitionLink = link;
 
-        return (
-          <section className="cta bg-black">
-            <TransitionLink
-              className="cta__link"
-              to="/contact"
-              transitionElement={transitionElement}
-            >
-              <span className="cta__text">Let’s talk</span>
-            </TransitionLink>
-          </section>
-        );
-      }}
-    </ContextConsumer>
+  return (
+    <section className="cta bg-black">
+      <TransitionLink
+        className="cta__link"
+        to="/contact"
+        transitionElement={transitionElement}
+      >
+        <span className="cta__text">Let’s talk</span>
+      </TransitionLink>
+    </section>
   );
 }
 
