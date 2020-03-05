@@ -4,7 +4,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import slugify from '../utils/slugify';
 
-function SEO({ title, description, url, image, pathname, article, lang, meta }) {
+import defaultImage from '../images/me.jpg';
+
+function SEO({ title, description, image, pathname, article, lang, meta }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -13,7 +15,6 @@ function SEO({ title, description, url, image, pathname, article, lang, meta }) 
             defaultTitle: title
             defaultDescription: description
             siteUrl: url
-            defaultImage: image
             twitterUsername
           }
         }
@@ -21,7 +22,7 @@ function SEO({ title, description, url, image, pathname, article, lang, meta }) 
     `
   );
 
-  const { defaultTitle, defaultDescription, siteUrl, defaultImage, twitterUsername } = site.siteMetadata;
+  const { defaultTitle, defaultDescription, siteUrl, twitterUsername } = site.siteMetadata;
 
   const seo = {
     title: title || defaultTitle,

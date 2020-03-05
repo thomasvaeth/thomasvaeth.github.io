@@ -3,7 +3,6 @@ module.exports = {
     title: 'Thomas Vaeth',
     description: 'My name is Thomas Vaeth. I am front-end developer based in Seattle, Washington. I currently work at Redfin and have previously worked at Urban Influence and Getty Images.',
     url: 'https://thomasvaeth.com',
-    image: '/images/me.jpg',
     twitterUsername: '@thomasvaeth',
     social: [
       {
@@ -24,19 +23,16 @@ module.exports = {
         title: 'Art by Elina',
         description: 'Website development to showcase Elina Dmitruk\'s oil paintings',
         image: '/art-by-elina-link.gif',
-        video: '',
       },
       {
         title: 'The Stable Seattle',
         description: 'Website development for an event space in Seattle',
         image: '/the-stable-seattle-link.jpg',
-        video: '',
       },
       {
         title: 'Getty Images',
         description: 'Website redesign for the world\'s best photo library',
         image: '/getty-images-link.jpg',
-        video: '',
       },
       {
         title: 'Ink+Volt',
@@ -48,13 +44,11 @@ module.exports = {
         title: 'S&P Real Estate',
         description: 'Website development for a boutique real estate firm in Vancouver',
         image: '/sp-real-estate-link.jpg',
-        video: '',
       },
       {
         title: 'INRIX',
         description: 'Interactive data visualization for a leader in big data analytics',
         image: '/inrix-link.jpg',
-        video: '',
       },
     ],
   },
