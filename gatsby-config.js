@@ -60,6 +60,12 @@ module.exports = {
     'gatsby-plugin-transition-link',
     'gatsby-transformer-sharp',
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-57782903-1',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-layout',
       options: {
         component: `${__dirname}/src/templates/Default.js`,
