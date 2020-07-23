@@ -42,6 +42,26 @@ function SPRealEstate({ data, path }) {
     }
   });
 
+  const awwwardsLink = (
+    <a
+      href="https://www.awwwards.com/sites/s-p-real-estate-1"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Awwwards
+    </a>
+  );
+
+  const cssDesignAwardsLink = (
+    <a
+      href="https://www.cssdesignawards.com/sites/s-p-real-estate/31111/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      CSS Design Awards
+    </a>
+  );
+
   return (
     <Project
       title="S&amp;P Real Estate"
@@ -57,10 +77,7 @@ function SPRealEstate({ data, path }) {
           designers or developers.
         </p>
         <p>
-          The S&amp;P website was done at Urban Influence and has received recognition from <a
-          href="https://www.awwwards.com/sites/s-p-real-estate-1" target="_blank" rel="noopener noreferrer">Awwwards</a>
-          and <a href="https://www.cssdesignawards.com/sites/s-p-real-estate/31111/" target="_blank"
-          rel="noopener noreferrer">CSS Design Awards</a>.
+          The S&amp;P website was done at Urban Influence and has received recognition from {awwwardsLink} and {cssDesignAwardsLink}.
         </p>
       </Content>
 

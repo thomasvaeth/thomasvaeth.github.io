@@ -44,7 +44,7 @@ function InkVoltPage({ data, path }) {
       <Content header="Notebooks and planners">
         <p>
           Kate Matsudaira's product line of notebooks and planners needed somewhere to grow after her successful
-          Kickstart campaigns. She needed an e-commerce website to sell products  year-round, so a clean and minimal
+          Kickstarter campaigns. She needed an e-commerce website to sell products  year-round, so a clean and minimal
           storefront was built on WordPress and WooCommerce. Development focused on components that could be reused as
           the brand continued to grow.
         </p>
