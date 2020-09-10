@@ -38,7 +38,7 @@ function Instagram() {
         </a>
       </article>
     );
-  }).filter(Boolean);
+  }).filter(Boolean).slice(0, 12);
 
   return (
     <div className="instagram">

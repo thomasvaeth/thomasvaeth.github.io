@@ -88,7 +88,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-instagram',
       options: {
-        username: 'thomas.vaeth',
+        username: '3980752',
       },
     },
     {
@@ -115,9 +115,8 @@ module.exports = {
         background_color: '#ffffff',
         theme_color: '#ffffff',
         display: 'minimal-ui',
-        icon: 'src/images/favicon.ico',
+        icon: 'src/images/favicon.png',
       },
     },
-    // 'gatsby-plugin-offline',
   ],
 }
