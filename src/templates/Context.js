@@ -4,7 +4,7 @@ import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
 import { gsap, CSSPlugin, TimelineMax, Power3 } from 'gsap';
 
 const contextValue = {
-  link({ transitionElement, className, to, children }) {
+  link({ transitionElement, className, to, onClick, onKeyPress, children }) {
     gsap.registerPlugin(CSSPlugin);
 
     const verticalAnimation = ({ length }) => {
@@ -32,6 +32,8 @@ const contextValue = {
           delay: 0.6,
           length: 0.6,
         }}
+        onClick={() => onClick && setTimeout(() => onClick(), 600)}
+        onKeyPress={() => onKeyPress && setTimeout(() => onKeyPress(), 600)}
       >
         {children}
       </TransitionLink>

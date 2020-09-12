@@ -58,6 +58,10 @@ function Header({ pathname }) {
     setHamburgerMenu(!hamburgerMenu ? 'hamburger--open' : null);
   };
 
+  const onTransition = () => {
+    setHamburgerMenu(null);
+  };
+
   const TransitionLink = link;
 
   const desktopClasses = classNames('header', scrollDirection, hamburgerMenu);
@@ -168,6 +172,8 @@ function Header({ pathname }) {
                   className="header__link"
                   to="/#projects"
                   transitionElement={transitionElement}
+                  onClick={onTransition}
+                  onKeyPress={onTransition}
                 >
                   Projects
                 </TransitionLink>
@@ -189,6 +195,8 @@ function Header({ pathname }) {
                   className="header__link"
                   to="/#projects"
                   transitionElement={transitionElement}
+                  onClick={onTransition}
+                  onKeyPress={onTransition}
                 >
                   Articles
                 </TransitionLink>
@@ -199,6 +207,8 @@ function Header({ pathname }) {
                 className="header__link"
                 to="/contact"
                 transitionElement={transitionElement}
+                onClick={onTransition}
+                onKeyPress={onTransition}
               >
                 Contact
               </TransitionLink>
