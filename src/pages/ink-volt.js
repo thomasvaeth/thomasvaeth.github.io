@@ -17,19 +17,19 @@ function InkVoltPage({ data, path }) {
     // eslint-disable-next-line default-case
     switch (node.name) {
       case 'blog':
-        blog = node.childImageSharp.fluid;
+        blog = node.childImageSharp.gatsbyImageData;
         break;
       case 'home':
-        home = node.childImageSharp.fluid;
+        home = node.childImageSharp.gatsbyImageData;
         break;
       case 'shop':
-        shop = node.childImageSharp.fluid;
+        shop = node.childImageSharp.gatsbyImageData;
         break;
       case 'shop-single-1':
-        shopSingleOne = node.childImageSharp.fluid;
+        shopSingleOne = node.childImageSharp.gatsbyImageData;
         break;
       case 'shop-single-2':
-        shopSingleTwo = node.childImageSharp.fluid;
+        shopSingleTwo = node.childImageSharp.gatsbyImageData;
         break;
     }
   });
@@ -107,9 +107,7 @@ export const projectQuery = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }

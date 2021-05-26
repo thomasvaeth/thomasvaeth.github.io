@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Img from 'gatsby-image';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import useAnimateOnScroll from '../../utils/useAnimateOnScroll';
 
 import './index.scss';
@@ -8,13 +8,15 @@ import './index.scss';
 function Browser({ image, video }) {
   useAnimateOnScroll();
 
+  console.info(image);
+
   const media = video ? (
     <video autoPlay loop muted>
       <source type="video/mp4" src={video} />
     </video>
   ) : (
     <div className="browser__img">
-      <Img fluid={image} />
+      <GatsbyImage image={image} />
     </div>
   );
 

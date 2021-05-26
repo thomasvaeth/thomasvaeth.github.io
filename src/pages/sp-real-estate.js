@@ -16,10 +16,10 @@ function SPRealEstate({ data, path }) {
     // eslint-disable-next-line default-case
     switch (node.name) {
       case 'approach':
-        approach = node.childImageSharp.fluid;
+        approach = node.childImageSharp.gatsbyImageData;
         break;
       case 'home-mast':
-        homeMast = node.childImageSharp.fluid;
+        homeMast = node.childImageSharp.gatsbyImageData;
         break;
       case 'map':
         map = node.publicURL;
@@ -28,16 +28,16 @@ function SPRealEstate({ data, path }) {
         news = node.publicURL;
         break;
       case 'portfolio':
-        portfolio = node.childImageSharp.fluid;
+        portfolio = node.childImageSharp.gatsbyImageData;
         break;
       case 'portfolio-single-1':
-        portfolioSingleOne = node.childImageSharp.fluid;
+        portfolioSingleOne = node.childImageSharp.gatsbyImageData;
         break;
       case 'portfolio-single-2':
-        portfolioSingleTwo = node.childImageSharp.fluid;
+        portfolioSingleTwo = node.childImageSharp.gatsbyImageData;
         break;
       case 'world-housing':
-        worldHousing = node.childImageSharp.fluid;
+        worldHousing = node.childImageSharp.gatsbyImageData;
         break;
     }
   });
@@ -152,9 +152,7 @@ export const projectQuery = graphql`
           name
           publicURL
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }

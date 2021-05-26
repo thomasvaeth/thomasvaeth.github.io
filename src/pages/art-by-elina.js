@@ -14,13 +14,13 @@ function ArtByElinaPage({ data, path }) {
     const node = image.node;
 
     if (node.name === 'about') {
-      about = node.childImageSharp.fluid;
+      about = node.childImageSharp.gatsbyImageData;
     } else if (node.name === 'gallery') {
-      gallery = node.childImageSharp.fluid;
+      gallery = node.childImageSharp.gatsbyImageData;
     } else if (node.name === 'home') {
-      home = node.childImageSharp.fluid;
+      home = node.childImageSharp.gatsbyImageData;
     } else if (node.name === 'menu-1') {
-      menuOne = node.childImageSharp.fluid;
+      menuOne = node.childImageSharp.gatsbyImageData;
     }
   });
 
@@ -94,9 +94,7 @@ export const projectQuery = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }

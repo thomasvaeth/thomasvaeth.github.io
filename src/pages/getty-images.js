@@ -20,22 +20,22 @@ function GettyImagesPage({ data, path }) {
     // eslint-disable-next-line default-case
     switch (node.name) {
       case 'details-filter':
-        details = node.childImageSharp.fluid;
+        details = node.childImageSharp.gatsbyImageData;
         break;
       case 'home':
-        home = node.childImageSharp.fluid;
+        home = node.childImageSharp.gatsbyImageData;
         break;
       case 'home-jp':
-        homeJapan = node.childImageSharp.fluid;
+        homeJapan = node.childImageSharp.gatsbyImageData;
         break;
       case 'homepage-1':
-        homepageOne = node.childImageSharp.fluid;
+        homepageOne = node.childImageSharp.gatsbyImageData;
         break;
       case 'homepage-2':
-        homepageTwo = node.childImageSharp.fluid;
+        homepageTwo = node.childImageSharp.gatsbyImageData;
         break;
       case 'mosaic-filter':
-        mosaic = node.childImageSharp.fluid;
+        mosaic = node.childImageSharp.gatsbyImageData;
         break;
     }
   });
@@ -114,9 +114,7 @@ export const projectQuery = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }

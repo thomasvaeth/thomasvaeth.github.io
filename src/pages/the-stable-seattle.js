@@ -16,22 +16,22 @@ function TheStableSeattle({ data, path }) {
     // eslint-disable-next-line default-case
     switch (node.name) {
       case 'chrome':
-        chrome = node.childImageSharp.fluid;
+        chrome = node.childImageSharp.gatsbyImageData;
         break;
       case 'error':
-        error = node.childImageSharp.fluid;
+        error = node.childImageSharp.gatsbyImageData;
         break;
       case 'home':
-        home = node.childImageSharp.fluid;
+        home = node.childImageSharp.gatsbyImageData;
         break;
       case 'home-mast':
-        homeMast = node.childImageSharp.fluid;
+        homeMast = node.childImageSharp.gatsbyImageData;
         break;
       case 'reservation-1':
-        reservationOne = node.childImageSharp.fluid;
+        reservationOne = node.childImageSharp.gatsbyImageData;
         break;
       case 'reservation-2':
-        reservationTwo = node.childImageSharp.fluid;
+        reservationTwo = node.childImageSharp.gatsbyImageData;
         break;
     }
   });
@@ -109,9 +109,7 @@ export const projectQuery = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }

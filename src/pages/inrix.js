@@ -16,28 +16,28 @@ function INRIXPage({ data, path }) {
     // eslint-disable-next-line default-case
     switch (node.name) {
       case 'blog':
-        blog = node.childImageSharp.fluid;
+        blog = node.childImageSharp.gatsbyImageData;
         break;
       case 'careers':
-        careers = node.childImageSharp.fluid;
+        careers = node.childImageSharp.gatsbyImageData;
         break;
       case 'home':
-        home = node.childImageSharp.fluid;
+        home = node.childImageSharp.gatsbyImageData;
         break;
       case 'home-mast':
-        homeMast = node.childImageSharp.fluid;
+        homeMast = node.childImageSharp.gatsbyImageData;
         break;
       case 'industry':
-        industry = node.childImageSharp.fluid;
+        industry = node.childImageSharp.gatsbyImageData;
         break;
       case 'report':
-        report = node.childImageSharp.fluid;
+        report = node.childImageSharp.gatsbyImageData;
         break;
       case 'report-mast':
-        reportMast = node.childImageSharp.fluid;
+        reportMast = node.childImageSharp.gatsbyImageData;
         break;
       case 'scorecard':
-        scorecard = node.childImageSharp.fluid;
+        scorecard = node.childImageSharp.gatsbyImageData;
         break;
     }
   });
@@ -135,9 +135,7 @@ export const projectQuery = graphql`
         node {
           name
           childImageSharp {
-            fluid(maxWidth: 1400) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: CONSTRAINED)
           }
         }
       }
