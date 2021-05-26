@@ -6,7 +6,7 @@ function useOpacityScroll(ref) {
 
   const opacityChange = () => {
     const scrollTop = window.pageYOffset;
-    const height = ref.current.offsetHeight / 4;
+    const height = ref.current ? ref.current.offsetHeight / 4 : 0;
     const opacity = 1 - (scrollTop - height) / scrollTop * 1.5;
 
     if (scrollTop >= height) {

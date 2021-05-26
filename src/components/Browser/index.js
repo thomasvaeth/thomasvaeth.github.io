@@ -14,7 +14,7 @@ function Browser({ image, video }) {
     </video>
   ) : (
     <div className="browser__img">
-      <Img sizes={image} />
+      <Img fluid={image} />
     </div>
   );
 
