@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Thomas Vaeth',
-    description: 'My name is Thomas Vaeth. I am front-end developer based in Seattle, Washington. I currently work at Redfin and have previously worked at Urban Influence and Getty Images.',
+    description: 'My name is Thomas Vaeth. I am front-end developer based in Austin, Texas. I currently work at Square and have previously worked at Redfin, Getty Images, and Urban Influence.',
     url: 'https://thomasvaeth.com',
     twitterUsername: '@thomasvaeth',
     social: [
