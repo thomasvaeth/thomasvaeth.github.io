@@ -22,37 +22,37 @@ function Header({ pathname }) {
 
   locationRef.current = pathname;
 
-  const headerDirection = () => {
-    const scrollTop = window.pageYOffset;
+  // const headerDirection = () => {
+  //   const scrollTop = window.pageYOffset;
 
-    if (Math.abs(scrollRef.current - scrollTop) <= 15) {
-      return;
-    }
+  //   if (Math.abs(scrollRef.current - scrollTop) <= 15) {
+  //     return;
+  //   }
 
-    const headerHeight = headerRef.current.offsetHeight;
+  //   const headerHeight = headerRef.current.offsetHeight;
 
-    if (scrollTop <= headerRef.current.getBoundingClientRect().top + headerHeight) {
-      setScrollDirection(null);
-    } else if (scrollTop > scrollRef.current && scrollTop > headerHeight) {
-      if (scrollDirection === 'header--scrolling-up') {
-        setScrollDirection('header--scrolling-down');
-      }
-    } else if (scrollTop + window.innerHeight < document.body.clientHeight) {
-      setScrollDirection('header--scrolling-up');
-    }
+  //   if (scrollTop <= headerRef.current.getBoundingClientRect().top + headerHeight) {
+  //     setScrollDirection(null);
+  //   } else if (scrollTop > scrollRef.current && scrollTop > headerHeight) {
+  //     if (scrollDirection === 'header--scrolling-up') {
+  //       setScrollDirection('header--scrolling-down');
+  //     }
+  //   } else if (scrollTop + window.innerHeight < document.body.clientHeight) {
+  //     setScrollDirection('header--scrolling-up');
+  //   }
 
-    scrollRef.current = scrollTop;
-  };
+  //   scrollRef.current = scrollTop;
+  // };
 
-  useEffect(() => {
-    window.addEventListener('scroll', headerDirection);
-    window.addEventListener('resize', headerDirection);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', headerDirection);
+  //   window.addEventListener('resize', headerDirection);
 
-    return () => {
-      window.removeEventListener('scroll', headerDirection);
-      window.removeEventListener('resize', headerDirection);
-    };
-  });
+  //   return () => {
+  //     window.removeEventListener('scroll', headerDirection);
+  //     window.removeEventListener('resize', headerDirection);
+  //   };
+  // });
 
   const onClick = () => {
     setHamburgerMenu(!hamburgerMenu ? 'hamburger--open' : null);

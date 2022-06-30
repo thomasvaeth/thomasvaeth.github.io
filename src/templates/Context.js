@@ -1,14 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link';
-import { gsap, CSSPlugin, TimelineMax, Power3 } from 'gsap';
+import { gsap, CSSPlugin, Power3 } from 'gsap';
 
 const contextValue = {
   link({ transitionElement, className, to, onClick, onKeyPress, children }) {
     gsap.registerPlugin(CSSPlugin);
 
     const verticalAnimation = ({ length }) => {
-      return new TimelineMax()
+      return gsap.timeline()
         .set(transitionElement, { y: '100%' })
         .to(transitionElement, length, {
           y: '0%',

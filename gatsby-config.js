@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Thomas Vaeth',
-    description: 'My name is Thomas Vaeth. I am front-end developer based in Austin, Texas. I currently work at Square and have previously worked at Redfin, Getty Images, and Urban Influence.',
+    description: 'My name is Thomas Vaeth. I am front-end developer based in Seattle, Washington. I currently work at Square and have previously worked at Redfin, Getty Images, and Urban Influence.',
     url: 'https://thomasvaeth.com',
     twitterUsername: '@thomasvaeth',
     social: [
@@ -51,6 +51,56 @@ module.exports = {
         image: '/inrix-link.jpg',
       },
     ],
+    instagram: [
+      {
+        id: 'CPa3KgtlAf9',
+        image: '/instagram-CPa3KgtlAf9.jpg',
+      },
+      {
+        id: 'CPZwVL9Fl9k',
+        image: '/instagram-CPZwVL9Fl9k.jpg',
+      },
+      {
+        id: 'CPUxkmOFv1m',
+        image: '/instagram-CPUxkmOFv1m.jpg',
+      },
+      {
+        id: 'CFBZjSklmp0',
+        image: '/instagram-CFBZjSklmp0.jpg',
+      },
+      {
+        id: 'CE-9KL1FqWK',
+        image: '/instagram-CE-9KL1FqWK.jpg',
+      },
+      {
+        id: 'CEzlk-vF-Hf',
+        image: '/instagram-CEzlk-vF-Hf.jpg',
+      },
+      {
+        id: 'CEj50aflbo0',
+        image: '/instagram-CEj50aflbo0.jpg',
+      },
+      {
+        id: 'CDKwVrGllck',
+        image: '/instagram-CDKwVrGllck.jpg',
+      },
+      {
+        id: 'CA8Cm0nFxkl',
+        image: '/instagram-CA8Cm0nFxkl.jpg',
+      },
+      {
+        id: 'B5MH4PEF8Zi',
+        image: '/instagram-B5MH4PEF8Zi.jpg',
+      },
+      {
+        id: 'BrQ3TOBFDVS',
+        image: '/instagram-BrQ3TOBFDVS.jpg',
+      },
+      {
+        id: 'BlinetFAxm_',
+        image: '/instagram-BlinetFAxm_.jpg',
+      },
+    ],
   },
   plugins: [
     'gatsby-plugin-image',
@@ -84,12 +134,6 @@ module.exports = {
       options: {
         name: 'images',
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-instagram',
-      options: {
-        username: '3980752',
       },
     },
     {

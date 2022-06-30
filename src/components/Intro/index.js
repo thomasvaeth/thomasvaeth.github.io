@@ -11,7 +11,7 @@ function Intro() {
     <section className="intro bg-white rellax" ref={introRef}>
       <div className="grid">
         <div>
-          <h1 className="intro__text" style={{ opacity }}>Hi, I’m Thomas. A front-end developer based in Austin.</h1>
+          <h1 className="intro__text" style={{ opacity }}>Hi, I’m Thomas. A front-&#x2060;end developer based in Seattle.</h1>
         </div>
       </div>
     </section>
