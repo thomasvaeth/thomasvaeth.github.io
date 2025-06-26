@@ -1,15 +1,27 @@
-import prettier from "eslint-config-prettier";
+import prettier from 'eslint-config-prettier';
+import { includeIgnoreFile } from '@eslint/compat';
+import js from '@eslint/js';
+import svelte from 'eslint-plugin-svelte';
+import globals from 'globals';
+import { fileURLToPath } from 'node:url';
+import svelteConfig from './svelte.config.js';
 
+const gitignorePath = fileURLToPath(new URL('./.gitignore', import.meta.url));
+
+/** @type {import('eslint').Linter.Config[]} */
 export default [
+  includeIgnoreFile(gitignorePath),
+  js.configs.recommended,
+  ...svelte.configs.recommended,
+  prettier,
+  ...svelte.configs.prettier,
   {
-    files: ["src/**/*.js"],
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-    },
-    rules: {
-      "prettier/prettier": "error",
+      globals: { ...globals.browser, ...globals.node },
     },
   },
-  prettier,
+  {
+    files: ['**/*.svelte', '**/*.svelte.js'],
+    languageOptions: { parserOptions: { svelteConfig } },
+  },
 ];
