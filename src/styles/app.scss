@@ -15,13 +15,7 @@
 //----------------------------------------------
 // Tools: Mixins
 //----------------------------------------------
-// @use 'tools/mixins';
-
-//----------------------------------------------
-// Tools: Extends
-//----------------------------------------------
-// @use 'tools/extends-type';
-// @use 'tools/extends';
+@use 'tools/mixins-media';
 
 //----------------------------------------------
 // Vendor: Normalize
@@ -40,13 +34,4 @@
 //----------------------------------------------
 // Utils
 //----------------------------------------------
-// @use 'utils/helpers-colors';
-// @use 'utils/helpers-grid';
 @use 'utils/helpers';
-
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     color: #213547;
-//     background-color: #ffffff;
-//   }
-// }

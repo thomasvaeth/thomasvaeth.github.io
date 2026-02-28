@@ -27,37 +27,32 @@
 }
 
 //----------------------------------------------
-// Fonts: Size variables
-//----------------------------------------------
-$font-small: 0.9em;
-$font-xsmall: 0.8em;
-$font-xxsmall: 0.7em;
-$font-xxxsmall: 0.6em;
-
-//----------------------------------------------
 // Media Queries
 //----------------------------------------------
 // Smallest phone
-$mq-xsmall: 22em;
+$mq-xsmall: 30em;
 // Phone
-$mq-small: 32em;
+$mq-small: 48em;
 // Tablet
-$mq-med: 54em;
+$mq-med: 64em;
 // Laptop
-$mq-large: 65em;
+$mq-large: 80em;
 // Past laptop
-$mq-xlarge: 91em;
+$mq-xlarge: 96em;
 // Mid-size monitor
-$mq-xxlarge: 115em;
+$mq-xxlarge: 120em;
 // Thunderbold goes to 157em
-$mq-xxxlarge: 130em;
+$mq-xxxlarge: 160em;
 
 //----------------------------------------------
 // Colors
 //----------------------------------------------
 :root {
   --color-black: #000;
+  --color-black-rgb: 0, 0, 0;
   --color-white: #fff;
+  --color-white-rgb: 255, 255, 255;
+  --color-gray: #f8f8f8;
 }
 
 //----------------------------------------------

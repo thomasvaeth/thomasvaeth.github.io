@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use 'config';
+
+$breakpoints: (
+  'extra-small': config.$mq-xsmall,
+  'small': config.$mq-small,
+  'medium': config.$mq-med,
+  'large': config.$mq-large,
+  'extra-large': config.$mq-xlarge,
+  'extra-extra-large': config.$mq-xxlarge,
+  'extra-extra-extra-large': config.$mq-xxxlarge,
+);
+
+//----------------------------------------------
+//  Media Query At - at()
+//  @description: Creates a min-width media query from a breakpoint key
+//  @param:       $name: [null] - Breakpoint key from $breakpoints map
+//----------------------------------------------
+@mixin at($name) {
+  $width: map.get($breakpoints, $name);
+
+  @if $width == null {
+    @error "Unknown breakpoint `#{$name}`. Use one of: #{map.keys($breakpoints)}";
+  }
+
+  @media (min-width: $width) {
+    @content;
+  }
+}

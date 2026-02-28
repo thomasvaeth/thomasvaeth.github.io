@@ -1,41 +1,33 @@
-<script></script>
+<script lang="ts">
+  import Footer from '$lib/components/Footer.svelte';
+  import Header from '$lib/components/Header.svelte';
+  import Intro from '$lib/components/Intro.svelte';
+  import ModelViewer from '$lib/components/ModelViewer.svelte';
+  import Section from '$lib/components/Section.svelte';
+</script>
+
+<Header />
 
 <main>
-  <div>
-    <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src="" class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src="" class="logo svelte" alt="Svelte Logo" />
-    </a>
-  </div>
-  <h1>Vite + Svelte</h1>
+  <Intro />
 
-  <p>
-    Check out <a
-      href="https://github.com/sveltejs/kit#readme"
-      target="_blank"
-      rel="noreferrer">SvelteKit</a
-    >, the official Svelte app framework powered by Vite!
-  </p>
-
-  <p class="read-the-docs">Click on the Vite and Svelte logos to learn more</p>
+  <Section layout="2•1">
+    <ModelViewer title="Handheld" />
+    <div class="Section__subcontainer">
+      <ModelViewer title="Register" />
+      <ModelViewer title="Stand" />
+    </div>
+  </Section>
 </main>
 
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
+<Footer />
+
+<style lang="scss">
+  .Section {
+    &__subcontainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
 </style>
