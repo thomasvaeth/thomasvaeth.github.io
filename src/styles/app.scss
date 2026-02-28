@@ -1,0 +1,52 @@
+//----------------------------------------------
+//  Main Styling Build
+//
+//  Tools:      Configs, variables, extends, mixins
+//  Base:       Styles for base level elements
+//  Vendor:     Vendor specific styles
+//  Utils:      Helper classes, utilities, animations
+//----------------------------------------------
+
+//----------------------------------------------
+// Tools: Main Config & Global Variables
+//----------------------------------------------
+@use 'tools/config';
+
+//----------------------------------------------
+// Tools: Mixins
+//----------------------------------------------
+// @use 'tools/mixins';
+
+//----------------------------------------------
+// Tools: Extends
+//----------------------------------------------
+// @use 'tools/extends-type';
+// @use 'tools/extends';
+
+//----------------------------------------------
+// Vendor: Normalize
+//----------------------------------------------
+@use 'vendor/normalize';
+@use 'base/normalizer';
+
+//----------------------------------------------
+// Base
+//----------------------------------------------
+@use 'base/links';
+@use 'base/lists';
+@use 'base/media';
+@use 'base/typography';
+
+//----------------------------------------------
+// Utils
+//----------------------------------------------
+// @use 'utils/helpers-colors';
+// @use 'utils/helpers-grid';
+@use 'utils/helpers';
+
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     color: #213547;
+//     background-color: #ffffff;
+//   }
+// }

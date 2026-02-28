@@ -1,0 +1,26 @@
+//----------------------------------------------
+// Media
+//----------------------------------------------
+img,
+svg,
+figure,
+picture,
+object,
+embed,
+iframe,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+figure {
+  margin: var(--space-none);
+}
+
+img {
+  display: block;
+}
+
+iframe {
+  border: none;
+}

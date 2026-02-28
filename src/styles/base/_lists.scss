@@ -1,0 +1,10 @@
+//----------------------------------------------
+//  Lists
+//----------------------------------------------
+ul,
+ol {
+  margin: var(--space-none);
+  padding: var(--space-none);
+
+  list-style-type: none;
+}
