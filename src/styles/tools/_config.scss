@@ -53,17 +53,27 @@ $mq-xxxlarge: 160em;
   --color-white: #fff;
   --color-white-rgb: 255, 255, 255;
   --color-gray: #f8f8f8;
+  --color-red: #f00;
 }
 
 //----------------------------------------------
 // Grid
 //----------------------------------------------
-$max-width: 45em;
-$max-width--lg: $mq-large;
-$max-width--xl: 81em;
+$max-width: 90rem;
+
+:root {
+  --max-width: #{$max-width};
+}
 
 //----------------------------------------------
-// Misc
+// Border radius
+//----------------------------------------------
+:root {
+  --border-radius: 1rem;
+}
+
+//----------------------------------------------
+// Transition timing functions
 //----------------------------------------------
 $ease-cb-1: cubic-bezier(0.4, 0, 0.2, 1);
 $ease-cb-2: cubic-bezier(0.19, 1, 0.22, 1);

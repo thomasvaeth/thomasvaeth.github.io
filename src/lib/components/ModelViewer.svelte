@@ -2,8 +2,20 @@
   const {
     title,
   }: {
-    title: string;
+    title: 'Handheld' | 'Register' | 'Stand' | 'Terminal';
   } = $props();
+
+  const rotationPerSecond = $derived.by(() => {
+    let rotationPerSecond = '22deg';
+
+    if (title === 'Handheld') {
+      rotationPerSecond = '-26deg';
+    } else if (title === 'Stand') {
+      rotationPerSecond = '-22deg';
+    }
+
+    return rotationPerSecond;
+  });
 </script>
 
 <svelte:head>
@@ -27,9 +39,11 @@
     disable-tap
     disable-zoom
     interaction-prompt="none"
-    orientation={title === 'Handheld' ? '15deg 45deg 180deg' : '0deg 0deg 0deg'}
+    orientation={title === 'Handheld'
+      ? '-15deg 15deg 180deg'
+      : '0deg 0deg 0deg'}
     reveal="auto"
-    rotation-per-second="22deg"
+    rotation-per-second={rotationPerSecond}
     shadow-intensity="1"
     touch-action="pan-y"
     tabindex="-1"
@@ -41,6 +55,7 @@
     position: relative;
 
     background-color: var(--color-gray);
+    border-radius: var(--border-radius);
 
     &:before {
       content: '';

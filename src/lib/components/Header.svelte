@@ -11,16 +11,15 @@
     top: 0;
     z-index: 999;
 
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1rem;
 
+    color: var(--color-white);
     text-align: center;
+    mix-blend-mode: difference;
 
     &__title {
-      grid-column: 2;
-      padding: 1em;
-
       font-weight: var(--font-weight-bold);
+      user-select: none;
     }
   }
 </style>

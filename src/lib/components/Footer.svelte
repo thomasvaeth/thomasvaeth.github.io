@@ -16,9 +16,9 @@
 </script>
 
 <footer class="Footer">
-  <span class="Footer__copy"
-    >&copy; Thomas Vaeth. Coded with code in {new Date().getFullYear()}.</span
-  >
+  <span>
+    &copy; Thomas Vaeth. Coded with code in {new Date().getFullYear()}.
+  </span>
   <ul class="Footer__list">
     {#each links as { title, link } (link)}
       <li>
@@ -40,13 +40,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1em;
+    padding: 2em;
 
     border-top: 1px solid var(--color-black);
-
-    // &__copy {
-
-    // }
 
     &__list {
       display: flex;

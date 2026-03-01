@@ -1,3 +1,5 @@
+@use '../tools/config' as config;
+
 //----------------------------------------------
 // Normalize Additions
 //----------------------------------------------
@@ -9,4 +11,19 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+//----------------------------------------------
+// Body
+//----------------------------------------------
+body {
+  max-width: var(--max-width);
+  margin-inline: var(--space-auto);
+
+  @media (min-width: config.$max-width) {
+    border: {
+      left: 1px solid var(--color-black);
+      right: 1px solid var(--color-black);
+    }
+  }
 }

@@ -15,7 +15,8 @@
 //----------------------------------------------
 // Headings
 //----------------------------------------------
-h1 {
+h1,
+h2 {
   margin: {
     top: var(--space-none);
     bottom: var(--space-none);
@@ -25,10 +26,20 @@ h1 {
 }
 
 //----------------------------------------------
+// Paragraphs
+//----------------------------------------------
+p {
+  margin: {
+    top: var(--space-none);
+    bottom: var(--space-none);
+  }
+}
+
+//----------------------------------------------
 // Selection
 //----------------------------------------------
 ::selection {
   color: var(--color-white);
-  background-color: var(--color-black);
+  background-color: var(--color-red);
   text-shadow: none;
 }
