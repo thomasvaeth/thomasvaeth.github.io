@@ -56,6 +56,7 @@
 
     background-color: var(--color-gray);
     border-radius: var(--border-radius);
+    overflow: hidden;
 
     &:before {
       content: '';

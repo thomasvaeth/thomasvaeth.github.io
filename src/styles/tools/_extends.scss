@@ -1,0 +1,20 @@
+//----------------------------------------------
+//  Full Width Border - %full-width-border
+//  @description: Creates a 100vw top border
+//----------------------------------------------
+%full-width-border {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    height: 1px;
+    width: 100vw;
+
+    background-color: var(--color-black);
+    transform: translateX(-50%);
+  }
+}

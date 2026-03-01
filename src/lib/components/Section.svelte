@@ -4,7 +4,7 @@
 
   const {
     children,
-    class: className = '',
+    class: className,
   }: {
     children: Snippet;
     class?: ClassValue;
@@ -16,25 +16,14 @@
 </section>
 
 <style lang="scss">
+  @use '../../styles/tools/extends';
+
   .Section {
-    position: relative;
+    @extend %full-width-border;
 
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-
-      height: 1px;
-      width: 100vw;
-
-      background-color: var(--color-black);
-      transform: translateX(-50%);
-    }
   }
 </style>

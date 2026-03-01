@@ -17,6 +17,13 @@ html {
 // Body
 //----------------------------------------------
 body {
+  background-color: var(--color-white);
+}
+
+//----------------------------------------------
+// App
+//----------------------------------------------
+#app {
   max-width: var(--max-width);
   margin-inline: var(--space-auto);
 

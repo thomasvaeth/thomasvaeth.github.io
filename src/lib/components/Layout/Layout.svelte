@@ -5,7 +5,7 @@
     variant = '1•1•1',
     columnStart = 'auto',
     children,
-    class: className = '',
+    class: className,
   }: LayoutProps = $props();
 
   const variantClassMap: Record<NonNullable<LayoutProps['variant']>, string> = {

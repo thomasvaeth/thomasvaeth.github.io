@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Image from '$lib/components/Image.svelte';
   import Layout from '$lib/components/Layout/Layout.svelte';
   import Section from '$lib/components/Section.svelte';
   import TextBlock from '$lib/components/TextBlock.svelte';
@@ -18,9 +19,9 @@
     </p>
   </TextBlock>
 
-  <Layout>
+  <Layout columnStart="2">
     <figure class="Intro__figure">
-      <img class="Intro__img" src="/me.jpg" alt="Thomas Vaeth" />
+      <Image class="Intro__img" src="/me.jpg" alt="Thomas Vaeth" />
     </figure>
   </Layout>
 </Section>
@@ -48,16 +49,16 @@
 
       background-color: var(--color-black);
     }
-
-    &__img {
-      filter: grayscale(1);
-    }
   }
 
   :global {
     .Intro {
       --character-count: 12;
       --glyph-factor: 0.6;
+
+      &__img {
+        filter: grayscale(1);
+      }
     }
   }
 </style>

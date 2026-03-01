@@ -1,12 +1,16 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte';
   import Header from '$lib/components/Header.svelte';
+  import Image from '$lib/components/Image.svelte';
   import Intro from '$lib/components/Intro.svelte';
   import Layout from '$lib/components/Layout/Layout.svelte';
   import ModelViewer from '$lib/components/ModelViewer.svelte';
+  import Progess from '$lib/components/Progess.svelte';
   import Section from '$lib/components/Section.svelte';
   import TextBlock from '$lib/components/TextBlock.svelte';
 </script>
+
+<Progess />
 
 <Header />
 
@@ -14,7 +18,95 @@
   <Intro />
 
   <Section>
-    <TextBlock heading="Block">
+    <TextBlock heading="Square Handheld & Terminal" contentSize="large">
+      <p>
+        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque
+        magna libero, porta eu molestie non, maximus id nibh. In gravida dolor
+        id dolor dapibus, ut imperdiet odio finibus.
+      </p>
+    </TextBlock>
+    <Layout variant="1">
+      <video autoplay loop muted playsinline>
+        <source src="/block/handheld/handheld-battery.mp4" type="video/mp4" />
+      </video>
+    </Layout>
+    <Layout variant="2•1">
+      <Image
+        src="/block/handheld/handheld-pricing.jpg"
+        alt=""
+        withBorder={true}
+      />
+    </Layout>
+    <Layout variant="1•2" columnStart="2">
+      <Image
+        src="/block/handheld/terminal-pricing.jpg"
+        alt=""
+        withBorder={true}
+      />
+    </Layout>
+    <Layout variant="1">
+      <Image src="/block/handheld/handheld-case.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="1•1">
+      <Image
+        src="/block/handheld/handheld-values.jpg"
+        alt=""
+        withBorder={true}
+      />
+      <Image
+        src="/block/handheld/terminal-values.jpg"
+        alt=""
+        withBorder={true}
+      />
+    </Layout>
+    <Layout variant="1">
+      <Image
+        src="/block/handheld/terminal-compare.jpg"
+        alt=""
+        withBorder={true}
+      />
+    </Layout>
+  </Section>
+
+  <Section>
+    <TextBlock heading="Public Web Next" contentSize="large">
+      <p>
+        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque
+        magna libero, porta eu molestie non, maximus id nibh. In gravida dolor
+        id dolor dapibus, ut imperdiet odio finibus.
+      </p>
+    </TextBlock>
+
+    <Layout>
+      <Image src="/block/next/hero-1.jpg" alt="" withBorder={true} />
+      <Image src="/block/next/hero-2.jpg" alt="" withBorder={true} />
+      <Image src="/block/next/hero-3.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="1">
+      <Image src="/block/next/content-block.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="1•1">
+      <Image src="/block/next/carousel.jpg" alt="" withBorder={true} />
+      <Image src="/block/next/banking.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="2•1">
+      <Image
+        src="/block/next/content-explorer-1.jpg"
+        alt=""
+        withBorder={true}
+      />
+    </Layout>
+    <Layout variant="1•2" columnStart="2">
+      <Image
+        src="/block/next/content-explorer-2.jpg"
+        alt=""
+        withBorder={true}
+      />
+    </Layout>
+  </Section>
+
+  <Section>
+    <TextBlock heading="AR/VR" contentSize="large">
       <p>
         Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque
         magna libero, porta eu molestie non, maximus id nibh. In gravida dolor
@@ -31,7 +123,7 @@
   </Section>
 
   <Section>
-    <TextBlock heading="Block">
+    <TextBlock heading="Upgrade" contentSize="large">
       <p>
         Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque
         magna libero, porta eu molestie non, maximus id nibh. In gravida dolor
@@ -39,13 +131,13 @@
       </p>
     </TextBlock>
     <Layout variant="1">
-      <img src="/block/upgrade/family.jpg" alt="" />
+      <Image src="/block/upgrade/family.jpg" alt="" />
     </Layout>
     <Layout variant="1">
-      <img src="/block/upgrade/desktop.jpg" alt="" />
+      <Image src="/block/upgrade/desktop.jpg" alt="" />
     </Layout>
     <Layout columnStart="3">
-      <video autoplay loop>
+      <video autoplay loop muted playsinline>
         <source src="/block/upgrade/register.mp4" type="video/mp4" />
       </video>
     </Layout>
