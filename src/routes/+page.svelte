@@ -10,6 +10,37 @@
   import TextBlock from '$lib/components/TextBlock.svelte';
 </script>
 
+<svelte:head>
+  <title>Thomas Vaeth → Design Engineer</title>
+  <link rel="canonical" href="https://thomasvaeth.com/" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <meta name="author" content="Thomas Vaeth" />
+  <meta
+    name="description"
+    content="Design-minded front-end developer creating scalable, customer-facing web experiences with strong UX, robust design systems, and reliable performance."
+  />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Thomas Vaeth → Design Engineer" />
+  <meta property="og:url" content="https://thomasvaeth.com/" />
+  <meta property="og:site_name" content="Thomas Vaeth" />
+  <meta
+    property="og:description"
+    content="Design-minded front-end developer creating scalable, customer-facing web experiences with strong UX, robust design systems, and reliable performance."
+  />
+  <meta property="og:image" content="https://thomasvaeth.com/seo.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta
+    name="twitter:description"
+    content="Design-minded front-end developer creating scalable, customer-facing web experiences with strong UX, robust design systems, and reliable performance."
+  />
+  <meta name="twitter:title" content="Thomas Vaeth → Design Engineer" />
+  <meta name="twitter:url" content="https://thomasvaeth.com/" />
+  <meta name="twitter:image" content="https://thomasvaeth.com/seo.jpg" />
+</svelte:head>
+
 <Progess />
 
 <Header />

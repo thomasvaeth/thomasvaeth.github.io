@@ -4,9 +4,9 @@
   "type": "module",
   "description": "Thomas Vaeth is a Design Technologist at Square in Seattle, Washington.",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite dev",
     "build": "vite build",
-    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
     "format": "prettier --write src",
     "lint": "eslint src && eslint .",
@@ -36,7 +36,8 @@
   "devDependencies": {
     "@eslint/compat": "^2.0.2",
     "@eslint/js": "^10.0.1",
-    "@ota-meshi/eslint-plugin-svelte": "^0.34.1",
+    "@sveltejs/adapter-static": "^3.0.10",
+    "@sveltejs/kit": "^2.53.4",
     "@sveltejs/vite-plugin-svelte": "^6.2.4",
     "@typescript-eslint/parser": "^8.56.1",
     "eslint": "^10.0.2",

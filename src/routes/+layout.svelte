@@ -1,0 +1,37 @@
+<script lang="ts">
+  import type { Snippet } from 'svelte';
+  import { onMount } from 'svelte';
+  import Lenis from 'lenis';
+
+  import '../styles/fonts.scss';
+  import '../styles/app.scss';
+
+  // prettier-ignore
+  const {
+    children,
+  }: {
+    children: Snippet;
+  } = $props();
+
+  onMount(() => {
+    const lenis = new Lenis();
+
+    let frameId = 0;
+
+    const raf = (time: number) => {
+      lenis.raf(time);
+
+      frameId = requestAnimationFrame(raf);
+    };
+
+    frameId = requestAnimationFrame(raf);
+
+    return () => {
+      cancelAnimationFrame(frameId);
+
+      lenis.destroy();
+    };
+  });
+</script>
+
+{@render children()}
