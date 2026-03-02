@@ -18,6 +18,36 @@
   <Intro />
 
   <Section>
+    <TextBlock heading="Project 20X" contentSize="large">
+      <p>
+        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque
+        magna libero, porta eu molestie non, maximus id nibh. In gravida dolor
+        id dolor dapibus, ut imperdiet odio finibus.
+      </p>
+    </TextBlock>
+    <Layout variant="2•1">
+      <Image src="/block/project-20x/hero-1.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="1•2" columnStart="2">
+      <Image src="/block/project-20x/hero-2.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="1">
+      <Image src="/block/project-20x/hardware.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="1•1">
+      <Image
+        src="/block/project-20x/content-explorer.jpg"
+        alt=""
+        withBorder={true}
+      />
+      <Image src="/block/project-20x/faq.jpg" alt="" withBorder={true} />
+    </Layout>
+    <Layout variant="2•1" columnStart="2">
+      <Image src="/block/project-20x/footer.jpg" alt="" withBorder={true} />
+    </Layout>
+  </Section>
+
+  <Section>
     <TextBlock heading="Square Handheld & Terminal" contentSize="large">
       <p>
         Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque
@@ -27,8 +57,11 @@
     </TextBlock>
     <Layout variant="1">
       <video autoplay loop muted playsinline>
-        <source src="/block/handheld/handheld-battery.mp4" type="video/mp4" />
+        <source src="/block/handheld/handheld.mp4" type="video/mp4" />
       </video>
+    </Layout>
+    <Layout variant="1">
+      <Image src="/block/handheld/handheld-case.jpg" alt="" withBorder={true} />
     </Layout>
     <Layout variant="2•1">
       <Image
@@ -43,9 +76,6 @@
         alt=""
         withBorder={true}
       />
-    </Layout>
-    <Layout variant="1">
-      <Image src="/block/handheld/handheld-case.jpg" alt="" withBorder={true} />
     </Layout>
     <Layout variant="1•1">
       <Image
@@ -78,27 +108,27 @@
     </TextBlock>
 
     <Layout>
-      <Image src="/block/next/hero-1.jpg" alt="" withBorder={true} />
-      <Image src="/block/next/hero-2.jpg" alt="" withBorder={true} />
-      <Image src="/block/next/hero-3.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/hero-1.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/hero-2.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/hero-3.jpg" alt="" withBorder={true} />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/next/content-block.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/content-block.jpg" alt="" withBorder={true} />
     </Layout>
     <Layout variant="1•1">
-      <Image src="/block/next/carousel.jpg" alt="" withBorder={true} />
-      <Image src="/block/next/banking.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/carousel.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/banking.jpg" alt="" withBorder={true} />
     </Layout>
     <Layout variant="2•1">
       <Image
-        src="/block/next/content-explorer-1.jpg"
+        src="/block/pw-next/content-explorer-1.jpg"
         alt=""
         withBorder={true}
       />
     </Layout>
     <Layout variant="1•2" columnStart="2">
       <Image
-        src="/block/next/content-explorer-2.jpg"
+        src="/block/pw-next/content-explorer-2.jpg"
         alt=""
         withBorder={true}
       />

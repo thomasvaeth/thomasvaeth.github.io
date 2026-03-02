@@ -34,3 +34,14 @@ body {
     }
   }
 }
+
+//----------------------------------------------
+// Accessibility
+//----------------------------------------------
+:focus-visible {
+  border-radius: var(--border-radius);
+  box-shadow:
+    0 0 0 2px var(--color-white),
+    0 0 0 4px var(--color-red);
+  outline: none;
+}

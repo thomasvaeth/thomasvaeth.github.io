@@ -23,7 +23,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
+    gap: var(--space-component);
+    padding: var(--space-component);
   }
 </style>

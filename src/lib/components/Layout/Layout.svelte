@@ -25,25 +25,37 @@
 </div>
 
 <style lang="scss">
+  @use '../../../styles/tools/mixins-media' as media;
+
   .Layout {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: var(--space-component);
+
+    @include media.at('medium') {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     &--two-one {
       & > :global(*:first-child) {
-        grid-column-end: span 2;
+        @include media.at('medium') {
+          grid-column-end: span 2;
+        }
       }
     }
 
     &--one-two {
       & > :global(*:last-child) {
-        grid-column-end: span 2;
+        @include media.at('medium') {
+          grid-column-end: span 2;
+        }
       }
     }
 
     &--one-one {
-      grid-template-columns: repeat(2, 1fr);
+      @include media.at('medium') {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     &--one {
@@ -51,7 +63,9 @@
     }
 
     & > :global(*:first-child) {
-      grid-column-start: var(--layout-column-start);
+      @include media.at('medium') {
+        grid-column-start: var(--layout-column-start);
+      }
     }
   }
 </style>

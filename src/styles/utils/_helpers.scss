@@ -1,7 +1,14 @@
+@use '../tools/mixins-media' as media;
+
 //--------------------------------------------
 // Spacing
 //--------------------------------------------
 :root {
   --space-none: 0;
   --space-auto: auto;
+  --space-component: 1rem;
+
+  @include media.at('small') {
+    --space-component: 2rem;
+  }
 }

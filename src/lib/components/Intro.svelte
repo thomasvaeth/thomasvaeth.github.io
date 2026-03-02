@@ -45,7 +45,7 @@
     }
 
     &__figure {
-      padding: 2rem;
+      padding: var(--space-component);
 
       background-color: var(--color-black);
     }
