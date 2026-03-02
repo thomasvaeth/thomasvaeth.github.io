@@ -57,7 +57,8 @@
   .ModelViewer {
     position: relative;
 
-    background-color: var(--color-gray);
+    background-color: var(--color-white);
+    border: 1px solid var(--color-black);
 
     &:before {
       content: '';
@@ -82,7 +83,7 @@
     }
 
     model-viewer {
-      --progress-bar-height: 4px;
+      --progress-bar-height: 2px;
       --progress-bar-color: var(--color-black);
 
       position: absolute;

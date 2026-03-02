@@ -49,36 +49,37 @@
   <Intro />
 
   <Section>
-    <TextBlock splitColumns={true} heading="Growth Surfaces" contentSize="large">
+    <TextBlock splitColumns={true} company="Block" heading="Growth Surfaces" contentSize="large">
       <p>
         A redesign of Square’s website launched in parallel with Square Register, focused on clarifying the product’s
-        major performance and durability improvements through cleaner storytelling and a conversion-focused front-end
-        build.
+        major performance and durability improvements through cleaner storytelling and a conversion&#8209;focused
+        front&#8209;end build.
       </p>
     </TextBlock>
     <Layout variant="2•1">
-      <Image src="/block/project-20x/hero-1.jpg" alt="" withBorder={true} />
+      <Image src="/block/project-20x/hero-1.jpg" alt="" />
     </Layout>
     <Layout variant="1•2" columnStart="2">
-      <Image src="/block/project-20x/hero-2.jpg" alt="" withBorder={true} />
+      <Image src="/block/project-20x/hero-2.jpg" alt="" />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/project-20x/hardware.jpg" alt="" withBorder={true} />
+      <Image src="/block/project-20x/hardware.jpg" alt="" />
     </Layout>
     <Layout variant="1•1">
-      <Image src="/block/project-20x/content-explorer.jpg" alt="" withBorder={true} />
-      <Image src="/block/project-20x/faq.jpg" alt="" withBorder={true} />
+      <Image src="/block/project-20x/content-explorer.jpg" alt="" />
+      <Image src="/block/project-20x/faq.jpg" alt="" />
     </Layout>
     <Layout variant="2•1" columnStart="2">
-      <Image src="/block/project-20x/footer.jpg" alt="" withBorder={true} />
+      <Image src="/block/project-20x/footer.jpg" alt="" />
     </Layout>
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} heading="Square Handheld & Terminal" contentSize="large">
+    <TextBlock splitColumns={true} company="Block" heading="Square Handheld & Terminal" contentSize="large">
       <p>
         An international launch campaign for Square Handheld alongside a redesigned Square Terminal experience, focused
-        on showcasing the hardware’s refined design, durability, and day-to-day performance across global markets.
+        on showcasing the hardware’s refined design, durability, and day&#8209;to&#8209;day performance across global
+        markets.
       </p>
     </TextBlock>
     <Layout variant="1">
@@ -87,56 +88,56 @@
       </video>
     </Layout>
     <Layout variant="1">
-      <Image src="/block/handheld/handheld-case.jpg" alt="" withBorder={true} />
+      <Image src="/block/handheld/handheld-case.jpg" alt="" />
     </Layout>
     <Layout variant="2•1">
-      <Image src="/block/handheld/handheld-pricing.jpg" alt="" withBorder={true} />
+      <Image src="/block/handheld/handheld-pricing.jpg" alt="" />
     </Layout>
     <Layout variant="1•2" columnStart="2">
-      <Image src="/block/handheld/terminal-pricing.jpg" alt="" withBorder={true} />
+      <Image src="/block/handheld/terminal-pricing.jpg" alt="" />
     </Layout>
     <Layout variant="1•1">
-      <Image src="/block/handheld/handheld-values.jpg" alt="" withBorder={true} />
-      <Image src="/block/handheld/terminal-values.jpg" alt="" withBorder={true} />
+      <Image src="/block/handheld/handheld-values.jpg" alt="" />
+      <Image src="/block/handheld/terminal-values.jpg" alt="" />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/handheld/terminal-compare.jpg" alt="" withBorder={true} />
+      <Image src="/block/handheld/terminal-compare.jpg" alt="" />
     </Layout>
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} heading="Public Web Next" contentSize="large">
+    <TextBlock splitColumns={true} company="Block" heading="Public Web Next" contentSize="large">
       <p>
-        A full redesign of Square’s website, modernizing the front-end system, improving performance and consistency,
-        and creating a scalable foundation for future marketing and product storytelling.
+        A full redesign of Square’s website, modernizing the front&#8209;end system, improving performance and
+        consistency, and creating a scalable foundation for future marketing and product storytelling.
       </p>
     </TextBlock>
 
     <Layout>
-      <Image src="/block/pw-next/hero-1.jpg" alt="" withBorder={true} />
-      <Image src="/block/pw-next/hero-2.jpg" alt="" withBorder={true} />
-      <Image src="/block/pw-next/hero-3.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/hero-1.jpg" alt="" />
+      <Image src="/block/pw-next/hero-2.jpg" alt="" />
+      <Image src="/block/pw-next/hero-3.jpg" alt="" />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/pw-next/content-block.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/content-block.jpg" alt="" />
     </Layout>
     <Layout variant="1•1">
-      <Image src="/block/pw-next/carousel.jpg" alt="" withBorder={true} />
-      <Image src="/block/pw-next/banking.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/carousel.jpg" alt="" />
+      <Image src="/block/pw-next/banking.jpg" alt="" />
     </Layout>
     <Layout variant="2•1">
-      <Image src="/block/pw-next/content-explorer-1.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/content-explorer-1.jpg" alt="" />
     </Layout>
     <Layout variant="1•2" columnStart="2">
-      <Image src="/block/pw-next/content-explorer-2.jpg" alt="" withBorder={true} />
+      <Image src="/block/pw-next/content-explorer-2.jpg" alt="" />
     </Layout>
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} heading="AR/VR" contentSize="large">
+    <TextBlock splitColumns={true} company="Block" heading="AR Experiences" contentSize="large">
       <p>
         Launched AR hardware experiences so sellers could place Square devices in their own space and evaluate
-        real-world size, fit, and setup before purchase.
+        real&#8209;world size, fit, and setup before purchase.
       </p>
     </TextBlock>
     <Layout variant="2•1">
@@ -149,17 +150,17 @@
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} heading="Upgrade" contentSize="large">
+    <TextBlock splitColumns={true} company="Block" heading="Upgrade" contentSize="large">
       <p>
         An international hardware campaign featuring Square Register, Square Stand, and Square Terminal, designed to
-        highlight the premium look, feel, and performance of Square point-of-sale devices.
+        highlight the premium look, feel, and performance of Square point&#8209;of&#8209;sale devices.
       </p>
     </TextBlock>
     <Layout variant="1">
-      <Image src="/block/upgrade/family.jpg" alt="" />
+      <Image src="/block/upgrade/family.jpg" alt="" withoutBorder={true} />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/upgrade/desktop.jpg" alt="" />
+      <Image src="/block/upgrade/desktop.jpg" alt="" withoutBorder={true} />
     </Layout>
     <Layout columnStart="3">
       <video autoplay loop muted playsinline>

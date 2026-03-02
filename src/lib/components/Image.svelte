@@ -4,12 +4,12 @@
   const {
     src,
     alt,
-    withBorder = false,
+    withoutBorder = false,
     class: className,
   }: {
     src: string;
     alt: string;
-    withBorder?: boolean;
+    withoutBorder?: boolean;
     class?: ClassValue;
   } = $props();
 </script>
@@ -19,7 +19,7 @@
     'Image',
     className,
     {
-      'Image--with-border': withBorder,
+      'Image--without-border': withoutBorder,
     },
   ]}
 >
@@ -29,9 +29,10 @@
 <style lang="scss">
   .Image {
     background-color: var(--color-black);
+    border: 1px solid var(--color-black);
 
-    &--with-border {
-      border: 1px solid var(--color-black);
+    &--without-border {
+      border: none;
     }
   }
 </style>
