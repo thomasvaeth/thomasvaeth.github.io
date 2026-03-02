@@ -24,7 +24,7 @@
 </header>
 
 <style lang="scss">
-  @use '../../styles/tools/config' as config;
+  @use '../../styles/tools/extends';
 
   .Header {
     position: sticky;
@@ -40,33 +40,7 @@
     }
 
     &__link {
-      position: relative;
-
-      font-weight: var(--font-weight-bold);
-      color: var(--color-black);
-
-      &:after {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-
-        height: 2px;
-        width: 100%;
-
-        background-color: var(--color-red);
-        transform: translateY(-50%) scaleX(0);
-        transform-origin: right center;
-        transition: transform 800ms config.$ease-out-expo;
-      }
-
-      &:hover,
-      &:focus-visible {
-        &:after {
-          transform: translateY(-50%) scaleX(1);
-          transform-origin: left center;
-        }
-      }
+      @extend %action-transition;
     }
   }
 </style>

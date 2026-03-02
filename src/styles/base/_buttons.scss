@@ -1,0 +1,26 @@
+//----------------------------------------------
+// Buttons
+//----------------------------------------------
+button {
+  width: auto;
+  margin: var(--space-none);
+  padding: var(--space-none);
+
+  font-family: inherit;
+  font-weight: var(--font-weight-regular);
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  line-height: var(--line-height);
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  text-align: inherit;
+  outline: 0;
+  appearance: none;
+  overflow: visible;
+
+  &::-moz-focus-inner {
+    border: 0;
+    padding: var(--space-none);
+  }
+}

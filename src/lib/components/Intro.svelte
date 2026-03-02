@@ -13,8 +13,12 @@
 
   <TextBlock variant="1•1" columnStart="2" contentSize="extra-large">
     <p>
-      Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna libero, porta eu molestie non, maximus
-      id nibh. In gravida dolor id dolor dapibus, ut imperdiet odio finibus.
+      I build high-traffic, customer-facing websites with a focus on performance, maintainability, and thoughtful user
+      experience
+    </p>
+    <p>
+      My work sits at the intersection of design and engineering, where I turn complex product and marketing goals into
+      scalable front-end systems built for long-term growth
     </p>
   </TextBlock>
 
@@ -29,7 +33,7 @@
   .Intro {
     &__title {
       font-size: calc((100cqw - 2em) / (var(--character-count) * var(--glyph-factor)));
-      line-height: 1;
+      line-height: 1.1;
       text-transform: uppercase;
 
       span {

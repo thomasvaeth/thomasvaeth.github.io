@@ -18,10 +18,11 @@
   <Intro />
 
   <Section>
-    <TextBlock heading="Project 20X" contentSize="large">
+    <TextBlock heading="Growth Surfaces" contentSize="large">
       <p>
-        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna libero, porta eu molestie non, maximus
-        id nibh. In gravida dolor id dolor dapibus, ut imperdiet odio finibus.
+        A redesign of Square’s website launched in parallel with Square Register, focused on clarifying the product’s
+        major performance and durability improvements through cleaner storytelling and a conversion-focused front-end
+        build
       </p>
     </TextBlock>
     <Layout variant="2•1">
@@ -45,8 +46,8 @@
   <Section>
     <TextBlock heading="Square Handheld & Terminal" contentSize="large">
       <p>
-        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna libero, porta eu molestie non, maximus
-        id nibh. In gravida dolor id dolor dapibus, ut imperdiet odio finibus.
+        An international launch campaign for Square Handheld alongside a redesigned Square Terminal experience, focused
+        on showcasing the hardware’s refined design, durability, and day-to-day performance across global markets
       </p>
     </TextBlock>
     <Layout variant="1">
@@ -75,8 +76,8 @@
   <Section>
     <TextBlock heading="Public Web Next" contentSize="large">
       <p>
-        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna libero, porta eu molestie non, maximus
-        id nibh. In gravida dolor id dolor dapibus, ut imperdiet odio finibus.
+        A full redesign of Square’s website, modernizing the front-end system, improving performance and consistency,
+        and creating a scalable foundation for future marketing and product storytelling
       </p>
     </TextBlock>
 
@@ -103,8 +104,8 @@
   <Section>
     <TextBlock heading="AR/VR" contentSize="large">
       <p>
-        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna libero, porta eu molestie non, maximus
-        id nibh. In gravida dolor id dolor dapibus, ut imperdiet odio finibus.
+        Launched AR hardware experiences so sellers could place Square devices in their own space and evaluate
+        real-world size, fit, and setup before purchase
       </p>
     </TextBlock>
     <Layout variant="2•1">
@@ -119,8 +120,8 @@
   <Section>
     <TextBlock heading="Upgrade" contentSize="large">
       <p>
-        Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna libero, porta eu molestie non, maximus
-        id nibh. In gravida dolor id dolor dapibus, ut imperdiet odio finibus.
+        An international hardware campaign featuring Square Register, Square Stand, and Square Terminal, designed to
+        highlight the premium look, feel, and performance of Square point-of-sale devices
       </p>
     </TextBlock>
     <Layout variant="1">

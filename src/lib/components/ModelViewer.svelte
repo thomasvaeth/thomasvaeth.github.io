@@ -45,10 +45,15 @@
     shadow-intensity="1"
     touch-action="pan-y"
     tabindex="-1"
-  ></model-viewer>
+  >
+    <button slot="ar-button" class="ModelViewer__button"> View in your space </button>
+  </model-viewer>
 </div>
 
 <style lang="scss">
+  @use '../../styles/tools/extends';
+  @use '../../styles/tools/mixins-media' as media;
+
   .ModelViewer {
     position: relative;
 
@@ -61,9 +66,24 @@
       padding-top: 80%;
     }
 
+    &__button {
+      @extend %action-transition;
+
+      position: absolute;
+      left: 50%;
+      bottom: 0.5rem;
+
+      cursor: pointer;
+      transform: translateX(-50%);
+
+      @include media.at('small') {
+        bottom: 1rem;
+      }
+    }
+
     model-viewer {
-      --progress-bar-height: 0px;
-      // --progress-bar-color: var(--color-black);
+      --progress-bar-height: 4px;
+      --progress-bar-color: var(--color-black);
 
       position: absolute;
       top: 0;
