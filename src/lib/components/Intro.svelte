@@ -7,8 +7,8 @@
 
 <Section class="Intro">
   <h1 class="Intro__title">
-    <span>Thomas</span>
-    <span class="Intro__last">Vaeth</span>
+    <span class="Intro__line Intro__line--thomas">Thomas</span>
+    <span class="Intro__line Intro__line--vaeth">Vaeth</span>
   </h1>
 
   <TextBlock variant="1•1" columnStart="2" contentSize="extra-large">
@@ -32,21 +32,25 @@
 <style lang="scss">
   .Intro {
     &__title {
-      font-size: calc((100cqw - 2em) / (var(--character-count) * var(--glyph-factor)));
-      line-height: 1.1;
+      line-height: 0.8;
+      text-align: center;
       text-transform: uppercase;
+    }
 
-      span {
-        display: block;
+    &__line {
+      display: block;
+
+      &--thomas {
+        font-size: calc((min(100vw, var(--max-width)) - (var(--space-medium) * 2)) / (7 * var(--glyph-factor)));
+      }
+
+      &--vaeth {
+        font-size: calc((min(100vw, var(--max-width)) - (var(--space-medium) * 2)) / (6 * var(--glyph-factor)));
       }
     }
 
-    &__last {
-      text-align: right;
-    }
-
     &__figure {
-      padding: var(--space-component);
+      padding: var(--space-medium);
 
       background-color: var(--color-black);
     }
@@ -54,7 +58,6 @@
 
   :global {
     .Intro {
-      --character-count: 12;
       --glyph-factor: 0.6;
 
       &__img {

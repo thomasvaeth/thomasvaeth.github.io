@@ -4,11 +4,9 @@
 // Spacing
 //--------------------------------------------
 :root {
+  --space-large: 4rem;
+  --space-medium: 2rem;
+  --space-small: 1rem;
   --space-none: 0;
   --space-auto: auto;
-  --space-component: 1rem;
-
-  @include media.at('small') {
-    --space-component: 2rem;
-  }
 }

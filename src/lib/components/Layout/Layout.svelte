@@ -28,10 +28,11 @@
   .Layout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--space-component);
+    gap: var(--space-small);
 
     @include media.at('medium') {
       grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-medium);
     }
 
     &--two-one {

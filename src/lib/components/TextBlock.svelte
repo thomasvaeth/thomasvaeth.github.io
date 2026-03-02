@@ -56,6 +56,24 @@
     }
   }
 
+  :global {
+    .TextBlock {
+      margin-bottom: var(--space-small);
+
+      @include media.at('medium') {
+        margin-bottom: var(--space-none);
+      }
+
+      &.Layout {
+        gap: var(--space-small);
+
+        @include media.at('medium') {
+          gap: var(--space-medium);
+        }
+      }
+    }
+  }
+
   :global(.TextBlock--split-columns) {
     .TextBlock {
       &__heading {
