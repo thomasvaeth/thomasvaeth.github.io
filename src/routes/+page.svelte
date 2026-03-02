@@ -57,20 +57,20 @@
       </p>
     </TextBlock>
     <Layout variant="2•1">
-      <Image src="/block/project-20x/hero-1.jpg" alt="" />
+      <Image src="/block/project-20x/hero-1.jpg" alt="Payments hero" />
     </Layout>
     <Layout variant="1•2" columnStart="2">
-      <Image src="/block/project-20x/hero-2.jpg" alt="" />
+      <Image src="/block/project-20x/hero-2.jpg" alt="Tap to pay on iPhone hero" />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/project-20x/hardware.jpg" alt="" />
+      <Image src="/block/project-20x/hardware.jpg" alt="Hardware devies" />
     </Layout>
     <Layout variant="1•1">
-      <Image src="/block/project-20x/content-explorer.jpg" alt="" />
-      <Image src="/block/project-20x/faq.jpg" alt="" />
+      <Image src="/block/project-20x/content-explorer.jpg" alt="Content explorer" />
+      <Image src="/block/project-20x/faq.jpg" alt="FAQ" />
     </Layout>
     <Layout variant="2•1" columnStart="2">
-      <Image src="/block/project-20x/footer.jpg" alt="" />
+      <Image src="/block/project-20x/footer.jpg" alt="Footer with closing call to action and form" />
     </Layout>
   </Section>
 
@@ -88,20 +88,20 @@
       </video>
     </Layout>
     <Layout variant="1">
-      <Image src="/block/handheld/handheld-case.jpg" alt="" />
+      <Image src="/block/handheld/handheld-case.jpg" alt="Handheld case" />
     </Layout>
     <Layout variant="2•1">
-      <Image src="/block/handheld/handheld-pricing.jpg" alt="" />
+      <Image src="/block/handheld/handheld-pricing.jpg" alt="Handheld pricing" />
     </Layout>
     <Layout variant="1•2" columnStart="2">
-      <Image src="/block/handheld/terminal-pricing.jpg" alt="" />
+      <Image src="/block/handheld/terminal-pricing.jpg" alt="Terminal pricing" />
     </Layout>
     <Layout variant="1•1">
-      <Image src="/block/handheld/handheld-values.jpg" alt="" />
-      <Image src="/block/handheld/terminal-values.jpg" alt="" />
+      <Image src="/block/handheld/handheld-values.jpg" alt="Handheld value proposition cards" />
+      <Image src="/block/handheld/terminal-values.jpg" alt="Terminal value proposition cards" />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/handheld/terminal-compare.jpg" alt="" />
+      <Image src="/block/handheld/terminal-compare.jpg" alt="Portable hardware comparison" />
     </Layout>
   </Section>
 
@@ -114,22 +114,22 @@
     </TextBlock>
 
     <Layout>
-      <Image src="/block/pw-next/hero-1.jpg" alt="" />
-      <Image src="/block/pw-next/hero-2.jpg" alt="" />
-      <Image src="/block/pw-next/hero-3.jpg" alt="" />
+      <Image src="/block/pw-next/hero-1.jpg" alt="Square for Services hero" />
+      <Image src="/block/pw-next/hero-2.jpg" alt="Square for Barbershops hero" />
+      <Image src="/block/pw-next/hero-3.jpg" alt="Websites hero" />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/pw-next/content-block.jpg" alt="" />
+      <Image src="/block/pw-next/content-block.jpg" alt="Content block" />
     </Layout>
     <Layout variant="1•1">
-      <Image src="/block/pw-next/carousel.jpg" alt="" />
-      <Image src="/block/pw-next/banking.jpg" alt="" />
+      <Image src="/block/pw-next/carousel.jpg" alt="Carousel" />
+      <Image src="/block/pw-next/banking.jpg" alt="Banking services" />
     </Layout>
     <Layout variant="2•1">
-      <Image src="/block/pw-next/content-explorer-1.jpg" alt="" />
+      <Image src="/block/pw-next/content-explorer-1.jpg" alt="Content explorer" />
     </Layout>
     <Layout variant="1•2" columnStart="2">
-      <Image src="/block/pw-next/content-explorer-2.jpg" alt="" />
+      <Image src="/block/pw-next/content-explorer-2.jpg" alt="Content explorer" />
     </Layout>
   </Section>
 
@@ -157,10 +157,10 @@
       </p>
     </TextBlock>
     <Layout variant="1">
-      <Image src="/block/upgrade/family.jpg" alt="" withoutBorder={true} />
+      <Image src="/block/upgrade/family.jpg" alt="Upgrade hero" withoutBorder={true} />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/upgrade/desktop.jpg" alt="" withoutBorder={true} />
+      <Image src="/block/upgrade/desktop.jpg" alt="Upgrade hardware device cards" withoutBorder={true} />
     </Layout>
     <Layout columnStart="3">
       <video autoplay loop muted playsinline>
