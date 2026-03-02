@@ -29,8 +29,8 @@
 <div class="ModelViewer">
   <model-viewer
     alt="Square {title}"
-    src="/block/{title.toLowerCase()}.glb"
-    ios-src="/block/{title.toLowerCase()}.usdz"
+    src="/block/ar/{title.toLowerCase()}.glb"
+    ios-src="/block/ar/{title.toLowerCase()}.usdz"
     ar
     auto-rotate
     auto-rotate-delay="0"
