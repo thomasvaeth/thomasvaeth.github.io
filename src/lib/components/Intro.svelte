@@ -13,12 +13,12 @@
 
   <TextBlock variant="1•1" columnStart="2" contentSize="extra-large">
     <p>
-      I build high-traffic, customer-facing websites with a focus on performance, maintainability, and thoughtful user
-      experience
+      I build high-traffic, customer-facing digital products with a focus on performance, maintainability, and
+      thoughtful user experience.
     </p>
     <p>
       My work sits at the intersection of design and engineering, where I turn complex product and marketing goals into
-      scalable front-end systems built for long-term growth
+      scalable front-end systems built for long-term growth.
     </p>
   </TextBlock>
 

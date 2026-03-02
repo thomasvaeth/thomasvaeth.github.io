@@ -22,7 +22,7 @@
       <p>
         A redesign of Square’s website launched in parallel with Square Register, focused on clarifying the product’s
         major performance and durability improvements through cleaner storytelling and a conversion-focused front-end
-        build
+        build.
       </p>
     </TextBlock>
     <Layout variant="2•1">
@@ -47,7 +47,7 @@
     <TextBlock heading="Square Handheld & Terminal" contentSize="large">
       <p>
         An international launch campaign for Square Handheld alongside a redesigned Square Terminal experience, focused
-        on showcasing the hardware’s refined design, durability, and day-to-day performance across global markets
+        on showcasing the hardware’s refined design, durability, and day-to-day performance across global markets.
       </p>
     </TextBlock>
     <Layout variant="1">
@@ -77,7 +77,7 @@
     <TextBlock heading="Public Web Next" contentSize="large">
       <p>
         A full redesign of Square’s website, modernizing the front-end system, improving performance and consistency,
-        and creating a scalable foundation for future marketing and product storytelling
+        and creating a scalable foundation for future marketing and product storytelling.
       </p>
     </TextBlock>
 
@@ -105,7 +105,7 @@
     <TextBlock heading="AR/VR" contentSize="large">
       <p>
         Launched AR hardware experiences so sellers could place Square devices in their own space and evaluate
-        real-world size, fit, and setup before purchase
+        real-world size, fit, and setup before purchase.
       </p>
     </TextBlock>
     <Layout variant="2•1">
@@ -121,7 +121,7 @@
     <TextBlock heading="Upgrade" contentSize="large">
       <p>
         An international hardware campaign featuring Square Register, Square Stand, and Square Terminal, designed to
-        highlight the premium look, feel, and performance of Square point-of-sale devices
+        highlight the premium look, feel, and performance of Square point-of-sale devices.
       </p>
     </TextBlock>
     <Layout variant="1">
