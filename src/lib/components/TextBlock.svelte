@@ -6,19 +6,30 @@
   const {
     variant = '1•1•1',
     columnStart = 'auto',
+    splitColumns = false,
     heading = '',
     contentSize = 'regular',
     children,
   }: {
     variant?: LayoutProps['variant'];
     columnStart?: LayoutProps['columnStart'];
+    splitColumns?: boolean;
     heading?: string;
     contentSize?: 'regular' | 'large' | 'extra-large';
     children: Snippet;
   } = $props();
 </script>
 
-<Layout class="TextBlock" {variant} {columnStart}>
+<Layout
+  class={[
+    'TextBlock',
+    {
+      'TextBlock--split-columns': splitColumns,
+    },
+  ]}
+  {variant}
+  {columnStart}
+>
   {#if heading}
     <h2 class="TextBlock__heading">
       {heading}
@@ -31,6 +42,8 @@
 </Layout>
 
 <style lang="scss">
+  @use '../../styles/tools/mixins-media' as media;
+
   .TextBlock {
     &__content {
       &--large {
@@ -39,6 +52,22 @@
 
       &--extra-large {
         font-size: 1.5rem;
+      }
+    }
+  }
+
+  :global(.TextBlock--split-columns) {
+    .TextBlock {
+      &__heading {
+        @include media.at('medium') {
+          grid-column: 1;
+        }
+      }
+
+      &__content {
+        @include media.at('medium') {
+          grid-column: 3;
+        }
       }
     }
   }

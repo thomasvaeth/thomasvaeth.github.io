@@ -49,7 +49,7 @@
   <Intro />
 
   <Section>
-    <TextBlock heading="Growth Surfaces" contentSize="large">
+    <TextBlock splitColumns={true} heading="Growth Surfaces" contentSize="large">
       <p>
         A redesign of Square’s website launched in parallel with Square Register, focused on clarifying the product’s
         major performance and durability improvements through cleaner storytelling and a conversion-focused front-end
@@ -75,7 +75,7 @@
   </Section>
 
   <Section>
-    <TextBlock heading="Square Handheld & Terminal" contentSize="large">
+    <TextBlock splitColumns={true} heading="Square Handheld & Terminal" contentSize="large">
       <p>
         An international launch campaign for Square Handheld alongside a redesigned Square Terminal experience, focused
         on showcasing the hardware’s refined design, durability, and day-to-day performance across global markets.
@@ -105,7 +105,7 @@
   </Section>
 
   <Section>
-    <TextBlock heading="Public Web Next" contentSize="large">
+    <TextBlock splitColumns={true} heading="Public Web Next" contentSize="large">
       <p>
         A full redesign of Square’s website, modernizing the front-end system, improving performance and consistency,
         and creating a scalable foundation for future marketing and product storytelling.
@@ -133,7 +133,7 @@
   </Section>
 
   <Section>
-    <TextBlock heading="AR/VR" contentSize="large">
+    <TextBlock splitColumns={true} heading="AR/VR" contentSize="large">
       <p>
         Launched AR hardware experiences so sellers could place Square devices in their own space and evaluate
         real-world size, fit, and setup before purchase.
@@ -149,7 +149,7 @@
   </Section>
 
   <Section>
-    <TextBlock heading="Upgrade" contentSize="large">
+    <TextBlock splitColumns={true} heading="Upgrade" contentSize="large">
       <p>
         An international hardware campaign featuring Square Register, Square Stand, and Square Terminal, designed to
         highlight the premium look, feel, and performance of Square point-of-sale devices.
