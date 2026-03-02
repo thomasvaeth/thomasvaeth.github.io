@@ -25,12 +25,7 @@
     </h2>
   {/if}
 
-  <div
-    class={[
-      'TextBlock__content',
-      contentSize !== 'regular' && `TextBlock__content--${contentSize}`,
-    ]}
-  >
+  <div class={['TextBlock__content', contentSize !== 'regular' && `TextBlock__content--${contentSize}`]}>
     {@render children?.()}
   </div>
 </Layout>

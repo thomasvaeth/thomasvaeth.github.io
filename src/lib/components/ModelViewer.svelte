@@ -39,9 +39,7 @@
     disable-tap
     disable-zoom
     interaction-prompt="none"
-    orientation={title === 'Handheld'
-      ? '-15deg 15deg 180deg'
-      : '0deg 0deg 0deg'}
+    orientation={title === 'Handheld' ? '-15deg 15deg 180deg' : '0deg 0deg 0deg'}
     reveal="auto"
     rotation-per-second={rotationPerSecond}
     shadow-intensity="1"
@@ -55,8 +53,6 @@
     position: relative;
 
     background-color: var(--color-gray);
-    border-radius: var(--border-radius);
-    overflow: hidden;
 
     &:before {
       content: '';

@@ -13,9 +13,8 @@
 
   <TextBlock variant="1•1" columnStart="2" contentSize="extra-large">
     <p>
-      Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna
-      libero, porta eu molestie non, maximus id nibh. In gravida dolor id dolor
-      dapibus, ut imperdiet odio finibus.
+      Aenean et tortor convallis, placerat lacus a, congue lacus. Quisque magna libero, porta eu molestie non, maximus
+      id nibh. In gravida dolor id dolor dapibus, ut imperdiet odio finibus.
     </p>
   </TextBlock>
 
@@ -29,9 +28,7 @@
 <style lang="scss">
   .Intro {
     &__title {
-      font-size: calc(
-        (100cqw - 2em) / (var(--character-count) * var(--glyph-factor))
-      );
+      font-size: calc((100cqw - 2em) / (var(--character-count) * var(--glyph-factor)));
       line-height: 1;
       text-transform: uppercase;
 

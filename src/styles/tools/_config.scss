@@ -11,9 +11,7 @@
 // Fonts
 //----------------------------------------------
 :root {
-  --font:
-    'Px Grotesk', -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-    sans-serif;
+  --font: 'Px Grotesk', -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
@@ -54,6 +52,7 @@ $mq-xxxlarge: 160em;
   --color-white-rgb: 255, 255, 255;
   --color-gray: #f8f8f8;
   --color-red: #f00;
+  --color-transparent: transparent;
 }
 
 //----------------------------------------------
@@ -63,13 +62,6 @@ $max-width: 90rem;
 
 :root {
   --max-width: #{$max-width};
-}
-
-//----------------------------------------------
-// Border radius
-//----------------------------------------------
-:root {
-  --border-radius: 1rem;
 }
 
 //----------------------------------------------

@@ -15,12 +15,7 @@
   <ul class="Header__list">
     {#each links as { title, link } (link)}
       <li>
-        <a
-          class="Header__link"
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a class="Header__link" href={link} target="_blank" rel="noopener noreferrer">
           {title}
         </a>
       </li>

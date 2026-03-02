@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { LayoutProps } from './Layout.types';
 
+  // prettier-ignore
   const {
     variant = '1•1•1',
     columnStart = 'auto',
@@ -17,10 +18,7 @@
   };
 </script>
 
-<div
-  class={['Layout', variantClassMap[variant], className]}
-  style:--layout-column-start={columnStart}
->
+<div class={['Layout', variantClassMap[variant], className]} style:--layout-column-start={columnStart}>
   {@render children?.()}
 </div>
 
