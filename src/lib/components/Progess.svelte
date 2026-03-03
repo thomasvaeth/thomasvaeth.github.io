@@ -19,26 +19,6 @@
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<div class="Progess" aria-hidden="true">
-  <div class="Progess__bar" style="--progress: {progress}%"></div>
+<div class="fixed top-0 left-0 z-[999] w-full pointer-events-none" aria-hidden="true">
+  <div class="h-1 w-[var(--progress)] bg-[var(--color-red)]" style:--progress="{progress}%"></div>
 </div>
-
-<style lang="scss">
-  .Progess {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-
-    width: 100%;
-
-    pointer-events: none;
-
-    &__bar {
-      height: 4px;
-      width: var(--progress);
-
-      background-color: var(--color-red);
-    }
-  }
-</style>

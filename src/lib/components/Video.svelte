@@ -35,12 +35,6 @@
   });
 </script>
 
-<video bind:this={videoElement} class="Video" loop muted playsinline preload="metadata">
+<video bind:this={videoElement} class="border border-black" loop muted playsinline preload="metadata">
   <source {src} type="video/mp4" />
 </video>
-
-<style lang="scss">
-  .Video {
-    border: 1px solid var(--color-black);
-  }
-</style>
