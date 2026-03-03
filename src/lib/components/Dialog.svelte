@@ -40,67 +40,45 @@
       return;
     }
 
-    document.documentElement.style.overflow = open ? 'hidden' : '';
-    document.body.style.overflow = open ? 'hidden' : '';
+    document.documentElement.classList.toggle('overflow-hidden', open);
+    document.body.classList.toggle('overflow-hidden', open);
 
     return () => {
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
+      document.documentElement.classList.remove('overflow-hidden');
+      document.body.classList.remove('overflow-hidden');
     };
   });
 </script>
 
-<dialog bind:this={dialogElement} id="dialog" class={['Dialog', className]} onclose={handleClose}>
-  <div class="Dialog__header">
+<dialog
+  bind:this={dialogElement}
+  id="dialog"
+  class={[
+    'h-full',
+    'w-full',
+    'max-h-full',
+    'max-w-full',
+    'm-auto',
+    'p-0',
+    'overflow-x-hidden',
+    'overflow-y-auto',
+    'overscroll-contain',
+    'border',
+    'border-black',
+    'md:h-auto',
+    'md:max-h-[calc(100dvh-var(--spacing)*8)]',
+    'md:max-w-[calc(var(--max-width)/2)]',
+    'backdrop:bg-black/35',
+    'backdrop:backdrop-blur-[1px]',
+    className,
+  ]}
+  onclose={handleClose}
+>
+  <div class="sticky top-4 z-[99] my-4 mr-8 ml-auto w-fit">
     <form method="dialog">
-      <button class="Dialog__close" type="submit">Close</button>
+      <button class="action-link" type="submit">Close</button>
     </form>
   </div>
 
   {@render children?.()}
 </dialog>
-
-<style lang="scss">
-  @use '../../styles/tools/extends';
-  @use '../../styles/tools/mixins-media' as media;
-
-  .Dialog {
-    height: 100%;
-    width: 100%;
-    max-height: 100%;
-    max-width: 100%;
-    padding: var(--space-none);
-
-    overflow-y: auto;
-    overflow-x: hidden;
-    overscroll-behavior: contain;
-    -webkit-overflow-scrolling: touch;
-
-    border: 1px solid var(--color-black);
-
-    @include media.at('small') {
-      height: auto;
-      max-height: calc(100dvh - (var(--space-medium) * 2));
-      max-width: calc(var(--max-width) / 2);
-    }
-
-    &::backdrop {
-      background-color: rgba(var(--color-black-rgb), 0.35);
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(1px);
-    }
-
-    &__header {
-      position: sticky;
-      top: var(--space-small);
-      z-index: 99;
-
-      width: fit-content;
-      margin: var(--space-small) var(--space-medium) var(--space-small) var(--space-auto);
-    }
-
-    &__close {
-      @extend %action-transition;
-    }
-  }
-</style>

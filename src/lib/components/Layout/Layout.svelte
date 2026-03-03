@@ -10,61 +10,25 @@
   }: LayoutProps = $props();
 
   const variantClassMap: Record<NonNullable<LayoutProps['variant']>, string> = {
-    '1•1•1': '',
-    '2•1': 'Layout--two-one',
-    '1•2': 'Layout--one-two',
-    '1•1': 'Layout--one-one',
-    '1': 'Layout--one',
+    '1•1•1': 'md:grid-cols-3',
+    '2•1': 'md:grid-cols-3 md:[&>*:first-child]:[grid-column-end:span_2]',
+    '1•2': 'md:grid-cols-3 md:[&>*:last-child]:[grid-column-end:span_2]',
+    '1•1': 'md:grid-cols-2',
+    '1': 'md:grid-cols-1',
   };
 </script>
 
-<div class={['Layout', variantClassMap[variant], className]} style:--layout-column-start={columnStart}>
+<div
+  class={[
+    'grid',
+    'grid-cols-1',
+    'gap-4',
+    'md:gap-8',
+    'md:[&>*:first-child]:col-start-[var(--layout-column-start)]',
+    variantClassMap[variant],
+    className,
+  ]}
+  style:--layout-column-start={columnStart}
+>
   {@render children?.()}
 </div>
-
-<style lang="scss">
-  @use '../../../styles/tools/mixins-media' as media;
-
-  .Layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: var(--space-small);
-
-    @include media.at('medium') {
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-medium);
-    }
-
-    &--two-one {
-      & > :global(*:first-child) {
-        @include media.at('medium') {
-          grid-column-end: span 2;
-        }
-      }
-    }
-
-    &--one-two {
-      & > :global(*:last-child) {
-        @include media.at('medium') {
-          grid-column-end: span 2;
-        }
-      }
-    }
-
-    &--one-one {
-      @include media.at('medium') {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    &--one {
-      grid-template-columns: 1fr;
-    }
-
-    & > :global(*:first-child) {
-      @include media.at('medium') {
-        grid-column-start: var(--layout-column-start);
-      }
-    }
-  }
-</style>

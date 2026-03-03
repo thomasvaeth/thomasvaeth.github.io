@@ -40,6 +40,7 @@
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/kit": "^2.53.4",
     "@sveltejs/vite-plugin-svelte": "^6.2.4",
+    "@tailwindcss/vite": "^4.2.1",
     "@typescript-eslint/parser": "^8.56.1",
     "eslint": "^10.0.2",
     "eslint-config-prettier": "^10.1.8",
@@ -50,9 +51,9 @@
     "netlify-cli": "^24.0.1",
     "prettier": "^3.8.1",
     "prettier-plugin-svelte": "^3.5.0",
-    "sass-embedded": "^1.97.3",
     "svelte": "^5.53.5",
     "svelte-check": "^4.4.4",
+    "tailwindcss": "^4.2.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
   },

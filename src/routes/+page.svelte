@@ -71,7 +71,7 @@
       <Image src="/block/project-20x/content-explorer.jpg" alt="Content explorer" />
       <Image src="/block/project-20x/faq.jpg" alt="FAQ" />
     </Layout>
-    <Layout variant="2•1" columnStart="2">
+    <Layout variant="1•2" columnStart="2">
       <Image src="/block/project-20x/footer.jpg" alt="Footer with closing call to action and form" />
     </Layout>
   </Section>

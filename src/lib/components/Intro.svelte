@@ -5,73 +5,30 @@
   import TextBlock from '$lib/components/TextBlock.svelte';
 </script>
 
-<Section class="Intro">
-  <h1 class="Intro__title">
-    <span class="Intro__line">Thomas</span>
-    <span class="Intro__line">Vaeth</span>
+<Section class="[--glyph-factor:0.6]">
+  <h1
+    class="font-bold text-center leading-[0.92] uppercase sm:leading-[0.86] md:leading-[0.8]"
+    style:font-size="calc((min(100vw, var(--max-width)) - (var(--spacing) * 16)) / (7 * var(--glyph-factor)))"
+  >
+    <span class="block">Thomas</span>
+    <span class="block">Vaeth</span>
   </h1>
 
-  <TextBlock variant="1•1" columnStart="2" contentSize="extra-large">
+  <TextBlock variant="1" class="lg:grid-cols-2 lg:[&>*:first-child]:col-start-2" contentSize="extra-large">
     <p>
-      I am a Design Engineer who builds high&#8209;traffic, customer&#8209;facing products with a focus on performance
-      and long-term maintainability.
+      I build high&#8209;traffic, customer&#8209;facing products with a focus on performance and long-term
+      maintainability.
     </p>
-    <p>
-      I like working where design meets engineering, turning complex ideas into clean, flexible UI systems that can
-      evolve over time.
+    <p class="mt-4">
+      I like working where design meets engineering, turning complex ideas into clean, flexible front&#8209;end systems
+      that can evolve over time.
     </p>
   </TextBlock>
 
-  <Layout class="Intro__headshot" variant="1" columnStart="2">
-    <Image class="Intro__img" src="/me.jpg" alt="Thomas Vaeth" />
+  <Layout
+    variant="1"
+    class="md:grid-cols-2 lg:grid-cols-3 md:[&>*:first-child]:col-start-1 lg:[&>*:first-child]:col-start-2"
+  >
+    <Image class="p-8 grayscale" src="/me.jpg" alt="Thomas Vaeth" />
   </Layout>
 </Section>
-
-<style lang="scss">
-  @use '../../styles/tools/mixins-media' as media;
-
-  .Intro {
-    &__title {
-      font-size: calc((min(100vw, var(--max-width)) - (var(--space-medium) * 2)) / (7 * var(--glyph-factor)));
-      line-height: 0.92;
-      text-align: center;
-      text-transform: uppercase;
-
-      @include media.at('small') {
-        line-height: 0.86;
-      }
-
-      @include media.at('medium') {
-        line-height: 0.8;
-      }
-    }
-
-    &__line {
-      display: block;
-    }
-  }
-
-  :global {
-    .Intro {
-      --glyph-factor: 0.6;
-
-      &__headshot {
-        &.Layout {
-          @include media.at('small') {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
-          @include media.at('medium') {
-            grid-template-columns: repeat(3, 1fr);
-          }
-        }
-      }
-
-      &__img {
-        padding: var(--space-medium);
-
-        filter: grayscale(1);
-      }
-    }
-  }
-</style>
