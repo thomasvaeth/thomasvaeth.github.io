@@ -22,7 +22,7 @@
     </p>
   </TextBlock>
 
-  <Layout class="Intro__headshot" columnStart="2">
+  <Layout class="Intro__headshot" variant="1" columnStart="2">
     <Image class="Intro__img" src="/me.jpg" alt="Thomas Vaeth" />
   </Layout>
 </Section>
