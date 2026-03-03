@@ -8,6 +8,7 @@
   import Progess from '$lib/components/Progess.svelte';
   import Section from '$lib/components/Section.svelte';
   import TextBlock from '$lib/components/TextBlock.svelte';
+  import Video from '$lib/components/Video.svelte';
 </script>
 
 <svelte:head>
@@ -83,9 +84,7 @@
       </p>
     </TextBlock>
     <Layout variant="1">
-      <video autoplay loop muted playsinline>
-        <source src="/block/handheld/handheld.mp4" type="video/mp4" />
-      </video>
+      <Video src="/block/handheld/handheld.mp4" />
     </Layout>
     <Layout variant="1">
       <Image src="/block/handheld/handheld-case.jpg" alt="Handheld case" />
@@ -157,15 +156,13 @@
       </p>
     </TextBlock>
     <Layout variant="1">
-      <Image src="/block/upgrade/family.jpg" alt="Upgrade hero" withoutBorder={true} />
+      <Image src="/block/upgrade/family.jpg" alt="Upgrade hero" />
     </Layout>
     <Layout variant="1">
-      <Image src="/block/upgrade/desktop.jpg" alt="Upgrade hardware device cards" withoutBorder={true} />
+      <Image src="/block/upgrade/desktop.jpg" alt="Upgrade hardware device cards" />
     </Layout>
     <Layout columnStart="3">
-      <video autoplay loop muted playsinline>
-        <source src="/block/upgrade/register.mp4" type="video/mp4" />
-      </video>
+      <Video src="/block/upgrade/register.mp4" />
     </Layout>
   </Section>
 </main>

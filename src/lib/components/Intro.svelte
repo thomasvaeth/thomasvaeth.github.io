@@ -23,9 +23,7 @@
   </TextBlock>
 
   <Layout class="Intro__headshot" columnStart="2">
-    <figure class="Intro__figure">
-      <Image class="Intro__img" src="/me.jpg" alt="Thomas Vaeth" />
-    </figure>
+    <Image class="Intro__img" src="/me.jpg" alt="Thomas Vaeth" />
   </Layout>
 </Section>
 
@@ -51,12 +49,6 @@
     &__line {
       display: block;
     }
-
-    &__figure {
-      padding: var(--space-medium);
-
-      background-color: var(--color-black);
-    }
   }
 
   :global {
@@ -76,6 +68,8 @@
       }
 
       &__img {
+        padding: var(--space-medium);
+
         filter: grayscale(1);
       }
     }
