@@ -1,0 +1,104 @@
+@import 'tailwindcss';
+
+:root {
+  --max-width: 90rem;
+
+  --px-grotesk: 'Px Grotesk', -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --line-height: 1.5;
+
+  --color-gray: #f2f2f2;
+  --color-red: #f00;
+}
+
+@layer base {
+  body {
+    font-family: var(--px-grotesk);
+    line-height: var(--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    color: var(--color-black);
+    background-color: var(--color-gray);
+  }
+
+  #page {
+    max-width: var(--max-width);
+    margin-inline: auto;
+  }
+
+  @media (min-width: 90rem) {
+    #page {
+      border-right: 1px solid var(--color-black);
+      border-left: 1px solid var(--color-black);
+    }
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    line-height: 1.05;
+  }
+
+  button {
+    text-align: inherit;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-red);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    color: var(--color-white);
+    background-color: var(--color-red);
+    text-shadow: none;
+  }
+}
+
+@layer components {
+  .full-width-border {
+    position: relative;
+  }
+
+  .full-width-border:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    height: 1px;
+    width: 100vw;
+
+    background-color: var(--color-black);
+    transform: translateX(-50%);
+  }
+
+  .action-link {
+    position: relative;
+
+    font-weight: var(--font-weight-bold);
+    /* color: var(--color-black); */
+  }
+
+  .action-link:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    height: 2px;
+    width: 100%;
+
+    background-color: var(--color-red);
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right center;
+    transition: transform 800ms cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  .action-link:hover:after,
+  .action-link:focus-visible:after {
+    transform: translateY(-50%) scaleX(1);
+    transform-origin: left center;
+  }
+}

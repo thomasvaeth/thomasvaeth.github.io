@@ -1,0 +1,26 @@
+/**
+ * Family: Px Grotesk
+ *
+ * Regular: 400
+ * Bold:    700
+ */
+
+/* Regular */
+@font-face {
+  font-family: 'Px Grotesk';
+  src:
+    url('./assets/fonts/Px-Grotesk-Regular.woff2') format('woff2'),
+    url('./assets/fonts/Px-Grotesk-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: 'Px Grotesk';
+  src:
+    url('./assets/fonts/Px-Grotesk-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Px-Grotesk-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

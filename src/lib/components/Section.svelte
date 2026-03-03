@@ -11,24 +11,6 @@
   } = $props();
 </script>
 
-<section class={['Section', className]}>
+<section class={['flex', 'flex-col', 'gap-4', 'px-8', 'py-16', 'full-width-border', 'md:gap-8', className]}>
   {@render children?.()}
 </section>
-
-<style lang="scss">
-  @use '../../styles/tools/extends';
-  @use '../../styles/tools/mixins-media' as media;
-
-  .Section {
-    @extend %full-width-border;
-
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-small);
-    padding: var(--space-large) var(--space-medium);
-
-    @include media.at('medium') {
-      gap: var(--space-medium);
-    }
-  }
-</style>

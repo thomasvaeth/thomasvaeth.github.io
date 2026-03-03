@@ -3,8 +3,8 @@
   import { onMount } from 'svelte';
   import Lenis from 'lenis';
 
-  import '../styles/fonts.scss';
-  import '../styles/app.scss';
+  import '../fonts.css';
+  import '../app.css';
 
   const {
     children,

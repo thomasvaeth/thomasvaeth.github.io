@@ -26,8 +26,9 @@
   ></script>
 </svelte:head>
 
-<div class="ModelViewer">
+<div class="relative aspect-[5/4] border border-black bg-white">
   <model-viewer
+    class="absolute inset-0 block h-full w-full [--progress-bar-height:2px] [--progress-bar-color:var(--color-black)]"
     alt="Square {title}"
     src="/block/ar/{title.toLowerCase()}.glb"
     ios-src="/block/ar/{title.toLowerCase()}.usdz"
@@ -46,52 +47,8 @@
     touch-action="pan-y"
     tabindex="-1"
   >
-    <button slot="ar-button" class="ModelViewer__button"> View in your space </button>
+    <button slot="ar-button" class="action-link absolute left-1/2 bottom-2 sm:bottom-4 -translate-x-1/2">
+      View in your space
+    </button>
   </model-viewer>
 </div>
-
-<style lang="scss">
-  @use '../../styles/tools/extends';
-  @use '../../styles/tools/mixins-media' as media;
-
-  .ModelViewer {
-    position: relative;
-
-    background-color: var(--color-white);
-    border: 1px solid var(--color-black);
-
-    &:before {
-      content: '';
-
-      display: block;
-      padding-top: 80%;
-    }
-
-    &__button {
-      @extend %action-transition;
-
-      position: absolute;
-      left: 50%;
-      bottom: 0.5rem;
-
-      cursor: pointer;
-      transform: translateX(-50%);
-
-      @include media.at('small') {
-        bottom: 1rem;
-      }
-    }
-
-    model-viewer {
-      --progress-bar-height: 2px;
-      --progress-bar-color: var(--color-black);
-
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      height: 100%;
-      width: 100%;
-    }
-  }
-</style>

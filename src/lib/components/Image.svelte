@@ -12,13 +12,6 @@
   } = $props();
 </script>
 
-<figure class={['Image', className]}>
+<figure class={['bg-black', 'border', 'border-black', className]}>
   <img {src} {alt} />
 </figure>
-
-<style lang="scss">
-  .Image {
-    background-color: var(--color-black);
-    border: 1px solid var(--color-black);
-  }
-</style>

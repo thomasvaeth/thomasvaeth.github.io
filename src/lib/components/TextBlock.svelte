@@ -1,6 +1,7 @@
 <script lang="ts">
   import Layout from '$lib/components/Layout/Layout.svelte';
   import type { Snippet } from 'svelte';
+  import type { ClassValue } from 'svelte/elements';
   import type { LayoutProps } from '$lib/components/Layout/Layout.types';
 
   const {
@@ -10,6 +11,7 @@
     company = '',
     heading = '',
     contentSize = 'regular',
+    class: className,
     children,
   }: {
     variant?: LayoutProps['variant'];
@@ -18,98 +20,46 @@
     company?: string;
     heading?: string;
     contentSize?: 'regular' | 'large' | 'extra-large';
+    class?: ClassValue;
     children: Snippet;
   } = $props();
 </script>
 
-<Layout
-  class={[
-    'TextBlock',
-    {
-      'TextBlock--split-columns': splitColumns,
-    },
-  ]}
-  {variant}
-  {columnStart}
->
+<Layout class={['mb-4 md:mb-0', className]} {variant} {columnStart}>
   {#if company || heading}
-    <div class="TextBlock__header">
+    <div
+      class={[
+        'flex',
+        'flex-col',
+        'justify-end',
+        {
+          'md:col-span-2': splitColumns,
+        },
+      ]}
+    >
       {#if company}
-        <p class="TextBlock__company">
+        <p class="ml-[0.1em] font-bold uppercase">
           {company}
         </p>
       {/if}
 
       {#if heading}
-        <h2>
+        <h2 class="font-bold">
           {heading}
         </h2>
       {/if}
     </div>
   {/if}
 
-  <div class={['TextBlock__content', contentSize !== 'regular' && `TextBlock__content--${contentSize}`]}>
+  <div
+    class={[
+      {
+        'md:col-start-3': splitColumns,
+        'text-xl': contentSize === 'large',
+        'text-2xl': contentSize === 'extra-large',
+      },
+    ]}
+  >
     {@render children?.()}
   </div>
 </Layout>
-
-<style lang="scss">
-  @use '../../styles/tools/mixins-media' as media;
-
-  .TextBlock {
-    &__header {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
-
-    &__company {
-      // Optical alignment because this is directly above a much larger font-size
-      margin-inline-start: 0.1em;
-      font-weight: var(--font-weight-bold);
-      text-transform: uppercase;
-    }
-
-    &__content {
-      &--large {
-        font-size: 1.25rem;
-      }
-
-      &--extra-large {
-        font-size: 1.5rem;
-      }
-    }
-  }
-
-  :global {
-    .TextBlock {
-      margin-bottom: var(--space-small);
-
-      @include media.at('medium') {
-        margin-bottom: var(--space-none);
-      }
-
-      &.Layout {
-        gap: var(--space-small);
-
-        @include media.at('medium') {
-          gap: var(--space-medium);
-        }
-      }
-    }
-  }
-
-  :global(.TextBlock--split-columns) {
-    .TextBlock__header {
-      @include media.at('medium') {
-        grid-column: 1 / span 2;
-      }
-    }
-
-    .TextBlock__content {
-      @include media.at('medium') {
-        grid-column: 3;
-      }
-    }
-  }
-</style>
