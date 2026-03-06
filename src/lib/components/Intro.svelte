@@ -13,8 +13,8 @@
 
   <TextBlock variant="1•1" columnStart="2" contentSize="extra-large">
     <p>
-      I build high&#8209;traffic, customer&#8209;facing products with a focus on performance and long-term
-      maintainability.
+      I am a Design Engineer who builds high&#8209;traffic, customer&#8209;facing products with a focus on performance
+      and long-term maintainability.
     </p>
     <p>
       I like working where design meets engineering, turning complex ideas into clean, flexible front&#8209;end systems

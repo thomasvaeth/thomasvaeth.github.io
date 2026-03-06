@@ -9,6 +9,9 @@
   import Section from '$lib/components/Section.svelte';
   import TextBlock from '$lib/components/TextBlock.svelte';
   import Video from '$lib/components/Video.svelte';
+
+  const seoDescription =
+    'Thomas Vaeth is a Design Engineer building scalable design systems and high-traffic web platforms with modern frontend architecture and strong UX.';
 </script>
 
 <svelte:head>
@@ -17,26 +20,17 @@
   <meta name="theme-color" content="#ffffff" />
 
   <meta name="author" content="Thomas Vaeth" />
-  <meta
-    name="description"
-    content="Design-minded front-end developer creating scalable, customer-facing web experiences with strong UX, robust design systems, and reliable performance."
-  />
+  <meta name="description" content={seoDescription} />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Thomas Vaeth → Design Engineer" />
   <meta property="og:url" content="https://thomasvaeth.com/" />
   <meta property="og:site_name" content="Thomas Vaeth" />
-  <meta
-    property="og:description"
-    content="Design-minded front-end developer creating scalable, customer-facing web experiences with strong UX, robust design systems, and reliable performance."
-  />
+  <meta property="og:description" content={seoDescription} />
   <meta property="og:image" content="https://thomasvaeth.com/seo.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:description"
-    content="Design-minded front-end developer creating scalable, customer-facing web experiences with strong UX, robust design systems, and reliable performance."
-  />
+  <meta name="twitter:description" content={seoDescription} />
   <meta name="twitter:title" content="Thomas Vaeth → Design Engineer" />
   <meta name="twitter:url" content="https://thomasvaeth.com/" />
   <meta name="twitter:image" content="https://thomasvaeth.com/seo.jpg" />
