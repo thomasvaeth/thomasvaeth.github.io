@@ -85,7 +85,9 @@
     }
 
     &::backdrop {
-      background-color: rgba(var(--color-black-rgb), 0.5);
+      background-color: rgba(var(--color-black-rgb), 0.35);
+      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(1px);
     }
 
     &__header {

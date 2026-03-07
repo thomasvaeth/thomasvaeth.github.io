@@ -34,6 +34,7 @@
 
   const formatMemberRating = (rating: number): string => {
     const normalizedRating = Math.max(0, Math.min(5, Math.round(rating * 2) / 2));
+
     const fullStars = Math.floor(normalizedRating);
     const hasHalfStar = normalizedRating - fullStars >= 0.5;
 
