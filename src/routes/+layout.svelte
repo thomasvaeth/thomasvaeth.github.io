@@ -6,7 +6,6 @@
   import '../styles/fonts.scss';
   import '../styles/app.scss';
 
-  // prettier-ignore
   const {
     children,
   }: {
@@ -14,7 +13,9 @@
   } = $props();
 
   onMount(() => {
-    const lenis = new Lenis();
+    const lenis = new Lenis({
+      prevent: (node) => node.id === 'dialog',
+    });
 
     let frameId = 0;
 

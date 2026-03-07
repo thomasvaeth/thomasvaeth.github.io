@@ -17,8 +17,8 @@
       and long-term maintainability.
     </p>
     <p>
-      I like working where design meets engineering, turning complex ideas into clean, flexible front&#8209;end systems
-      that can evolve over time.
+      I like working where design meets engineering, turning complex ideas into clean, flexible UI systems that can
+      evolve over time.
     </p>
   </TextBlock>
 

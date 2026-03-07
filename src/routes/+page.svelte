@@ -9,6 +9,13 @@
   import Section from '$lib/components/Section.svelte';
   import TextBlock from '$lib/components/TextBlock.svelte';
   import Video from '$lib/components/Video.svelte';
+  import type { PageData } from './$types';
+
+  const {
+    data,
+  }: {
+    data: PageData;
+  } = $props();
 
   const seoDescription =
     'Thomas Vaeth is a Design Engineer building scalable design systems and high-traffic web platforms with modern frontend architecture and strong UX.';
@@ -38,7 +45,7 @@
 
 <Progess />
 
-<Header />
+<Header letterboxdFeed={data.letterboxdFeed} />
 
 <main>
   <Intro />
