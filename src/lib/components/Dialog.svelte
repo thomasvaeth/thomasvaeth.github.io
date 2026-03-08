@@ -27,6 +27,8 @@
     if (open && !dialogElement.open) {
       dialogElement.showModal();
 
+      dialogElement.scrollTop = 0;
+
       return;
     }
 
@@ -40,12 +42,14 @@
       return;
     }
 
-    document.documentElement.style.overflow = open ? 'hidden' : '';
-    document.body.style.overflow = open ? 'hidden' : '';
+    const overflowClassName = 'overflow-hidden';
+
+    document.documentElement.classList.toggle(overflowClassName, open);
+    document.body.classList.toggle(overflowClassName, open);
 
     return () => {
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
+      document.documentElement.classList.remove(overflowClassName);
+      document.body.classList.remove(overflowClassName);
     };
   });
 </script>
@@ -71,12 +75,12 @@
     max-width: 100%;
     padding: var(--space-none);
 
+    background-color: var(--color-gray);
+    border: 1px solid var(--color-black);
     overflow-y: auto;
     overflow-x: hidden;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-
-    border: 1px solid var(--color-black);
 
     @include media.at('small') {
       height: auto;
