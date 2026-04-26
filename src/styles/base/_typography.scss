@@ -4,7 +4,7 @@
 @use '../tools/mixins-media' as media;
 
 :root {
-  font-family: var(--font);
+  font-family: var(--font-body);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height);
   -webkit-font-smoothing: antialiased;
@@ -24,6 +24,7 @@ h2 {
     bottom: var(--space-none);
   }
 
+  font-family: var(--font-heading);
   font-weight: var(--font-weight-bold);
 }
 
