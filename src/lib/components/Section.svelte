@@ -16,16 +16,16 @@
 </section>
 
 <style lang="scss">
-  @use '../../styles/tools/extends';
+  @use '../../styles/tools/mixins' as mixins;
   @use '../../styles/tools/mixins-media' as media;
 
   .Section {
-    @extend %full-width-border;
+    @include mixins.full-width-border($after: true);
 
     display: flex;
     flex-direction: column;
     gap: var(--space-small);
-    padding: var(--space-large) var(--space-medium);
+    padding: calc(var(--space-large) * 2) var(--space-medium) var(--space-large);
 
     @include media.at('medium') {
       gap: var(--space-medium);

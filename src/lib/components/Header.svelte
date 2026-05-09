@@ -176,6 +176,14 @@
   :global {
     .Header {
       &__dialog {
+        .Section {
+          padding-top: var(--space-large);
+
+          &:after {
+            content: normal;
+          }
+        }
+
         .Image {
           filter: grayscale(1);
         }

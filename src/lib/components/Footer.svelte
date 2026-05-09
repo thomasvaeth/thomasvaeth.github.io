@@ -5,14 +5,14 @@
 </footer>
 
 <style lang="scss">
-  @use '../../styles/tools/extends';
+  @use '../../styles/tools/mixins';
 
   .Footer {
-    @extend %full-width-border;
+    @include mixins.full-width-border();
 
     display: flex;
     justify-content: center;
-    padding: 2em;
+    padding: var(--space-medium);
 
     font-weight: var(--font-weight-bold);
   }

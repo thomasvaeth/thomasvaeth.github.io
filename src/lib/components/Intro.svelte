@@ -53,6 +53,14 @@
 
   :global {
     .Intro {
+      &.Section {
+        padding-top: var(--space-large);
+
+        &:after {
+          content: normal;
+        }
+      }
+
       --glyph-factor: 0.6;
 
       &__headshot {
