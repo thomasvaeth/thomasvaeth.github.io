@@ -168,4 +168,4 @@
   </Section>
 </main>
 
-<Footer />
+<Footer spotifyTrack={data.spotifyTrack} />
