@@ -51,7 +51,7 @@
   <Intro />
 
   <Section>
-    <TextBlock splitColumns={true} company="Block" heading="Growth Surfaces" contentSize="large">
+    <TextBlock variant="1•1" company="Block" heading="Growth Surfaces" contentSize="large">
       <p>
         A redesign of Square’s website launched in parallel with Square Register, focused on clarifying the product’s
         major performance and durability improvements through cleaner storytelling and a conversion&#8209;focused
@@ -77,7 +77,7 @@
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} company="Block" heading="Square Handheld & Terminal" contentSize="large">
+    <TextBlock variant="1•1" company="Block" heading="Square Handheld & Terminal" contentSize="large">
       <p>
         An international launch campaign for Square Handheld alongside a redesigned Square Terminal experience, focused
         on showcasing the hardware’s refined design, durability, and day&#8209;to&#8209;day performance across global
@@ -106,7 +106,7 @@
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} company="Block" heading="Public Web Next" contentSize="large">
+    <TextBlock variant="1•1" company="Block" heading="Public Web Next" contentSize="large">
       <p>
         A full redesign of Square’s website, modernizing the front&#8209;end system, improving performance and
         consistency, and creating a scalable foundation for future marketing and product storytelling.
@@ -134,7 +134,7 @@
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} company="Block" heading="AR Experiences" contentSize="large">
+    <TextBlock variant="1•1" company="Block" heading="AR Experiences" contentSize="large">
       <p>
         Launched AR hardware experiences so sellers could place Square devices in their own space and evaluate
         real&#8209;world size, fit, and setup before purchase.
@@ -150,7 +150,7 @@
   </Section>
 
   <Section>
-    <TextBlock splitColumns={true} company="Block" heading="Upgrade" contentSize="large">
+    <TextBlock variant="1•1" company="Block" heading="Upgrade" contentSize="large">
       <p>
         An international hardware campaign featuring Square Register, Square Stand, and Square Terminal, designed to
         highlight the premium look, feel, and performance of Square point&#8209;of&#8209;sale devices.

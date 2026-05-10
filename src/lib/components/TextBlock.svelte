@@ -6,7 +6,6 @@
   const {
     variant = '1•1•1',
     columnStart = 'auto',
-    splitColumns = false,
     company = '',
     heading = '',
     contentSize = 'regular',
@@ -14,7 +13,6 @@
   }: {
     variant?: LayoutProps['variant'];
     columnStart?: LayoutProps['columnStart'];
-    splitColumns?: boolean;
     company?: string;
     heading?: string;
     contentSize?: 'regular' | 'large' | 'extra-large';
@@ -22,16 +20,7 @@
   } = $props();
 </script>
 
-<Layout
-  class={[
-    'TextBlock',
-    {
-      'TextBlock--split-columns': splitColumns,
-    },
-  ]}
-  {variant}
-  {columnStart}
->
+<Layout class="TextBlock" {variant} {columnStart}>
   {#if company || heading}
     <div class="TextBlock__header">
       {#if company}
@@ -95,20 +84,6 @@
         @include media.at('medium') {
           gap: var(--space-medium);
         }
-      }
-    }
-  }
-
-  :global(.TextBlock--split-columns) {
-    .TextBlock__header {
-      @include media.at('medium') {
-        grid-column: 1 / span 2;
-      }
-    }
-
-    .TextBlock__content {
-      @include media.at('medium') {
-        grid-column: 3;
       }
     }
   }
