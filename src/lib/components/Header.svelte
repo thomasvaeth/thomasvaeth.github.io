@@ -177,11 +177,7 @@
     .Header {
       &__dialog {
         .Section {
-          padding-top: var(--space-large);
-
-          &:after {
-            content: normal;
-          }
+          @extend %full-width-border-reset;
         }
 
         .Image {

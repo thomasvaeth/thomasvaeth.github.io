@@ -33,3 +33,15 @@
     }
   }
 }
+
+//----------------------------------------------
+//  Full Width Border Reset - %full-width-border-reset
+//  @description: Resets the full-width-border after pseudo element on a Section
+//----------------------------------------------
+%full-width-border-reset {
+  padding-top: var(--space-large);
+
+  &:after {
+    content: normal;
+  }
+}

@@ -28,6 +28,7 @@
 </Section>
 
 <style lang="scss">
+  @use '../../styles/tools/extends';
   @use '../../styles/tools/mixins-media' as media;
 
   .Intro {
@@ -54,11 +55,7 @@
   :global {
     .Intro {
       &.Section {
-        padding-top: var(--space-large);
-
-        &:after {
-          content: normal;
-        }
+        @extend %full-width-border-reset;
       }
 
       --glyph-factor: 0.6;
