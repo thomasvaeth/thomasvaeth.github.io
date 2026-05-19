@@ -86,8 +86,6 @@
     </TextBlock>
     <Layout variant="1">
       <Video src="/block/handheld/handheld.mp4" />
-    </Layout>
-    <Layout variant="1">
       <Image src="/block/handheld/handheld-case.jpg" alt="Handheld case" />
     </Layout>
     <Layout variant="2•1">
@@ -158,8 +156,6 @@
     </TextBlock>
     <Layout variant="1">
       <Image src="/block/upgrade/family.jpg" alt="Upgrade hero" />
-    </Layout>
-    <Layout variant="1">
       <Image src="/block/upgrade/desktop.jpg" alt="Upgrade hardware device cards" />
     </Layout>
     <Layout columnStart="3">

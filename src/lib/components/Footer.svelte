@@ -4,7 +4,7 @@
   const {
     spotifyTrack,
   }: {
-    spotifyTrack?: SpotifyTrack;
+    spotifyTrack: SpotifyTrack | null;
   } = $props();
 </script>
 

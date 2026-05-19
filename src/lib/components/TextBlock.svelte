@@ -38,7 +38,7 @@
   {/if}
 
   <div class={['TextBlock__content', contentSize !== 'regular' && `TextBlock__content--${contentSize}`]}>
-    {@render children?.()}
+    {@render children()}
   </div>
 </Layout>
 

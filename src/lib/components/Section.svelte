@@ -12,7 +12,7 @@
 </script>
 
 <section class={['Section', className]}>
-  {@render children?.()}
+  {@render children()}
 </section>
 
 <style lang="scss">

@@ -61,7 +61,7 @@
     </form>
   </div>
 
-  {@render children?.()}
+  {@render children()}
 </dialog>
 
 <style lang="scss">
@@ -90,8 +90,8 @@
 
     &::backdrop {
       background-color: rgba(var(--color-black-rgb), 0.35);
-      -webkit-backdrop-filter: blur(1px);
-      backdrop-filter: blur(1px);
+      -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
     }
 
     &__header {

@@ -19,7 +19,7 @@
 </script>
 
 <div class={['Layout', variantClassMap[variant], className]} style:--layout-column-start={columnStart}>
-  {@render children?.()}
+  {@render children()}
 </div>
 
 <style lang="scss">
