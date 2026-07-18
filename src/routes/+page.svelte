@@ -9,12 +9,16 @@
   import Section from '$lib/components/Section.svelte';
   import TextBlock from '$lib/components/TextBlock.svelte';
   import Video from '$lib/components/Video.svelte';
-  import type { PageData } from './$types';
+  import type { LetterboxdFeedItem } from '$lib/types/letterboxd-feed';
+  import type { SpotifyTrack } from '$lib/types/spotify-track';
 
   const {
     data,
   }: {
-    data: PageData;
+    data: {
+      letterboxdFeed: LetterboxdFeedItem[];
+      spotifyTrack: SpotifyTrack | null;
+    };
   } = $props();
 
   const seoDescription =
