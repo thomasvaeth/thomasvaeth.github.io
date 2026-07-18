@@ -35,10 +35,7 @@
   const formatMemberRating = (rating: number): string => {
     const normalizedRating = Math.max(0, Math.min(5, Math.round(rating * 2) / 2));
 
-    const fullStars = Math.floor(normalizedRating);
-    const hasHalfStar = normalizedRating - fullStars >= 0.5;
-
-    return `${'★'.repeat(fullStars)}${hasHalfStar ? '½' : ''}`;
+    return `${(normalizedRating / 5) * 100}%`;
   };
 </script>
 
@@ -116,7 +113,15 @@
               <Image src={poster} alt={title} />
             </a>
             {#if memberRating !== undefined}
-              <span>{formatMemberRating(memberRating)}</span>
+              <span
+                class="Header__rating"
+                style:--header-rating={formatMemberRating(memberRating)}
+                role="img"
+                aria-label={`${memberRating} out of 5 stars`}
+              >
+                <span class="Header__rating--empty" aria-hidden="true">★★★★★</span>
+                <span class="Header__rating--full" aria-hidden="true">★★★★★</span>
+              </span>
             {/if}
           </li>
         {/each}
@@ -144,6 +149,29 @@
 
     &__link {
       @extend %action-transition;
+    }
+
+    &__rating {
+      position: relative;
+
+      display: inline-block;
+
+      white-space: nowrap;
+
+      &--empty {
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px currentcolor;
+      }
+
+      &--full {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: var(--header-rating);
+
+        overflow: hidden;
+      }
     }
 
     &__images {
